@@ -1,0 +1,109 @@
+<!-- Página de VisualForce referente a la visualización de una Encuesta realizada de:
+        -Nationale Nederlanden Cobros Adicionales   -> T1_1040_CA
+
+
+-->
+
+
+
+<apex:page Controller="EncuestaRealizadaController" sidebar="false"
+	showHeader="false" readonly="true">
+	<style>
+.tabla {
+	border: 0.8px solid black;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	background-color: #E9967A; ! important;
+	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+	color: #CC0000 !important;
+	font-size: 100% !important;
+}
+
+.headerRow .TableTitle {
+	color: #CC0000s !important;
+	background-color: #E9967A !important;
+	font-size: 100% !important;
+	font-weight: bold;
+}
+
+.pregunta {
+	font-weight: bold;
+	font-size: 120% !important;
+}
+</style>
+
+	<apex:form >
+
+
+		<!-- PAGINA PRINCIPAL DE ENCUESTA -->
+
+		<apex:pageMessages ></apex:pageMessages>
+
+
+		<apex:pageBlock id="encuesta" title="Encuesta">
+			
+				<apex:pageBlockSection columns="1" id="Pregunta1">
+				<apex:variable var="p1" value="{!Respuestas1}" />
+				<apex:outputText value="Pregunta 1" styleClass="pregunta" />
+				<apex:outputText value="{0}">
+					<apex:param value="{!listaPreguntas[0].ENP_TXT_Pregunta__c} " />
+				</apex:outputText>
+				<apex:selectRadio label="{!respuestaTxt}" required="true"
+					value="{!p1.respPrinc}" disabled="true">
+					<apex:selectOptions value="{!listaMotsSN}" />
+				</apex:selectRadio>
+				<p />
+				<apex:pageBlockSection columns="2" id="MotivosTabla1">
+					<apex:selectList required="true" label="{!motivoTxt}"
+						value="{!p1.listaResp[0].motivo}" size="1" disabled="true"
+						rendered="{!p1.renderizar[1]}">
+						<apex:selectOptions value="{!p1.motivos}" />
+					</apex:selectList>
+					<apex:inputTextArea label="{!comentarioTxt}"
+						value="{!p1.listaResp[0].comentario}"
+						rendered="{!p1.renderizar[1]}" disabled="true" />
+					<apex:inputTextArea label="{!comentarioTxt}" value="{!p1.respNo}"
+						rendered="{!p1.renderizar[0]}" disabled="true" />
+				</apex:pageBlockSection>
+			</apex:pageBlockSection>
+				<apex:pageBlockSection columns="1" id="Pregunta2">
+				<apex:outputText value="Pregunta 2" styleClass="pregunta" />
+				<apex:outputText value="{0}">
+					<apex:param value="{!listaPreguntas[1].ENP_TXT_Pregunta__c} " />
+				</apex:outputText>
+				<apex:repeat var="p2" value="{!Respuestas2}">
+					<apex:selectList required="true" label="{!respuestaTxt}"
+						value="{!p2.respPrinc}" size="1" disabled="true">
+						<apex:selectOptions value="{!listaMotsValoracion}" />
+					</apex:selectList>
+						<apex:pageBlockSection columns="4" id="MotivosPregunta2">
+							<apex:repeat var="mot" value="{!p2.listaResp}">
+								<apex:inputTextarea id="test2" value="{!mot.comentario}"
+									label="{!mot.motivo}" rendered="{!p2.renderizar[0]}"
+									disabled="true" />
+							</apex:repeat>
+							<apex:inputTextArea label="{!comentarioTxt}" value="{!p2.respNo}"
+									rendered="{!p2.renderizar[1]}" disabled="true" />
+						</apex:pageBlockSection>
+				</apex:repeat>	
+			</apex:pageBlockSection>
+
+				<apex:pageBlockSection columns="1" id="Pregunta3">
+				<apex:outputText value="Pregunta 3" styleClass="pregunta" />
+				<apex:outputText value="{0}">
+					<apex:param value="{!listaPreguntas[2].ENP_TXT_Pregunta__c}" />
+				</apex:outputText>
+				<apex:repeat var="p3" value="{!Respuestas3}" >
+						<apex:selectList required="true" label="{!respuestaTxt}"
+							value="{!p3.respPrinc}" size="1" disabled="true">
+							<apex:selectOptions value="{!listaMotsValoracion}" />
+						</apex:selectList>
+						<apex:inputTextarea label="{!comentarioTxt}" required="true"
+							value="{!p3.respNo}" disabled="true" />
+				</apex:repeat>
+			</apex:pageBlockSection>
+			
+
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

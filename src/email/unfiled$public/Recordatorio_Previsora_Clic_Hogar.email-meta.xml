@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de recordatorio de Previsora para cuenta del portal de Clic Hogar</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Recordatorio Previsora</name>
+    <style>none</style>
+    <subject>Recordatorio Portal Clic Hogar</subject>
+    <textOnly>EMAIL  RECORDATORIO
+
+
+
+
+
+
+
+
+
+
+Fecha Siniestro: {!Case.CreatedDate}
+
+Nº Siniestro: {!Case.CaseNumber}
+
+Nº Póliza:  {!Case.00N9E000001uR9S}
+
+
+
+
+
+
+
+
+
+Estimado Sr/Sra. {!Case.Account},
+
+
+
+
+
+Hemos comprobado que todavía no ha accedido a la información que tiene disponible sobre su siniestro en el Portal Clic Hogar. Le recordamos que a través de este portal, usted podrá seguir todos los pasos de su reparación, comprobar los gremios que han de intervenir y resolver todas sus dudas sobre el proceso.
+
+
+
+
+
+¿Cómo acceder al Portal?
+
+Simplemente tendrá que entrar en el link que le indicamos e introducir su usuario y contraseña:
+
+
+
+
+
+Link: https://www.clichogar.es
+
+Usuario: 	{!Case.CAS_TXT_Usuario_Clic_Hogar__c}
+
+Contraseña: 	{!Case.CAS_TXT_Password_Clic_Hogar__c}
+
+
+
+
+
+
+Estamos a su disposición para ayudarle y prestarle el mejor servicio.
+
+
+Reciba un cordial saludo,
+
+Previsora Bilbaína
+
+
+*Nota: este correo es informativo, rogamos no responda al mismo.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

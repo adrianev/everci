@@ -1,0 +1,130 @@
+<apex:page standardController="Case" extensions="B2B_Gremios"
+	showHeader="true" sidebar="false">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:includeScript value="{!$Resource.jQuery}" />
+	<style type="text/css">
+		.filasSeleccionables {
+			cursor: pointer;
+		}
+		
+		.listaGremio {
+			width: 60%;
+			border-left: 3px solid #C00;
+		}
+		
+		.inputDisabled {
+			width: 16px;
+			height: 16px;
+		}
+	</style>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="cancelarAF" action="{!cancelar}"
+			rerender="mainForm" status="iconoCargando" />
+
+		<apex:sectionHeader title="{!if(fase == $Label.SINI_FASE_APERTURA, 'Proceso de Apertura', 'Tramitación')} de {!tipoServicio}: Nuevo Gremio"
+			subtitle="{!if(caso != null, caso.CaseNumber, '')}" />
+
+		<apex:pageBlock id="formulario"
+			title="Seleccionar Gremio {!if(caso.CAS_LKP_Orden_Trabajo_Principal__c == null, 'Principal', 'Adicional')}">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<apex:commandButton value="<< Salir" title="Salir" immediate="true"
+					rendered="{!fase == $Label.SINI_FASE_APERTURA && caso.CAS_LKP_Orden_Trabajo_Principal__c == null}"
+					onclick="if(confirm('¿Está seguro de salir?')){cancelarAF();}return false;" />
+				<apex:commandButton value="<< Cancelar" title="Cancelar" immediate="true"
+					rendered="{!fase != $Label.SINI_FASE_APERTURA || caso.CAS_LKP_Orden_Trabajo_Principal__c != null}"
+					onclick="if(confirm('¿Está seguro de cancelar sin guardar los cambios del gremio?')){cancelarAF();}return false;" />
+				<apex:commandButton value="Continuar >>" title="Continuar Apertura"
+					action="{!guardar}"
+					rerender="mainForm" status="iconoCargando"
+					rendered="{!fase == $Label.SINI_FASE_APERTURA && caso.CAS_LKP_Orden_Trabajo_Principal__c == null}" />
+				<apex:commandButton value="Guardar >>" title="Guardar"
+					action="{!guardar}"
+					rerender="mainForm" status="iconoCargando"
+					rendered="{!(fase != $Label.SINI_FASE_APERTURA || caso.CAS_LKP_Orden_Trabajo_Principal__c != null)
+							&& !(esReclamacion 
+							&& (caso.Status == $Label.CAS_ESTADO_CERRADO_PDTE_LIQUIDAR 
+							|| caso.Status == $Label.CAS_ESTADO_CERRADO_FACTURADO
+							|| caso.Status == $Label.CAS_ESTADO_CERRADO))}" />
+				<apex:commandButton value="Reabrir reclamación"	title="Reabrir reclamación"
+					action="{!reabrirReclamacion}"
+					rerender="mainForm" status="iconoCargando"
+					rendered="{!esReclamacion 
+						&& (caso.Status == $Label.CAS_ESTADO_CERRADO_PDTE_LIQUIDAR 
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO_FACTURADO
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO)}"/>
+			</apex:pageBlockButtons>
+
+			<c:Detalle_B2B_B2B2C atrCase="{!caso}" atrAccount="{!cuenta}"
+				atrB2C="{!esB2C}" />
+
+			<apex:pageBlockSection id="reapertura" collapsible="false" columns="2" title="Reapertura reclamación" 
+				rendered="{!esReclamacion 
+						&& (caso.Status == $Label.CAS_ESTADO_CERRADO_PDTE_LIQUIDAR 
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO_FACTURADO
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO)}">
+											
+				<apex:inputfield value="{!caso.CAS_SEL_Motivo_Reapertura__c}" styleClass="listaGremio"/>
+				
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="seccionSeleccionGremio"
+				title="Selección de gremio" collapsible="false" columns="2" 
+				rendered="{!!(esReclamacion 
+						&& (caso.Status == $Label.CAS_ESTADO_CERRADO_PDTE_LIQUIDAR 
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO_FACTURADO
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO))}">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Gremio" for="listaGremiosVF" />
+					<apex:selectList id="listaGremiosVF" value="{!gremio}" size="1"
+						styleClass="listaGremio">
+						<apex:selectOptions value="{!listaGremios}" />
+						<apex:actionSupport event="onchange"
+							action="{!buscarTiposTrabajo}"
+							rerender="mainForm" status="iconoCargando" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:inputCheckbox id="urgente" label="Urgente"
+					value="{!booleanUrgente}" />
+				<apex:inputTextarea id="newDesc" label="Comentario de Gremio"
+					styleClass="requerido"
+					value="{!nuevoComentario.COT_TXT_Comentario__c}" title="Comentario" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="seccionSucesos" title="Sucesos"
+				collapsible="false" columns="1"
+				rendered="{!listaResultados != null
+						&& !(esReclamacion 
+						&& (caso.Status == $Label.CAS_ESTADO_CERRADO_PDTE_LIQUIDAR 
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO_FACTURADO
+						|| caso.Status == $Label.CAS_ESTADO_CERRADO))}">
+				<apex:variable value="{!0}" var="indice" />
+				<apex:pageBlockTable id="tablaResultados" value="{!listaResultados}"
+					var="resultado" title="Tipos de Trabajo" columnsWidth="1%,99%"
+					rendered="{!listaResultados.size != 0}">
+					<apex:column headerValue="">
+						<apex:variable value="{!indice + 1}" var="indice" />
+						<apex:inputCheckbox value="{!resultado.seleccionado}"
+							onchange="$('input[name*=tablaResultados][type=checkbox]').not(this).prop('checked', false);" />
+					</apex:column>
+					<apex:column headerValue="Nombre">
+						<apex:outputText value="{!resultado.tipoTrabajo.Name}" />
+					</apex:column>
+				</apex:pageBlockTable>
+				<apex:outputPanel rendered="{!listaResultados.size == 0}">
+					<apex:outputText value="No hay resultados" />
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

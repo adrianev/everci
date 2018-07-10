@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <help>Calculează data limită adăugând minute la ora creării serviciului, care reflecă Acordul de servicii intern al organizației</help>
+        <label><!-- Due Date Offset --></label>
+        <name>FSL__Due_Date_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exact Appointments --></label>
+        <name>FSL__Exact_Appointments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suceso Mizad --></label>
+        <name>TDT_CAS_Suceso_Mizad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Categorías --></label>
+        <name>TDT_SEL_Categoria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>TDT_SEL_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>TDT_TXT_Identificador__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- debe marcar la casilla de “Crear citas de servicio automáticamente” --></errorMessage>
+        <name>citas_Servicio_Automaticamente</name>
+    </validationRules>
+</CustomObjectTranslation>

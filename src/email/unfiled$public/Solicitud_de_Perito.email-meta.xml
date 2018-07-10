@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para informar a la CIA que asigne un perito</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Solicitud de Perito</name>
+    <style>none</style>
+    <subject>Solicitud de perito {!Case.CAS_TXT_Num_Caso_CIA__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

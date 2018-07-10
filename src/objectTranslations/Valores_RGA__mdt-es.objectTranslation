@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Valor RGA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Valores RGA</value>
+    </caseValues>
+    <fields>
+        <label><!-- Causa Queja y Reclamación --></label>
+        <name>RGA_Causa_Queja_y_Reclamacion__c</name>
+        <picklistValues>
+            <masterLabel>Compromiso oro</masterLabel>
+            <translation><!-- Compromiso oro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demora Inicio en la Reparación</masterLabel>
+            <translation><!-- Demora Inicio en la Reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demora o incumplimiento de Visita</masterLabel>
+            <translation><!-- Demora o incumplimiento de Visita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disconformidad con Rechazo</masterLabel>
+            <translation><!-- Disconformidad con Rechazo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disconformidad con Resultado Peritación</masterLabel>
+            <translation><!-- Disconformidad con Resultado Peritación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En ejecución de la Reparación</masterLabel>
+            <translation><!-- En ejecución de la Reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incumplimiento compromiso ORO</masterLabel>
+            <translation><!-- Incumplimiento compromiso ORO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incumplimiento de Cita</masterLabel>
+            <translation><!-- Incumplimiento de Cita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Información o aclaración de un expediente (desinformación)</masterLabel>
+            <translation><!-- Información o aclaración de un expediente (desinformación) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Finalización de reparación (Demora fin trabajos, incumplimiento de plazos)</masterLabel>
+            <translation><!-- No Finalización de reparación (Demora fin trabajos, incumplimiento de plazos) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No asignación de Cita</masterLabel>
+            <translation><!-- No asignación de Cita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resultado de la Reparación. Mala Calidad trabajos ejecutados</masterLabel>
+            <translation><!-- Resultado de la Reparación. Mala Calidad trabajos ejecutados --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Evento --></label>
+        <name>RGA_Evento__c</name>
+        <picklistValues>
+            <masterLabel>01 Rechazo Total</masterLabel>
+            <translation><!-- 01 Rechazo Total --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02 Con reparación</masterLabel>
+            <translation><!-- 02 Con reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03 Mixto</masterLabel>
+            <translation><!-- 03 Mixto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04 Indemnizable</masterLabel>
+            <translation><!-- 04 Indemnizable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05 Reapertura</masterLabel>
+            <translation><!-- 05 Reapertura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06 Asignación de cita</masterLabel>
+            <translation><!-- 06 Asignación de cita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07 Cita Cerrada</masterLabel>
+            <translation><!-- 07 Cita Cerrada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08 Vista reparación</masterLabel>
+            <translation><!-- 08 Vista reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09 Primera cita cancelada</masterLabel>
+            <translation><!-- 09 Primera cita cancelada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10 Cita Replanificada</masterLabel>
+            <translation><!-- 10 Cita Replanificada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11 Visita Replanificada</masterLabel>
+            <translation><!-- 11 Visita Replanificada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12 Asignación Pericial</masterLabel>
+            <translation><!-- 12 Asignación Pericial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13 Recepción Inf. Pericial</masterLabel>
+            <translation><!-- 13 Recepción Inf. Pericial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14 Apertura de la Queja y Reclamación</masterLabel>
+            <translation><!-- 14 Apertura de la Queja y Reclamación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15 Propuesta de solución al Asegurado</masterLabel>
+            <translation><!-- 15 Propuesta de solución al Asegurado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16 Cierre de la Queja y Reclamación</masterLabel>
+            <translation><!-- 16 Cierre de la Queja y Reclamación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>17 Finalización técnica del expediente</masterLabel>
+            <translation><!-- 17 Finalización técnica del expediente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>18 Rechazo Identificado Total</masterLabel>
+            <translation><!-- 18 Rechazo Identificado Total --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>19 Rechazo Comunicado Total</masterLabel>
+            <translation><!-- 19 Rechazo Comunicado Total --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20 Solicitud compromiso ORO</masterLabel>
+            <translation><!-- 20 Solicitud compromiso ORO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Momento --></label>
+        <name>RGA_Momento__c</name>
+        <picklistValues>
+            <masterLabel>Apertura</masterLabel>
+            <translation><!-- Apertura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cierre</masterLabel>
+            <translation><!-- Cierre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indemnización</masterLabel>
+            <translation><!-- Indemnización --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechazo</masterLabel>
+            <translation><!-- Rechazo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reparación</masterLabel>
+            <translation><!-- Reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valoración</masterLabel>
+            <translation><!-- Valoración --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Motivo --></label>
+        <name>RGA_Motivo__c</name>
+        <picklistValues>
+            <masterLabel>Disconformidad con Rechazo</masterLabel>
+            <translation><!-- Disconformidad con Rechazo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disconformidad con trabajos efectuados</masterLabel>
+            <translation><!-- Disconformidad con trabajos efectuados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reclamación de Daños no contemplados por Empresa de Asistencia</masterLabel>
+            <translation><!-- Reclamación de Daños no contemplados por Empresa de Asistencia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trabajos pendientes de finalización</masterLabel>
+            <translation><!-- Trabajos pendientes de finalización --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Motivos de Rechazo --></label>
+        <name>RGA_Motivos_de_Rechazo__c</name>
+        <picklistValues>
+            <masterLabel>CLAUSULA EXLUSION</masterLabel>
+            <translation><!-- CLAUSULA EXLUSION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIRECC.DISTINTA</masterLabel>
+            <translation><!-- DIRECC.DISTINTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EXCLUS.HURTO FUERA</masterLabel>
+            <translation><!-- EXCLUS.HURTO FUERA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FRANQUIC.NEG.O CERO</masterLabel>
+            <translation><!-- FRANQUIC.NEG.O CERO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GAR.NO CUBIERTA</masterLabel>
+            <translation><!-- GAR.NO CUBIERTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO CONTENIDO</masterLabel>
+            <translation><!-- NO CONTENIDO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NO CONTINENTE</masterLabel>
+            <translation><!-- NO CONTINENTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POLIZA ANULADA</masterLabel>
+            <translation><!-- POLIZA ANULADA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>POLIZA NO CORRESPOND</masterLabel>
+            <translation><!-- POLIZA NO CORRESPOND --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RC NO IMPUTABLE ASEG</masterLabel>
+            <translation><!-- RC NO IMPUTABLE ASEG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIESGO NO CUBIERTO</masterLabel>
+            <translation><!-- RIESGO NO CUBIERTO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STRO.ANTER.F.EFECTO</masterLabel>
+            <translation><!-- STRO.ANTER.F.EFECTO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STRO.CONSORCIABLE</masterLabel>
+            <translation><!-- STRO.CONSORCIABLE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>STRO.POSTE.F.VENCIMT</masterLabel>
+            <translation><!-- STRO.POSTE.F.VENCIMT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIENTO NO ANORMAL</masterLabel>
+            <translation><!-- VIENTO NO ANORMAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIVIENDA EN OBRAS</masterLabel>
+            <translation><!-- VIVIENDA EN OBRAS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Resultado del Siniestro --></label>
+        <name>RGA_Resultado_del_Siniestro__c</name>
+        <picklistValues>
+            <masterLabel>Indemnizable</masterLabel>
+            <translation><!-- Indemnizable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixto</masterLabel>
+            <translation><!-- Mixto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reparable</masterLabel>
+            <translation><!-- Reparable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Clasificador --></label>
+        <name>RGA_SEL_Clasificador__c</name>
+        <picklistValues>
+            <masterLabel>ACTOS VANDALICOS</masterLabel>
+            <translation><!-- ACTOS VANDALICOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AGUA PROPIOS</masterLabel>
+            <translation><!-- AGUA PROPIOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AGUA PROPIOS Y TERCEROS</masterLabel>
+            <translation><!-- AGUA PROPIOS Y TERCEROS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALIMENTOS CONGELADOS</masterLabel>
+            <translation><!-- ALIMENTOS CONGELADOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATRACO</masterLabel>
+            <translation><!-- ATRACO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAIDA DE RAYO / DAÑOS ELECTRICOS</masterLabel>
+            <translation><!-- CAIDA DE RAYO / DAÑOS ELECTRICOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRISTALES</masterLabel>
+            <translation><!-- CRISTALES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAÑOS A BIENES REFRIGERADOS</masterLabel>
+            <translation><!-- DAÑOS A BIENES REFRIGERADOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAÑOS POR HUMO</masterLabel>
+            <translation><!-- DAÑOS POR HUMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FENOMENOS NATURALEZA</masterLabel>
+            <translation><!-- FENOMENOS NATURALEZA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IMPACTO DE VEHICULOS</masterLabel>
+            <translation><!-- IMPACTO DE VEHICULOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INCENDIO</masterLabel>
+            <translation><!-- INCENDIO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INUNDACION</masterLabel>
+            <translation><!-- INUNDACION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R.C. CONTENIDO</masterLabel>
+            <translation><!-- R.C. CONTENIDO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R.C. CONTINENTE</masterLabel>
+            <translation><!-- R.C. CONTINENTE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R.C. EXPLOTACION</masterLabel>
+            <translation><!-- R.C. EXPLOTACION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R.C. PATRONAL</masterLabel>
+            <translation><!-- R.C. PATRONAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>R.C. PRODUCTOS</masterLabel>
+            <translation><!-- R.C. PRODUCTOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RECLAMACION DE DAÑOS</masterLabel>
+            <translation><!-- RECLAMACION DE DAÑOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RIESGO NO CUBIERTO</masterLabel>
+            <translation><!-- RIESGO NO CUBIERTO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROBO</masterLabel>
+            <translation><!-- ROBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TODO RIESGO ACCIDENTAL</masterLabel>
+            <translation><!-- TODO RIESGO ACCIDENTAL --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo Cita --></label>
+        <name>RGA_Tipo_Cita__c</name>
+        <picklistValues>
+            <masterLabel>Propuesta por el asegurado</masterLabel>
+            <translation><!-- Propuesta por el asegurado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Propuesta por empresa de asistencia</masterLabel>
+            <translation><!-- Propuesta por empresa de asistencia --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Visita --></label>
+        <name>RGA_Tipo_de_Visita__c</name>
+        <picklistValues>
+            <masterLabel>Resto Visitas</masterLabel>
+            <translation><!-- Resto Visitas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Última Visita</masterLabel>
+            <translation><!-- Última Visita --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipos Acción RGA Pratus --></label>
+        <name>RGA_Tipos_Accion_Pratus__c</name>
+        <picklistValues>
+            <masterLabel>Actualización de información del siniestro</masterLabel>
+            <translation><!-- Actualización de información del siniestro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Encargo de peritación</masterLabel>
+            <translation><!-- Encargo de peritación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finalización de la reparación (Finalización Técnica)</masterLabel>
+            <translation><!-- Finalización de la reparación (Finalización Técnica) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inicio de la reparación</masterLabel>
+            <translation><!-- Inicio de la reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Observaciones al siniestro</masterLabel>
+            <translation><!-- Observaciones al siniestro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reapertura de la reparación</masterLabel>
+            <translation><!-- Reapertura de la reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechazo en confirmación</masterLabel>
+            <translation><!-- Rechazo en confirmación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solicitud de presupuesto de reparación</masterLabel>
+            <translation><!-- Solicitud de presupuesto de reparación --></translation>
+        </picklistValues>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

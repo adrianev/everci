@@ -1,0 +1,1033 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Deprecated --></label>
+        <name>Emergency_Current_WorkORder_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Gantt Lightbox --></label>
+        <name>Gantt_Lightbox</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Companía Workflow --></label>
+        <name>CAS_TXT_WF_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Fill In Candidate --></label>
+        <name>FSL__IsFillInCandidate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prevent Geocoding For Chatter Actions --></label>
+        <name>FSL__Prevent_Geocoding_For_Chatter_Actions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scheduling Priority --></label>
+        <name>FSL__Scheduling_Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visiting Hours --></label>
+        <name>FSL__VisitingHours__c</name>
+        <relationshipLabel><!-- Work Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ¿Aplicar modificaciones? --></label>
+        <name>OTR_CAS_AplicaRevision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asignar como franquiciado --></label>
+        <name>OTR_CAS_Asignar_Como_Franquiciado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asignar como Mizad --></label>
+        <name>OTR_CAS_Asignar_Mizad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ampliar búsqueda de profesionales --></label>
+        <name>OTR_CAS_Asignar_territorio_prim_no_franq__c</name>
+    </fields>
+    <fields>
+        <label><!-- Autoasignar --></label>
+        <name>OTR_CAS_Autoasignacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cierre Tecnico --></label>
+        <name>OTR_CAS_Cierre_Tecnico__c</name>
+    </fields>
+    <fields>
+        <label><!-- Confianza en la red --></label>
+        <name>OTR_CAS_Confianza_en_la_red__c</name>
+    </fields>
+    <fields>
+        <label><!-- Copia de seguridad --></label>
+        <name>OTR_CAS_Copia_de_Seguridad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Generar Tarea Semaforo --></label>
+        <name>OTR_CAS_Generar_Tarea_Semaforo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Límite de Tramitación Exprés Superado --></label>
+        <name>OTR_CAS_Lim_Tramitacion_Expres_Superado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicio Facturado --></label>
+        <name>OTR_CAS_Orden_Trabajo_Facturada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicio Liquidado --></label>
+        <name>OTR_CAS_Orden_Trabajo_Liquidada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partidas modificadas en revisión --></label>
+        <name>OTR_CAS_Partidas_Modificadas_Revision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pendiente de Gestor --></label>
+        <name>OTR_CAS_Pendiente_de_Gestor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reclamación Vinculada --></label>
+        <name>OTR_CAS_Reclamacion_Vinculada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Residencia Habitual Más de 2 años --></label>
+        <name>OTR_CAS_Res_Habitual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicio Anulado --></label>
+        <name>OTR_CAS_Servicio_Anulado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicio Encuestado --></label>
+        <name>OTR_CAS_Servicio_Encuestado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicio Revisado --></label>
+        <name>OTR_CAS_Servicio_Revisado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Urgente --></label>
+        <name>OTR_CAS_Urgente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vetado Servicio --></label>
+        <name>OTR_CAS_Vetado_Orden_Trabajo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Anulación --></label>
+        <name>OTR_DAT_Fecha_Anulacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Cierre Servicio --></label>
+        <name>OTR_DAT_Fecha_Cierre_servicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha estimada Desbloqueo --></label>
+        <name>OTR_DAT_Fecha_Despertar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Facturación --></label>
+        <name>OTR_DAT_Fecha_Facturacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha semaforo rojo --></label>
+        <name>OTR_DAT_Fecha_Hora_Cambio_semaforo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha/Hora tarea sin cita --></label>
+        <name>OTR_DAT_Fecha_Hora_Tarea_Sin_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Liquidación --></label>
+        <name>OTR_DAT_Fecha_Liquidacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Primera Cita --></label>
+        <name>OTR_DAT_Fecha_Primera_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Recepción Albarán --></label>
+        <name>OTR_DAT_Fecha_Recepcion_Albaran__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha última cita --></label>
+        <name>OTR_DAT_Fecha_Ultima_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha cambio estado --></label>
+        <name>OTR_DAT_Fecha_cambio_estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha rechazo --></label>
+        <name>OTR_DAT_Fecha_rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha revisión --></label>
+        <name>OTR_DAT_Fecha_revision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha último C2C --></label>
+        <name>OTR_DAT_Fecha_ultimo_C2C__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Generar Tarea Semaforo --></label>
+        <name>OTR_DAT_Generar_Tarea_Semaforo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe diferencia --></label>
+        <name>OTR_DIV_Importe_diferencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe nuevo --></label>
+        <name>OTR_DIV_Importe_nuevo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe original --></label>
+        <name>OTR_DIV_Importe_original__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe recibido de cliente --></label>
+        <name>OTR_DIV_Importe_recibido_de_cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Canal --></label>
+        <name>OTR_FOR_Canal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Profesional --></label>
+        <name>OTR_FOR_Codigo_Profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>OTR_FOR_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dirección Territorial --></label>
+        <name>OTR_FOR_DT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Días desde el cierre del servicio --></label>
+        <name>OTR_FOR_Dias_desde_cierre_del_servicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gestor Asignado --></label>
+        <name>OTR_FOR_Gestor_Asignado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio Ppal. Intervención --></label>
+        <name>OTR_FOR_Gremio_Ppal_Caso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha/Hora de Primera Cita --></label>
+        <name>OTR_FOR_Hora_Primera_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador CIA --></label>
+        <name>OTR_FOR_Identificador_CIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Intervención CIA Antes Imp --></label>
+        <name>OTR_FOR_Importe_CIA_Intervencion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe total siniestro --></label>
+        <name>OTR_FOR_Importe_total_siniestro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lim Actuación CIA: No Permite Urg --></label>
+        <name>OTR_FOR_Lim_Actuac_CIA_NoPermiteUrg__c</name>
+    </fields>
+    <fields>
+        <label><!-- Límite de actuación de la CÍA --></label>
+        <name>OTR_FOR_Limite_Actuacion_CIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Producto --></label>
+        <name>OTR_FOR_Producto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>OTR_FOR_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- RecordType DevName --></label>
+        <name>OTR_FOR_RTDevName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reclamación vinculada --></label>
+        <name>OTR_FOR_Reclamacion_vinculada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Semáforo --></label>
+        <name>OTR_FOR_Semaforo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Siniestro Peritado --></label>
+        <name>OTR_FOR_Siniestro_Peritado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subcanal --></label>
+        <name>OTR_FOR_Subcanal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono VDN --></label>
+        <name>OTR_FOR_Telefono_VDN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tiempo de citas completas --></label>
+        <name>OTR_FOR_Tiempo_de_citas_completas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Trabajo --></label>
+        <name>OTR_FOR_Tipo_Trabajo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Intervención --></label>
+        <name>OTR_FOR_Tipo_de_Caso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usuario profesional --></label>
+        <name>OTR_FOR_Usuario_profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe evento E21 --></label>
+        <name>OTR_FOR_importe_E21__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hora de revisión --></label>
+        <name>OTR_HOR_Hora_de_revision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cuenta Profesional (Histórico) --></label>
+        <lookupFilter>
+            <errorMessage><!-- El valor no existe o no coinciden los criterios de filtro. La cuenta debe ser un Profesional Contrato. --></errorMessage>
+        </lookupFilter>
+        <name>OTR_LKP_Cuenta_Profesional_Historico__c</name>
+        <relationshipLabel><!-- Servicios históricos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- FacturaAsociada --></label>
+        <name>OTR_LKP_Factura__c</name>
+        <relationshipLabel><!-- Órdenes de trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Gestor revisión --></label>
+        <name>OTR_LKP_Gestor_revision__c</name>
+        <relationshipLabel><!-- Servicios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Línea de Contrato --></label>
+        <name>OTR_LKP_Linea_Contrato__c</name>
+        <relationshipLabel><!-- Órdenes de trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primera Cita de Servicio --></label>
+        <name>OTR_LKP_Primera_Cita__c</name>
+        <relationshipLabel><!-- Órdenes de trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Profesional Programado --></label>
+        <name>OTR_LKP_Profesional_Programado__c</name>
+        <relationshipLabel><!-- Órdenes de trabajo (Profesional Programado) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Profesional --></label>
+        <name>OTR_LKP_Recurso_Servicio__c</name>
+        <relationshipLabel><!-- Órdenes de trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Scheduling Policy --></label>
+        <name>OTR_LKP_Scheduling_Policy__c</name>
+        <relationshipLabel><!-- Órdenes de trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Duración de citas completadas (Minutos) --></label>
+        <name>OTR_NUM_Duracion_de_citas_completadas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dias Amarillo --></label>
+        <name>OTR_NUM_Horas_amarillo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dias Verde --></label>
+        <name>OTR_NUM_Horas_verde__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número C2C --></label>
+        <name>OTR_NUM_Numero_C2C__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de citas completadas --></label>
+        <name>OTR_NUM_Numero_de_citas_completadas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cliente antes Imp --></label>
+        <name>OTR_RES_Facturar_Cliente_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cliente desp Imp --></label>
+        <name>OTR_RES_Facturar_Cliente_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar a Cía despues Imp --></label>
+        <name>OTR_RES_Facturar_Compania_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe compañía --></label>
+        <name>OTR_RES_Importe_comp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe de cliente --></label>
+        <name>OTR_RES_Importe_de_cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Liquidar Prof después imp --></label>
+        <name>OTR_RES_Importe_partidas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje Impuestos Cliente/Compañía --></label>
+        <name>OTR_RES_Impuesto_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Liquidar a Prof antes Imp --></label>
+        <name>OTR_RES_Liquidar_prof_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partidas --></label>
+        <name>OTR_RES_Partidas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cía antes imp --></label>
+        <name>OTR_RES_Subtotal_Partidas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total a Facturar antes impuestos --></label>
+        <name>OTR_RES_Total_Facturar_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar después impuestos --></label>
+        <name>OTR_RES_Total_Facturar_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo --></label>
+        <name>OTR_SEL_AG_Motivo__c</name>
+        <picklistValues>
+            <masterLabel>Errores MB</masterLabel>
+            <translation><!-- Errores MB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Importe &gt; 2000</masterLabel>
+            <translation><!-- Importe &gt; 2000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incidencias Claims</masterLabel>
+            <translation><!-- Incidencias Claims --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incidencias MB</masterLabel>
+            <translation><!-- Incidencias MB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pendiente Confirmación Cliente</masterLabel>
+            <translation><!-- Pendiente Confirmación Cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pendiente Perito</masterLabel>
+            <translation><!-- Pendiente Perito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pendiente Reclamación</masterLabel>
+            <translation><!-- Pendiente Reclamación --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bloqueo Eventos --></label>
+        <name>OTR_SEL_Bloqueo_Eventos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Categoría del profesional --></label>
+        <name>OTR_SEL_Categoria_del_profesional__c</name>
+        <picklistValues>
+            <masterLabel>Franquiciado</masterLabel>
+            <translation><!-- Franquiciado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Licenciatario</masterLabel>
+            <translation><!-- Licenciatario --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Eventos bloqueados (Procedencias) --></label>
+        <name>OTR_SEL_Eventos_bloqueados_Proc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>OTR_SEL_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- OTR_SEL_Incidente_Facturacion --></label>
+        <name>OTR_SEL_Incidente_Facturacion__c</name>
+        <picklistValues>
+            <masterLabel>Refacturacion</masterLabel>
+            <translation><!-- Refacturacion --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Modo de pago --></label>
+        <name>OTR_SEL_Modo_de_pago__c</name>
+        <picklistValues>
+            <masterLabel>Contado</masterLabel>
+            <translation><!-- Contado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financiado</masterLabel>
+            <translation><!-- Financiado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pago por tarjeta</masterLabel>
+            <translation><!-- Pago por tarjeta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recibo Domiciliado</masterLabel>
+            <translation><!-- Recibo Domiciliado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talon</masterLabel>
+            <translation><!-- Talon --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Motivo de Anulación --></label>
+        <name>OTR_SEL_Motivo_Anulacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo de rectificación --></label>
+        <name>OTR_SEL_Motivo_de_rectificacion__c</name>
+        <picklistValues>
+            <masterLabel>Avería no cubierta</masterLabel>
+            <translation><!-- Avería no cubierta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceso Importe Material</masterLabel>
+            <translation><!-- Exceso Importe Material --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceso M.O. y Material</masterLabel>
+            <translation><!-- Exceso M.O. y Material --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceso horas M.O.</masterLabel>
+            <translation><!-- Exceso horas M.O. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exceso metros realizados</masterLabel>
+            <translation><!-- Exceso metros realizados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mala interpretación del baremo</masterLabel>
+            <translation><!-- Mala interpretación del baremo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No aceptado por perito/compañía</masterLabel>
+            <translation><!-- No aceptado por perito/compañía --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No procede abrir 2 siniestros/servicios</masterLabel>
+            <translation><!-- No procede abrir 2 siniestros/servicios --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No procede incremento</masterLabel>
+            <translation><!-- No procede incremento --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trabajos No realizados</masterLabel>
+            <translation><!-- Trabajos No realizados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trabajos no acreditados</masterLabel>
+            <translation><!-- Trabajos no acreditados --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Motivos de Rechazo de Albarán --></label>
+        <name>OTR_SEL_Motivos_de_Rechazo_de_Albaran__c</name>
+        <picklistValues>
+            <masterLabel>Albarán ilegible (formato jpg).</masterLabel>
+            <translation><!-- Albarán ilegible (formato jpg). --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aporte factura de compra de materiales.</masterLabel>
+            <translation><!-- Aporte factura de compra de materiales. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Aporte fotografías.</masterLabel>
+            <translation><!-- Aporte fotografías. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Describa los trabajos realizados.</masterLabel>
+            <translation><!-- Describa los trabajos realizados. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Envíe albarán de servicio/asistencia según corresponda (el enviado no es correcto).</masterLabel>
+            <translation><!-- Envíe albarán de servicio/asistencia según corresponda (el enviado no es correcto). --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indique marca y/o modelo de material/es.</masterLabel>
+            <translation><!-- Indique marca y/o modelo de material/es. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indique quien aportó el material, el importe y %iva cobrado al asegurado.</masterLabel>
+            <translation><!-- Indique quien aportó el material, el importe y %iva cobrado al asegurado. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Otros</masterLabel>
+            <translation><!-- Otros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Valore la reparación con códigos de baremo.</masterLabel>
+            <translation><!-- Valore la reparación con códigos de baremo. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Penalización --></label>
+        <name>OTR_SEL_Penalizacion__c</name>
+        <picklistValues>
+            <masterLabel>10,00€</masterLabel>
+            <translation><!-- 10,00€ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40,00€</masterLabel>
+            <translation><!-- 40,00€ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90,00€</masterLabel>
+            <translation><!-- 90,00€ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No procede</masterLabel>
+            <translation><!-- No procede --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Procedencias bloqueadas --></label>
+        <name>OTR_SEL_Procedencias_bloqueadas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quien Reclama --></label>
+        <name>OTR_SEL_Quien_Reclama__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hora de Primera Cita --></label>
+        <name>OTR_SEL_Rango_Primera_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hora de Última Cita --></label>
+        <name>OTR_SEL_Rango_Ultima_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subestado --></label>
+        <name>OTR_SEL_Subestado__c</name>
+        <picklistValues>
+            <masterLabel>En Revisión</masterLabel>
+            <translation><!-- En Revisión --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pendiente de revisión en espera de Homeserve por resolución</masterLabel>
+            <translation><!-- Pendiente de revisión en espera de Homeserve por resolución --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado Automáticamente con intervención gestor</masterLabel>
+            <translation><!-- Revisado Automáticamente con intervención gestor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado Automáticamente sin intervención gestor</masterLabel>
+            <translation><!-- Revisado Automáticamente sin intervención gestor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado E16</masterLabel>
+            <translation><!-- Revisado E16 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado como PER</masterLabel>
+            <translation><!-- Revisado como PER --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado manualmente</masterLabel>
+            <translation><!-- Revisado manualmente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado pendiente de recibir albarán que se ha devuelto al profesional</masterLabel>
+            <translation><!-- Revisado pendiente de recibir albarán que se ha devuelto al profesional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revisado sin albarán</masterLabel>
+            <translation><!-- Revisado sin albarán --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Servicio --></label>
+        <name>OTR_SEL_Tipo_Red__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de red profesional --></label>
+        <name>OTR_SEL_Tipo_de_red_prof__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipología de Servicio --></label>
+        <name>OTR_SEL_Tipologia_de_Servicio__c</name>
+        <picklistValues>
+            <masterLabel>ASISTENCIAS</masterLabel>
+            <translation><!-- ASISTENCIAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LDA SINIESTROS</masterLabel>
+            <translation><!-- LDA SINIESTROS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MANITAS</masterLabel>
+            <translation><!-- MANITAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB REPARACIONES</masterLabel>
+            <translation><!-- MB REPARACIONES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB SINIESTROS</masterLabel>
+            <translation><!-- MB SINIESTROS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MediaMarkt</masterLabel>
+            <translation><!-- MediaMarkt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REAL ESTATE</masterLabel>
+            <translation><!-- REAL ESTATE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SINIESTROS</masterLabel>
+            <translation><!-- SINIESTROS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Teléfono C2C --></label>
+        <name>OTR_TEL_Telefono_C2C__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aviso Auditoria de Gestión --></label>
+        <name>OTR_TXT_Aviso_Auditoria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de baremo --></label>
+        <name>OTR_TXT_Codigo_de_baremo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentario Auditoria --></label>
+        <name>OTR_TXT_Comentario_Auditoria__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado Anterior --></label>
+        <name>OTR_TXT_Estado_Anterior__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gestor Rechazo --></label>
+        <name>OTR_TXT_Gestor_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- IdQuote --></label>
+        <name>OTR_TXT_IdQuote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profesional Anterior (Id) --></label>
+        <name>OTR_TXT_Id_Recurso_Anterior__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador DLC --></label>
+        <name>OTR_TXT_Identificador_DLC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo anulación --></label>
+        <name>OTR_TXT_Motivo_anulacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Servicio HS --></label>
+        <name>OTR_TXT_Num_OrdenTrabajo_HS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rango Primera Cita --></label>
+        <name>OTR_TXT_Rango_Primera_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Texto ampliado de la rectificación --></label>
+        <name>OTR_TXT_rectificacion__c</name>
+    </fields>
+    <layouts>
+        <layout>Comunidad Orden Trabajo Reparable Extendido</layout>
+        <sections>
+            <label><!-- Dirección --></label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del cliente --></label>
+            <section>Importe del cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Otros datos --></label>
+            <section>Otros datos</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Comunidad Orden de Trabajo Reparable Gestor</layout>
+        <sections>
+            <label><!-- Datos de citas --></label>
+            <section>Datos de citas</section>
+        </sections>
+        <sections>
+            <label>Adresse</label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del cliente --></label>
+            <section>Importe del cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Otros datos --></label>
+            <section>Otros datos</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Orden de Trabajo En Revisión</layout>
+        <sections>
+            <label><!-- Datos citas --></label>
+            <section>Datos citas</section>
+        </sections>
+        <sections>
+            <label>Adresse</label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- FSL Conf --></label>
+            <section>FSL Conf</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del cliente --></label>
+            <section>Importe del cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Información --></label>
+            <section>Información</section>
+        </sections>
+        <sections>
+            <label><!-- Otros datos --></label>
+            <section>Otros datos</section>
+        </sections>
+        <sections>
+            <label><!-- Revisión de albarán --></label>
+            <section>Revisión de albarán</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Orden de Trabajo Layout</layout>
+        <sections>
+            <label>Adresse</label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del cliente --></label>
+            <section>Importe del cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Orden de Trabajo Indemnizable --></label>
+            <section>Orden de Trabajo Indemnizable</section>
+        </sections>
+        <sections>
+            <label><!-- Orden de Trabajo Reparable --></label>
+            <section>Orden de Trabajo Reparable</section>
+        </sections>
+        <sections>
+            <label><!-- Orden de Trabajo en Revisión --></label>
+            <section>Orden de Trabajo en Revisión</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Orden de Trabajo Reparable</layout>
+        <sections>
+            <label><!-- Datos de citas --></label>
+            <section>Datos de citas</section>
+        </sections>
+        <sections>
+            <label>Adresse</label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Histórico de cambios de estado --></label>
+            <section>Histórico de cambios de estado</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del cliente --></label>
+            <section>Importe del cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Otros datos --></label>
+            <section>Otros datos</section>
+        </sections>
+        <sections>
+            <label><!-- Revisión de albarán --></label>
+            <section>Revisión de albarán</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Orden de Trabajo Reparable Gestor</layout>
+        <sections>
+            <label><!-- Datos de citas --></label>
+            <section>Datos de citas</section>
+        </sections>
+        <sections>
+            <label>Adresse</label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Histórico de cambios de estado --></label>
+            <section>Histórico de cambios de estado</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del cliente --></label>
+            <section>Importe del cliente</section>
+        </sections>
+        <sections>
+            <label><!-- Importe del profesional --></label>
+            <section>Importe del profesional</section>
+        </sections>
+        <sections>
+            <label><!-- Otros datos --></label>
+            <section>Otros datos</section>
+        </sections>
+        <sections>
+            <label><!-- Revisión de albarán --></label>
+            <section>Revisión de albarán</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create New Service Appointment --></label>
+        <name>Crear_Cita_de_Servicio</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- Pago del cliente --></label>
+        <name>Pago_del_cliente</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <recordTypes>
+        <label><!-- En revisión --></label>
+        <name>OTR_En_revision</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Reparable --></label>
+        <name>OTR_Reparable</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Debe indicar el modo de pago del cliente si se indica el valor del importe que ha pagado. --></errorMessage>
+        <name>Modo_de_pago_del_cliente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se puede modificar la urgencia del Gremio principal. --></errorMessage>
+        <name>OTR_RGV_Cabecera_Urgente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No es posible editar cuando el estado es cerrado o anulado. --></errorMessage>
+        <name>OTR_RGV_Editar_Caso_Cerrado_Anulado</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe registrarse el Importe Recibido por el Cliente --></errorMessage>
+        <name>Pago_Cliente</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No es posible realizar este cambio de estado. --></errorMessage>
+        <name>Validaciones_cambio_de_estado_B2B_B2B2C</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Abrir_Reclamacion --></label>
+        <name>Abrir_Reclamacion</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Aceptar --></label>
+        <name>Aceptar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Actualizar_partidas --></label>
+        <name>Actualizar_partidas</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Actualizar_partidas_Indemnizables --></label>
+        <name>Actualizar_partidas_Indemnizables</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cambiar_Propietario --></label>
+        <name>Cambiar_Propietario</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cerrar --></label>
+        <name>Cerrar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Eliminar --></label>
+        <name>Eliminar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Eliminar_Revision --></label>
+        <name>Eliminar_Revision</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Generar_Declaracion_Reponsable --></label>
+        <name>Generar_Declaracion_Reponsable</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Nueva_Cita --></label>
+        <name>Nueva_Cita</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Rechazar --></label>
+        <name>Rechazar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reservar_Cita_Servicio --></label>
+        <name>Reservar_Cita_Servicio</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Revisar --></label>
+        <name>Revisar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Revisar_Automaticamente --></label>
+        <name>Revisar_Automaticamente</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- TEST_CPQ_WO --></label>
+        <name>TEST_CPQ_WO</name>
+    </webLinks>
+    <workflowTasks>
+        <name>AvisoServicioDormido</name>
+        <subject><!-- Avisar a cliente por fecha límite de servicio dormido --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Fecha_de_para_cuando_vencida</name>
+        <subject><!-- Fecha de para cuando vencida --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>Fecha_estimacion_desbloqueo_vencida</name>
+        <subject><!-- Fecha estimación desbloqueo vencida --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <name>cita_servicio_workOrder</name>
+        <subject><!-- Asignación cita de servicio a servicio --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

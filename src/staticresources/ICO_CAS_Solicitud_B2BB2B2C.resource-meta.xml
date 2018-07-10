@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Private</cacheControl>
+    <contentType>image/png</contentType>
+    <description>Icono para el tipo de registro de caso &apos;Solicitud de  &apos;Servicio B2B/B2B2C&apos;</description>
+</StaticResource>

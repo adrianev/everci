@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto personalizado que representa el detalle de todas las tareas que están dentro de un tipo de trabajo</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>TTT_LKP_Tipo_Trabajo__c</fullName>
+        <description>Campo que relaciona la tarea de tipo de trabajo con el tipo de trabajo</description>
+        <externalId>false</externalId>
+        <label>Tipo de trabajo</label>
+        <referenceTo>WorkType</referenceTo>
+        <relationshipLabel>Tareas de Tipo de Trabajo</relationshipLabel>
+        <relationshipName>Tareas_Tipo_Trabajo</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>TTT_TXT_Baremo_Codigo__c</fullName>
+        <description>Código de Baremo de la Tarea</description>
+        <externalId>false</externalId>
+        <label>Código de Baremo</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TTT_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Identificador Externo exclusivo. Se establece con el valor del campo Name en el trigger.</description>
+        <externalId>true</externalId>
+        <label>Identificador (Ext Id)</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Tarea de Tipo de Trabajo</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <label>Tarea de Tipo de Trabajo</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Tareas de Tipo de Trabajo</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>TTT_LKP_Tipo_Trabajo__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>TTT_LKP_Tipo_Trabajo__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>TTT_LKP_Tipo_Trabajo__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>TTT_LKP_Tipo_Trabajo__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Editar_campo_identificador</fullName>
+        <active>true</active>
+        <description>El campo identificador  no puede ser modificado</description>
+        <errorConditionFormula>IF(AND(NOT(ISBLANK(PRIORVALUE(TTT_TXT_Identificador__c ))),ISCHANGED(TTT_TXT_Identificador__c )), true, false)</errorConditionFormula>
+        <errorMessage>El campo identificador  no puede ser modificado</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Requerimiento_de_identificador</fullName>
+        <active>false</active>
+        <description>Regla de validación para requerir el campo Identificador</description>
+        <errorConditionFormula>OR(ISBLANK(TTT_TXT_Identificador__c),ISNULL( TTT_TXT_Identificador__c))</errorConditionFormula>
+        <errorDisplayField>TTT_TXT_Identificador__c</errorDisplayField>
+        <errorMessage>El campo Identificador es requerido</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

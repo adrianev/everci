@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaseSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseFeedItemSettings>
+        <characterLimit>1200</characterLimit>
+        <collapseThread>false</collapseThread>
+        <displayFormat>Default</displayFormat>
+        <feedItemType>EmailMessageEvent</feedItemType>
+    </caseFeedItemSettings>
+    <closeCaseThroughStatusChange>false</closeCaseThroughStatusChange>
+    <defaultCaseOwner>adminsfdc@reparalia.com</defaultCaseOwner>
+    <defaultCaseOwnerType>User</defaultCaseOwnerType>
+    <defaultCaseUser>adminsfdc@reparalia.com</defaultCaseUser>
+    <emailToCase>
+        <enableEmailToCase>true</enableEmailToCase>
+        <enableHtmlEmail>true</enableHtmlEmail>
+        <enableOnDemandEmailToCase>true</enableOnDemandEmailToCase>
+        <enableThreadIDInBody>true</enableThreadIDInBody>
+        <enableThreadIDInSubject>true</enableThreadIDInSubject>
+        <notifyOwnerOnNewCaseEmail>false</notifyOwnerOnNewCaseEmail>
+        <overEmailLimitAction>Bounce</overEmailLimitAction>
+        <preQuoteSignature>false</preQuoteSignature>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>PatriaHispana_Apert_Email</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>1</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>ph.homeserve@gmail.com</emailAddress>
+            <emailServicesAddress>ph.homeserve@y-1sqkczs1vs95cud8c5ni7d7e053n2kjtauvnz89ck72uqnlgjg.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Buzon_Patria_Hispana</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+            <taskStatus>En Curso</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <casePriority>No urgente</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>blanca.palao.juan@everis.com</emailAddress>
+            <emailServicesAddress>blanca.palao.juan@9hqys1yh6qfbzgzomolzz090p4mmd547kr9z09gtb64nzmqnm.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Buzón Apertura Siniestro Ocaso</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>B2B_Apert_AGC_Email</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>bricodepot.hs@gmail.com</emailAddress>
+            <emailServicesAddress>ggonzaji@25m7el6jivwemlc7bojll7do5tm0t6ahxlsgtq2vhe6ilreag7.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Buzón Bricodepot</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>En Curso</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>B2B_Apert_AGC_Email</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>canaldigitalhs@gmail.com</emailAddress>
+            <emailServicesAddress>canaldigitalhs@10aavul60ui533lp13txcmcc8qo9d393r1td69ub0q3e1d3dt.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>false</isVerified>
+            <routingName>Buzón Canal Digital</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Buzon_555001</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>holidaygymhs@gmail.com</emailAddress>
+            <emailServicesAddress>holidaygymhs@c-2y1l93kbt0554667n85ecdf30lvtp4f0xup3vp68p3h9mmg9gt.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Buzón Holiday Gym</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>En Curso</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>B2B_Apert_AGC_Email</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>homeserve.asistencias@gmail.com</emailAddress>
+            <emailServicesAddress>pdelalas@g-2fhcffcag76hf5cf52y7b2r6aqsmez9l8jpjfai2d0ztuymw05.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Buzón HomeServe</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>En Curso</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Reclamaciones</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>true</createTask>
+            <emailAddress>reclamacioneshs@gmail.com</emailAddress>
+            <emailServicesAddress>reclamacioneshs@xiyzkzcosv9xr26rp65hhgdnypd78p3egu1hktet44cts4jiy.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Buzón Reclamaciones</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+            <taskStatus>En Curso</taskStatus>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Buzon_1023</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>rgaseguros2017@gmail.com</emailAddress>
+            <emailServicesAddress>rgaseguros2017@l-1rci8r5l06qb99vtaml3g8btnq3cg9rwrc2w8begk3g13sw3a6.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Email2Case RGA</routingName>
+            <saveEmailHeaders>false</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Buzon_1042</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>almudenaseguros2017@gmail.com</emailAddress>
+            <emailServicesAddress>almudenaseguros2017@w-34zhg3570us5qcg5wupil44qs231lfz95b71vbkz3xbuvvcgw0.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Email2Case_Almudena</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>Buzon_1018</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>segurcaixaseguros@gmail.com</emailAddress>
+            <emailServicesAddress>segurcaixaseguros@z-1b9p4313wrxv06gujnb8zhkb3jq44amv2hsw68qysy1417gn57.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>EmailToCase SegurCaixa</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <routingAddresses>
+            <addressType>EmailToCase</addressType>
+            <caseOrigin>Email</caseOrigin>
+            <caseOwner>PatriaHispana_Apert_Email</caseOwner>
+            <caseOwnerType>Queue</caseOwnerType>
+            <casePriority>No urgente</casePriority>
+            <createTask>false</createTask>
+            <emailAddress>ph.peritos.homeserve@gmail.com</emailAddress>
+            <emailServicesAddress>ph.peritos.homeserve@m-kynnik0x6mmpy5934kpamihrs0l5ovx2ojs1y27m81vhr7178.9e-ckpuai.cs88.case.sandbox.salesforce.com</emailServicesAddress>
+            <isVerified>true</isVerified>
+            <routingName>Peritos Patria Hispana</routingName>
+            <saveEmailHeaders>true</saveEmailHeaders>
+        </routingAddresses>
+        <unauthorizedSenderAction>Bounce</unauthorizedSenderAction>
+    </emailToCase>
+    <enableCaseFeed>false</enableCaseFeed>
+    <enableEarlyEscalationRuleTriggers>false</enableEarlyEscalationRuleTriggers>
+    <enableSuggestedSolutions>false</enableSuggestedSolutions>
+    <keepRecordTypeOnAssignmentRule>true</keepRecordTypeOnAssignmentRule>
+    <notifyContactOnCaseComment>false</notifyContactOnCaseComment>
+    <notifyDefaultCaseOwner>false</notifyDefaultCaseOwner>
+    <notifyOwnerOnCaseComment>false</notifyOwnerOnCaseComment>
+    <notifyOwnerOnCaseOwnerChange>false</notifyOwnerOnCaseOwnerChange>
+    <showEmailAttachmentsInCaseAttachmentsRL>true</showEmailAttachmentsInCaseAttachmentsRL>
+    <systemUserEmail>automatedcase@00d9e0000000ckpuai.ext</systemUserEmail>
+    <useSystemEmailAddress>true</useSystemEmailAddress>
+    <useSystemUserAsDefaultCaseUser>false</useSystemUserAsDefaultCaseUser>
+    <webToCase>
+        <enableWebToCase>true</enableWebToCase>
+    </webToCase>
+</CaseSettings>

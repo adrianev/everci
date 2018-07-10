@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Visibilidad_Global_Movimiento_IR</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Visibilidad Global Movimiento IR</label>
+        <sharedTo>
+            <roleAndSubordinatesInternal>Director_General</roleAndSubordinatesInternal>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinatesInternal>Director_General</roleAndSubordinatesInternal>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

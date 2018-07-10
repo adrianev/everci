@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>007</fullName>
+        <default>false</default>
+        <label>Cierre por Anulación de Servicio</label>
+    </customValue>
+    <customValue>
+        <fullName>009</fullName>
+        <default>false</default>
+        <label>Reclamación Resuelta</label>
+    </customValue>
+    <customValue>
+        <fullName>008</fullName>
+        <default>false</default>
+        <label>Queja Resuelta</label>
+    </customValue>
+    <customValue>
+        <fullName>010</fullName>
+        <default>false</default>
+        <label>Falta de información a cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>011</fullName>
+        <default>false</default>
+        <label>Interpretación erronea en apertura</label>
+    </customValue>
+    <customValue>
+        <fullName>012</fullName>
+        <default>false</default>
+        <label>Demora de perito</label>
+    </customValue>
+    <customValue>
+        <fullName>013</fullName>
+        <default>false</default>
+        <label>Demora de compañía</label>
+    </customValue>
+    <customValue>
+        <fullName>014</fullName>
+        <default>false</default>
+        <label>Falta de gestiones por gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>015</fullName>
+        <default>false</default>
+        <label>Duplicada</label>
+    </customValue>
+    <customValue>
+        <fullName>016</fullName>
+        <default>false</default>
+        <label>Demora administrativa (factura, indemnización, abono…)</label>
+    </customValue>
+    <customValue>
+        <fullName>017</fullName>
+        <default>false</default>
+        <label>Fallo en la aplicación</label>
+    </customValue>
+    <customValue>
+        <fullName>018</fullName>
+        <default>false</default>
+        <label>Asignación tardía de profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>019</fullName>
+        <default>false</default>
+        <label>Profesional no acude</label>
+    </customValue>
+    <customValue>
+        <fullName>020</fullName>
+        <default>false</default>
+        <label>No se informa a cliente cambio de cita</label>
+    </customValue>
+    <customValue>
+        <fullName>021</fullName>
+        <default>false</default>
+        <label>Profesional llega tarde</label>
+    </customValue>
+    <customValue>
+        <fullName>023</fullName>
+        <default>false</default>
+        <label>Agente cierra servicio/siniestro por error</label>
+    </customValue>
+    <customValue>
+        <fullName>024</fullName>
+        <default>false</default>
+        <label>Fallo aplicación</label>
+    </customValue>
+    <customValue>
+        <fullName>025</fullName>
+        <default>false</default>
+        <label>Reparación mal efectuada</label>
+    </customValue>
+    <customValue>
+        <fullName>026</fullName>
+        <default>false</default>
+        <label>Reclama realización de estética</label>
+    </customValue>
+    <customValue>
+        <fullName>027</fullName>
+        <default>false</default>
+        <label>Material defectuoso</label>
+    </customValue>
+    <customValue>
+        <fullName>028</fullName>
+        <default>false</default>
+        <label>Material de calidad inferior al sustituido</label>
+    </customValue>
+    <customValue>
+        <fullName>029</fullName>
+        <default>false</default>
+        <label>Localización incorrecta del profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>030</fullName>
+        <default>false</default>
+        <label>Material</label>
+    </customValue>
+    <customValue>
+        <fullName>031</fullName>
+        <default>false</default>
+        <label>Demora ocasionada por profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>032</fullName>
+        <default>false</default>
+        <label>Desperfectos ocasionados por profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>033</fullName>
+        <default>false</default>
+        <label>Daños ocasionados por perito</label>
+    </customValue>
+    <customValue>
+        <fullName>034</fullName>
+        <default>false</default>
+        <label>Pendiente material</label>
+    </customValue>
+    <customValue>
+        <fullName>035</fullName>
+        <default>false</default>
+        <label>Pendiente instrucciones periciales</label>
+    </customValue>
+    <customValue>
+        <fullName>036</fullName>
+        <default>false</default>
+        <label>Pendiente instrucciones de compañía</label>
+    </customValue>
+    <customValue>
+        <fullName>037</fullName>
+        <default>false</default>
+        <label>Se cierra servicio/siniestro sin realizar trabajos - Facturando</label>
+    </customValue>
+    <customValue>
+        <fullName>038</fullName>
+        <default>false</default>
+        <label>Se cierra servicio/siniestro sin realizar trabajos - Sin facturar</label>
+    </customValue>
+    <customValue>
+        <fullName>039</fullName>
+        <default>false</default>
+        <label>Se anula por error</label>
+    </customValue>
+    <customValue>
+        <fullName>040</fullName>
+        <default>false</default>
+        <label>Daños no valorados por perito</label>
+    </customValue>
+    <customValue>
+        <fullName>041</fullName>
+        <default>false</default>
+        <label>Trato inadecuado</label>
+    </customValue>
+    <customValue>
+        <fullName>042</fullName>
+        <default>false</default>
+        <label>Información insuficiente</label>
+    </customValue>
+    <customValue>
+        <fullName>043</fullName>
+        <default>false</default>
+        <label>Fraude</label>
+    </customValue>
+    <customValue>
+        <fullName>044</fullName>
+        <default>false</default>
+        <label>Aspecto</label>
+    </customValue>
+    <customValue>
+        <fullName>045</fullName>
+        <default>false</default>
+        <label>Exceso de información</label>
+    </customValue>
+    <customValue>
+        <fullName>046</fullName>
+        <default>false</default>
+        <label>Coberturas</label>
+    </customValue>
+    <customValue>
+        <fullName>047</fullName>
+        <default>false</default>
+        <label>No se limpia tras trabajos</label>
+    </customValue>
+    <customValue>
+        <fullName>048</fullName>
+        <default>false</default>
+        <label>Se dejan herramientas en la vivienda</label>
+    </customValue>
+    <customValue>
+        <fullName>049</fullName>
+        <default>false</default>
+        <label>Suciedad no derivada del siniestro</label>
+    </customValue>
+    <customValue>
+        <fullName>050</fullName>
+        <default>false</default>
+        <label>Diferentes presupuestos</label>
+    </customValue>
+    <customValue>
+        <fullName>051</fullName>
+        <default>false</default>
+        <label>Disparidad entre factura y presupuesto</label>
+    </customValue>
+    <customValue>
+        <fullName>052</fullName>
+        <default>false</default>
+        <label>Precio erroneo en apertura</label>
+    </customValue>
+    <customValue>
+        <fullName>053</fullName>
+        <default>false</default>
+        <label>Precio material excesivo</label>
+    </customValue>
+    <customValue>
+        <fullName>054</fullName>
+        <default>false</default>
+        <label>No aplica correctamente el IVA</label>
+    </customValue>
+    <customValue>
+        <fullName>055</fullName>
+        <default>false</default>
+        <label>Exceso de Mano de obra</label>
+    </customValue>
+    <customValue>
+        <fullName>056</fullName>
+        <default>false</default>
+        <label>Factura con datos erroneos</label>
+    </customValue>
+    <customValue>
+        <fullName>057</fullName>
+        <default>false</default>
+        <label>Carpetas mal abiertas por profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>058</fullName>
+        <default>false</default>
+        <label>Carpetas mal abiertas por gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>059</fullName>
+        <default>false</default>
+        <label>Mala confirmación de profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>060</fullName>
+        <default>false</default>
+        <label>Mala confirmación de gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>061</fullName>
+        <default>false</default>
+        <label>No se confirman telefonos en apertura</label>
+    </customValue>
+    <customValue>
+        <fullName>062</fullName>
+        <default>false</default>
+        <label>Telefonos erroneos</label>
+    </customValue>
+    <customValue>
+        <fullName>063</fullName>
+        <default>false</default>
+        <label>Profesional no llama</label>
+    </customValue>
+    <customValue>
+        <fullName>064</fullName>
+        <default>false</default>
+        <label>Rechazado erroneamente</label>
+    </customValue>
+    <customValue>
+        <fullName>065</fullName>
+        <default>false</default>
+        <label>Tramitación incorrecta por parte perito/Compañía</label>
+    </customValue>
+    <customValue>
+        <fullName>066</fullName>
+        <default>false</default>
+        <label>Venta incorrecta</label>
+    </customValue>
+    <customValue>
+        <fullName>067</fullName>
+        <default>false</default>
+        <label>Error en tramitación</label>
+    </customValue>
+    <customValue>
+        <fullName>068</fullName>
+        <default>false</default>
+        <label>Cuelgan a cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>069</fullName>
+        <default>false</default>
+        <label>Falta de información al cliente / información incorrecta</label>
+    </customValue>
+    <customValue>
+        <fullName>070</fullName>
+        <default>false</default>
+        <label>Demora de tramitación</label>
+    </customValue>
+    <customValue>
+        <fullName>071</fullName>
+        <default>false</default>
+        <label>Pendiente de compañía</label>
+    </customValue>
+    <customValue>
+        <fullName>074</fullName>
+        <default>false</default>
+        <label>Facturamos por encima de limite</label>
+    </customValue>
+    <customValue>
+        <fullName>072</fullName>
+        <default>false</default>
+        <label>Aplicación erronea de cobertura</label>
+    </customValue>
+    <customValue>
+        <fullName>073</fullName>
+        <default>false</default>
+        <label>Siniestro duplicado por error</label>
+    </customValue>
+    <customValue>
+        <fullName>082</fullName>
+        <default>false</default>
+        <label>Interpretación erronea de ayudas</label>
+    </customValue>
+    <customValue>
+        <fullName>075</fullName>
+        <default>false</default>
+        <label>Ayudas están erroneas</label>
+    </customValue>
+    <customValue>
+        <fullName>076</fullName>
+        <default>false</default>
+        <label>Saturación de llamadas</label>
+    </customValue>
+    <customValue>
+        <fullName>077</fullName>
+        <default>false</default>
+        <label>Incidencia informática</label>
+    </customValue>
+    <customValue>
+        <fullName>078</fullName>
+        <default>false</default>
+        <label>Agente deja mucho tiempo en espera</label>
+    </customValue>
+    <customValue>
+        <fullName>079</fullName>
+        <default>false</default>
+        <label>Mala gestión del gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>080</fullName>
+        <default>false</default>
+        <label>Actitud de perito</label>
+    </customValue>
+    <customValue>
+        <fullName>081</fullName>
+        <default>false</default>
+        <label>Perito no se ha puesto en contacto con cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>083</fullName>
+        <default>false</default>
+        <label>Demora ocasionada por perito</label>
+    </customValue>
+    <customValue>
+        <fullName>084</fullName>
+        <default>false</default>
+        <label>Abierta por error de gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>085</fullName>
+        <default>false</default>
+        <label>Infraseguro</label>
+    </customValue>
+    <customValue>
+        <fullName>086</fullName>
+        <default>false</default>
+        <label>Tramitación incorrecta gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>087</fullName>
+        <default>false</default>
+        <label>Tramitación incorrecta perito</label>
+    </customValue>
+    <customValue>
+        <fullName>088</fullName>
+        <default>false</default>
+        <label>Ocasionada por cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>089</fullName>
+        <default>false</default>
+        <label>Disconformidad con coberturas</label>
+    </customValue>
+    <customValue>
+        <fullName>090</fullName>
+        <default>false</default>
+        <label>Fuera de plazo de garantía</label>
+    </customValue>
+    <customValue>
+        <fullName>091</fullName>
+        <default>false</default>
+        <label>Ampliación de daños</label>
+    </customValue>
+    <customValue>
+        <fullName>092</fullName>
+        <default>false</default>
+        <label>Solicita trabajos no incluidos en la garantía</label>
+    </customValue>
+    <customValue>
+        <fullName>093</fullName>
+        <default>false</default>
+        <label>Nuevo siniestro</label>
+    </customValue>
+    <customValue>
+        <fullName>094</fullName>
+        <default>false</default>
+        <label>Daños preexistentes</label>
+    </customValue>
+    <customValue>
+        <fullName>095</fullName>
+        <default>false</default>
+        <label>Daños necesarios para trabajos</label>
+    </customValue>
+    <customValue>
+        <fullName>096</fullName>
+        <default>false</default>
+        <label>Daños por nuevo siniestro</label>
+    </customValue>
+    <customValue>
+        <fullName>097</fullName>
+        <default>false</default>
+        <label>Demora ocasionada por cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>098</fullName>
+        <default>false</default>
+        <label>Aparecen nuevos daños</label>
+    </customValue>
+    <customValue>
+        <fullName>099</fullName>
+        <default>false</default>
+        <label>Asegurado habia aceptado el presupuesto</label>
+    </customValue>
+    <customValue>
+        <fullName>100</fullName>
+        <default>false</default>
+        <label>Analizado no procedente, sin imputar</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pendiente Asegurado /perjudicado</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Pendiente Compañía / Perito</label>
+    </customValue>
+    <customValue>
+        <fullName>05</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cierre por Rechazo</label>
+    </customValue>
+    <customValue>
+        <fullName>06</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Abierto por error</label>
+    </customValue>
+    <customValue>
+        <fullName>08</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Cierre por pase a contado</label>
+    </customValue>
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Terminado Correctamente</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>No Terminado por cliente</label>
+    </customValue>
+    <description>Motivo por los que se ha cerrado el Siniestro. Sólo aplica a algunas Compañías Aseguradoras</description>
+    <masterLabel>Motivo de Cierre</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

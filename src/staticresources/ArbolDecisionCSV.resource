@@ -1,0 +1,2 @@
+Id,RecordTypeId,ADC_LKP_Producto_CIA__c,ADC_SEL_Estado__c,ADC_NUM_Version__c
+a0m9E0000010MKtQAM,0129E0000000saQ,a0V9E000000mN18UAE,Activo,1

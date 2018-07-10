@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Casos</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Casos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Tarea --></label>
+        <name>MTD_CAS_CAS_Tarea__c</name>
+    </fields>
+    <fields>
+        <label><!-- Días Amarillos --></label>
+        <name>MTD_CAS_NUM_Dias_amarillo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Días Verdes --></label>
+        <name>MTD_CAS_NUM_Dias_verde__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duración Estimada --></label>
+        <name>MTD_CAS_NUM_Duracion_estimada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>MTD_CAS_SEL_Estado_c__c</name>
+        <picklistValues>
+            <masterLabel>Anulado</masterLabel>
+            <translation><!-- Anulado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cerrado</masterLabel>
+            <translation><!-- Cerrado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En Curso</masterLabel>
+            <translation><!-- En Curso --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En Espera de Cliente</masterLabel>
+            <translation><!-- En Espera de Cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>En Espera de Cía</masterLabel>
+            <translation><!-- En Espera de Cía --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactivo</masterLabel>
+            <translation><!-- Inactivo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nuevo</masterLabel>
+            <translation><!-- Nuevo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pdte. Análisis</masterLabel>
+            <translation><!-- Pdte. Análisis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pdte. de Tratamiento</masterLabel>
+            <translation><!-- Pdte. de Tratamiento --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Naturaleza --></label>
+        <name>MTD_CAS_SEL_Naturaleza__c</name>
+        <picklistValues>
+            <masterLabel>Actitud de profesional</masterLabel>
+            <translation><!-- Actitud de profesional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Actitud perito</masterLabel>
+            <translation><!-- Actitud perito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demora en la tramitación del servicio</masterLabel>
+            <translation><!-- Demora en la tramitación del servicio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demora en la tramitación del siniestro</masterLabel>
+            <translation><!-- Demora en la tramitación del siniestro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Demora en realización de trabajo</masterLabel>
+            <translation><!-- Demora en realización de trabajo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Descoordinación de gremios</masterLabel>
+            <translation><!-- Descoordinación de gremios --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Desperfectos en la vivienda</masterLabel>
+            <translation><!-- Desperfectos en la vivienda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Desperfectos en vivienda</masterLabel>
+            <translation><!-- Desperfectos en vivienda --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incumplimiento SLA&apos;s</masterLabel>
+            <translation><!-- Incumplimiento SLA&apos;s --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incumplimiento de Urgencia</masterLabel>
+            <translation><!-- Incumplimiento de Urgencia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incumplimiento de cita</masterLabel>
+            <translation><!-- Incumplimiento de cita --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informalidad Perito</masterLabel>
+            <translation><!-- Informalidad Perito --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mala atención del agente</masterLabel>
+            <translation><!-- Mala atención del agente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No conforme con el rechazo</masterLabel>
+            <translation><!-- No conforme con el rechazo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No conforme con la indemnización</masterLabel>
+            <translation><!-- No conforme con la indemnización --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Precio</masterLabel>
+            <translation><!-- Precio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Procedimiento de Compañía no respetado</masterLabel>
+            <translation><!-- Procedimiento de Compañía no respetado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profesional no ha contactado con cliente</masterLabel>
+            <translation><!-- Profesional no ha contactado con cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Profesional no ha contactado con el cliente</masterLabel>
+            <translation><!-- Profesional no ha contactado con el cliente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suciedad tras la reparación</masterLabel>
+            <translation><!-- Suciedad tras la reparación --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tiempo en la atención telefónica</masterLabel>
+            <translation><!-- Tiempo en la atención telefónica --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trabajos mal efectuados /mala calidad</masterLabel>
+            <translation><!-- Trabajos mal efectuados /mala calidad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trabajos no finalizados</masterLabel>
+            <translation><!-- Trabajos no finalizados --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Prioridad --></label>
+        <name>MTD_CAS_SEL_Prioridad__c</name>
+        <picklistValues>
+            <masterLabel>No Urgente</masterLabel>
+            <translation><!-- No Urgente --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urgente</masterLabel>
+            <translation><!-- Urgente --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>MTD_CAS_TXT_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción de Tarea --></label>
+        <name>MTD_CAS_TXT_Descripcion_Tarea__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Casos</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

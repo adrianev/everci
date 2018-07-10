@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Configuración personalizada para evitar que determinados usuarios ejecuten triggers y/o reglas de validación.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Saltar_Regla_Validacion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Cuando está a &quot;true&quot; indica que se salta la ejecución de la regla de validación.</description>
+        <externalId>false</externalId>
+        <label>Saltar Regla de Validación</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Saltar_Trigger__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Cuando está a &quot;true&quot; indica que se salta la ejecución del trigger.</description>
+        <externalId>false</externalId>
+        <label>Saltar Trigger</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Baipas</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>SETUP_OWNER_NAME</columns>
+        <columns>SETUP_TYPE</columns>
+        <columns>Saltar_Trigger__c</columns>
+        <columns>Saltar_Regla_Validacion__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>es</language>
+    </listViews>
+    <visibility>Public</visibility>
+</CustomObject>

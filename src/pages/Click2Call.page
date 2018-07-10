@@ -1,0 +1,126 @@
+<apex:page controller="Click2CallController" showHeader="false"
+	sidebar="false" setup="true" id="ServiceForm">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<head>
+		<meta name="viewport" content="width = device-width" />
+		<script type="text/javascript" src="/mobileclient/api/mobileforce.js"></script>
+		<script>
+	        function disableButtons() {
+	            var list = document.getElementsByClassName("btn");
+	            for(i = 0; i<list.length; i++){
+	                var bi = list[i];
+	                bi.disabled = "true";
+	                bi.style.color="#909090";
+	            }
+	        }
+	        var successGeo = function(position){
+				debug(position);
+	        	lat = position.coords.latitude;
+	            lon = position.coords.longitude;
+				//debug('LAT:'+lat+", LON"+lon);
+	        	var strLatLong = "lat: " + lat.toString() + ", long: " + lon.toString();
+	            var d = getDistanceFromLatLonInKm(lat,lon,"{!wo.Latitude}","{!wo.Longitude}");
+	            var distanciaMenor = d<=0.5;
+				//debug('PRIORITARIA: '+distanciaMenor);
+	        	llamada(distanciaMenor);
+	        };
+	        
+			var showError = function(error) {
+				debug('ERROR'+error);
+	        	var strError = "Unknown Error";
+	            switch(error.code) {
+	                case error.PERMISSION_DENIED:
+	                    strError = "User denied the request for Geolocation.";
+	                    break;
+	                case error.POSITION_UNAVAILABLE:
+	                    strError = "Location information is unavailable.";
+	                    break;
+	                case error.TIMEOUT:
+	                    strError = "The request to get user location timed out.";
+	                    break;
+	                case error.UNKNOWN_ERROR:
+	                    strError = "An unknown error occurred.";
+	                    break;
+	                }
+	            askDistance();
+	        };
+   
+	        function getLocation() {
+	        	disableButtons();
+	        	//askDistance();
+	        	debug("get geolocation");
+				if (navigator.geolocation) {
+					debug("get geolocation2");
+	        		navigator.geolocation.getCurrentPosition(successGeo, showError,{enableHighAccuracy:true,timeout:3000});
+	        	} else {
+					debug("askdistance");
+	        		askDistance();
+	        	}
+
+	        };
+		
+	        function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+	          var R = 6371; // Radius of the earth in km
+	          var dLat = deg2rad(lat2-lat1);  // deg2rad below
+	          var dLon = deg2rad(lon2-lon1); 
+	          var a = 
+	            Math.sin(dLat/2) * Math.sin(dLat/2) +
+	            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+	            Math.sin(dLon/2) * Math.sin(dLon/2)
+	            ; 
+	          var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+	          var d = R * c; // Distance in km
+	          return d;
+	        }
+	        
+	        function deg2rad(deg) {
+	          return deg * (Math.PI/180);
+	        }
+
+	        function debug(text) {
+	        	console.log(text);
+	        	document.getElementById('debugdiv').innerHTML +=  text + "<br>";
+	        }
+
+	        var askDistance = function() {
+	        	var urgent = confirm("¿Se encuentra en casa del cliente?");
+                llamada(urgent);
+	        };
+
+        </script>
+	</head>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="llamada" action="{!solicitarLlamada2}"
+			status="iconoCargando" rerender="mainForm">
+			<apex:param name="distanciaMenor" assignTo="{!distanciaMenor}" value="" />
+		</apex:actionFunction>
+
+		<apex:sectionHeader title="Te Llamamos" />
+
+		<apex:pageMessages id="mensajes" />
+		<apex:pageBlock rendered="{!error==null}" id="block">
+			<apex:outputText id="latitude">Introduzca el número de teléfono al que requiere que le llamemos:</apex:outputText>
+			<br />
+			<apex:inputField value="{!wo.OTR_TEL_Telefono_C2C__c}" id="telefono"
+				required="true" rendered="{!!deshabilitarCampo}" />
+			<apex:outputField value="{!wo.OTR_TEL_Telefono_C2C__c}"
+				id="telefono2" rendered="{!deshabilitarCampo}" />
+			<br />
+			<apex:commandButton value="Solicitar Llamada"
+				onclick="getLocation();return(false);" rerender="mainForm"
+				disabled="{!deshabilitarCampo}" status="iconoCargando"/>
+		</apex:pageBlock>
+		<div id="debugdiv"></div>
+	</apex:form>
+</apex:page>

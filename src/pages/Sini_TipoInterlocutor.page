@@ -1,0 +1,110 @@
+<apex:page standardController="Case" extensions="SiniTipoInterlocutorController" showHeader="true" sidebar="false">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:includeScript value="{!$Resource.jQuery}" />
+	<style>
+		.div_oculto {
+			display:none;
+		}
+	</style>
+	<script>
+		var desactivarUnload = false;
+		window.onbeforeunload = cierreVentana;
+		
+		function setDesactivarUnload(valor){
+			desactivarUnload = valor;
+		}
+		
+		function cierreVentana(){
+			debugger;
+			if(!desactivarUnload){
+				cancelarAF();
+			}
+		}
+		
+		function cancelarJS(){
+			setDesactivarUnload(true);
+			cancelarAF();
+			return confirm('¿Está seguro de salir?');
+		}
+		
+		function validarTipoInterlocutorJS(){
+			setDesactivarUnload(true);
+			validarTipoInterlocutorAF();
+		}
+	</script>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionStatus id="cargandoIcono" onstart="cargandoIcono(true);" onStop="cargandoIcono(false);" />
+		<apex:actionFunction name="cancelarAF" action="{!cancelar}" rerender="formulario" status="iconoCargando"/>
+		<apex:actionFunction name="validarTipoInterlocutorAF" action="{!validarTipoInterlocutor}" status="iconoCargando" rerender="formulario,panelSubmit"/>
+
+		<apex:sectionHeader title="Proceso de Apertura de Siniestro" />
+
+		<apex:pageBlock id="formulario" title="{!if(interlocutorAutorizado,'Alta de Siniestro','Validar Tipo de Interlocutor')}">
+			<apex:pageMessages />
+			<apex:facet name="header">
+				<apex:outputPanel >
+					<apex:outputText style="margin:0 100px 0 12px;font-size:1.2em;font-weight:bold"
+						value="{!if(interlocutorAutorizado,'Alta de Siniestro','Validar Tipo de Interlocutor')}"/>
+					<apex:commandButton style="margin:10px 3px 10px 3px" onclick="cancelarJS();return false;"
+						value="<< Salir" title="Salir" rerender="mainForm"/>
+					<apex:commandButton style="margin:10px 3px 10px 3px" onclick="validarTipoInterlocutorJS();return false;"
+						value="Continuar >>" title="Continuar Apertura" rerender="mainForm,panelSubmit"
+						rendered="{!!interlocutorAutorizado && tipoInterlocutor != null}"/>
+				</apex:outputPanel>
+			</apex:facet>
+	   		<apex:pageBlockSection collapsible="false" columns="2">
+				<apex:outputText id="Compania" label="Compañía" value="{!poliza.POL_LKP_Compania__r.Name}" />
+				<apex:outputText id="Cliente" value="{!poliza.Account.Name}" />
+				<apex:outputText id="Poliza" label="Nº de Póliza" value="{!poliza.Name}" />
+				<apex:outputText id="Producto" label="Producto" value="{!poliza.POL_LKP_Producto_Cia__r.Name}" />
+				<apex:pageBlockSectionItem rendered="{!!interlocutorAutorizado}">
+					<apex:outputLabel value="Tipo de Interlocutor" for="listaTiposIntVF"/>
+					<apex:selectList id="listaTiposIntVF" value="{!tipoInterlocutor}" size="1">
+						<apex:selectOptions value="{!listaTiposInt}"/>
+						<apex:actionSupport event="onchange" action="{!campoOtros}" rerender="formulario"/>
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:inputField id="PersonaLlamante" value="{!caso.CAS_TXT_Persona_que_llama__c}" rendered="{!!interlocutorAutorizado && (tipoInterlocutor == 'Otros' || tipoInterlocutor == 'Otros familiares')}"/>
+		   	</apex:pageBlockSection>
+		   	<apex:pageBlockSection collapsible="false" columns="1">
+				<apex:iframe id="iframeSondeoExt" width="100%" height="800px" scrolling="false" rendered="{!interlocutorAutorizado}"/>
+		   	</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:outputPanel id="panelSubmit">
+		<apex:outputPanel styleClass="div_oculto" rendered="{!interlocutorAutorizado}">
+			<form id="envioSondeoExterno" action="{!urlSondeoExterno}" method="POST" target="iframeSondeoExt"
+				charset="UTF-8" enctype="application/x-www-form-urlencoded" >
+				<fieldset>
+					<legend>Formulario Enviado a Sondeo Externo [OCULTO]</legend>
+					<p>CaseId <input name="CaseId" value="{!caso.Id}" /></p>
+					<p>CompanyExternalId <input name="CompanyExternalId" value="{!poliza.POL_LKP_Compania__r.CUE_TXT_Identificador__c}" /></p>
+					<p>CustomerEmail <input name="CustomerEmail" value="{!poliza.Account.CUE_EMA_Email__c}" /></p>
+					<p>CustomerZipCode <input name="CustomerZipCode" value="{!poliza.POL_LKP_Version_Actual__r.POLV_TXT_Codigo_Postal__c}" /></p>
+					<p>DocumentNumber <input name="DocumentNumber" value="{!poliza.Account.CUE_TXT_Numero_Documento__c}" /></p>
+					<p>Language <input name="Language" value="{!poliza.POL_LKP_Version_Actual__r.POLV_SEL_Idioma__c}" /></p>
+					<p>PolicyCompanyExternalId <input name="PolicyCompanyExternalId" value="{!poliza.Name}" /></p>
+					<p>TypeRisk <input name="TypeRisk" value="{!poliza.POL_LKP_Version_Actual__r.POLV_SEL_Tipo_Riesgo__c}" /></p>
+					<p>WhoCalls <input name="WhoCalls" value="{!caso.CAS_SEL_Tipo_Interlocutor__c}" /></p>
+					<p>returnURLOK <input name="returnURLOK" value="{!urlRetornoOK}" /></p>
+					<p>returnURLKO <input name="returnURLKO" value="{!urlRetornoKO}" /></p>
+				</fieldset>
+			</form>
+			<script>
+				debugger;
+				document.getElementById('envioSondeoExterno').submit();
+			</script>
+		</apex:outputPanel>
+	</apex:outputPanel>
+</apex:page>

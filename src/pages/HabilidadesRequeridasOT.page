@@ -1,0 +1,97 @@
+<apex:page standardController="Case" extensions="HabilidadesRequeridasOT"
+	showHeader="true" sidebar="false" tabStyle="WorkOrder">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+	<style type="text/css">
+		.actionLink {
+			cursor: pointer;
+		}
+		.link24 {
+			height: 24px;
+			width: 24px;
+		}
+	</style>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="eliminarItemAF" action="{!eliminarItem}" rerender="mainForm">
+			<apex:param name="indiceListaItems" assignTo="{!indiceListaItems}" value=""/>
+		</apex:actionFunction>
+
+		<apex:sectionHeader title="Gestionar Habilidades Requeridas {!$ObjectType.WorkOrder.label}"
+			subtitle="{!if(agrupador != null, agrupador.WorkOrderNumber, '')}"/>
+
+		<apex:pageBlock id="pbid1" title="Gestionar Habilidades Requeridas {!$ObjectType.WorkOrder.label}">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!volver}" value="<< Volver"
+					title="Volver"
+					status="iconoCargando" rerender="mainForm"/>
+				<apex:commandButton action="{!crearItem}" value="Nueva Habilidad Requerida"
+					title="Añadir Habilidad Requerida"
+					status="iconoCargando" rerender="mainForm"
+					rendered="{!!creacionItem}" immediate="true" />
+			</apex:pageBlockButtons>
+
+			<c:Detalle_Caso atrCaso="{!caso}" rendered="{!tipoCaso == 1}"/>
+			<c:Detalle_B2B_B2B2C atrCase="{!caso}" atrAccount="{!cuenta}" atrB2C="{!esB2C}" rendered="{!tipoCaso == 2}"/>
+
+			<apex:pageBlockSection id="datosOrdenTrabajo" collapsible="false" columns="2" title="Datos de {!$ObjectType.WorkOrder.label}">
+				<apex:outputField value="{!agrupador.WorkOrderNumber}"/>
+				<apex:outputField value="{!agrupador.OTR_SEL_Gremio__c}"/>
+				<apex:outputField value="{!agrupador.Status}"/>
+				<apex:outputField value="{!agrupador.OTR_CAS_Urgente__c}"/>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="habilidadesRequeridas" title="Habilidades requeridas" collapsible="false" columns="1" showHeader="true">
+				<apex:variable value="{!0}" var="indiceCC"/>
+				<apex:outputText value="No hay habilidades Requeridas." rendered="{!listaItems.size == 0}"/>
+				<apex:pageBlockTable value="{!listaItems}" var="item" title="Habilidades" rendered="{!listaItems.size != 0}" 
+						style="cursor: pointer">
+					<apex:column headerValue="Acción">
+						<apex:variable value="{!indiceCC + 1}" var="indiceCC"/>
+						<apex:image url="/img/func_icons/util/recycle.gif" title="Eliminar" styleClass="actionLink link24"
+								onclick="if(confirm('¿Está seguro?')){eliminarItemAF('{!indiceCC}');} return false;" />
+					</apex:column>
+					<apex:column headerValue="Categoría">
+						<apex:outputText value="{!mapaCategorias[LEFT(item.Skill.DeveloperName,FIND('_',item.Skill.DeveloperName))]}"/>
+					</apex:column>
+					<apex:column headerValue="Habilidad" id="habilidadSeleccionada" value="{!item.Skill.MasterLabel}"/>
+					<apex:column value="{!item.Skill.Description}"/>
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection collapsible="false" columns="2" showHeader="true" title="Datos de nueva habilidad requerida" rendered="{!creacionItem}">								
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Categoría" for="listaCategoriasVF"/>
+					<apex:selectList id="listaCategoriasVF" value="{!categoria}" size="1" styleClass="requerido">
+						<apex:selectOptions value="{!listaCategorias}"/>
+						<apex:actionSupport event="onchange" action="{!buscarHabilidades}"
+							status="iconoCargando" rerender="mainForm"/>
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Habilidad" for="listaHabilidadesVF"/>
+						<apex:selectList id="listaHabilidadesVF" value="{!habilidad}" size="1"	styleClass="requerido">
+								<apex:selectOptions value="{!listaHabilidades}"/>
+						</apex:selectList>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection collapsible="false" columns="1">
+				<apex:outputPanel style="padding-left:30.2%">
+					<apex:commandButton reRender="pbid1" status="iconoCargando" action="{!guardarItem}" value="Guardar" title="Guardar" rendered="{!creacionItem && !actualizacionItem}" rerender="mainForm"/>
+					<apex:commandButton reRender="pbid1" status="iconoCargando" action="{!actualizarItem}" value="Guardar" title="Actualizar" rendered="{!actualizacionItem}" rerender="mainForm"/>
+					<apex:commandButton reRender="pbid1" status="iconoCargando" action="{!cancelarCreacionItem}" value="Cancelar" title="Cancelar" immediate="true" rendered="{!creacionItem}" rerender="mainForm"/>
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

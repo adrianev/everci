@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contiene información de los contactos telefónicos asociados a los movimientos que se envían a las aseguradoras</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ICT_EMA_Correo_Electronico__c</fullName>
+        <description>Dato de correo electrónico. Reflejo del respectivo campo en el objeto Contacto Telefónico para el envío de movimientos.</description>
+        <externalId>false</externalId>
+        <label>Correo electrónico</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_FOR_Cons_Tipo_Contacto__c</fullName>
+        <description>Tipo de Contacto que se envía a la aseguradora. Siempre es &apos;02&apos; para SegurCaixa.</description>
+        <externalId>false</externalId>
+        <formula>IF( ICT_LKP_Movimiento_CIA__r.MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_SEGURCAIXA , &apos;02&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Contacto</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_FOR_Hora_Desde_Tarde__c</fullName>
+        <description>Franja horaria de la tarde. La información de la franja horaria disponible viene dada en el campo &quot;Hora Desde&quot;</description>
+        <externalId>false</externalId>
+        <formula>&apos;     &apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hora Desde Tarde</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_FOR_Hora_Hasta_Tarde__c</fullName>
+        <description>Franja horaria de la tarde. La información de la franja horaria disponible viene dada en el campo &quot;Hora Hasta&quot;</description>
+        <externalId>false</externalId>
+        <formula>&apos;     &apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hora Hasta Tarde</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_LKP_Movimiento_CIA__c</fullName>
+        <description>Movimiento que se envía a la aseguradora asociado a los contactos telefónicos</description>
+        <externalId>false</externalId>
+        <label>Integraciones: Movimiento CIA</label>
+        <referenceTo>INT_Movimiento_CIA__c</referenceTo>
+        <relationshipLabel>Integraciones: Contactos Telefónicos</relationshipLabel>
+        <relationshipName>Integraciones_Contactos_Telefonicos</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ICT_TFN_Telefono__c</fullName>
+        <description>Número de teléfono del contacto que se envía a la aseguradora</description>
+        <externalId>false</externalId>
+        <label>Teléfono</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>ICT_TXT_Apellidos__c</fullName>
+        <description>Dato de apellidos. Reflejo del respectivo campo en el objeto Contacto Telefónico para el envío de movimientos.</description>
+        <externalId>false</externalId>
+        <label>Apellidos</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_TXT_Hora_desde__c</fullName>
+        <description>Inicio de la franja horaria en la cual el contacto está disponible</description>
+        <externalId>false</externalId>
+        <label>Hora desde</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_TXT_Hora_hasta__c</fullName>
+        <description>Fin de la franja horaria en la cual el contacto está disponible</description>
+        <externalId>false</externalId>
+        <label>Hora hasta</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_TXT_Nombre__c</fullName>
+        <description>Dato de nombre. Reflejo del respectivo campo en el objeto Contacto Telefónico para el envío de movimientos.</description>
+        <externalId>false</externalId>
+        <label>Nombre</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ICT_TXT_Tipo_Telefono__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de teléfono</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Integraciones: Contactos Telefónicos</label>
+    <nameField>
+        <label>Nombre de Integraciones: Contactos Telefónicos</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Integraciones: Contactos Telefónicos</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

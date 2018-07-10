@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa cada una de las procedencias de una Compañía/Cliente B2B.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>PROC_CAS_No_Requiere_Albaran__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Si está marcado indica que no se requiere que haya albarán en el cierre de una Orden de Trabajo.</description>
+        <externalId>false</externalId>
+        <label>Cierre Servicio No Requiere Albarán</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PROC_CAS_Requiere_Declaracion_Resp__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica que se requiere que el profesional presente un documento de Declaración de Responsable antes de iniciar los trabajos.</description>
+        <externalId>false</externalId>
+        <label>Requiere Declaración Responsable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PROC_CAS_Requiere_Informe_Cierre_Cita__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica si es requerido generar un informe para poder completar una Cita de Servicio.</description>
+        <externalId>false</externalId>
+        <label>Cierre Visita Requiere Parte</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PROC_CAS_Requiere_Pago_Minuta__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica que es necesario informar en la intervención el importe de minuta al perito.</description>
+        <externalId>false</externalId>
+        <label>Requiere Pago Minuta</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PROC_LKP_Cuenta__c</fullName>
+        <description>Identificador único de la compañia</description>
+        <externalId>false</externalId>
+        <label>Cuenta</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Procedencias</relationshipLabel>
+        <relationshipName>Procedencias</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>PROC_NUM_Contador_Rechazos__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Campo utilizado para contabilizar el número de siniestros con tipo de actuación rechazo que lleva la Compañía Aseguradora</description>
+        <externalId>false</externalId>
+        <label>Contador Rechazos</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PROC_NUM_Contador__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Contador secuencial de Siniestros y Cuentas</description>
+        <externalId>false</externalId>
+        <label>Contador Siniestros</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PROC_NUM_Numero_Fotos_Requeridas__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Número de fotos requeridas en el cierre del Servicio.</description>
+        <externalId>false</externalId>
+        <label>Cierre Servicio Nº de fotos requeridas</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PROC_NUM_Tiempo_Atencion_Urgencias__c</fullName>
+        <description>Tiempo en horas establecido por la Compañía para atender Urgencias.</description>
+        <externalId>false</externalId>
+        <label>Tiempo de atención de urgencias (hrs)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Canal__c</fullName>
+        <externalId>false</externalId>
+        <label>Canal</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Canales_Procedencia</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Gremios_Disp__c</fullName>
+        <description>Listado de gremios disponibles para cada CIA</description>
+        <externalId>false</externalId>
+        <label>Gremios Disponibles</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Gremios</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Motivos_Anulacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivos de Anulación</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Motivos_Anulacion</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Motivos_rechazo_presupuesto__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivos rechazo presupuesto</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Motivo_rechazo_presupuesto</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Preferencia_Comunicacion__c</fullName>
+        <description>Lista de selección para indicar por qué medio quiere la Compañía que se contacte a sus contactos</description>
+        <externalId>false</externalId>
+        <label>Preferencia de Comunicación</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Preferencia_Comunicacion</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Subcanal__c</fullName>
+        <externalId>false</externalId>
+        <label>Subcanal</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Subcanales_Procedencia</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Tipo_Actuacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Actuación</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_Siniestro</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Tipologia_Servicio__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipología de Servicio</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>01</fullName>
+                    <default>false</default>
+                    <label>SINIESTROS</label>
+                </value>
+                <value>
+                    <fullName>02</fullName>
+                    <default>false</default>
+                    <label>ASISTENCIAS</label>
+                </value>
+                <value>
+                    <fullName>03</fullName>
+                    <default>false</default>
+                    <label>REAL ESTATE</label>
+                </value>
+                <value>
+                    <fullName>04</fullName>
+                    <default>false</default>
+                    <label>MEDIAMARKT</label>
+                </value>
+                <value>
+                    <fullName>05</fullName>
+                    <default>false</default>
+                    <label>MB REPARACIONES</label>
+                </value>
+                <value>
+                    <fullName>06</fullName>
+                    <default>false</default>
+                    <label>MANITAS</label>
+                </value>
+                <value>
+                    <fullName>07</fullName>
+                    <default>false</default>
+                    <label>LDA SINIESTROS</label>
+                </value>
+                <value>
+                    <fullName>08</fullName>
+                    <default>false</default>
+                    <label>MB SINIESTROS</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PROC_SEL_Tipos_Caso__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipos de Registro de Intervención</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipo_Caso_Procedencia</valueSetName>
+        </valueSet>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PROC_TXT_Descripcion__c</fullName>
+        <description>Descripción de la procedencia</description>
+        <externalId>false</externalId>
+        <label>Descripción</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PROC_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Identificador único (External ID) del Código de Procedencia</description>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>20</length>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Procedencia</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>PROC_LKP_Cuenta__c</columns>
+        <columns>PROC_SEL_Tipos_Caso__c</columns>
+        <columns>PROC_SEL_Tipo_Actuacion__c</columns>
+        <columns>PROC_NUM_Contador__c</columns>
+        <columns>PROC_NUM_Contador_Rechazos__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Código de Procedencia</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Procedencias</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Editar_campo_identificador</fullName>
+        <active>true</active>
+        <description>El campo identificador  no puede ser modificado</description>
+        <errorConditionFormula>IF(AND(NOT(ISBLANK(PRIORVALUE(PROC_TXT_Identificador__c ))),ISCHANGED(PROC_TXT_Identificador__c )), true, false)</errorConditionFormula>
+        <errorMessage>El campo identificador  no puede ser modificado</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Requerimiento_de_identificador</fullName>
+        <active>true</active>
+        <description>Regla de validación para requerir el campo Identificador</description>
+        <errorConditionFormula>OR(ISBLANK(PROC_TXT_Identificador__c),ISNULL( PROC_TXT_Identificador__c))</errorConditionFormula>
+        <errorDisplayField>PROC_TXT_Identificador__c</errorDisplayField>
+        <errorMessage>El campo Identificador es requerido</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

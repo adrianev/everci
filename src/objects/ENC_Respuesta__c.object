@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa el conjunto de respuestas de una pantalla de la Encuesta</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ENR_LKP_Encuesta_Realizada__c</fullName>
+        <description>Encuesta realizada a la que pertenece la respuesta.</description>
+        <externalId>false</externalId>
+        <label>Encuesta Realizada</label>
+        <referenceTo>ENC_Encuesta__c</referenceTo>
+        <relationshipLabel>Encuestas Realizadas: Respuesta</relationshipLabel>
+        <relationshipName>RespuestasRealizadas</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ENR_LKP_Resp_Pregunta__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Pregunta vinculada a la respuesta.</description>
+        <externalId>false</externalId>
+        <label>Pregunta</label>
+        <referenceTo>ENC_Pregunta__c</referenceTo>
+        <relationshipLabel>Encuestas Realizadas: Respuesta</relationshipLabel>
+        <relationshipName>RespuestasRealizadas</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENR_LKP_WorkOrder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Servicio (si aplica) vinculado a la respuesta.</description>
+        <externalId>false</externalId>
+        <label>Servicio</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipLabel>Encuestas Realizadas: Respuesta</relationshipLabel>
+        <relationshipName>RespuestasRealizadas</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENR_TXT_Gremio__c</fullName>
+        <description>Literal del gremio (si aplica) asociado a la respuesta.</description>
+        <externalId>false</externalId>
+        <label>Gremio</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENR_TXT_Num_Orden_Trabajo__c</fullName>
+        <description>Nº de Servicio (si aplica) asociado a la respuesta.</description>
+        <externalId>false</externalId>
+        <label>Nº de Servicio</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENR_TXT_Pregunta__c</fullName>
+        <description>Texto de la pregunta asociada esta respuesta.</description>
+        <externalId>false</externalId>
+        <label>Pregunta</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENR_TXT_Respuesta__c</fullName>
+        <description>Texto de la respuesta.</description>
+        <externalId>false</externalId>
+        <label>Respuesta</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Encuesta Realizada: Respuesta</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <displayFormat>{00000000}</displayFormat>
+        <label>Nombre</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Encuestas Realizadas: Respuesta</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

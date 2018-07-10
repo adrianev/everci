@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Sirve para identificar los diferentes documentos de los que se dispone asociados a cada Profesional Contrato</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>DPC_DAT_Fecha_Baja__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Baja</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DPC_DAT_Fecha_Entrega__c</fullName>
+        <description>Fecha en la que el Profesional Contrato aportó el documento asociado al registro</description>
+        <externalId>false</externalId>
+        <label>Fecha Entrega</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DPC_DAT_Fecha_Expiracion__c</fullName>
+        <description>Indica la fecha en la que expira el documento asociado al registro</description>
+        <externalId>false</externalId>
+        <label>Fecha Expiración</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DPC_LKP_Profesional_Contrato__c</fullName>
+        <description>Indica la cuenta Profesional Contrato a la que se asocia  el documento registrado</description>
+        <externalId>false</externalId>
+        <label>Profesional Contrato</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>La cuenta seleccionada no es válida.</errorMessage>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Profesional Contrato</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Documentos de Profesional Contrato</relationshipLabel>
+        <relationshipName>Documentos_de_Profesional_Contrato</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>DPC_LKP_Tipo_de_Documento__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Tipo de Documento</label>
+        <referenceTo>Tipo_de_documento__c</referenceTo>
+        <relationshipLabel>Documentos de Profesional Contrato</relationshipLabel>
+        <relationshipName>Documentos_de_Profesional_Contrato</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DPC_TXT_Identificador__c</fullName>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Documento de Profesional Contrato</label>
+    <nameField>
+        <displayFormat>DPC-{000000}</displayFormat>
+        <label>Identificador</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Documentos de Profesional Contrato</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Documento_sin_fecha_expiracion</fullName>
+        <active>true</active>
+        <description>Regla que salta si se rellena la fecha de expiración de un documento que no la requiere</description>
+        <errorConditionFormula>(!DPC_LKP_Tipo_de_Documento__r.DOC_CAS_Validez__c)&amp;&amp; NOT(ISNULL(DPC_DAT_Fecha_Expiracion__c))</errorConditionFormula>
+        <errorDisplayField>DPC_DAT_Fecha_Expiracion__c</errorDisplayField>
+        <errorMessage>Este tipo de documento no requiere fecha de expiración</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Fecha_de_expiracion_obligatoria</fullName>
+        <active>true</active>
+        <description>Requerimiento de fecha de expiración para ciertos tipos de documentos</description>
+        <errorConditionFormula>(DPC_LKP_Tipo_de_Documento__r.DOC_CAS_Validez__c) &amp;&amp; ISNULL(DPC_DAT_Fecha_Expiracion__c)</errorConditionFormula>
+        <errorDisplayField>DPC_DAT_Fecha_Expiracion__c</errorDisplayField>
+        <errorMessage>Este tipo de documento requiere fecha de expiración.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

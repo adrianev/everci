@@ -1,0 +1,354 @@
+<apex:page controller="B2B_BusquedaClientes" showHeader="true" sidebar="false"
+	tabStyle="Busqueda_Cuentas_B2B_B2B2C__tab">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<style>
+		.celdaBusquedaDerecha {
+			text-align: right;
+		}
+
+		.filasSeleccionables {
+			cursor: pointer;
+		}
+
+		.tableDiv {
+			width: 100%;
+			height: 350px;
+			overflow: scroll;
+		}
+
+		.paginator {
+			text-align: center;
+			position: relative;
+			white-space: nowrap;
+		}
+
+		.leftCustom {
+			position: absolute;
+			left: 0;
+		}
+
+		.disabledLink {
+			color: #a8a8a8;
+		}
+
+		.right {
+			position: absolute;
+			right: 0;
+		}
+	</style>
+	<apex:includeScript value="{!$Resource.jQuery}" />
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="seleccionarResultadoAF"
+			action="{!seleccionarResultado}" 
+			status="iconoCargando" rerender="mainForm">
+			<apex:param name="indiceResultado" assignTo="{!indiceResultado}"
+				value="" />
+		</apex:actionFunction>
+		<apex:actionFunction name="seleccionarCasoAF"
+			action="{!seleccionarCaso}"
+			status="iconoCargando" rerender="mainForm">
+			<apex:param name="indiceResultado" assignTo="{!indiceResultado}"
+				value="" />
+		</apex:actionFunction>
+		<apex:actionFunction name="doSearchAF" action="{!busqueda}"
+			rerender="mainForm" />
+		<apex:actionFunction name="cargarListaPoblacionPorCPAF"
+			action="{!cargarListaPoblacionPorCP}"
+			status="iconoCargando" rerender="mainForm" />
+		<apex:actionFunction name="cargarProvinciaPoblacionAF"
+			action="{!cargarProvinciaPoblacion}"
+			status="iconoCargando" rerender="mainForm" />
+
+		<apex:pageblock title="{!if(idCaso != null, 'Seleccionar Cliente', 'Búsqueda de' + if(busquedaServicios, ' Servicios/Asistencias de', '') + ' Clientes')}">
+			<apex:pageMessages id="mensajesError" escape="false" />
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="<< Volver" title="Volver"
+					action="{!volver}" immediate="true" rendered="{!idCaso != null}"
+					status="iconoCargando" rerender="mainForm" />
+				<apex:commandButton value="Buscar" title="Ejecutar Búsqueda de Pólizas"
+					action="{!busqueda}"
+					status="iconoCargando" rerender="mainForm" />
+				<apex:commandButton value="Nueva Dirección/Cliente Final/Cliente Contable"
+					title="Añadir Nueva Dirección/Cliente Final/Cliente Contable"
+					action="{!nuevaCuenta}" immediate="true"
+					status="iconoCargando" rerender="mainForm" />
+				<apex:commandButton value="Asistencia Cliente No Existente"
+					title="Iniciar Proceso de Apertura de Asistencia sin Cliente" action="{!noExistenteB2C}"
+					immediate="true" rendered="{!cuentaPpalEsB2C && idCaso == null}"
+					status="iconoCargando" rerender="mainForm" />
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection title="Cuenta Principal" columns="2"
+				id="seccionCompaniaVF" collapsible="false">
+				<apex:inputField label="Cuenta Principal"
+					value="{!clienteFiltros.CUE_LKP_Cuenta_principal__c}"
+					rendered="{!codigoVDN == null && idCaso == null}"
+					styleClass="{!if(busquedaServicios, '', 'requerido')}"
+					onkeypress="if(event.keyCode==13) return false;">
+					<apex:actionSupport event="onchange" action="{!seleccionarCIA}"
+						status="iconoCargando" rerender="mainForm" />
+				</apex:inputField>
+				<apex:outputText label="Cuenta Principal" value="{!nombreCuentaP}"
+					rendered="{!codigoVDN != null || idCaso != null}" />
+				<apex:outputText label="VDN" value="{!codigoVDN}" />
+				<apex:outputText label="Presentación" value="{!presentacion}"
+					title="Información de presentación"
+					rendered="{!presentacion != null}" />
+				<apex:outputText label="Ayuda Búsqueda" value="{!observaciones}"
+					rendered="{!observaciones != null}" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="Campos de Búsqueda" columns="2"
+				id="seccionFiltrosVF" collapsible="false">
+				<apex:inputText label="Nº de Documento" value="{!valorN_Documento}"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!!busquedaServicios}" />
+				<apex:selectList label="Tipo" value="{!clienteFiltros.Type}"
+					size="1" title="Tipo" rendered="{!!busquedaServicios}">
+					<apex:selectOptions value="{!typeList}" />
+				</apex:selectList>
+				<apex:inputText label="Nombre" value="{!valorNombre}"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!!busquedaServicios}" />
+				<apex:inputText label="Primer Apellido" value="{!valorApellido_1}"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!!busquedaServicios}" />
+				<apex:inputText label="Segundo Apellido" value="{!valorApellido_2}"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!!busquedaServicios}" />
+				<apex:inputText label="Teléfono" value="{!valorTelefono}"
+					onkeypress="if(event.keyCode==13) return false;" />
+				<apex:inputText label="Vía/Domicilio" value="{!valorDomicilio}"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!!busquedaServicios}" />
+				<apex:inputText label="Código Postal" value="{!valorCodigoPostal}"
+					id="valorCodigoPostalVF" onchange="cargarListaPoblacionPorCPAF();"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!!busquedaServicios}" />
+				<apex:inputText label="Código Postal" value="{!valorCodigoPostal}"
+					onkeypress="if(event.keyCode==13) return false;"
+					rendered="{!busquedaServicios}" />
+				<apex:selectList label="Población" value="{!poblacion}" size="1"
+					onchange="cargarProvinciaPoblacionAF();"
+					rendered="{!!busquedaServicios}">
+					<apex:selectOptions value="{!listaPoblaciones}" />
+				</apex:selectList>
+				<apex:selectList label="Provincia" value="{!valorProvincia}"
+					id="valorProvinciaVF" size="1" title="Provincia"
+					rendered="{!!busquedaServicios}">
+					<apex:selectOptions value="{!listaProvincias}" />
+				</apex:selectList>
+				<apex:inputText label="Nº Intervenc./Cod.Activ.{!if(busquedaServicios, '/Presup.', '')}"
+					value="{!valorN_Servicio}" onkeypress="if(event.keyCode==13) return false;" />
+				<apex:pageBlockSectionItem />
+				<apex:pageBlockSectionItem />
+				<apex:pageBlockSectionItem >
+					<apex:outputPanel layout="block" styleClass="celdaBusquedaDerecha"
+						rendered="{!idCaso == null}">
+						<apex:commandLink action="{!busquedaServicios}"
+							value="Búsqueda de Servicios"
+							status="iconoCargando" rerender="mainForm"
+							rendered="{!!busquedaServicios}" />
+						<apex:commandLink action="{!busquedaClientes}"
+							value="Búsqueda de Clientes"
+							status="iconoCargando" rerender="mainForm"
+							rendered="{!busquedaServicios}" />
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="blockTablaResultadosCli" title="Clientes"
+				columns="1" collapsible="false"
+				rendered="{!listaClientes != null && !busquedaServicios}">
+				<!-- Results table with scroll -->
+				<apex:outputPanel layout="block" styleClass="tableDiv"
+					rendered="{!listaClientes.size != 0}">
+					<apex:variable value="{!0}" var="indice" />
+					<apex:pageBlockTable id="tablaResultados"
+						value="{!listaClientesFinal}" var="cliente" title="Clientes"
+						onRowDblClick="seleccionarResultadoAF('{!indice}');return false;"
+						rowClasses="filasSeleccionables">
+						<apex:column headerValue="Nombre de la cuenta">
+							<apex:variable value="{!indice + 1}" var="indice" />
+							<apex:outputText value="{!cliente.Name}" />
+						</apex:column>
+						<apex:column headerValue="Número de documento">
+							<apex:outputText value="{!cliente.CUE_TXT_Numero_Documento__c}" />
+						</apex:column>
+						<apex:column value="{!cliente.Type}" />
+						<apex:column headerValue="Dirección" rendered="{!!cuentaPpalEsB2C}">
+							<apex:outputText value="{!cliente.CUE_FOR_DireccionEnvio__c}" />
+						</apex:column>
+						<apex:column headerValue="Dirección" rendered="{!cuentaPpalEsB2C}">
+							<apex:dataList value="{!mapaDirecc[cliente.Id]}" var="direc">
+								<apex:outputText value="{!direc.DCU_FOR_DireccionCompleta__c}" />
+								<p />
+							</apex:dataList>
+						</apex:column>
+						<apex:column value="{!cliente.CUE_CAS_Activado__c}" />
+					</apex:pageBlockTable>
+				</apex:outputPanel>
+				<!--paginador-->
+				<apex:outputPanel id="paginacionClientes" layout="block"
+					styleClass="paginator" rendered="{!listaClientes.size != 0}">
+					<!-- Results shown -->
+					<apex:outputPanel styleClass="leftCustom">
+						<apex:outputLabel value="Registros por página: " for="recPerPage" />
+						<apex:selectList id="recPerPage" value="{!recPerPage}" size="1"
+							rendered="{!listaClientes.size != 0}">
+							<apex:selectOptions value="{!recPerPageOptions}" />
+							<apex:actionSupport event="onchange" status="iconoCargando"
+								action="{!recPerPageChange}" rerender="mainForm" />
+						</apex:selectList>
+					</apex:outputPanel>
+					<!-- << < Previous Next > >> -->
+					<apex:outputPanel >
+						<apex:commandLink value="<<" action="{!firstPage}"
+							rendered="{!page != 1}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="<<" styleClass="disabledLink"
+							rendered="{!page == 1}" />
+						&nbsp;
+						<apex:commandLink value="<" action="{!previousPage}"
+							rendered="{!page != 1}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="<" styleClass="disabledLink"
+							rendered="{!page == 1}" />
+						&nbsp;
+						<apex:commandLink value="Anterior" action="{!previousPage}"
+							rendered="{!page != 1}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="Anterior" styleClass="disabledLink"
+							rendered="{!page == 1}" />
+						&nbsp;
+						<apex:outputText value="Página {!page} de {!lastPage}" />
+						&nbsp;
+						<apex:commandLink value="Siguiente" action="{!nextPage}"
+							rendered="{!page != lastPage}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="Siguiente" styleClass="disabledLink"
+							rendered="{!page == lastPage}" />
+						&nbsp;
+						<apex:commandLink value=">" action="{!nextPage}"
+							rendered="{!page != lastPage}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value=">" styleClass="disabledLink"
+							rendered="{!page == lastPage}" />
+						&nbsp;
+						<apex:commandLink value=">>" action="{!lastPage}"
+							rendered="{!page != lastPage}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value=">>" styleClass="disabledLink"
+							rendered="{!page == lastPage}" />
+					</apex:outputPanel>
+					<!-- Page number -->
+					<apex:outputPanel styleClass="right">
+						<apex:outputText value="{!listaClientes.size} resultados" />
+					</apex:outputPanel>
+				</apex:outputPanel>
+				<apex:outputPanel rendered="{!listaClientes.size == 0}">
+					<apex:outputText value="No hay resultados" />
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="blockTablaResultadosCas"
+				title="{!$ObjectType.Case.labelPlural}" columns="1"
+				rendered="{!listaCasos != null && busquedaServicios}"
+				collapsible="false">
+				<apex:outputPanel layout="block" styleClass="tableDiv"
+					rendered="{!listaCasos.size != 0}">
+					<apex:variable value="{!0}" var="indice" />
+					<apex:pageBlockTable id="tablaResultados" value="{!listaCasosFinal}" var="caso"
+						title="{!$ObjectType.Case.labelPlural}"
+						onRowDblClick="seleccionarCasoAF('{!indice}');return false;"
+						rowClasses="filasSeleccionables">
+						<apex:column headerValue="Nº de Intervención">
+							<apex:variable value="{!indice + 1}" var="indice" />
+							<apex:outputText value="{!caso.CaseNumber}" />
+						</apex:column>
+						<apex:column headerValue="Cuenta Principal"
+							value="{!caso.CAS_LKP_Compania__r.Name}" />
+						<apex:column headerValue="Nombre de la Cuenta"
+							value="{!caso.Account.Name}" />
+						<apex:column value="{!caso.CAS_FOR_Tipo_Caso__c}" />
+						<apex:column value="{!caso.Type}" />
+						<apex:column value="{!caso.Origin}" />
+						<apex:column headerValue="Nombre del Contacto">
+							<apex:outputText value="{!caso.CAS_TXT_Nombre__c + ' ' + caso.CAS_TXT_Apellidos__c}" />
+						</apex:column>
+					</apex:pageBlockTable>
+				</apex:outputPanel>
+				<!--paginador-->
+				<apex:outputPanel id="paginacionCasos" layout="block"
+					styleClass="paginator" rendered="{!listaCasos.size != 0}">
+					<!-- Results shown -->
+					<apex:outputPanel styleClass="leftCustom">
+						<apex:outputLabel value="Registros por página: " for="recPerPage" />
+						<apex:selectList id="recPerPage" value="{!recPerPage}" size="1"
+							rendered="{!listaCasos.size != 0}">
+							<apex:selectOptions value="{!recPerPageOptions}" />
+							<apex:actionSupport event="onchange" status="iconoCargando"
+								action="{!recPerPageChange}" rerender="blockTablaResultadosCas" />
+						</apex:selectList>
+					</apex:outputPanel>
+					<!-- << < Previous Next > >> -->
+					<apex:outputPanel >
+						<apex:commandLink value="<<" action="{!firstPage}"
+							rendered="{!page != 1}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="<<" styleClass="disabledLink"
+							rendered="{!page == 1}" />
+						&nbsp;
+						<apex:commandLink value="<" action="{!previousPage}"
+							rendered="{!page != 1}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="<" styleClass="disabledLink"
+							rendered="{!page == 1}" />
+						&nbsp;
+						<apex:commandLink value="Anterior" action="{!previousPage}"
+							rendered="{!page != 1}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="Anterior" styleClass="disabledLink"
+							rendered="{!page == 1}" />
+						&nbsp;
+						<apex:outputText value="Página {!page} de {!lastPage}" />
+						&nbsp;
+						<apex:commandLink value="Siguiente" action="{!nextPage}"
+							rendered="{!page != lastPage}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value="Siguiente" styleClass="disabledLink"
+							rendered="{!page == lastPage}" />
+						&nbsp;
+						<apex:commandLink value=">" action="{!nextPage}"
+							rendered="{!page != lastPage}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value=">" styleClass="disabledLink"
+							rendered="{!page == lastPage}" />
+						&nbsp;
+						<apex:commandLink value=">>" action="{!lastPage}"
+							rendered="{!page != lastPage}"
+							status="iconoCargando" rerender="mainForm" />
+						<apex:outputText value=">>" styleClass="disabledLink"
+							rendered="{!page == lastPage}" />
+					</apex:outputPanel>
+					<!-- Page number -->
+					<apex:outputPanel styleClass="right">
+						<apex:outputText value="{!listaCasos.size} resultados" />
+					</apex:outputPanel>
+				</apex:outputPanel>
+				<apex:outputPanel rendered="{!listaCasos.size == 0}">
+					<apex:outputText value="No hay resultados" />
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageblock>
+	</apex:form>
+</apex:page>

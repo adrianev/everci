@@ -1,0 +1,137 @@
+<apex:page controller="CNT_QuoteCopy" tabStyle="WorkOrder" sidebar="false"
+	standardStylesheets="true">
+	<apex:sectionHeader title="Modificación de {!$ObjectType.WorkOrder.label}"
+		subtitle="Modificación de Partidas" />
+		<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+		<apex:includeScript value="{!$Resource.jQuery}" />
+    	<apex:includeScript value="/support/console/42.0/integration.js" />
+		<apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" />
+		<apex:stylesheet value="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+		<script>
+    function fnOpenNormalDialog() {
+	    $("#dialog-confirm").html("{!$Label.WARNING_CONFIANZA_RED}");
+	
+	    // Define the Dialog and its properties.
+	    $("#dialog-confirm").dialog({
+	        resizable: false,
+	        modal: true,
+	        title: "",
+	        height: 200,
+	        width: 400,
+	        buttons: {
+	            "Si": function () {
+	                $(this).dialog('close');
+	                volverCtrl(true);
+	            },
+	            "No": function () {
+	                $(this).dialog('close');
+	                volverCtrl(false);
+	            }
+	        }
+	    });
+	}
+    
+	window.onload = function(){
+		sforce.console.openPrimaryTab(undefined,'/06A?rlid=RelatedFileList&id={!wo.Id}', false, 'Fotos y Adjuntos');
+	}
+    
+    </script>
+		<!-- <script>
+        function getConfirmation(id){
+            var retVal = confirm("¿Confirma que desea volver? Se perderán los cambios que no hayan sido guardados");
+            if( retVal ){
+                if ((typeof sforce != 'undefined') && sforce && (!!sforce.one)){
+                        var url = '/apex/B2B_Reparable?id=' + id;
+                        sforce.one.navigateToURL(url);
+                    } else {
+                        volverCtrl();
+                }
+            }else{
+                return false;
+            }
+        }
+    </script>
+     -->
+	<apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	<apex:form id="mainForm">
+		<apex:actionFunction name="volverCtrl" action="{!volverDialogo}"
+			id="volverFunc" reRender="mainForm" immediate="true">
+			<apex:param name="aplicaFranquiciado"
+				assignTo="{!aplicaFranquiciado}" value="" />
+		</apex:actionFunction>
+		<apex:actionFunction name="volverNormal" action="{!volver}"
+			id="volverNorm" reRender="mainForm" immediate="true" />
+		<apex:pageBlock title="Actualizar Partidas Reparables">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<!-- <apex:commandButton value="<< Volver" title="<< Volver" onclick="return getConfirmation('{!caso.id}')"/> -->
+				<!-- <apex:commandButton value="<< Volver" title="<< Volver" action="{!volver}" onclick="if(confirm('Es franquiciado blablabla cosas. Aplicar?')){volverCtrl();return false;}" rerender="none" rendered="{!wo.OTR_SEL_Categoria_del_profesional__c == '1'}"/>  -->
+				<!-- <apex:commandButton value="<< Volver" title="<< Volver" action="{!checkCambioPartidas}" oncomplete="if({!cambioPartidas}){if(confirm('Es franquiciado blablabla cosas. Aplicar?')){volverCtrl();return false;}else{volverNormal();}}else{volverNormal();}" rerender="none" rendered="{!wo.OTR_SEL_Categoria_del_profesional__c == '1'}"/>  -->
+				<apex:commandButton value="<< Volver" title="<< Volver"
+					action="{!checkCambioPartidas}"
+					oncomplete="if({!cambioPartidas}){fnOpenNormalDialog();}else{volverNormal();}"
+					rerender="none" rendered="{!wo.OTR_CAS_Confianza_en_la_red__c}" status="iconoCargando"/>
+				<apex:commandButton value="<< Volver" title="<< Volver"
+					action="{!volverDialogo}" rerender="mainForm"
+					rendered="{!!wo.OTR_CAS_Confianza_en_la_red__c}" status="iconoCargando"/>
+				<apex:commandButton value="Ver fotos y adjuntos" title="Ver fotos y adjuntos"
+					rerender="none"
+					onclick="sforce.console.openPrimaryTab(undefined,'/06A?rlid=RelatedFileList&id={!wo.Id}', true, 'Fotos y Adjuntos');"/>
+			</apex:pageBlockButtons>
+			<div id="dialog-confirm"></div>
+			<c:Detalle_Caso atrCaso="{!caso}" rendered="{!tipoCaso == 1}" />
+			<c:Detalle_B2B_B2B2C atrCase="{!caso}" atrAccount="{!cuenta}"
+				rendered="{!tipoCaso == 2}" />
+
+			<apex:pageBlockSection collapsible="false" columns="2"
+				title="Datos de {!$ObjectType.WorkOrder.label}">
+				<apex:outputField value="{!wo.WorkOrderNumber}" />
+				<apex:outputField value="{!wo.OTR_SEL_Gremio__c}" />
+			</apex:pageBlockSection>
+
+			<iframe scrolling="auto" frameborder="0" height="600px"
+				id="theIframe" name="theIframe" src="" title="Content" width="100%"></iframe>
+			<script type='text/javascript' src='/canvas/sdk/js/publisher.js' />
+			<script type="text/javascript"
+				src="../../soap/ajax/19.0/connection.js" />
+			<script type="text/javascript" src="../../soap/ajax/15.0/apex.js" />
+			<script>
+            sforce.connection.sessionId = "{!$Api.Session_ID}";
+            debugger;
+            var url = new URL(window.location.href);
+            if(url.searchParams.get("idWorkO") != null){
+                var c = url.searchParams.get("idWorkO").substring(0,15) + '';
+                //alert(c); 
+                var countQuote = sforce.apex.execute("CNT_QuoteEdit","getSumQuotes", {woId:"{!woIdParent}"});                        
+                if(countQuote==0) {
+                    window.location.href  = "/apex/{!$Label.VF_QUOTE_CREATE}?idWorkO=" + c +"&retorno=/"+c+"&enRevision=Y&inline=1"; 
+                }
+                var srcIframe = 'https://' + '{!CPQSite.BigMachines__bm_site__c}' +'.bigmachines.com/commerce/buyside/copy_processing.jsp?'+
+                //'formaction=performAction&'+
+                'version_id='+ '{!CPQSite.BigMachines__version_id__c}' +'&'+
+                'action_id=' + '{!CPQSite.BigMachines__action_id_copy__c}' +'&'+
+                'bs_id=' + '{!bsId}'.substring(0,15) + '&'+
+                'bm_cm_process_id=' + '{!CPQSite.BigMachines__process_id__c}' +'&'+
+                '_partnerSessionId=' + '{!$Api.Session_ID}' + '&'+
+                '_partnerSessionUrl=' + '{!$Api.Partner_Server_URL_410}' + '&'+
+                '_partnerSessionUserName=' + '{!$User.Username}' + '&'+
+                'partnerSessionUserId=' + '{!$User.Id}' + '&'+
+                'BM_URL_CAPTURE_COOKIE=' + '{!CPQSite.BigMachines__bm_site__c}' +'&'+
+                //'document_id=' + '{!CPQSite.BigMachines__document_id__c}' +'&'+
+                '_partnerOpportunityId='+ c.substring(0,15) ;
+                //alert(srcIframe);
+                document.getElementById('theIframe').setAttribute('src',srcIframe);
+            }
+
+            
+        </script>
+		</apex:pageBlock>
+	</apex:form>
+
+</apex:page>

@@ -1,0 +1,90 @@
+<apex:page standardController="Case"
+	extensions="CambiarNaturalezaReclamacion" showHeader="true">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:includeScript value="{!$Resource.jQuery}" />
+
+	<script> 
+        window.onload = function(){
+        
+            var listNatBorrar = new Array();
+            listNatBorrar = JSON.parse('{!listaNaturalezasBorrar}');
+            console.log(listNatBorrar);
+            var mapaNuevo = new Array();
+            mapaNuevo = JSON.parse('{!naturalezaClaveValor}');
+            var reemplazos = JSON.parse('{!reemplazos}');
+            console.log(reemplazos);
+            var nuevos = [];
+            var e = document.querySelectorAll('[id$="naturaleza"]')[0];
+            var eValor;
+            if (e) {
+                eValor = e.value;
+                for(var i = (e.options.length-1);i>= 0;i--){
+                    if(listNatBorrar.includes(e.options[i].label)){
+                    
+                        if(reemplazos != null){
+                            console.log(e.options[i].label);
+	                        console.log(reemplazos[e.options[i].label]);
+	                        if((e.options[i].label in reemplazos) && !nuevos.includes(reemplazos[e.options[i].label])){
+	                            nuevos.push(reemplazos[e.options[i].label]);
+	                        }
+                        }
+                        
+                        e.remove(i);
+                    }
+                }
+            }
+            console.log(nuevos);
+            console.log(mapaNuevo);
+            console.log(nuevos.length);
+            if(nuevos.length > 0){
+                for(j in nuevos){
+                    var opt = document.createElement("OPTION");
+                    opt.text = nuevos[j];
+                    opt.value = mapaNuevo[nuevos[j]];
+                    e.add(opt);
+                }
+            }
+            e.value = eValor;
+            
+        }
+    </script>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+
+		<apex:sectionHeader title="Cambiar Naturaleza Reclamación"
+			subtitle="{!if(case != null, case.CaseNumber, '')}" />
+
+		<apex:pageBlock id="formulario" title="Cambiar Naturaleza Reclamación">
+			<apex:pageMessages />
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="<< Cancelar" title="Cancelar"
+					action="{!cancel}"
+					status="iconoCargando" rerender="mainForm" />
+				<apex:commandButton value="Guardar >>" title="Guardar"
+					action="{!save}"
+					rendered="{!todoCorrecto}"
+					status="iconoCargando" rerender="mainForm" />
+			</apex:pageBlockButtons>
+
+
+			<apex:pageBlockSection id="datos" showheader="false"
+				collapsible="false" columns="2">
+				<apex:inputField value="{!case.CAS_SEL_Padre_reclamacion__c}"
+					html-disabled="true" />
+				<apex:inputField id="naturaleza"
+					value="{!case.CAS_SEL_Naturaleza__c}" required="true" />
+			</apex:pageBlockSection>
+
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

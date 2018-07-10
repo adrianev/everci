@@ -1,0 +1,201 @@
+<apex:page controller="BusquedaClientesPolizaController" showHeader="true" sidebar="false"
+	tabStyle="Busqueda_Clientes_Asegurados__tab">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+	<apex:stylesheet value="{!URLFOR($Resource.VF_BusquedaClientesPoliza)}"/> 
+	<script>
+		function navegarAvisoCia(existenErroresAvisoCia,companiaId,idCaso) {
+			if(existenErroresAvisoCia=='false') {
+			   window.open('/apex/AvisoACompania?idCompania=' + companiaId+'&caseId='+idCaso, "", "height=640px, width=960px, status=no");
+			}
+		} 
+	</script> 
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+ 
+	<apex:form id="mainForm">
+
+		<apex:actionFunction name="seleccionarPoliza" action="{!seleccionarPoliza}" status="iconoCargando" rerender="mensajesError">
+			<apex:param name="polizaSeleccionada" assignTo="{!polizaSeleccionada}"  value="" />
+		</apex:actionFunction>
+
+		<apex:actionFunction name="validarAvisoCiaActionFunction" action="{!validarAvisoACia}"
+			oncomplete="navegarAvisoCia('{!existenErroresAvisoCia}','{!compania.Id}','{!idCaso}')"
+			status="iconoCargando" rerender="mensajesError"/>
+
+		<apex:pageblock title="{!$Label.FICHA_BUSQ_ASEGURADOS}" >
+			<apex:pageMessages id="mensajesError" escape="false" /> 
+
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="<< Cancelar" action="{!cancelar}"
+					title="Cancelar selección de Póliza"
+					status="iconoCargando" rendered="{!renderizarBotonCancelar}" rerender="mainForm"/>
+				<apex:commandButton value="Buscar" action="{!buscarPolizas}"
+					title="Ejecutar Búsqueda de Pólizas"
+					rerender="mainForm" status="iconoCargando"/>
+				<apex:commandButton value="Aviso a Compañía" onclick="validarAvisoCiaActionFunction(); return false;"
+					title="Enviar Correo Electrónico a Compañía"
+					rerender="mainForm" status="iconoCargando"/>
+				<apex:commandButton value="Nueva Intervención sin Póliza" action="{!navegarSiniIntervencionSinPoliza}"
+					title="Iniciar Proceso de Apertura de Intervención sin Póliza"
+					rerender="mainForm" status="iconoCargando"/>
+				<apex:image url="/img/icon/custom51_100/ipPhone24.png"
+					title="Seleccionar Teléfono de Consulta" styleClass="actionLink link24 derecha"/>
+				<apex:selectList id="listaTelefonos" value="{!telefonoSeleccionado}" size="1" styleClass="telefonosConsulta derecha">
+					<apex:selectOptions value="{!listaTelefonos}"/> 
+					<apex:actionSupport event="onchange"  action="{!mostrarAyudaTelefonoCompania}" status="iconoCargando" rerender="mainForm"/>
+				</apex:selectList> 
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection title="{!$Label.FAC_TipoCliente_CIA}" collapsible="false" id="compania"> 
+				<apex:pageBlockSectionItem rendered="{!!renderizarCompaniaSoloLectura}">
+					<apex:outputLabel value="Compañía" />
+					<apex:inputField id="companiaInput"  value="{!cuentaFiltro.CUE_LKP_Cuenta_principal__c}" >
+						<apex:actionSupport event="onchange" action="{!populateSectionCompaniaFromVisual}"  status="iconoCargando" rerender="mainForm"/>  
+					</apex:inputField>  
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem rendered="{!renderizarCompaniaSoloLectura}" >
+					<apex:outputLabel value="Compañía" />
+					<apex:outputText label="Compañía"  value="{!cuentaFiltro.CUE_LKP_Cuenta_principal__r.Name}"  />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="VDN"/>
+					<apex:outputText value="{!vdnName}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem rendered="{!compania.CUE_TXT_Presentacion__c!=null}">
+					<apex:outputLabel value="Presentación"/>
+					<apex:outputField value="{!compania.CUE_TXT_Presentacion__c}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem rendered="{!compania.CUE_TXT_Ayuda_Busqueda__c!=null}">
+					<apex:outputLabel value="Ayuda Búsqueda"/>
+					<apex:outputField value="{!compania.CUE_TXT_Ayuda_Busqueda__c}"/>
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection title="Campos de búsqueda" columns="2"  collapsible="false" id="camposDeBusqueda">
+
+				<apex:pageBlockSectionItem HelpText="Introduzca un valor de filtro" rendered="{!!esBusquedaAvanzada}">
+					<apex:outputLabel value="Identificador"/>
+					<apex:inputText value="{!identificador}"/>
+				</apex:pageBlockSectionItem> 
+				<apex:pageBlockSectionItem rendered="{!!esBusquedaAvanzada}">
+				</apex:pageBlockSectionItem> 
+				<apex:pageBlockSectionItem rendered="{!!esBusquedaAvanzada}">
+				</apex:pageBlockSectionItem> 
+			 
+
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Nº de siniestro HS" /> 
+					<apex:inputText value="{!busquedaAvanzadaWrapper.numeroSiniestroHS}" />				 
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Nº de póliza/contrato" />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.numeroPoliza}"/>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Nº de documento"  />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.numeroDocumento}"/>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Nombre" />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.nombre}"/>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Primer Apellido" />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.primerApellido}" />
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Segundo Apellido" />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.segundoApellido}"/>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Vía/Domicilio"  />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.viaDomicilio}"/>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Código Postal"/>
+					<apex:inputText value="{!busquedaAvanzadaWrapper.codigoPostal}">
+						<apex:actionSupport event="onchange" status="iconoCargando" action="{!busquedaAvanzadaWrapper.cargarUbicacion}" rerender="camposDeBusqueda"/>
+					</apex:inputText>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem helpText="Introduzca un código postal o seleccione una provincia" rendered="{!esBusquedaAvanzada}" >
+					<apex:outputLabel value="Población" />
+					<apex:selectList value="{!busquedaAvanzadaWrapper.poblacion}" size="1">
+						<apex:selectOptions value="{!busquedaAvanzadaWrapper.listaPoblaciones}" />
+						<!-- <apex:actionSupport event="onchange" status="iconoCargando" action="{!busquedaAvanzadaWrapper.cargarCodigoPostal}" rerender="camposDeBusqueda" />	   -->
+					</apex:selectList> 
+				</apex:pageBlockSectionItem> 
+
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Provincia"/>
+					<apex:selectList value="{!busquedaAvanzadaWrapper.provincia}" size="1">
+						 <apex:selectOptions value="{!busquedaAvanzadaWrapper.listaProvincias}" /> 
+						<!-- <apex:actionSupport event="onchange" status="iconoCargando" action="{!busquedaAvanzadaWrapper.cargarPoblacion}"  rerender="camposDeBusqueda"/>   -->	
+					</apex:selectList> 
+				</apex:pageBlockSectionItem>
+
+				<apex:pageBlockSectionItem rendered="{!esBusquedaAvanzada}">
+					<apex:outputLabel value="Nº Siniestro CIA" />
+					<apex:inputText value="{!busquedaAvanzadaWrapper.numeroSiniestroCia}"/>
+				</apex:pageBlockSectionItem>
+				
+				<apex:pageBlockSectionItem >
+					<apex:outputPanel layout="block" styleClass="busqueda"> 
+						<apex:commandLink value="Búsqueda avanzada" action="{!setBusqueda}" status="iconoCargando" rerender="camposDeBusqueda" rendered="{!!esBusquedaAvanzada}" />
+						<apex:commandLink value="Búsqueda simple"  action="{!setBusqueda}"  status="iconoCargando" rerender="camposDeBusqueda" rendered="{!esBusquedaAvanzada}"/>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem> 
+			</apex:pageBlockSection>
+
+			<apex:pageBlockSection id="SeccionPolizas" title="Pólizas de Clientes Asegurados" columns="1" collapsible="false" rendered="{!listaPolizas != null}">
+				<apex:variable value="{!0}" var="numeroPoliza" />
+				<apex:pageBlockTable id="tablaResultados" value="{!listaPolizas}" var="poliza" title="Pólizas del cliente" onRowDblClick="seleccionarPoliza('{!numeroPoliza}'); return false;"  rowClasses="filasSeleccionables" rendered="{!listaPolizas.size != 0}">
+					<!-- Columna Nombre Completo -->
+					<apex:column headerValue="Cliente Asegurado">
+						<apex:variable value="{!numeroPoliza + 1}" var="numeroPoliza" />
+						<apex:outputText value="{!poliza.nombreCompleto}" />
+					</apex:column>
+					 <!-- Columna Número de Documento -->
+					<apex:column headerValue="Nº de Documento" value="{!poliza.numeroDocumento}" />
+					<!-- Columna Situación de Riesgo -->
+					<apex:column headerValue="Situación de Riesgo">
+						<apex:outputText value="{!poliza.direccionCompleta}" />
+					</apex:column>
+					<!-- Columna Compañía -->
+					<apex:column headerValue="Compañía" value="{!poliza.nombreCompania}" />
+					<!-- Columna Número de Póliza-->
+					<apex:column headerValue="Nº de Póliza" value="{!poliza.numeroPoliza}" />
+					<!-- Columna Estado -->
+					<apex:column headerValue="Estado" value="{!poliza.estado}" />
+					<!-- Columna Producto -->
+					<apex:column headerValue="Producto" value="{!poliza.nombreProducto}" />
+					<!-- Columna Descripción del Prodcuto -->
+					<apex:column headerValue="Desc. Producto" value="{!poliza.descProdAux}" />
+					<!-- Columna Pertenece a HS -->
+					<apex:column headerValue="Pertenece a HS">
+						<apex:inputCheckBox value="{!poliza.perteneceHS}" disabled="true" />
+					</apex:column>
+				</apex:pageBlockTable>
+				
+				<apex:outputPanel rendered="{!listaPolizas.size == 0}">
+					<apex:outputText value="La búsqueda no ha obtenido ningún resultado." />
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		
+		</apex:pageblock>
+	</apex:form>
+</apex:page>

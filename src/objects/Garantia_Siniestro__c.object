@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>GSIN_FOR_Descripcion_Garantia__c</fullName>
+        <externalId>false</externalId>
+        <formula>GSIN_LKP_Garantia__r.GAR_TXT_Descripcion__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Descripción Garantía</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GSIN_LKP_Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Siniestro al que se vincula la Garantía. Representa la FK al objeto Case. Para resolver esta FK en integración (servicios web) y migración (plantillas DataLoader) se debe informar el valor del campo External ID del objeto Case (Case.CAS_TXT_Identificador__c) para Siniestros: &quot;[Código de CIA]_[Nº de Siniestro HomeServe]&quot;</description>
+        <externalId>false</externalId>
+        <label>Intervención</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Garantías Siniestro</relationshipLabel>
+        <relationshipName>Garantias_Siniestro</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GSIN_LKP_Confirmacion__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo relación a confirmación</description>
+        <externalId>false</externalId>
+        <label>Datos Apertura/Confirmación</label>
+        <referenceTo>Confirmacion__c</referenceTo>
+        <relationshipLabel>Garantías Siniestro</relationshipLabel>
+        <relationshipName>Garantias_Siniestro</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>GSIN_LKP_Garantia__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Garantía que se vincula al Siniestro. Representa la FK al objeto Garantia__c. Para resolver esta FK en integración (servicios web) y migración (plantillas DataLoader) se debe informar el valor del campo External ID del objeto Garantia__c (Garantia__c.GAR_TXT_Codigo_Garantia__c): Código único de la Garantía.</description>
+        <externalId>false</externalId>
+        <label>Garantía</label>
+        <referenceTo>Garantia__c</referenceTo>
+        <relationshipLabel>Garantías Siniestro</relationshipLabel>
+        <relationshipName>Garantias_Siniestro</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Garantía Siniestro</label>
+    <nameField>
+        <displayFormat>{00000000}</displayFormat>
+        <label>Identificador</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Garantías Siniestro</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

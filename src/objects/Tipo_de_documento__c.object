@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Entidad necesaria para el registro de tipos de documentos</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>DOC_CAS_Estado_Documento__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Indica si el documento aplica o no</description>
+        <externalId>false</externalId>
+        <label>Documento imprescindible</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DOC_CAS_Validez__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica si el Documento tiene fecha de vigencia o no</description>
+        <externalId>false</externalId>
+        <label>Caducidad</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>DOC_DAT_Fecha_Inicio_Vigencia__c</fullName>
+        <description>Fecha en la que el documento comienza a ser vigente</description>
+        <externalId>false</externalId>
+        <label>Fecha de Inicio Vigencia</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DOC_NUM_Dias_para_Baja__c</fullName>
+        <description>Número de días en el que se dará de baja temporal a la cuenta de Profesional Contrato, tras haber vencido el Documento.</description>
+        <externalId>false</externalId>
+        <label>Dias para Baja tras Vencimiento</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DOC_SEL_Gremio__c</fullName>
+        <description>Gremio específico al que aplica el documento, si procede</description>
+        <externalId>false</externalId>
+        <label>Gremio</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Gremios</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DOC_SEL_Tipo_de_Profesional__c</fullName>
+        <description>Indica los diferentes tipos de Profesionales a los que aplica el documento</description>
+        <externalId>false</externalId>
+        <label>Tipo de Profesional</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_de_Profesional</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DOC_TXT_Identificador__c</fullName>
+        <description>Id externo del Documento</description>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DOC_TXT_Texto_Email_Baja__c</fullName>
+        <externalId>false</externalId>
+        <label>Texto Email Baja</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>DOC_TXT_Texto_Email__c</fullName>
+        <description>Campo tipo texto para la configuración de los e-mail de notificación del profesional 30 días antes de la fecha de vencimiento de un documento.</description>
+        <externalId>false</externalId>
+        <label>Texto Email</label>
+        <length>32768</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Tipo de Documento</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>DOC_TXT_Identificador__c</columns>
+        <columns>NAME</columns>
+        <columns>DOC_SEL_Gremio__c</columns>
+        <columns>DOC_CAS_Estado_Documento__c</columns>
+        <columns>DOC_SEL_Tipo_de_Profesional__c</columns>
+        <columns>DOC_DAT_Fecha_Inicio_Vigencia__c</columns>
+        <columns>DOC_NUM_Dias_para_Baja__c</columns>
+        <columns>DOC_CAS_Validez__c</columns>
+        <columns>DOC_TXT_Texto_Email__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Tipo de Documento</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Tipos de Documento</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

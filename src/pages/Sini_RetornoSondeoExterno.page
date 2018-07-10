@@ -1,0 +1,43 @@
+<apex:page standardController="Case" extensions="SiniRetornoSondeoExternoController"
+	showHeader="false" sidebar="false" >
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+	<apex:includeScript value="/support/console/43.0/integration.js"/>
+	
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	
+	<apex:actionStatus id="iconoCargandoSalir" onStop="salir_paso2AF();">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	<apex:form id="mainForm" target="_top">
+	
+	<apex:actionStatus onstart="cargando(true);" onStop="cargando(false);" id="cargandoFiltro"/>
+		<apex:actionStatus id="cargandoSalir" onStart="cargandoIcono(true);" onStop="salir_paso2AF();cargandoIcono(false);"/>
+		
+	<apex:actionFunction name="navegarASiniGremios" action="{!navegarSiniGremios}" status="iconoCargando" rerender="mainForm"></apex:actionFunction>
+
+		<apex:pageBlock title="Cargando..." rendered="{!errorUsuario == null}">
+			<script>
+				if (parent != null) {
+					parent.location.href = '{!paginaRedireccion}';
+				} else {
+					location.href = '{!paginaRedireccion}'; 				
+				}
+			</script>
+		</apex:pageBlock>
+		<apex:pageBlock title="Error" rendered="{!errorUsuario != null}">
+			<apex:pageMessages />
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

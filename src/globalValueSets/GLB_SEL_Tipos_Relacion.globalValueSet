@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Asegurado</fullName>
+        <default>false</default>
+        <label>Asegurado</label>
+    </customValue>
+    <customValue>
+        <fullName>Hijo/a de asegurado</fullName>
+        <default>false</default>
+        <label>Hijo/a de asegurado</label>
+    </customValue>
+    <customValue>
+        <fullName>Inquilino</fullName>
+        <default>false</default>
+        <label>Inquilino</label>
+    </customValue>
+    <customValue>
+        <fullName>Marido de asegurado</fullName>
+        <default>false</default>
+        <label>Marido de asegurado</label>
+    </customValue>
+    <customValue>
+        <fullName>Mujer de asegurado</fullName>
+        <default>false</default>
+        <label>Mujer de asegurado</label>
+    </customValue>
+    <masterLabel>Tipos de Relación</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

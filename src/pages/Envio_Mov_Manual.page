@@ -1,0 +1,37 @@
+<apex:page standardController="INT_Movimiento_CIA__c"
+	extensions="Envio_Mov_Manual" recordSetVar="movs">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	<apex:form id="mainForm">
+		<apex:pageBlock title="Envio manual de movimientos">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!cancel}" value="<< VOLVER"
+					rerender="mainForm" status="iconoCargando"/>
+				<apex:commandButton action="{!enviaMovs}" value="Enviar"
+					rendered="{!hayDatos}" rerender="mainForm" status="iconoCargando"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection title="Movimientos a enviar">
+				<apex:pageBlockTable value="{!movs}" var="mov"
+					rendered="{!hayDatos}">
+					<apex:column value="{!mov.Name}" />
+					<apex:outputLink value="/{!mov.MOV_LKP_Compania__c}" />
+					<apex:outputLink value="/{!mov.MOV_LKP_Bitacora__c}" />
+					<apex:column value="{!mov.MOV_LKP_Compania__c}" />
+					<apex:column value="{!mov.MOV_LKP_Bitacora__r.BIT_LKP_Envio_Programado_CIA__c}" />
+					<apex:column value="{!mov.MOV_LKP_Bitacora__r.BIT_LKP_Envio_Programado_CIA__r.ENV_LKP_Fichero__c}" />
+					<apex:column value="{!mov.MOV_SEL_Estado_Movimiento__c}" />
+				</apex:pageBlockTable>
+				<apex:outputPanel rendered="{!if(hayDatos=false,true,false)}">
+                  Alguno de los registros seleccionados no es válido para su envío.
+                  El movimiento ha de estar en estado 'enviado' o 'error' y un fichero de configuración asignado a través de su bitácora.
+               </apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

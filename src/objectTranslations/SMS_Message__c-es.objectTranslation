@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Envío SMS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Envíos SMS</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campaign Association Result --></label>
+        <name>SM_CampaignAssociation__c</name>
+        <picklistValues>
+            <masterLabel>Association has been performed manually.</masterLabel>
+            <translation><!-- Association has been performed manually. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Association has not been performed yet, please, contact the Administrator.</masterLabel>
+            <translation><!-- Association has not been performed yet, please, contact the Administrator. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Campaign has been associated by campaign code.</masterLabel>
+            <translation><!-- Campaign has been associated by campaign code. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>There are not Outbound campaigns for association, please, contact the Administrator.</masterLabel>
+            <translation><!-- There are not Outbound campaigns for association, please, contact the Administrator. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>SM_Campaign__c</name>
+        <relationshipLabel><!-- Sent SMSs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Sent Date --></label>
+        <name>SM_LastSMSSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Name --></label>
+        <name>SM_MessageName__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message Type --></label>
+        <name>SM_Message_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Sent --></label>
+        <name>SM_NumberOfSent__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS Used --></label>
+        <name>SM_SMSUsed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Super Messages Used --></label>
+        <name>SM_SuperMessagesUsed__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Envío SMS Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

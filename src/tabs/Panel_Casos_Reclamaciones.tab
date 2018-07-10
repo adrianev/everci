@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Panel Reclamaciones</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom100: TV Widescreen</motif>
+    <url>https://homeserve--develop.cs88.my.salesforce.com/00O9E000000WJr0</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

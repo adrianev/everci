@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Procedencia</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Procedencias</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cierre Servicio No Requiere Albarán --></label>
+        <name>PROC_CAS_No_Requiere_Albaran__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requiere Declaración Responsable --></label>
+        <name>PROC_CAS_Requiere_Declaracion_Resp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cierre Visita Requiere Parte --></label>
+        <name>PROC_CAS_Requiere_Informe_Cierre_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requiere Pago Minuta --></label>
+        <name>PROC_CAS_Requiere_Pago_Minuta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cuenta --></label>
+        <name>PROC_LKP_Cuenta__c</name>
+        <relationshipLabel><!-- Procedencias --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contador Rechazos --></label>
+        <name>PROC_NUM_Contador_Rechazos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contador Siniestros --></label>
+        <name>PROC_NUM_Contador__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cierre Servicio Nº de fotos requeridas --></label>
+        <name>PROC_NUM_Numero_Fotos_Requeridas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tiempo de atención de urgencias (hrs) --></label>
+        <name>PROC_NUM_Tiempo_Atencion_Urgencias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Canal --></label>
+        <name>PROC_SEL_Canal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremios Disponibles --></label>
+        <name>PROC_SEL_Gremios_Disp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivos de Anulación --></label>
+        <name>PROC_SEL_Motivos_Anulacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivos rechazo presupuesto --></label>
+        <name>PROC_SEL_Motivos_rechazo_presupuesto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preferencia de Comunicación --></label>
+        <name>PROC_SEL_Preferencia_Comunicacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subcanal --></label>
+        <name>PROC_SEL_Subcanal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Actuación --></label>
+        <name>PROC_SEL_Tipo_Actuacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipología de Servicio --></label>
+        <name>PROC_SEL_Tipologia_Servicio__c</name>
+        <picklistValues>
+            <masterLabel>ASISTENCIAS</masterLabel>
+            <translation><!-- ASISTENCIAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LDA SINIESTROS</masterLabel>
+            <translation><!-- LDA SINIESTROS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MANITAS</masterLabel>
+            <translation><!-- MANITAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB REPARACIONES</masterLabel>
+            <translation><!-- MB REPARACIONES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MB SINIESTROS</masterLabel>
+            <translation><!-- MB SINIESTROS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEDIAMARKT</masterLabel>
+            <translation><!-- MEDIAMARKT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REAL ESTATE</masterLabel>
+            <translation><!-- REAL ESTATE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SINIESTROS</masterLabel>
+            <translation><!-- SINIESTROS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipos de Registro de Intervención --></label>
+        <name>PROC_SEL_Tipos_Caso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción --></label>
+        <name>PROC_TXT_Descripcion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>PROC_TXT_Identificador__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Procedencia</layout>
+        <sections>
+            <label><!-- Contadores --></label>
+            <section>Contadores</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Procedencia FSL</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Albarán - ESP</name>
+    <style>none</style>
+    <subject>Albaran Servicio {!WorkOrder.WorkOrderNumber}</subject>
+    <textOnly>Asistencias HomeServe 
+
+¡Hola {!Contact.FirstName} {!Contact.LastName}! 
+
+Adjunto le enviamos el albarán correspondiente al servicio de referencia {!WorkOrder.OTR_TXT_Num_OrdenTrabajo_HS__c} que hemos gestionado el {!Contact.CON_FOR_Fecha_Actual__c}. 
+
+Por favor, no responda a este correo ya que es un correo automatizado solo para notificaciones. Para cualquier duda, póngase en contacto con nosotros. 
+
+Servicio 24h/365 días del año 
+
+{!WorkOrder.OTR_FOR_Telefono_VDN__c}
+
+Gracias por confiar en HomeServe 
+
+Para cualquier pregunta o sugerencia puede ponerse en contacto con nosotros en el correo electrónico atencion.cliente@homeserve.es  o en el teléfono {!WorkOrder.OTR_FOR_Telefono_VDN__c}.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

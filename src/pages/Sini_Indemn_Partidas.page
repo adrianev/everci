@@ -1,0 +1,71 @@
+<apex:page standardController="Case" extensions="SiniIndemnPartidasController" showHeader="true" sidebar="false">
+	<style>
+		.estiloFacet{
+			font-size: 1.2em;
+		}
+	</style>
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	<apex:form id="mainForm">
+		<apex:actionFunction name="seleccionarItemAF" action="{!seleccionarItem}" rerender="mainForm">
+			<apex:param name="indiceResultado" assignTo="{!indiceListaItems}" value=""/>
+		</apex:actionFunction>
+		<apex:actionFunction name="eliminarItemAF" action="{!eliminarItem}" rerender="mainForm">
+			<apex:param name="indiceListaItems" assignTo="{!indiceListaItems}" value=""/>
+		</apex:actionFunction>
+		<apex:sectionHeader title="Modificación Documento Indemnizable" subtitle="Partidas del Documento Indemnizable"/>
+		<apex:pageBlock title="Gestionar Partidas Indemnizables">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!volver}" value="<< Volver" title="<< Volver" rerender="mainForm" status="iconoCargando"/>
+				<apex:commandButton action="{!crearItem}" value="Nueva Partida" title="Nuevo" immediate="true" rendered="{!!creacionItem}" rerender="mainForm" status="iconoCargando"/>
+			</apex:pageBlockButtons>
+			<c:Detalle_Caso atrCaso="{!caso}"/>
+			<apex:pageBlockSection collapsible="false" columns="2" title="Datos de Documento Indemnizable">
+				<apex:outputField value="{!agrupador.Name}"/>
+				<apex:outputField value="{!agrupador.IND_SEL_Tipo_Documento__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="Partidas" collapsible="false" columns="1" showHeader="true">
+				<apex:variable value="{!0}" var="indiceCC"/>
+				<apex:facet name="header">
+					<apex:outputPanel styleClass="estiloFacet">
+						<apex:outputText value="Partidas del Documento Indemnizable"/>
+						<apex:image url="/img/s.gif" styleClass="helper helperOff" onmouseover="this.className='helper helperOn'; this.nextElementSibling.style.display='inline';" onmouseout="this.className='helper helperOff'; this.nextElementSibling.style.display='none';"/>
+						<apex:outputPanel styleClass="helperText">
+							<apex:outputText value="Doble click sobre la partida para modificarla"/>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:facet>
+				<apex:outputText value="No hay partidas." rendered="{!listaItems.size == 0}"/>
+				<apex:pageBlockTable value="{!listaItems}" var="item" title="Partidas" rendered="{!listaItems.size != 0}" 
+					onRowDblClick="seleccionarItemAF('{!indiceCC}', false);" style="cursor: pointer">
+					<apex:column headerValue="Acción">
+						<apex:variable value="{!indiceCC + 1}" var="indiceCC"/>
+						<apex:commandLink onclick="if(confirm('¿Está seguro?')){eliminarItemAF('{!indiceCC}');} return false;" value="Eliminar" styleClass="actionLink"/>
+					</apex:column>
+					<apex:column value="{!item.INDP_TXT_Descripcion__c}"/>
+					<apex:column value="{!item.INDP_DIV_Importe__c}"/>
+					<apex:column value="{!item.INDP_SEL_Estado__c}"/>
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection collapsible="false" columns="2" showHeader="true" title="{!tituloFormularioEdicion}" rendered="{!creacionItem}">				
+				<apex:inputField id="descripcion" value="{!nuevoItem.INDP_TXT_Descripcion__c}" required="true"/>
+				<apex:inputField id="importe" value="{!nuevoItem.INDP_DIV_Importe__c}" required="true"/>
+				<apex:inputField id="estado" value="{!nuevoItem.INDP_SEL_Estado__c}" required="true"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection collapsible="false" columns="1">
+				<apex:outputPanel style="padding-left:30.2%">
+					<apex:commandButton action="{!guardarItem}" value="Guardar" title="Guardar" rendered="{!creacionItem && !actualizacionItem}" rerender="mainForm" status="iconoCargando"/>
+					<apex:commandButton action="{!actualizarItem}" value="Guardar" title="Actualizar" rendered="{!actualizacionItem}" rerender="mainForm" status="iconoCargando"/>
+					<apex:commandButton action="{!cancelarCreacionItem}" value="Cancelar" title="Cancelar" immediate="true" rendered="{!creacionItem}" rerender="mainForm" status="iconoCargando"/>
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

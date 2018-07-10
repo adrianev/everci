@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Representan las ayudas que se deben mostrar al gestor parametrizadas por Compañía para no incurrir en hardcodear directamente sobre el código</description>
+    <fields>
+        <fullName>AYC_SEL_Tipo_Ayuda__c</fullName>
+        <description>Representa el tipo de ayuda</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Tipo de Ayuda</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Póliza No Identificada</fullName>
+                    <default>true</default>
+                    <label>Póliza No Identificada</label>
+                </value>
+                <value>
+                    <fullName>Póliza No Pertenece a HomeServe</fullName>
+                    <default>false</default>
+                    <label>Póliza No Pertenece a HomeServe</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AYC_TXT_Codigo_Cia__c</fullName>
+        <description>Representa el código identificador de la Compañía Aseguradora</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Código Compañía</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AYC_TXT_Mensaje__c</fullName>
+        <description>Representa el mensaje que se muestra en la ayuda al gestor</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Mensaje</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AYC_TXT_Valor__c</fullName>
+        <description>Representa el valor que se pasa para obtener el mensaje de la ayuda</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Valor</label>
+        <required>false</required>
+        <type>Phone</type>
+    </fields>
+    <label>Ayudas por Compañía</label>
+    <pluralLabel>Ayudas por Compañía</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

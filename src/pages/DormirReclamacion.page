@@ -1,0 +1,39 @@
+<apex:page standardController="Case" extensions="DormirReclamacion" showHeader="true">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:includeScript value="{!$Resource.jQuery}" />
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+
+		<apex:sectionHeader title="Dormir Reclamación"
+			subtitle="{!if(case != null, case.CaseNumber, '')}" />
+
+		<apex:pageBlock id="formularioSolicitud" title="Dormir Reclamación">
+			<apex:pageMessages />
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="<< Cancelar" title="Cancelar"
+					action="{!cancel}" rerender="mainForm" />
+				<apex:commandButton value="Continuar >>" title="Continuar"
+					action="{!guardar}" immediate="false"
+					status="iconoCargando" rerender="mainForm" />
+			</apex:pageBlockButtons>
+
+			<apex:pageBlockSection id="datos" showheader="false"
+				collapsible="false" columns="2">
+				<apex:inputField value="{!case.CAS_DAT_Fecha_Despertar__c}"
+					styleClass="requerido" />
+				<apex:inputField value="{!comentario.CMC_TXT_Comentario__c}"
+					styleClass="requerido" />
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

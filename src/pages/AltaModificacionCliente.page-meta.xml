@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApexPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>41.0</apiVersion>
+    <availableInTouch>true</availableInTouch>
+    <confirmationTokenRequired>false</confirmationTokenRequired>
+    <description>Página Visualforce que es llamada desde un botón de Cuenta con el RecordType Cliente B2B/B2B2C principal para dar de alta nuevas cuentas de Cliente B2B/B2B2C Secundarias</description>
+    <label>AltaModificacionCliente</label>
+</ApexPage>

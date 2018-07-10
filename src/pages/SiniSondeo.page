@@ -1,0 +1,394 @@
+<apex:page standardController="Case" extensions="SiniSondeoConfirmacionController" showHeader="false" sidebar="false">
+    <apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+
+    <style>
+        .listaSeleccion{
+            width: 45%;
+        }
+        .mensajeAyuda{
+            margin: 0 0 4px 0;
+            border-radius: 4px;
+            border-color: #39f;
+            background-color: #ffc;
+            border-style: solid;
+            border-width: 1px;
+            padding: 6px 8px 6px 6px;
+            display: block;
+            width: 98.5%;
+        }
+        
+        .imagenAyuda{
+            background-image: url(/img/msg_icons/info24.png);
+            margin-right: 10px !important;
+        }
+    </style>
+    
+    <script>
+        function colorPageBlock(pageblock, color) {
+        if (pageblock != null) pageblock.firstChild.style.cssText = 'background-color: ' + color + '; font-size: 1.5em;';
+        }
+    </script>
+
+    <apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+        <apex:facet name="start">
+            <apex:outputPanel styleClass="panelFondo">
+                <div class="contenedorCargando">Cargando...</div>
+            </apex:outputPanel>
+        </apex:facet>
+    </apex:actionStatus>
+
+    <apex:form id="mainForm">
+
+    <apex:actionFunction name="obtenerSalidaAF" action="{!obtenerSalida}" status="iconoCargando" rerender="mainForm"/>
+    <apex:actionFunction name="continuarAF" action="{!continuar_paso1}" status="iconoCargando" oncomplete="continuar_paso2AF();" rerender="mainForm"/>
+    <apex:actionFunction name="continuar_paso2AF" action="{!continuar_paso2}" status="iconoCargando" rerender="mainForm"/>
+  
+    <apex:actionFunction name="guardarPerjudicadoAF" action="{!guardarPerjudicado}" status="iconoCargando" rerender="mainForm">
+    </apex:actionFunction>
+
+    <apex:actionFunction name="editarPerjudicadoAF" action="{!seleccionarResultado}" status="iconoCargando" rerender="mainForm">
+			<apex:param name="indiceResultado"  value="" />
+	</apex:actionFunction> 
+
+    <apex:actionFunction name="eliminarPerjudicadoAF" action="{!eliminarPerjudicado}" status="iconoCargando" rerender="mainForm">
+			<apex:param name="indiceResultado"  value="" />
+		</apex:actionFunction>
+    
+	<apex:sectionHeader title="Proceso de Confirmación de Siniestro: Sondeo"
+		subtitle="{!if(intervencion != null, intervencion.CaseNumber, '')}" />
+
+    <apex:pageBlock id="formulario">
+        <!-- Mensajes -->
+        <apex:pageMessages />
+        <!-- Botontera -->
+        <apex:pageBlockButtons >
+            <apex:commandButton action="{!cancel}" value="<< Cancelar" title="Cancelar" status="iconoCargando" rerender="mainForm"/>
+            <apex:commandButton onclick="obtenerSalidaAF(); return false;"  value="Continuar >>" title="Continuar" status="cargandoIcono"  rerender="mainForm"  rendered="{!!intervencion.CAS_CAS_Confirmado__c &&  !verSeccionSalidasObtenidas}"/>
+            <apex:commandButton title="Continuar Confirmación"  onclick="continuarAF(); return false;" value="Continuar >>" status="iconoCargando" rerender="mainForm"  rendered="{!verSeccionSalidasObtenidas}"/>  
+        </apex:pageBlockButtons>
+
+        <c:Detalle_Caso atrCaso="{!intervencion}" atrPagina="{!$Label.VF_SINI_REPARABLE}" atrFase="CONFIRMACION"/>
+       
+        <apex:outputPanel styleClass="mensajeAyuda" rendered="{!textoAyudaGrupoCausa != null}">
+            <apex:image value="/s.gif" width="24" height="24" styleClass="imagenAyuda"/>
+            <apex:outputText value="{!textoAyudaGrupoCausa}"/>
+        </apex:outputPanel>
+        <!-- Grupo de Causas -->
+        <apex:pageBlockSection columns="{!numeroDeColumnas}"   collapsible="false">       
+            <!-- Grupo de causas: ORIGINAL -->
+            <apex:pageBlockSection id="seccionGrupoCausasApertura" title="Grupo de causas Apertura" collapsible="false">
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Grupo_Causa__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionGrupoCausasApertura}"), "#317F43");</script>
+            </apex:pageBlockSection>
+            <!-- Grupo de causas: PROFESIONAL -->
+            <apex:pageBlockSection title="Grupo de causas Profesional" id="seccionGrupoCausasProfesional" columns="1"  collapsible="false" rendered="{!numeroDeColumnas>2}">
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Grupo_Causa__c}" />
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionGrupoCausasProfesional}"), "#2271B3");</script>
+            </apex:pageBlockSection>
+            <!-- Grupo de causas: GESTOR -->
+            <apex:pageBlockSection title="Grupo de causas Gestor" id="seccionGrupoCausasGestor"  columns="1"   collapsible="false">
+            
+                <apex:selectList label="Grupo de causas" value="{!grupoCausas}" size="1" title="Grupo de causas">
+                    <apex:actionSupport event="onchange" action="{!cambioGrCausas}" status="iconoCargando" rerender="mainForm"/>
+                    <apex:selectOptions value="{!listaGrupoCausas}"/>
+                </apex:selectList>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionGrupoCausasGestor}"), "#C93C20");</script>
+            </apex:pageBlockSection>
+        </apex:pageBlockSection>
+        
+        
+        <apex:outputPanel styleClass="mensajeAyuda" rendered="{!textoAyudaTipoAveria!=null || textoAyudaDetalleAveria!=null || textoAyudaCausaAveria!=null}">
+            <apex:image value="/s.gif" width="24" height="24" styleClass="imagenAyuda"/>
+            <apex:outputText value="{!textoAyudaTipoAveria + textoAyudaDetalleAveria + textoAyudaCausaAveria}"/>
+        </apex:outputPanel>
+        <!-- Averías -->
+        <apex:pageBlockSection columns="{!numeroDeColumnas}" id="Averia" rendered="{!verTipoAveria}">
+            <!-- Averías ORIGINAL -->
+            <apex:pageBlockSection id="seccionaveriaApertura" title="Avería Apertura" columns="1" collapsible="false">
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Tipo_Averia__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Detalle_averia__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Causa_Averia__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionAveriaApertura}"), "#317F43");</script>
+            </apex:pageBlockSection>
+            <!-- Averías PROFESIONAL -->
+            <apex:pageBlockSection id="seccionAveriaProfesional" title="Avería Profesional" columns="1" rendered="{!numeroDeColumnas>2}" collapsible="false">
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Tipo_Averia__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Detalle_averia__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Causa_Averia__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionAveriaProfesional}"), "#2271B3");</script>
+            </apex:pageBlockSection>
+            <!-- Averías GESTOR -->
+            <apex:pageBlockSection id="seccionAveriaGestor" title="Avería Gestor" columns="1"  collapsible="false">
+                <apex:selectList label="Tipo de avería" value="{!tipoAveria}" size="1" title="Tipo de avería" styleClass="listaSeleccion">
+                    <apex:actionSupport event="onchange" action="{!cambioTipoAveria}" status="iconoCargando" rerender="mainForm"/>
+                    <apex:selectOptions value="{!listaTipoAveria}"/>
+                </apex:selectList>
+                <apex:selectList label="Detalle de la avería" value="{!detalleAveria}" size="1" title="Detalle de la avería" styleClass="listaSeleccion" rendered="{!verDetalleAveria}">
+                        <apex:actionSupport event="onchange" action="{!cambioDetalleAveria}" status="iconoCargando" rerender="mainForm"/>
+                        <apex:selectOptions value="{!listaDetalleAveria}"/>
+                    </apex:selectList>
+                <apex:selectList label="Causa de la avería" value="{!causaAveria}" size="1" title="Causa de la avería" styleClass="listaSeleccion" rendered="{!verCausaAveria}">
+                    <apex:actionSupport event="onchange" action="{!cambioCausaAveria}" status="iconoCargando" rerender="mainForm"/> <!-- action="{!cambioCausaAveria}" -->
+                    <apex:selectOptions value="{!listaCausaAveria}"/>
+                </apex:selectList> 
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionAveriaGestor}"), "#C93C20");</script>
+            </apex:pageBlockSection>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection columns="{!numeroDeColumnas}" collapsible="false" rendered="{!verSeccionDanos}">
+            <!-- Daños ORIGNIAL -->
+            <apex:pageBlockSection id="seccionDanosApertura" title="Daños Apertura" columns="1"   collapsible="false">
+                <apex:outputField label="Daños Propios" value="{!confirmacionCopiaOriginal.CNF_CAS_Danos_Propios__c}"/>
+                <apex:outputField label="Daños Perjudicados" value="{!confirmacionCopiaOriginal.CNF_CAS_Danos_Perjudicado__c}"/>
+                <apex:outputField label="Tercero Causante" value="{!confirmacionCopiaOriginal.CNF_CAS_Tercero_Causante__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionDanosApertura}"), "#317F43");</script>
+			</apex:pageBlockSection>
+		
+			<!-- Daños PROFESIONAL -->
+            <apex:pageBlockSection id="seccionDanosProfesional" title="Daños Profesional" columns="1" rendered="{!numeroDeColumnas>2}"  collapsible="false">
+                <apex:outputField label="Daños Propios" value="{!confirmacionProfesional.CNF_CAS_Danos_Propios__c}"/>
+                <apex:outputField label="Daños Perjudicados" value="{!confirmacionProfesional.CNF_CAS_Danos_Perjudicado__c}"/>
+                <apex:outputField label="Tercero Causante" value="{!confirmacionProfesional.CNF_CAS_Tercero_Causante__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionDanosProfesional}"), "#2271B3");</script>
+			</apex:pageBlockSection>
+			
+			            
+            <!-- Daños GESTOR -->
+            <apex:pageBlockSection id="seccionDanosGestor" title="Daños Gestor" columns="1" collapsible="false">
+                <apex:inputCheckBox label="Daños Propios" value="{!existenDanosPropios}">
+                    <apex:actionSupport event="onchange" action="{!cambioDanosPropios}" status="iconoCargando" rerender="mainForm"/>
+                </apex:inputCheckBox>
+
+                <apex:inputCheckBox label="Daños Perjudicados" value="{!existenDanosPerjudicado}">
+                    <apex:actionSupport event="onchange" action="{!cambioDanosPerjudicados}" status="iconoCargando" rerender="mainForm"/>
+                </apex:inputCheckBox>
+
+                <apex:inputCheckBox label="Tercero Causante" value="{!terceroCausante}" disabled="{!!existenDanosPropios}">
+                    <apex:actionSupport event="onchange" action="{!cargarListaPoblacionPorCPCausante}" status="iconoCargando" rerender="mainForm"/>
+                </apex:inputCheckBox>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionDanosGestor}"), "#C93C20");</script>
+			</apex:pageBlockSection>
+        </apex:pageBlockSection>
+
+        <!-- Daños: Daños Propios -->
+        <apex:outputPanel styleClass="mensajeAyuda"  rendered="{!textoAyudaDanosPropios!=null}">
+            <apex:image value="/s.gif" width="24" height="24" styleClass="imagenAyuda"/>
+            <apex:outputText value="{!textoAyudaDanosPropios}"/>
+        </apex:outputPanel>
+        <apex:pageBlockSection title="Daños Propios" columns="{!numeroDeColumnas}" collapsible="false" rendered="{!verSeccionDanosPropios}">
+            <!-- Daños: Daños Propios APERTURA -->
+            <apex:pageBlockSection columns="2" id="seccionDanosPropiosApertura" title="Daños Propios Apertura" collapsible="false">
+                <apex:outputText label="Daños" escape="false" value="{!SUBSTITUTE(confirmacionCopiaOriginal.CNF_SEL_Situacion_Danos_Propios__c,';','<br/>')}" />
+                <apex:outputText label="Otros Daños" escape="false" value="{!SUBSTITUTE(confirmacionCopiaOriginal.CNF_SEL_Otros_Danos__c,';','<br/>')}" />
+				<script>colorPageBlock(document.getElementById("{!$Component.seccionDanosPropiosApertura}"), "#317F43");</script>
+            </apex:pageBlockSection>
+
+            <!-- Daños: Daños Propios: PROFESIONAL -->
+            <apex:pageBlockSection columns="2" id="seccionDanosPropiosProfesional" title="Daños Propios Profesional" collapsible="false" rendered="{!numeroDeColumnas>2}">
+                <apex:outputText label="Daños" escape="false" value="{!SUBSTITUTE(confirmacionProfesional.CNF_SEL_Situacion_Danos_Propios__c,';','<br/>')}" />
+                <apex:outputText label="Otros Daños" escape="false" value="{!SUBSTITUTE(confirmacionProfesional.CNF_SEL_Otros_Danos__c,';','<br/>')}" />
+				<script>colorPageBlock(document.getElementById("{!$Component.seccionDanosPropiosProfesional}"), "#2271B3");</script>
+            </apex:pageBlockSection>
+
+            <!-- Daños: Daños Propios: GESTOR -->
+            <apex:pageBlockSection columns="2" id="seccionDanosPropiosGestor" title="Daños Propios Gestor" rendered="{!existenDanosPropios}" collapsible="false" >
+                <!-- <apex:inputField id="sitDanosPropios" label="Daños" styleClass="listaSeleccion" value="{!arbolDecisionLineasAuxiliar.ADL_SEL_E_Situacion_Danos_Propios__c}" rendered="{!existenDanosPropios}" />
+                <apex:inputField id="otrosDanosPropios" label="Otros Daños" styleClass="listaSeleccion" value="{!arbolDecisionLineasAuxiliar.ADL_SEL_E_Otros_Danos_Propios__c}" rendered="{!existenDanosPropios}"/>
+                -->
+                <!-- Daños -->
+               <!-- <apex:selectCheckboxes value="{!listaSeleccionDanosPropiosRespuestas}" layout="pageDirection"  onclick="verSalida();" label="Daños">
+                    <apex:selectOptions value="{!listaSeleccionDanosPropios}">
+                    </apex:selectOptions> 
+                </apex:selectCheckboxes> -->
+                <apex:outputPanel layout="block" style="overflow-y:auto;height:250px" title="Daños">
+                    <apex:dataList title="Daños" value="{!mapSeleccionDanosPropios}" var="danoPropioSelected" >
+                        <apex:outputText value="{!danoPropioSelected}"> 
+                            <apex:inputCheckBox selected="{!mapSeleccionDanosPropios[danoPropioSelected]}"/>
+                        </apex:outputText>
+                    </apex:dataList>
+                </apex:outputPanel>
+
+                <apex:outputPanel layout="block" style="overflow-y:auto; height:250px" title="Otros Daños">
+                    <apex:dataList title="Otros Daños" value="{!mapSeleccionOtrosDanos}" var="otroDanoSelected" >
+                        <apex:outputText value="{!otroDanoSelected}"> 
+                            <apex:inputCheckBox selected="{!mapSeleccionOtrosDanos[otroDanoSelected]}"/>
+                        </apex:outputText>
+                    </apex:dataList>
+                </apex:outputPanel>
+
+                <!-- Otros Daños --> 
+                <!-- <apex:selectCheckboxes value="{!listaSeleccionDanosPropiosRespuestas}" layout="pageDirection" label="Otros Daños">
+                    <apex:selectOptions value="{!listaSeleccionOtrosDanos}"/>
+                </apex:selectCheckboxes> -->
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionDanosPropiosGestor}"), "#C93C20");</script>
+            </apex:pageBlockSection>
+        </apex:pageBlockSection>    
+
+        <apex:outputPanel styleClass="mensajeAyuda"  rendered="{!textoAyudaDanosPerjudicados!=null}">
+            <apex:image value="/s.gif" width="24" height="24" styleClass="imagenAyuda"/>
+            <apex:outputText value="{!textoAyuda}"/>
+        </apex:outputPanel>
+        <!--PERJUDICADOS, EN UNA SOLA VISTA  -->
+        <apex:pageBlockSection columns="1" rendered="{!verSeccionDanosPerjudicado}">
+            <apex:pageBlockSection collapsible="false" columns="1"  title="{!IF(edicionPerjudicado, 'Editar Perjudicado', IF(creacionPerjudicado, 'Nuevo Perjudicado', 'Daños Perjudicados'))}" rendered="{!existenDanosPerjudicado}">
+                <apex:outputPanel style="padding-left:30.2%">
+                    <apex:commandButton action="{!crearPerjudicado}" value="Nuevo Perjudicado" title="Nuevo" immediate="true" rendered="{!!creacionPerjudicado && !edicionPerjudicado}" rerender="mainForm"/>
+                    <apex:commandButton onclick="guardarPerjudicadoAF(); return false;" value="Guardar Perjudicado" title="Guardar" rendered="{!creacionPerjudicado || edicionPerjudicado}" rerender="mainForm"/>
+                    <apex:commandButton action="{!cancelarCreacionPerjudicado}" value="Cancelar" title="Cancelar" immediate="true" rendered="{!creacionPerjudicado || edicionPerjudicado}" rerender="mainForm"/>
+                </apex:outputPanel>
+            </apex:pageBlockSection>
+            <!-- Daños Daños Perjudicado Tabla: GESTOR -->
+            <apex:pageBlockSection collapsible="false" columns="2" showHeader="false" rendered="{!existenDanosPerjudicado && (creacionPerjudicado || edicionPerjudicado)}">
+                    <apex:inputField id="tipoPerjudicado" value="{!nuevoPerjudicado.PRJ_SEL_Tipo_Perjudicado__c}"/>
+                    <apex:inputText id="nombrePerjudicado" value="{!nuevoPerjudicado.PRJ_TXT_Nombre__c}"/>
+                    <apex:inputText id="direccionPerjudicado" value="{!nuevoPerjudicado.PRJ_TXT_Direccion__c}"/>
+                    <apex:inputField id="cpPerjudicado" value="{!nuevoPerjudicado.PRJ_TXT_Codigo_Postal__c}">
+                        <!-- <apex:actionSupport event="onchange" action="{!buscarPoblacionPorCPPerjudicado}" status="cargando" rerender="mainFormVF"/> -->
+                        <apex:actionSupport event="onchange" action="{!cargarListaPoblacionPorCPPerjudicado}" status="iconoCargando" rerender="mainForm"/>
+                    </apex:inputField>
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Población"/>
+                        <apex:selectList value="{!poblacionPerjudicado}" size="1" title="Población perjudicado"
+                            onchange="cargarProvinciaPoblacionPerjudicadoAF();" styleClass="requerido">
+                            <apex:selectOptions value="{!listaPoblacionesPerjudicado}"/>
+                        </apex:selectList>
+                    </apex:pageBlockSectionItem>
+                    <apex:outputField id="provinciaPerjudicado" value="{!nuevoPerjudicado.PRJ_SEL_Provincia__c}"/>
+                    <apex:inputField id="dniPerjudicado" value="{!nuevoPerjudicado.PRJ_TXT_Perjudicado_N_Documento__c}"/>
+                    <apex:inputField id="tfnoPerjudicado1" value="{!nuevoPerjudicado.PRJ_TFN_Telefono_1__c}"/>
+                    <apex:inputField id="sitDanosPropiosPerj" value="{!nuevoPerjudicado.PRJ_SEL_Situacion_Danos__c}">
+                        
+                    </apex:inputField>
+                    <apex:inputField id="tfnoPerjudicado2" value="{!nuevoPerjudicado.PRJ_TFN_Movil__c}"/>
+                    <apex:inputField id="otrosDanosPropiosPerj" value="{!nuevoPerjudicado.PRJ_SEL_Otros_Danos__c}">
+                        
+                    </apex:inputField>
+                    <apex:inputField id="tfnoPerjudicado3" value="{!nuevoPerjudicado.PRJ_TFN_Telefono_Adicional__c}"/>
+                </apex:pageBlockSection> 
+
+                <apex:pageBlockSection columns="1" showHeader="false" rendered="{!existenDanosPerjudicado}"  collapsible="false">
+                    <apex:variable value="{!0}" var="indice"/>
+                    <apex:pageBlockTable value="{!listaPerjudicados}" var="perj" onRowDblClick="editarPerjudicadoAF('{!indice}');"
+                        rendered="{!listaPerjudicados.size != 0}" style="cursor: pointer" >
+                        <apex:column headerValue="Acción">
+                            <apex:variable value="{!indice + 1}" var="indice"/>
+                            <apex:commandLink onclick="if(confirm('¿Está seguro?')){eliminarPerjudicadoAF('{!indice}');} return false;" value="Eliminar" 
+                                immediate="true" styleClass="actionLink"/>
+                        </apex:column>
+                        <apex:column value="{!perj.PRJ_SEL_Tipo_Perjudicado__c}"/>
+                        <apex:column value="{!perj.PRJ_TXT_Nombre__c}"/>
+                        <apex:column value="{!perj.PRJ_TXT_Direccion__c}"/>
+                        <apex:column value="{!perj.PRJ_TXT_Codigo_Postal__c}"/>
+                        <apex:column value="{!perj.PRJ_TXT_Poblacion__c}"/>
+                        <apex:column value="{!perj.PRJ_SEL_Provincia__c}"/>
+                        <apex:column value="{!perj.PRJ_TXT_Perjudicado_N_Documento__c}"/>
+                        <apex:column value="{!perj.PRJ_SEL_Situacion_Danos__c}"/>
+                        <apex:column value="{!perj.PRJ_SEL_Otros_Danos__c}"/>
+                        <apex:column value="{!perj.PRJ_TFN_Telefono_1__c}"/>
+                        <apex:column value="{!perj.PRJ_TFN_Movil__c}"/>
+                        <apex:column value="{!perj.PRJ_TFN_Telefono_Adicional__c}"/>
+                    </apex:pageBlockTable>
+                   
+                </apex:pageBlockSection>       
+            </apex:pageBlockSection>
+        <!-- Daños:Tercero Causante --> 
+        <apex:pageBlockSection columns="{!numeroDeColumnas}"  collapsible="false" rendered="{!verSeccionTerceroCausante}">
+            <!-- Tercero Causante Apertura -->
+            <apex:pageBlockSection columns="2" id="seccionTerceroCausanteApertura" title="Tercero Causante Apertura" rendered="{!terceroCausante}"  collapsible="false">
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Causante_Responsable__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Nombre__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Apellidos__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Apellidos2__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Causante_Tipo_Documento__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Causante_N_Documento__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Causante_Direccion__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Codigo_Postal__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Causante_Poblacion__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Causante_Provincia__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TFN_Telefono_1__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TFN_Telefono_2__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_EMA_Email__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_SEL_Causante_Compania__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Causante_Poliza_R_C__c}"/>
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Causante_N_exp_Stro__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionTerceroCausanteApertura}"), "#317F43");</script>
+            </apex:pageBlockSection>
+                <!-- Daños: Tercero Causante: PROFESIONAL -->
+            <apex:pageBlockSection columns="2" id="seccionTerceroCausanteProfesional" title="Tercero Causante Profesional" rendered="{!terceroCausante && numeroDeColumnas>2}"  collapsible="false">
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Causante_Responsable__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Nombre__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Apellidos__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Apellidos2__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Causante_Tipo_Documento__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Causante_N_Documento__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Causante_Direccion__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Codigo_Postal__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Causante_Poblacion__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Causante_Provincia__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TFN_Telefono_1__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TFN_Telefono_2__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_EMA_Email__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_SEL_Causante_Compania__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Causante_Poliza_R_C__c}"/>
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Causante_N_exp_Stro__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionTerceroCausanteProfesional}"), "#2271B3");</script>
+            </apex:pageBlockSection> 
+
+            <!-- Daños: Tercero Causante : GESTOR -->
+            <apex:pageBlockSection columns="2" id="seccionTerceroCausanteGestor" title="Tercero Causante Gestor" rendered="{!terceroCausante}"  collapsible="false">
+                <apex:inputField value="{!confirmacionEditable.CNF_SEL_Causante_Responsable__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Nombre__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Apellidos__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Apellidos2__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_SEL_Causante_Tipo_Documento__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Causante_N_Documento__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Causante_Direccion__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Codigo_Postal__c}">
+                    <apex:actionSupport event="onchange" action="{!cargarListaPoblacionPorCPCausante}" status="iconoCargando" rerender="mainForm"/>
+                </apex:inputField>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Población"/>
+                    <apex:selectList value="{!poblacionCausante}" size="1" title="Población causante" onchange="cargarProvinciaPoblacionCausanteAF();" styleClass="requerido">
+                        <apex:selectOptions value="{!listaPoblacionesCausante}"/>
+                    </apex:selectList>
+                </apex:pageBlockSectionItem>
+                <apex:outputField value="{!confirmacionEditable.CNF_SEL_Causante_Provincia__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TFN_Telefono_1__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TFN_Telefono_2__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_EMA_Email__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_SEL_Causante_Compania__c}" styleClass="listaSeleccion"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Causante_Poliza_R_C__c}"/>
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Causante_N_exp_Stro__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionTerceroCausanteGestor}"), "#C93C20");</script>
+            </apex:pageBlockSection>
+                
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection columns="{!numeroDeColumnas}" collapsible="false">
+            <apex:pageBlockSection id="seccionComentariosApertura" columns="1" collapsible="false" title="Comentarios Apertura">
+                <apex:outputField value="{!confirmacionCopiaOriginal.CNF_TXT_Comentario__c}"/>
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionComentariosApertura}"), "#317F43");</script>
+             </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="seccionComentariosProfesional" columns="1" collapsible="false" title="Comentarios Profesional"
+            	rendered="{!confirmacionProfesional.Id != null}">
+                <apex:outputField value="{!confirmacionProfesional.CNF_TXT_Comentario__c}"/>  
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionComentariosProfesional}"), "#2271B3");</script>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockSection id="seccionComentariosGestor" columns="1" collapsible="false" title="Comentarios Gestor">
+                <apex:inputField value="{!confirmacionEditable.CNF_TXT_Comentario__c}" styleClass="requerido" />  
+                <script>colorPageBlock(document.getElementById("{!$Component.seccionComentariosGestor}"), "#C93C20");</script>
+            </apex:pageBlockSection>
+        </apex:pageBlockSection>
+
+        <apex:pageBlockSection id="seccionSalidasObtenidas" title="Salida Obtenida" rendered="{!verSeccionSalidasObtenidas}" collapsible="false">
+                <apex:outputLabel value="Selecciona la salida."/>
+            <apex:selectList value="{!salidaSeleccionada}" size="1" title="Salida obtenida" styleClass="requerido" onChange="modificaCionSalidaSeleccionada(); return false;">
+                    <apex:selectOptions value="{!listaSalidasObtenidas}"/>
+                </apex:selectList>
+            <script>colorPageBlock(document.getElementById("{!$Component.seccionSalidasObtenidas}"), "#C93C20");</script>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock> 
+    </apex:form>
+</apex:page>

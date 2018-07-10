@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>FAC_CAS_Con_Fichero__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Casilla que indica si la factura tiene un fichero adjunto</description>
+        <externalId>false</externalId>
+        <label>Con Fichero</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FAC_CAS_Factura_de_Gestion__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica si la factura es en concepto de gestión si está a true</description>
+        <externalId>false</externalId>
+        <label>Factura de Gestión</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FAC_CAS_IndicadorPagoFranquicia__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Representa si en la factura aplica Franquicia</description>
+        <externalId>false</externalId>
+        <label>Indicador Pago Franquicia</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FAC_DAT_FechaFactura__c</fullName>
+        <description>Fecha de expedición de la factura</description>
+        <externalId>false</externalId>
+        <label>Fecha de Factura</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>FAC_DIV_ImporteFactura__c</fullName>
+        <description>Importe de la factura con Base imponible</description>
+        <externalId>false</externalId>
+        <label>Importe de factura</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FAC_DIV_ImporteFranquicia__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe Franquicia</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FAC_DIV_Importe_Pago__c</fullName>
+        <description>Importe del pago informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Importe Pago</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FAC_DIV_RetencionPago__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>Valor de la Retención del Pago (importe retenido) informada por el Facturador.</description>
+        <externalId>false</externalId>
+        <label>Retencion Pago</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>FAC_LKP_Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Id del caso asociado a la factura</description>
+        <externalId>false</externalId>
+        <label>Id Intervención</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Facturas</relationshipLabel>
+        <relationshipName>Facturas</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FAC_LKP_Cuenta__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Identificador de la cuenta asociada a la factura</description>
+        <externalId>false</externalId>
+        <label>Id Cuenta</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Facturas</relationshipLabel>
+        <relationshipName>Facturas_del</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FAC_LKP_WorkOrkder__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Id de la orden de trabajo asociada a la factura.</description>
+        <externalId>false</externalId>
+        <label>Id Servicio</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipLabel>Facturas</relationshipLabel>
+        <relationshipName>Facturas</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_Ano_Pago__c</fullName>
+        <description>Año de emisión de la factura</description>
+        <externalId>false</externalId>
+        <label>Año Pago</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_Base_Imponible__c</fullName>
+        <description>Cantidad sobre la que se calculan los impuestos, lo que se conoce como cómputo de la cuota tributaria.</description>
+        <externalId>false</externalId>
+        <label>Base Imponible</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_ImporteFinal__c</fullName>
+        <description>Importe de la factura con Base imponible</description>
+        <externalId>false</externalId>
+        <label>Importe Final</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_ImporteIVA__c</fullName>
+        <description>Importe añadido por IVA</description>
+        <externalId>false</externalId>
+        <label>ImporteIVA</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_IndicadorQuincena__c</fullName>
+        <description>Quincena de emisión de la factura</description>
+        <externalId>false</externalId>
+        <label>Indicador Quincena</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_MesPago__c</fullName>
+        <description>Mes en el que se realiza el pago informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Mes Pago</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_NUM_TotalImportes__c</fullName>
+        <description>Importe del pago sin base imponible</description>
+        <externalId>false</externalId>
+        <label>Total Importes</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_POR_PorcentajeIVA__c</fullName>
+        <description>Porcentaje de IVA informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Porcentaje IVA</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>FAC_TXT_Codigo_Capital__c</fullName>
+        <externalId>false</externalId>
+        <label>Codigo Capital</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_TXT_Numero_factura__c</fullName>
+        <description>Número de factura informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Número de factura</label>
+        <length>30</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FAC_TXT_Tipo_Registro__c</fullName>
+        <description>Tipo de Registro de Pagos enviado a la aseguradora.</description>
+        <externalId>false</externalId>
+        <label>Tipo Registro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Factura</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Nombre de Factura</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Facturas</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

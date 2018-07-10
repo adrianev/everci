@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla de email que se envia cuando un caso se cierra y se transfiere</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Cerrado y transferido</name>
+    <style>none</style>
+    <subject>Siniestro transferido</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>100</fullName>
+        <default>false</default>
+        <label>BAU</label>
+    </customValue>
+    <customValue>
+        <fullName>110</fullName>
+        <default>false</default>
+        <label>REAL ESTATE</label>
+    </customValue>
+    <customValue>
+        <fullName>120</fullName>
+        <default>false</default>
+        <label>SME&apos;S</label>
+    </customValue>
+    <customValue>
+        <fullName>130</fullName>
+        <default>false</default>
+        <label>B2C/DIGITAL</label>
+    </customValue>
+    <customValue>
+        <fullName>140</fullName>
+        <default>false</default>
+        <label>B2B2C</label>
+    </customValue>
+    <customValue>
+        <fullName>150</fullName>
+        <default>false</default>
+        <label>ON DEMAND</label>
+    </customValue>
+    <customValue>
+        <fullName>160</fullName>
+        <default>false</default>
+        <label>B2B</label>
+    </customValue>
+    <masterLabel>Canales Procedencia</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

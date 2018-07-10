@@ -1,0 +1,73 @@
+<apex:page standardController="Account">
+    <style>
+.cabecera {
+    font-weight: bold;
+    font-size: 1.3em;
+    width: 100%;
+    text-align: Center;
+    margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
+}
+
+.B2B_B2B2C {
+    color: #1e63b7; /*Azul*/
+    background: radial-gradient(rgba(0, 103, 230, 0.32),
+        rgba(0, 103, 230, 0.05), rgba(0, 0, 0, 0));
+}
+
+.B2C {
+    color: #0e940e; /*Verde*/
+    background: radial-gradient(rgba(20, 167, 20, 0.32),
+        rgba(20, 167, 20, 0.05), rgba(0, 0, 0, 0));
+}
+
+.compania {
+    color: #de1a1a; /*Rojo*/
+    background: radial-gradient(rgba(255, 0, 0, 0.32), rgba(255, 0, 0, 0.05),
+        rgba(0, 0, 0, 0));
+}
+
+.profesional {
+    color: #ff4500; /*Naranja*/
+    background: radial-gradient(rgba(255, 140, 0, 0.55),
+        rgba(255, 165, 0, 0.10), rgba(0, 0, 0, 0)); 
+}
+
+</style>
+    <apex:form styleClass="cabecera compania"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_CLIENTE_ASEGURADO}">
+        <apex:outputText value="Cliente Asegurado" /> 
+    </apex:form>
+    <apex:form styleClass="cabecera B2B_B2B2C"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_CLIENTEB2B_1}">
+        <apex:outputText value="Compañia B2B/B2B2C" />
+    </apex:form>
+    <apex:form styleClass="cabecera B2B_B2B2C"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_CLIENTEB2B_2}">
+        <apex:outputText value="Cliente B2B/B2B2C" />
+    </apex:form>
+    <apex:form styleClass="cabecera B2C"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_CLIENTEB2C_1}">
+        <apex:outputText value="Compañia B2C" />
+    </apex:form>
+    <apex:form styleClass="cabecera B2C"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_CLIENTE_PARTICULAR}">
+        <apex:outputText value="Cliente B2C" /><!-- Cliente Particular -->
+    </apex:form>
+    <apex:form styleClass="cabecera compania"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_COMPANIA}">
+        <apex:outputText value="Compañía" />
+    </apex:form>
+    <apex:form styleClass="cabecera compania"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_COMPANIA_HS}">
+        <apex:outputText value="Compañía" />
+    </apex:form>
+    <apex:form styleClass="cabecera profesional"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_PROFESIONAL_CONTRATO}">
+        <apex:outputText value="Profesional Contrato" />
+    </apex:form>
+    <apex:form styleClass="cabecera profesional"
+        rendered="{!Account.CUE_FOR_RTDevName__c == $Label.RT_CUE_PROFESIONAL}">
+        <apex:outputText value="Profesional Empresa" />
+    </apex:form>
+</apex:page>

@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>EMAIL  RECORDATORIO</TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Windows)">
+	<META NAME="AUTHOR" CONTENT=" ">
+	<META NAME="CREATED" CONTENT="20120621;13380000">
+	<META NAME="CHANGEDBY" CONTENT=" ">
+	<META NAME="CHANGED" CONTENT="20120621;13380000">
+	<META NAME="Informaci&oacute;n 1" CONTENT="">
+	<META NAME="Informaci&oacute;n 2" CONTENT="">
+	<META NAME="Informaci&oacute;n 3" CONTENT="">
+	<META NAME="Informaci&oacute;n 4" CONTENT="">
+	<STYLE TYPE="text/css">
+	table { text-align: justify;}
+	<!--
+		@page { margin-right: 3cm; margin-top: 1.25cm; margin-bottom: 1.25cm }
+		P { margin-bottom: 0.21cm; direction: ltr; color: #000000; widows: 2; orphans: 2 }
+		P.western { font-family: "Times New Roman", serif; font-size: 12pt; so-language: es-ES }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 12pt }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 12pt; so-language: ar-SA }
+		A:link { color: #0000ff }
+		A.ctl:link { font-family: "Times New Roman", serif }
+		A:visited { color: #800080 }
+		A.western:visited { so-language: es-ES }
+		A.cjk:visited { so-language: zh-CN }
+		A.ctl:visited { font-family: "Times New Roman", serif; so-language: hi-IN }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-ES" TEXT="#000000" LINK="#0000ff" VLINK="#800080" DIR="LTR" leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+<TABLE WIDTH="100%"><TR>
+<DIV TYPE=HEADER>
+	<P LANG="es-ES" STYLE="margin-bottom: 0cm"><IMG SRC="{!$Label.Servlet_Imagenes}id=0159E000000Hxh2&oid={!$Label.Id_Entorno_Email_Templates}&lastMod=1519737135000"><IMG SRC="{!$Label.Servlet_Imagenes}id=0159E000000HxhM&oid={!$Label.Id_Entorno_Email_Templates}&lastMod=1519737227000" NAME="gr&aacute;ficos2" ALIGN=LEFT HEIGHT=35 BORDER=0></P>
+</DIV>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm">
+<BR>
+<BR>
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-bottom: 0cm">
+<BR>
+<BR>
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-right: -0cm; margin-bottom: 0cm; background: #ffffff; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Fecha
+Siniestro:{!Case.CreatedDate}</FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-right: -0cm; margin-bottom: 0cm; background: #ffffff; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">N&ordm;
+Siniestro: {!Case.CaseNumber}</FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" ALIGN=RIGHT STYLE="margin-right: -0cm; margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">N&ordm;
+P&oacute;liza: {!Case.00N9E000001uR9S}</FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm;">
+<BR>
+<BR>
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm;">
+<BR>
+<BR>
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Estimado
+Sr/Sra. <FONT COLOR="#0033cc">{!Case.Account}</FONT>,</FONT></FONT>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm;">
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Hemos
+comprobado que todav&iacute;a no ha accedido a la informaci&oacute;n
+que tiene disponible sobre su siniestro en el <B>Portal Clic Hogar</B>. Le recordamos que a trav&eacute;s de este portal usted
+podr&aacute; seguir todos los pasos de su reparaci&oacute;n,
+comprobar los gremios que han de intervenir y resolver todas sus
+dudas sobre el proceso.</FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm;">
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><U>&iquest;C&oacute;mo
+acceder al Portal?</U></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Simplemente
+tendr&aacute; que entrar en el link que le indicamos e introducir su
+usuario y contrase&ntilde;a:  </FONT></FONT>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm;">
+<BR>
+</P>
+<UL>
+	<LI><P LANG="es-ES" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Link:
+	</FONT></FONT><FONT COLOR="#0000ff"><U><A CLASS="western" HREF="https://www.clichogar.es"><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">https://www.clichogar.es</FONT></FONT></A></U></FONT></P>
+	<LI><P LANG="es-ES" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Usuario:
+	{!Case.CAS_TXT_Usuario_Clic_Hogar__c}</FONT></FONT></P>
+	<LI><P LANG="es-ES" STYLE="margin-bottom: 0cm; line-height: 150%"><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Contrase&ntilde;a:
+	{!Case.CAS_TXT_Password_Clic_Hogar__c}</FONT></FONT></P>
+</UL>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm;">
+<BR>
+<BR>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Estamos
+a su disposici&oacute;n para ayudarle y prestarle el mejor servicio.
+<BR></FONT></FONT><BR>
+</P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Reciba
+un cordial saludo,</FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<FONT COLOR="#ff6600"><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B>
+NATIONALE NEDERLANDEN</B></FONT></FONT></FONT></P>
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm; line-height: 150%">
+<P LANG="es-ES" CLASS="western" STYLE="margin-bottom: 0cm"><FONT FACE="Arial, sans-serif"><FONT SIZE=1 STYLE="font-size: 8pt">*Nota:
+este correo es informativo, rogamos no responda al mismo. </FONT></FONT>
+</P>
+<DIV TYPE=FOOTER>
+		<P LANG="es-ES" STYLE="margin-bottom: 0cm"><img src="https://www.homeserve.es/img/logo-homeserve.png" alt="HomeServe" />	</P>
+</DIV>
+</TR></TABLE>
+</BODY>
+</HTML>

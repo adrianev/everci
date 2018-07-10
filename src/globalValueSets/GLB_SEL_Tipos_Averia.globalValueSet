@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>001</fullName>
+        <default>false</default>
+        <label>ACCESO Y/O DAÑOS PROVOCADOS POR OCUPAS</label>
+    </customValue>
+    <customValue>
+        <fullName>002</fullName>
+        <default>false</default>
+        <label>ACCION DIRECTA DEL CALOR SIN EXISTENCIA DE LLAMA</label>
+    </customValue>
+    <customValue>
+        <fullName>003</fullName>
+        <default>false</default>
+        <label>ALTERACION ELECTRICA: DAÑOS SOLO EN INSTALACION ELECTRICA O INSTALACION ELECTRICA + APARATOS (CON GARANTIA, SIN Y CON/SIN)</label>
+    </customValue>
+    <customValue>
+        <fullName>004</fullName>
+        <default>false</default>
+        <label>ALTERACION ELECTRICA: SOLO DAÑOS EN APARATOS (UNOS ESTAN EN GARANTIA Y OTROS NO LO ESTAN)</label>
+    </customValue>
+    <customValue>
+        <fullName>005</fullName>
+        <default>false</default>
+        <label>ALTERACION ELECTRICA: SOLO DAÑOS EN APARATOS QUE ESTAN EN GARANTIA</label>
+    </customValue>
+    <customValue>
+        <fullName>006</fullName>
+        <default>false</default>
+        <label>ALTERACION ELECTRICA: SOLO DAÑOS EN APARATOS QUE NO ESTAN EN GARANTIA.</label>
+    </customValue>
+    <customValue>
+        <fullName>007</fullName>
+        <default>false</default>
+        <label>APERTURA DE PUERTA COSTEADA POR EL ASEGURADO</label>
+    </customValue>
+    <customValue>
+        <fullName>008</fullName>
+        <default>false</default>
+        <label>AVERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>009</fullName>
+        <default>false</default>
+        <label>AVERIAS DE GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>012</fullName>
+        <default>false</default>
+        <label>CAIDA DE RAYO: DAÑOS SOLO EN INSTALACION ELECTRICA O INSTALACION ELECTRICA + APARATOS (CON GARANTIA, SIN Y CON/SIN)</label>
+    </customValue>
+    <customValue>
+        <fullName>013</fullName>
+        <default>false</default>
+        <label>CAIDA DE RAYO: SOLO DAÑOS EN APARATOS (UNOS ESTAN EN GARANTIA Y OTROS NO LO ESTAN)</label>
+    </customValue>
+    <customValue>
+        <fullName>014</fullName>
+        <default>false</default>
+        <label>CAIDA DE RAYO: SOLO DAÑOS EN APARATOS QUE ESTAN EN GARANTIA</label>
+    </customValue>
+    <customValue>
+        <fullName>015</fullName>
+        <default>false</default>
+        <label>CAIDA DE RAYO: SOLO DAÑOS EN APARATOS QUE NO ESTAN EN GARANTIA (UNO O VARIOS)</label>
+    </customValue>
+    <customValue>
+        <fullName>016</fullName>
+        <default>false</default>
+        <label>CARPINTERIA MADERA</label>
+    </customValue>
+    <customValue>
+        <fullName>017</fullName>
+        <default>false</default>
+        <label>DAÑOS CAUSADOS POR ANIMALES O INSECTOS</label>
+    </customValue>
+    <customValue>
+        <fullName>018</fullName>
+        <default>false</default>
+        <label>DAÑOS EN PUERTAS Y ACCESORIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>019</fullName>
+        <default>false</default>
+        <label>DAÑOS EN VENTANAS Y/O MAMPARAS, CIERRES Y MARCOS</label>
+    </customValue>
+    <customValue>
+        <fullName>020</fullName>
+        <default>false</default>
+        <label>DAÑOS MATERIALES Y/O PERSONALES A UN PERJUDICADO</label>
+    </customValue>
+    <customValue>
+        <fullName>021</fullName>
+        <default>false</default>
+        <label>EXPLOSION DE CALDERA/CALENTADOR</label>
+    </customValue>
+    <customValue>
+        <fullName>022</fullName>
+        <default>false</default>
+        <label>EXPOLIACION</label>
+    </customValue>
+    <customValue>
+        <fullName>023</fullName>
+        <default>false</default>
+        <label>FALTA DE MANTENIMIENTO Y/O DEFECTO DE CONSTRUCCION</label>
+    </customValue>
+    <customValue>
+        <fullName>024</fullName>
+        <default>false</default>
+        <label>FENOMENOS METEOROLOGICOS</label>
+    </customValue>
+    <customValue>
+        <fullName>025</fullName>
+        <default>false</default>
+        <label>FILTRACIONES/CONDENSACIONES/MANCHA SECA</label>
+    </customValue>
+    <customValue>
+        <fullName>026</fullName>
+        <default>false</default>
+        <label>HECHO ACCIDENTAL O FORTUITO QUE PROVOCA DAÑOS SOBRE EL CONTINENTE</label>
+    </customValue>
+    <customValue>
+        <fullName>027</fullName>
+        <default>false</default>
+        <label>HURTO</label>
+    </customValue>
+    <customValue>
+        <fullName>028</fullName>
+        <default>false</default>
+        <label>INCENDIO</label>
+    </customValue>
+    <customValue>
+        <fullName>029</fullName>
+        <default>false</default>
+        <label>INFIDELIDAD DE EMPLEADOS</label>
+    </customValue>
+    <customValue>
+        <fullName>030</fullName>
+        <default>false</default>
+        <label>MALOS OLORES EN GENERAL (CONDUCCIONES, VENTILACION, …)</label>
+    </customValue>
+    <customValue>
+        <fullName>031</fullName>
+        <default>false</default>
+        <label>OTRAS AVERIAS ELECTRICAS NO CONTEMPLADAS EN LOS CASOS ANTERIORES</label>
+    </customValue>
+    <customValue>
+        <fullName>032</fullName>
+        <default>false</default>
+        <label>OTRAS CONTINGENCIAS MANTENIMIENTO</label>
+    </customValue>
+    <customValue>
+        <fullName>033</fullName>
+        <default>false</default>
+        <label>OTRAS EXPLOSIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>034</fullName>
+        <default>false</default>
+        <label>OTROS ELEMENTOS DAÑADOS NO CONTEMPLADOS EN LOS CASOS ANTERIORES</label>
+    </customValue>
+    <customValue>
+        <fullName>035</fullName>
+        <default>false</default>
+        <label>PERDIDA DE LLAVES</label>
+    </customValue>
+    <customValue>
+        <fullName>036</fullName>
+        <default>false</default>
+        <label>ROBO O DAÑOS CAUSADOS EN INSTALACIONES Y/O ENSERES</label>
+    </customValue>
+    <customValue>
+        <fullName>037</fullName>
+        <default>false</default>
+        <label>ROTURA DE: CRISTAL/METACRILATO/PVC/FIBRA DE VIDRIO</label>
+    </customValue>
+    <customValue>
+        <fullName>038</fullName>
+        <default>false</default>
+        <label>ROTURA DE: CRISTAL Y/O VINILO</label>
+    </customValue>
+    <customValue>
+        <fullName>039</fullName>
+        <default>false</default>
+        <label>ROTURA DE: ELEMENTOS SANITARIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>040</fullName>
+        <default>false</default>
+        <label>ROTURA DE: MAMPARA Y/O PERFILERIA DE CRISTAL/METACRILATO/PVC/FIBRA DE VIDRIO</label>
+    </customValue>
+    <customValue>
+        <fullName>041</fullName>
+        <default>false</default>
+        <label>ROTURA DE: MARMOL/GRANITO/SILESTONE/OTRAS PIEDRAS ARTIFICIALES</label>
+    </customValue>
+    <customValue>
+        <fullName>042</fullName>
+        <default>false</default>
+        <label>ROTURA DE: VITROCERAMICA</label>
+    </customValue>
+    <customValue>
+        <fullName>043</fullName>
+        <default>false</default>
+        <label>ROTURAS DE ELEMENTOS DE VENTANAS</label>
+    </customValue>
+    <customValue>
+        <fullName>044</fullName>
+        <default>false</default>
+        <label>SOLO DAÑOS EN APARATOS (SIN GARANTIA O CON/SIN GARANTIA) YA REPARADOS POR EL ASEGURADO</label>
+    </customValue>
+    <customValue>
+        <fullName>045</fullName>
+        <default>false</default>
+        <label>SOLO DAÑOS EN APARATOS CON GARANTIA YA REPARADOS POR EL ASEGURADO</label>
+    </customValue>
+    <customValue>
+        <fullName>046</fullName>
+        <default>false</default>
+        <label>SOLO PERDIDA DE ALIMENTOS Y MEDICAMENTOS REFRIGERADOS POR FALTA DE SUMINISTRO</label>
+    </customValue>
+    <customValue>
+        <fullName>047</fullName>
+        <default>false</default>
+        <label>TAREAS DE BRICOLAJE</label>
+    </customValue>
+    <customValue>
+        <fullName>048</fullName>
+        <default>false</default>
+        <label>TRASLADO TEMPORAL DE BIENES</label>
+    </customValue>
+    <customValue>
+        <fullName>050</fullName>
+        <default>false</default>
+        <label>ATASCO</label>
+    </customValue>
+    <customValue>
+        <fullName>051</fullName>
+        <default>false</default>
+        <label>AVERIA PROVOCADA POR UN CAUSANTE</label>
+    </customValue>
+    <customValue>
+        <fullName>052</fullName>
+        <default>false</default>
+        <label>ESCAPE DE AGUA</label>
+    </customValue>
+    <customValue>
+        <fullName>053</fullName>
+        <default>false</default>
+        <label>LOCALIZACION DE AVERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>054</fullName>
+        <default>false</default>
+        <label>OTRAS AVERIAS DE AGUA CON DAÑOS</label>
+    </customValue>
+    <customValue>
+        <fullName>055</fullName>
+        <default>false</default>
+        <label>OTRAS AVERIAS DE AGUA SIN DAÑOS</label>
+    </customValue>
+    <customValue>
+        <fullName>056</fullName>
+        <default>false</default>
+        <label>ROTURA DE CONDUCCIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>057</fullName>
+        <default>false</default>
+        <label>ROTURA DE: ELEMENTOS SANITARIOS DE LOZA/CRISTAL/FIBRA DE VIDRIO</label>
+    </customValue>
+    <customValue>
+        <fullName>058</fullName>
+        <default>false</default>
+        <label>ROTURA DE: MAMPARA Y/O PERFILERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>059</fullName>
+        <default>false</default>
+        <label>ROTURA DE: MARMOLES/GRANITOS Y SIMILARES (SILESTONE,CORIAN)</label>
+    </customValue>
+    <customValue>
+        <fullName>060</fullName>
+        <default>false</default>
+        <label>CAIDA DE RAYO</label>
+    </customValue>
+    <customValue>
+        <fullName>061</fullName>
+        <default>false</default>
+        <label>CORTOCIRCUITO O SOBRETENSION</label>
+    </customValue>
+    <customValue>
+        <fullName>062</fullName>
+        <default>false</default>
+        <label>OTRAS AVERIAS</label>
+    </customValue>
+    <customValue>
+        <fullName>063</fullName>
+        <default>false</default>
+        <label>RESTABLECIMIENTO DE LUZ COSTEADO POR EL ASEGURADO</label>
+    </customValue>
+    <customValue>
+        <fullName>064</fullName>
+        <default>false</default>
+        <label>SOLO PERDIDA DE ALIMENTOS</label>
+    </customValue>
+    <customValue>
+        <fullName>065</fullName>
+        <default>false</default>
+        <label>HUMO</label>
+    </customValue>
+    <customValue>
+        <fullName>066</fullName>
+        <default>false</default>
+        <label>IMPACTO DESDE EL EXTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>067</fullName>
+        <default>false</default>
+        <label>ONDAS SONICAS (AERONAVES/ASTRONAVES)</label>
+    </customValue>
+    <customValue>
+        <fullName>068</fullName>
+        <default>false</default>
+        <label>VANDALISMO</label>
+    </customValue>
+    <customValue>
+        <fullName>069</fullName>
+        <default>false</default>
+        <label>CAIDA ACCIDENTAL DE PERSONAS</label>
+    </customValue>
+    <customValue>
+        <fullName>070</fullName>
+        <default>false</default>
+        <label>CAIDA ACCIDENTAL O DESCOLGAMIENTO DE OBJETOS</label>
+    </customValue>
+    <customValue>
+        <fullName>071</fullName>
+        <default>false</default>
+        <label>DAÑOS EN VENTANAS, CIERRES Y MARCOS</label>
+    </customValue>
+    <customValue>
+        <fullName>072</fullName>
+        <default>false</default>
+        <label>DAÑOS Y/O ROTURAS DE PERSIANAS, MOSQUITERAS Y ACCESORIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>073</fullName>
+        <default>false</default>
+        <label>POR MANIPULACION DE ASEGURADOS U OTRAS PERSONAS</label>
+    </customValue>
+    <customValue>
+        <fullName>074</fullName>
+        <default>false</default>
+        <label>TAREAS DE BRICOLAGE</label>
+    </customValue>
+    <customValue>
+        <fullName>075</fullName>
+        <default>false</default>
+        <label>VIVIENDA DESHABITADA, EN REFORMA O PERIODO DE CONSTRUCCION</label>
+    </customValue>
+    <customValue>
+        <fullName>076</fullName>
+        <default>false</default>
+        <label>VIVIENDAS DE RECIENTE CONSTRUCCION</label>
+    </customValue>
+    <customValue>
+        <fullName>077</fullName>
+        <default>false</default>
+        <label>ROBO O HURTO EN VEHICULO</label>
+    </customValue>
+    <customValue>
+        <fullName>078</fullName>
+        <default>false</default>
+        <label>TRASLADO TEMPORAL DE BIENES (DURANTE MUDANZAS O TRASLADOS A OTROS EDIFICIOS)</label>
+    </customValue>
+    <customValue>
+        <fullName>079</fullName>
+        <default>false</default>
+        <label>TRASLADO TEMPORAL DE BIENES (ESTANCIA OCASIONAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>080</fullName>
+        <default>false</default>
+        <label>Avería Provocada Por Un  Causante</label>
+    </customValue>
+    <customValue>
+        <fullName>081</fullName>
+        <default>false</default>
+        <label>ASISTENCIA VETERINARIA NO POR HECHO ACCIDENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>082</fullName>
+        <default>false</default>
+        <label>ASISTENCIA VETERINARIA POR HECHO ACCIDENTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>083</fullName>
+        <default>false</default>
+        <label>ROTURA DE: PLACAS SOLARES</label>
+    </customValue>
+    <customValue>
+        <fullName>084</fullName>
+        <default>false</default>
+        <label>ROTURA DE: TAPA DE INODORO</label>
+    </customValue>
+    <customValue>
+        <fullName>085</fullName>
+        <default>false</default>
+        <label>ASISTENCIA AL EMPLEO</label>
+    </customValue>
+    <customValue>
+        <fullName>086</fullName>
+        <default>false</default>
+        <label>ASISTENCIA AL HOGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>087</fullName>
+        <default>false</default>
+        <label>ASISTENCIA TECNOLOGICA MANITAS</label>
+    </customValue>
+    <customValue>
+        <fullName>088</fullName>
+        <default>false</default>
+        <label>MASCOTAS</label>
+    </customValue>
+    <customValue>
+        <fullName>089</fullName>
+        <default>false</default>
+        <label>SERVICIO REPARACION ELECTRODOMESTICOS</label>
+    </customValue>
+    <customValue>
+        <fullName>090</fullName>
+        <default>false</default>
+        <label>ROTURA DE: CRISTALES</label>
+    </customValue>
+    <customValue>
+        <fullName>091</fullName>
+        <default>false</default>
+        <label>ROTURA DE: ELEMENTOS SANITARIOS DE LOZA/FIBRA DE VIDRIO/CRISTAL</label>
+    </customValue>
+    <customValue>
+        <fullName>092</fullName>
+        <default>false</default>
+        <label>IMPACTOS DESDE EL EXTERIOR</label>
+    </customValue>
+    <customValue>
+        <fullName>093</fullName>
+        <default>false</default>
+        <label>DAÑOS MATERIALES O PERSONALES A UN PERJUDICADO</label>
+    </customValue>
+    <customValue>
+        <fullName>094</fullName>
+        <default>false</default>
+        <label>PERSONAL EMPLEADO DE LA COMUNIDAD</label>
+    </customValue>
+    <customValue>
+        <fullName>095</fullName>
+        <default>false</default>
+        <label>ROBO O DAÑOS CAUSADOS EN INSTALACIONES Y ENSERES</label>
+    </customValue>
+    <customValue>
+        <fullName>096</fullName>
+        <default>false</default>
+        <label>FILTRACIONES/CONDENSACIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>097</fullName>
+        <default>false</default>
+        <label>AVERÍA EN TUBERÍAS</label>
+    </customValue>
+    <description>Tipo de avería (Rotura de conducciones, Rotura de: Cristal y/o Vinilo)</description>
+    <masterLabel>Tipos de Avería</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

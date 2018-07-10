@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>000000_01</fullName>
+        <default>false</default>
+        <label>DEMORA EN LA ATENCION DEL PROFESIONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_02</fullName>
+        <default>false</default>
+        <label>LA AVERIA NO TIENE SOLUCION O NO HAY AVERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_03</fullName>
+        <default>false</default>
+        <label>NO SE LOCALIZA AL CLIENTE  </label>
+    </customValue>
+    <customValue>
+        <fullName>000000_04</fullName>
+        <default>false</default>
+        <label>ANULA POR PRECIO ALTO</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_05</fullName>
+        <default>false</default>
+        <label>DEMORA EN EL ENVIO DE PRESUPUESTO</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_06</fullName>
+        <default>false</default>
+        <label>AVERIA PROVOCADA POR UN TERCERO</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_07</fullName>
+        <default>false</default>
+        <label>DEMORA EN LA ACEPTACION DEL PRESUPUESTO</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_08</fullName>
+        <default>false</default>
+        <label>LO REPARA UN FAMILIAR O CONOCIDO</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_09</fullName>
+        <default>false</default>
+        <label>ABIERTO POR ERROR EN TRAMITACION</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_10</fullName>
+        <default>false</default>
+        <label>ASISTENCIA QUE PASA A SINIESTRO</label>
+    </customValue>
+    <customValue>
+        <fullName>000000_11</fullName>
+        <default>false</default>
+        <label>INDICACIONES DE LA COMPAÑIA</label>
+    </customValue>
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>Error en tramitación</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <label>Precio Alto</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>Demora en el envío de presupuesto,</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <label>Demora en la aceptación de presupuesto</label>
+    </customValue>
+    <customValue>
+        <fullName>05</fullName>
+        <default>false</default>
+        <label>Fallo en la atención del profesional (cambio de cita,no acude a la cita, tarda en realizar la reparación, etc.)</label>
+    </customValue>
+    <customValue>
+        <fullName>06</fullName>
+        <default>false</default>
+        <label>No se puede reparar</label>
+    </customValue>
+    <customValue>
+        <fullName>07</fullName>
+        <default>false</default>
+        <label>Repara familiar o conocido</label>
+    </customValue>
+    <customValue>
+        <fullName>08</fullName>
+        <default>false</default>
+        <label>No se localiza al cliente</label>
+    </customValue>
+    <customValue>
+        <fullName>09</fullName>
+        <default>false</default>
+        <label>Decide contratar otra empresa</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>Creía que se lo cubria su poliza</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>Aceptacion de presupuesto: Tecnico de obra</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>Rechazo de presupuesto: Tecnico de obra</label>
+    </customValue>
+    <customValue>
+        <fullName>13</fullName>
+        <default>false</default>
+        <label>Error en Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>14</fullName>
+        <default>false</default>
+        <label>Urgencia atendida por otra empresa (sólo para servicios urgentes)</label>
+    </customValue>
+    <customValue>
+        <fullName>15</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <customValue>
+        <fullName>16</fullName>
+        <default>false</default>
+        <label>Error en tramitación Soluciones/Digital</label>
+    </customValue>
+    <customValue>
+        <fullName>17</fullName>
+        <default>false</default>
+        <label>Error en tramitación (Gestor de asistencias)</label>
+    </customValue>
+    <customValue>
+        <fullName>18</fullName>
+        <default>false</default>
+        <label>Error en tramitación (No gestor de asistencias)</label>
+    </customValue>
+    <customValue>
+        <fullName>19</fullName>
+        <default>false</default>
+        <label>Cliente volverá a llamar</label>
+    </customValue>
+    <customValue>
+        <fullName>20</fullName>
+        <default>false</default>
+        <label>Cliente no conforme con plazos de atención</label>
+    </customValue>
+    <customValue>
+        <fullName>21</fullName>
+        <default>false</default>
+        <label>Asistencia que pasa a Siniestro de Homeserve</label>
+    </customValue>
+    <customValue>
+        <fullName>22</fullName>
+        <default>false</default>
+        <label>Asistencia que pasa a Siniestro de Homeserve Club</label>
+    </customValue>
+    <customValue>
+        <fullName>25</fullName>
+        <default>false</default>
+        <label>Repara con otra empresa, familiar o conocido</label>
+    </customValue>
+    <customValue>
+        <fullName>26</fullName>
+        <default>false</default>
+        <label>No se puede reparar,</label>
+    </customValue>
+    <customValue>
+        <fullName>27</fullName>
+        <default>false</default>
+        <label>Cliente llamará más adelante</label>
+    </customValue>
+    <customValue>
+        <fullName>28</fullName>
+        <default>false</default>
+        <label>Error en el aplicativo</label>
+    </customValue>
+    <customValue>
+        <fullName>29</fullName>
+        <default>false</default>
+        <label>Creía  que se lo cubría su póliza</label>
+    </customValue>
+    <customValue>
+        <fullName>30</fullName>
+        <default>false</default>
+        <label>No podemos prestar el servicio</label>
+    </customValue>
+    <customValue>
+        <fullName>31</fullName>
+        <default>false</default>
+        <label>Anula por precio alto,</label>
+    </customValue>
+    <customValue>
+        <fullName>32</fullName>
+        <default>false</default>
+        <label>Cliente no conforme con los plazos de atención</label>
+    </customValue>
+    <customValue>
+        <fullName>33</fullName>
+        <default>false</default>
+        <label>Demora en el envío del presupuesto</label>
+    </customValue>
+    <customValue>
+        <fullName>34</fullName>
+        <default>false</default>
+        <label>Demora en la aceptación del presupuesto</label>
+    </customValue>
+    <customValue>
+        <fullName>35</fullName>
+        <default>false</default>
+        <label>Error en la apertura del servicio</label>
+    </customValue>
+    <customValue>
+        <fullName>36</fullName>
+        <default>false</default>
+        <label>Fallo en la atención del profesional</label>
+    </customValue>
+    <customValue>
+        <fullName>37</fullName>
+        <default>false</default>
+        <label>No se localiza al cliente,</label>
+    </customValue>
+    <customValue>
+        <fullName>38</fullName>
+        <default>false</default>
+        <label>No permite sondeo</label>
+    </customValue>
+    <customValue>
+        <fullName>39</fullName>
+        <default>false</default>
+        <label>Acepta Club Homeserve</label>
+    </customValue>
+    <customValue>
+        <fullName>40</fullName>
+        <default>false</default>
+        <label> Acepta Club Homeserve,</label>
+    </customValue>
+    <masterLabel>Motivos de Anulación</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

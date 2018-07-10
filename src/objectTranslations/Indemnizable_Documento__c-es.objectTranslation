@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Indemnizable: Documento</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Indemnizable: Documentos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Opcional --></label>
+        <name>IND_CAS_Opcional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Recepción de Documento --></label>
+        <name>IND_DAT_Fecha_Recepcion_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intervención --></label>
+        <name>IND_LKP_Caso__c</name>
+        <relationshipLabel><!-- Documentos Indemnizable --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Importe Total --></label>
+        <name>IND_RES_Importe_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>IND_SEL_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Documento --></label>
+        <name>IND_SEL_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción --></label>
+        <name>IND_TXT_Descripcion__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Indemnizable: Documento</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

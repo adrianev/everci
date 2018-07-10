@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Presupuesto</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Presupuestos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Intervención --></label>
+        <name>PRE_LKP_Caso__c</name>
+        <relationshipLabel><!-- Presupuestos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Versión --></label>
+        <name>PRE_NUM_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cía antes imp --></label>
+        <name>PRE_RES_Importe_Total_Cia_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cía después imp --></label>
+        <name>PRE_RES_Importe_Total_Cia_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cliente antes imp --></label>
+        <name>PRE_RES_Importe_Total_Cliente_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar Cliente desp imp --></label>
+        <name>PRE_RES_Importe_Total_Cliente_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar después impuestos --></label>
+        <name>PRE_RES_Importe_Total_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Total Facturar antes impuestos --></label>
+        <name>PRE_RES_Importe_total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje Impuestos Cliente/Compañía --></label>
+        <name>PRE_RES_Porcentaje_Imp_Cia_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado Anterior --></label>
+        <name>PRE_SEL_Estado_Anterior__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>PRE_SEL_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo Rechazo --></label>
+        <name>PRE_SEL_Motivo_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>PRE_TXT_Identificador__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo Aprobacion o Rechazo --></label>
+        <name>PRE_TXT_MotivoAprobacion__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Presupuesto</layout>
+        <sections>
+            <label><!-- Datos económicos --></label>
+            <section>Datos económicos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Presupuesto FSL</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

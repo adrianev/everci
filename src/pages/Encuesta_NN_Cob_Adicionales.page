@@ -1,0 +1,162 @@
+<!-- 
+    Página VisualForce referente a la Encuesta:
+    -Nationale Nederlanden Cob_Adicionales   -> T1_1040_CA
+ -->
+ 
+ <apex:page standardController="ENC_Encuesta__c" showheader="false"
+    sidebar="false" extensions="EncuestaController">
+    <style>
+.tabla {
+    border: 0.8px solid black;
+    font-weight: bold;
+    -webkit-border-radius: 5px;
+    background-color: #E9967A; ! important;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    color: #CC0000 !important;
+    font-size: 100% !important;
+}
+
+.headerRow .TableTitle {
+    color: #CC0000s !important;
+    background-color: #E9967A !important;
+    font-size: 100% !important;
+    font-weight: bold;
+}
+
+.pregunta {
+    font-weight: bold;
+    font-size: 120% !important;
+}
+</style>
+
+
+
+    <apex:form >
+
+
+        <!-- PAGINA PRINCIPAL DE ENCUESTA -->
+
+        <apex:pageMessages ></apex:pageMessages>
+
+
+        <apex:pageBlock title="Encuesta">
+            <apex:pageBlockSection id="encuesta" columns="1">
+
+                <apex:pageBlockSection columns="1" id="Pregunta1">
+                    <apex:outputText value="Pregunta 1" styleClass="pregunta" />
+                    <apex:outputText value="{0}">
+                        <apex:param value="{!listaPreguntas[0].ENP_TXT_Pregunta__c} " />
+                    </apex:outputText>
+                    <apex:selectRadio label=""  value="{!listaRespuestasPrincipales[0]}">
+                        <apex:actionSupport event="onchange" action="{!constrObj1NN}" 
+                                rerender="Pregunta1,encuesta">
+                                <apex:param assignto="{!gremio}" name="param2" value="" />
+                                <apex:param assignto="{!idPregunta}" name="param1"
+                                    value="{!listaPreguntas[0].Id}" />
+                                
+                                </apex:actionSupport>
+                        <apex:selectOptions value="{!listaItemsSN}" />
+                    </apex:selectRadio>
+                    
+                    <apex:pageBlockSection columns="2" rendered="{!preg1}">
+
+                        <apex:selectList value="{!listaRespuestasMotivos[0]}" size="1">
+                                <apex:selectOptions value="{!listaItemsValoracion}" />
+                                <apex:actionSupport event="onchange" rerender="Pregunta6" >
+                                    <apex:param assignto="{!gremio}" name="param2" value="" />
+                                    <apex:param assignto="{!idPregunta}" name="param1" value="{!listaPreguntas[0].Id}" />
+                                </apex:actionSupport>
+                            </apex:selectList>
+                        <apex:inputTextarea value="{!respuesta1}" label="Depende de los Motivos que elija" />
+                    </apex:pageBlockSection>
+
+                </apex:pageBlockSection>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
+                <apex:pageBlockSection rendered="{!preguntas}">
+                <apex:pageBlockSection columns="1" id="Pregunta2">
+                    <apex:outputText value="Pregunta 2" styleClass="pregunta" />
+                    <apex:outputText value="{0}">
+                        <apex:param value="{!listaPreguntas[1].ENP_TXT_Pregunta__c} " />
+                    </apex:outputText>
+
+                    <apex:selectList value="{!listaRespuestasPrincipales[1]}" size="1">
+                                
+                                <apex:actionSupport event="onchange" action="{!constrObj2NNA}" 
+                                rerender="Pregunta2" >
+                                <apex:param assignto="{!gremio}" name="param2" value="" />
+                                <apex:param assignto="{!idPregunta}" name="param1"
+                                    value="{!listaPreguntas[1].Id}" />
+                                
+                                </apex:actionSupport>
+                                    <apex:selectOptions value="{!listaItemsValoracion}" />
+                                </apex:selectList>
+                    <apex:pageBlockSection columns="8" id="MotivosPregunta2" rendered="{!preg1}">
+                        <apex:inputCheckbox label="Atención telefónica" selected="{!mostrar[0]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[0]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[0] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Cobertura siniestro" selected="{!mostrar[1]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[1]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[1] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Intervención pericial" selected="{!mostrar[2]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[2]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[2] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Intervención de profesionales" selected="{!mostrar[3]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[3]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[3] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Coordinación distintos gremios" selected="{!mostrar[4]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[4]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[4] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Calidad de las reparaciones" selected="{!mostrar[5]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[5]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[5] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Duración del siniestro" selected="{!mostrar[6]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[6]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[6] == true,true,false)}"/>
+                        
+                        <apex:inputCheckbox label="Otros" selected="{!mostrar[7]}" rendered="{!preg1_1}">
+                                    <apex:actionSupport event="onchange" rerender="Pregunta2" />
+                        </apex:inputCheckbox>
+                        <apex:inputTextarea value="{!listaRespuesta2[7]}" rendered="{!preg1_1}" disabled="{!!IF(mostrar[7] == true,true,false)}"/>
+                    </apex:pageBlockSection>
+                </apex:pageBlockSection>
+-------------------------------------------------------------------------------------------------------------------
+<apex:pageBlockSection columns="1" id="Pregunta3">
+                    <apex:outputText value="Pregunta 3" styleClass="pregunta" />
+                    <apex:outputText value="{0}">
+                        <apex:param value="{!listaPreguntas[2].ENP_TXT_Pregunta__c}" />
+                    </apex:outputText>
+
+
+                    <apex:selectList value="{!listaRespuestasPrincipales[2]}" size="1">
+                    <apex:actionSupport event="onchange" rerender="Pregunta3">
+                                <apex:param assignto="{!gremio}" name="param2" value="" />
+                                <apex:param assignto="{!idPregunta}" name="param1"
+                                    value="{!listaPreguntas[2].Id}" />
+                                
+                                </apex:actionSupport>
+                        <apex:selectOptions value="{!listaItemsValoracion}" />
+                    </apex:selectList>
+
+
+                    <apex:inputTextarea label="Comentario" value="{!respuesta3}" />
+                </apex:pageBlockSection>
+-------------------------------------------------------------------------------------------------------------------
+           </apex:pageBlockSection>
+            </apex:pageBlockSection>
+            <apex:commandButton action="{!save}" value="Finalizar Encuesta" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

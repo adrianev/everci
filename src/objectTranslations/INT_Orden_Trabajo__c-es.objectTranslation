@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integraciones: Servicio</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integraciones: Servicios</value>
+    </caseValues>
+    <fields>
+        <label><!-- Fecha de  cierre de servicio --></label>
+        <name>IOT_DAT_Fecha_Cierre_servicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Creación de la asistencia --></label>
+        <name>IOT_DAT_Fecha_Creacion_Asistencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de apertura del servicio --></label>
+        <name>IOT_DAT_Fecha_Primera_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total importe valoracion sin IVA --></label>
+        <name>IOT_DIV_Importe_Valoracion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Movimiento CIA --></label>
+        <name>IOT_LKP_Movimiento_CIA__c</name>
+        <relationshipLabel><!-- Integraciones: Servicios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Código Agente que ha anulado el servicio --></label>
+        <name>IOT_TXT_Agente_Anula_Asistencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Agente que creó la Asistencia --></label>
+        <name>IOT_TXT_Agente_Crea_Asistencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código canal de entrada --></label>
+        <name>IOT_TXT_Canal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de la asistencia --></label>
+        <name>IOT_TXT_Codigo_Asistencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código profesional --></label>
+        <name>IOT_TXT_Codigo_Profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- DT laboral del profesional --></label>
+        <name>IOT_TXT_DT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción corta de entrada --></label>
+        <name>IOT_TXT_Descripcion_Canal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Último estado del servicio --></label>
+        <name>IOT_TXT_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción del gremio --></label>
+        <name>IOT_TXT_Gremio_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código --></label>
+        <name>IOT_TXT_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Forma de pago del cliente --></label>
+        <name>IOT_TXT_Modo_de_pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo Anulación --></label>
+        <name>IOT_TXT_Motivo_Anulacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Servicio HS --></label>
+        <name>IOT_TXT_Num_OrdenTrabajo_HS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Presupuesto --></label>
+        <name>IOT_TXT_Presupuesto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Urgente --></label>
+        <name>IOT_TXT_Urgente__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Integraciones: Órdenes de Trabajo</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Detalles del Servicio --></label>
+            <section>Detalles del Servicio</section>
+        </sections>
+        <sections>
+            <label><!-- Gremio --></label>
+            <section>Gremio</section>
+        </sections>
+        <sections>
+            <label><!-- Información del Sistema --></label>
+            <section>Información del Sistema</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

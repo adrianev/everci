@@ -1,0 +1,134 @@
+<apex:page standardController="Case" extensions="ReservarCita" showHeader="true" sidebar="false"
+	action="{!asignarUrgYProg}" tabStyle="WorkOrder">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+	<script>
+		function setFocusOnload(){
+			document.getElementById('{!$Component.mainForm.formulario}').focus();
+		}
+		
+		function marcarNoFranq(){
+			var checkFranq = $("input[id$='asignarFranq']").get(0);
+			var checkNoFranq = $("input[id$='asignarNoFranq']").get(0);
+			if(checkFranq.checked
+			 && checkNoFranq != null){
+				checkNoFranq.checked = true;
+			}
+			asignarFranquiciadoAF();
+		}
+		onload=setFocusOnLoad();
+	</script>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="programarHoyAF" action="{!programarHoy}" rerender="seccionReservaCita"
+			status="iconoCargando"/>
+		<apex:actionFunction name="verificarCitaReservadaAF" action="{!verificarCitaReservada}"
+			rerender="scriptCitaReservada">
+			<apex:param name="automatico" value="" assignTo="{!automatico}"/>
+		</apex:actionFunction>
+		<apex:actionFunction name="continuarAF" action="{!volver}"/>
+		<apex:actionFunction name="asignarFranquiciadoAF" action="{!asignarFranquiciado}"
+			status="iconoCargando" rerender="mainForm"/>
+
+		<apex:sectionHeader title="Reserva de Cita para el {!$ObjectType.WorkOrder.label}"
+			subtitle="{!if(ot != null, ot.WorkOrderNumber, '')}"/>
+
+		<apex:pageBlock id="formulario" title="Reserva de Cita para el {!$ObjectType.WorkOrder.label}">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<apex:commandButton id="botonVolver" value="<< Volver" title="Volver" action="{!volver}"
+					rerender="mainForm" status="iconoCargando"/>
+			</apex:pageBlockButtons>
+			
+			<c:Detalle_Caso atrCaso="{!caso}" rendered="{!tipoCaso == 1}"/>
+			<c:Detalle_B2B_B2B2C atrCase="{!caso}" atrAccount="{!cuenta}" atrB2C="{!esB2C}" rendered="{!tipoCaso == 2}"/>
+			
+			<apex:pageBlockSection collapsible="false" columns="2" title="Datos de {!$ObjectType.WorkOrder.label}">
+				<apex:outputField value="{!ot.WorkOrderNumber}"/>
+				<apex:outputField value="{!ot.OTR_SEL_Gremio__c}"/>
+				<apex:outputField value="{!ot.Status}"/>
+				<apex:outputField value="{!ot.OTR_CAS_Urgente__c}"/>
+				<apex:outputField value="{!ot.OTR_SEL_Tipo_Red__c}"/>
+				<apex:inputCheckbox label="Asignar como urgencia" value="{!asignarUrgencia}" rendered="{!ot.OTR_CAS_Urgente__c}">
+						<apex:actionSupport event="onchange"
+											action="{!asignarComoUrgencia}" 
+											rerender="seccionReservaCita"
+											status="iconoCargando"/>
+				</apex:inputCheckbox>
+				<apex:inputCheckbox label="Autoasignar" value="{!autoasignar}" rendered="{!mostrarAutoasignar}">
+					<apex:actionSupport event="onchange"
+											action="{!autoasignarCitas}" 
+											rerender="seccionReservaCita"
+											status="iconoCargando"/>
+				</apex:inputCheckbox>
+				
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="seccionReservaCita" title="Reserva de Cita Automática" columns="1" collapsible="false"
+				rendered="{!!esProfesional && !horarioFuera && automatico}">
+				
+				<apex:commandButton id="botonManual" value="Reserva Manual" title="Reserva Manual" action="{!manualAutomatico}"
+				 status="iconoCargando" rerender="mainForm"/>
+				<apex:pageMessage summary="Recuerde que si no encuentra un profesional debe revisar la política de asignación" severity="warning" 
+				 strength="3" rendered="{!ot.OTR_SEL_Tipo_Red__c == 'Mizad'}"/>
+				<apex:pageBlockSection showHeader="false" columns="2">
+					<apex:inputField id="asignarNoFranq" value="{!ot.OTR_CAS_Asignar_territorio_prim_no_franq__c}">
+						<apex:actionSupport event="onchange" action="{!asignarTerritorioPrimNoFranq}" status="iconoCargando" rerender="formulario"/>
+					</apex:inputField>
+					<apex:inputField value="{!ot.OTR_CAS_Asignar_Mizad__c}" rendered="{!ot.OTR_SEL_Tipo_Red__c == 'Mizad'}">
+						<apex:actionSupport event="onchange" 
+											action="{!asignacionMizad}"
+											rerender="seccionReservaCita"
+											status="iconoCargando"/>
+					</apex:inputField>
+				</apex:pageBlockSection>
+				<apex:iframe id="paginaCS" src="/apex/FSL__AppointmentBookingVf?Id={!ot.Id}" scrolling="false" />
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="seccionCitaManual" title="Reserva de Cita Manual" columns="2" collapsible="false" rendered="{!!automatico || horarioFuera}">
+				<apex:commandButton id="botonAutomatico" value="Reserva Automática" title="Reserva Automática" action="{!manualAutomatico}" 
+				 status="iconoCargando" rendered="{!!horarioFuera && !esProfesional}" rerender="mainForm"/>
+				<apex:pageBlockSectionItem rendered="{!!horarioFuera && !esProfesional}" />
+				<apex:inputField value="{!otInputManual.OTR_DAT_Fecha_Primera_Cita__c}" label="Fecha" styleClass="requerido"/>
+				<apex:inputField value="{!otInputManual.OTR_SEL_Rango_Primera_Cita__c}" label="Hora" styleClass="requerido"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection showHeader="false" collapsible="false" columns="1" rendered="{!!automatico || horarioFuera}">
+				<apex:outputPanel style="padding-left:30.2%">
+					<apex:commandButton value="Confirmar Cita Deseada >>" title="Confirmar Cita Deseada" action="{!continuar}"
+						status="iconoCargando" rerender="mainForm" />
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="seccionFranquiciados" title="Asignación franquiciados" columns="2" rendered="false">
+				<apex:inputField id="asignarFranq" value="{!ot.OTR_CAS_Asignar_Como_Franquiciado__c}" onchange="marcarNoFranq();return false;"/>
+				<apex:outputField value="{!ot.OTR_CAS_Asignar_territorio_prim_no_franq__c}" rendered="{!ot.OTR_CAS_Asignar_Como_Franquiciado__c}"/>
+				<apex:inputField id="asignarNoFranq" value="{!ot.OTR_CAS_Asignar_territorio_prim_no_franq__c}" rendered="{!!ot.OTR_CAS_Asignar_Como_Franquiciado__c}">
+					<apex:actionSupport event="onchange" action="{!asignarTerritorioPrimNoFranq}" status="iconoCargando" rerender="formulario"/>
+				</apex:inputField>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+	<apex:outputPanel id="scriptCitaReservada" rendered="{!buscarCitaReservada}">
+<!--
+	<script>
+			var seccionManual = $("div[id$='seccionCitaManual']");
+			if(seccionManual.get(0) == null){
+				verificarCitaReservadaAF(true);
+				var citaReservada = "{!citaReservada}";
+				if (citaReservada == "true"){
+					continuarAF();
+				}
+			}else{
+				verificarCitaReservadaAF(false);
+			}
+		</script>
+ -->
+	</apex:outputPanel>
+</apex:page>

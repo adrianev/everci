@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>TXT_Codigo_Error__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>TXT_Codigo_Error__c</label>
+        <length>10</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>TXT_Descripcion_Error__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>TXT_Descripcion_Error__c</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Excepcion_Servicios</label>
+    <listViews>
+        <fullName>Excepciones_WS</fullName>
+        <columns>DeveloperName</columns>
+        <columns>TXT_Codigo_Error__c</columns>
+        <columns>TXT_Descripcion_Error__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Excepciones_WS</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>Excepciones_Servicios</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

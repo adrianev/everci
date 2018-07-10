@@ -1,0 +1,2 @@
+Id, Name, PRJ_EMA_Email__c, PRJ_TXT_Poblacion__c, PRJ_SEL_Otros_Danos__c,PRJ_SEL_Perjudicado_Tipo_Documento__c, PRJ_SEL_Provincia__c, PRJ_SEL_Situacion_Danos__c, PRJ_SEL_Tipo_Perjudicado__c,PRJ_TFN_Movil__c, PRJ_TFN_Telefono_1__c,PRJ_TFN_Telefono_Adicional__c, PRJ_TXT_Codigo_Postal__c, PRJ_TXT_Direccion__c,PRJ_TXT_Nombre__c, PRJ_TXT_Perjudicado_N_Documento__c,PRJ_LKP_Siniestro__c
+0039E00000Pax74,perjudicado,miguel@everis.com,Coslada,Alimentos refrigerados,N,28,TECHO,02,678765666,916566566,912343456,28002,albufera,Miguel,43456776y,5009E000006j4XOQAY

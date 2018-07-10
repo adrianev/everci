@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Profesional Gremio</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Profesionales Gremio</value>
+    </caseValues>
+    <fields>
+        <label><!-- Cuenta del Profesional --></label>
+        <lookupFilter>
+            <errorMessage><!-- La cuenta debe ser del Tipo de Registro: Profesional Contrato --></errorMessage>
+        </lookupFilter>
+        <name>PRG_LKP_Cuenta_Profesional__c</name>
+        <relationshipLabel><!-- Profesional Gremios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Límite de Servicios en curso --></label>
+        <name>PRG_NUM_Lim_OT_en_Curso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capacidad --></label>
+        <name>PRG_NUM_Recursos_de_Servicio_Activos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>PRG_SEL_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>PRG_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Gremio Profesional</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- El campo Name debe cumplir el formato PR_GREMIO. --></errorMessage>
+        <name>Editar_campo_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Gremio no puede ser modificado --></errorMessage>
+        <name>Editar_campo_gremio</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo identificador no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,3 @@
+Id,Name,BIT_NUM_Reintentos__c,BIT_SEL_Tipo_Integracion__c,BIT_SEL_Tipo_Integracion__c,BIT_SEL_Estado__c
+a0j9E0000026dGz,BIT000028,15,01,01
+a0j9E0000026xyz,BIT00001,15,01,01

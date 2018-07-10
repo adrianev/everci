@@ -1,0 +1,7 @@
+Se ha generado una nueva reclamación vía email con Número de Caso:
+{!Case.CaseNumber}
+
+Si tiene preguntas sobre su caso conteste a este email.
+
+
+{!Case.Thread_Id}

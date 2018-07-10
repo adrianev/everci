@@ -1,0 +1,31 @@
+/*.THIS h2.c017-footer__title-list{
+    background-color:rgba(231, 52, 44, 0.5);    
+}*/
+
+/*.THIS a.c017-footer__link {
+    color: white;
+}*/
+
+.THIS .row{
+    border-top:solid 1px rgb(231, 52, 44);    
+    border-bottom:solid 1px rgb(231, 52, 44);   
+    background-color:rgba(231, 52, 44, 0.05);    
+    display:inline-flex;
+    width:100%;
+}
+
+.THIS .col-xs-12.col-sm-6.col-md-4{
+    width:20%;
+    margin-left:5%;
+}
+.THIS .cBrandingLogo{
+    margin-top: 10%;
+}
+
+/*
+ @media screen and (max-width: 320px){
+   .THIS .col-blog-2{
+        margin-right: auto;
+        margin-left: 10%;
+    }
+ }*/

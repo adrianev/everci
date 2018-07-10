@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Administrator Email --></label>
+        <name>BigMachines__Administrator_Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, users will be allowed to create Quotes through the Salesforce UI that are not linked to a parent object.  If this box is unchecked, users will be forced to select a parent object to which the quote will be attached when created. --></help>
+        <label><!-- Allow Orphan Creation --></label>
+        <name>BigMachines__Allow_Orphan_Creation__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, users may create Quotes through the Salesforce UI that are linked directly to an Account.  If this box is unchecked, users will not be allowed to create quotes on an account without also attaching them to an opportunity. --></help>
+        <label><!-- Allow Quotes on Accounts --></label>
+        <name>BigMachines__Allow_Quotes_on_Accounts__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, the Oracle CPQ Cloud header will be displayed at the top of the page when creating and editing Oracle CPQ Cloud quotes. --></help>
+        <label><!-- Display Page Header --></label>
+        <name>BigMachines__Display_Page_Header__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked the API password on the Oracle CPQ Cloud site setup page will be hidden and the value stored will be encrypted. --></help>
+        <label><!-- Encrypt API Password --></label>
+        <name>BigMachines__Encrypt_API_Password__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, the first quote on an opportunity is automatically set to be the primary quote for that opportunity. --></help>
+        <label><!-- First Quote Is Primary --></label>
+        <name>BigMachines__First_Quote_Is_Primary__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, the integration package will use an optimized approach to synchronize quotes. In order for this approach to work, CPQ Cloud must be using optimizied XSLs. Do not check this box unless you are sure you are using the correct XSLs. --></help>
+        <label><!-- Optimize Synchronization --></label>
+        <name>BigMachines__Optimize_Synchronization__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, any products that have been added directly to the opportunity will not be removed when syncing a quote.  If this box is unchecked, the products on the opportunity will always be an exact match of the products on the primary quote. --></help>
+        <label><!-- Preserve Ad Hoc Products --></label>
+        <name>BigMachines__Preserve_Ad_Hoc_Products__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, the integration package will send the currency ISO code of the opportunity to Oracle CPQ Cloud when creating new quotes. Do not check this box unless you are sure that all necessary currencies are enabled in Oracle CPQ Cloud. --></help>
+        <label><!-- Use Opportunity Currency --></label>
+        <name>BigMachines__Use_Opportunity_Currency__c</name>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked, the integration package will send the ID of the opportunity pricebook to CPQ Cloud when creating new quotes.  Do not check this box unless you are sure that the CPQ Cloud pricebooks have the correct partner pricebook ID values. --></help>
+        <label><!-- Use Opportunity Pricebook --></label>
+        <name>BigMachines__Use_Opportunity_Pricebook__c</name>
+    </fields>
+    <fields>
+        <help><!-- Pixel adjustment of Oracle CPQ Cloud iFrame size. --></help>
+        <label><!-- Width Adjustment --></label>
+        <name>BigMachines__Width_Adjustment__c</name>
+    </fields>
+</CustomObjectTranslation>

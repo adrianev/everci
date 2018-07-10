@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <language>en_US</language>
+    <masterLabel>Home_1430x650</masterLabel>
+    <originNetwork>Web de Clientes</originNetwork>
+    <relationships>
+        <network>
+            <access>VIEWER</access>
+            <name>Web de Clientes</name>
+        </network>
+        <workspace>
+            <access>INFERRED</access>
+            <isManagingWorkspace>true</isManagingWorkspace>
+            <name>sfdc_asset_company_assets</name>
+        </workspace>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>Home_1430x650.jpg</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

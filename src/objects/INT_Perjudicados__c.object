@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contiene información de los perjudicados asociados a los movimientos que se envían a las aseguradoras</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>IPE_EMA_Perjudicado_Email__c</fullName>
+        <description>Correo electrónico del perjudicado</description>
+        <externalId>false</externalId>
+        <label>Correo electrónico</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_FOR_Nombre2__c</fullName>
+        <description>Segundo Nombre del Perjudicado. Siempre va con espacios en blanco</description>
+        <externalId>false</externalId>
+        <formula>&apos; &apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Segundo Nombre</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_FOR_Tipo_Telefono__c</fullName>
+        <description>Campo para tipo de teléfono que se envía en ficheros a CIAs.</description>
+        <externalId>false</externalId>
+        <formula>&apos;01&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Teléfono</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_FOR_Tipo_Via__c</fullName>
+        <externalId>false</externalId>
+        <formula>null</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Vía</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_LKP_Movimiento_CIA__c</fullName>
+        <description>Movimiento que se envía a la aseguradora asociado a los perjudicados</description>
+        <externalId>false</externalId>
+        <label>Integraciones: Movimiento CIA</label>
+        <referenceTo>INT_Movimiento_CIA__c</referenceTo>
+        <relationshipLabel>Integraciones: Perjudicados</relationshipLabel>
+        <relationshipName>Integraciones_Perjudicados</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>IPE_TFN_Telefono__c</fullName>
+        <description>Teléfono del perjudicado</description>
+        <externalId>false</externalId>
+        <label>Teléfono</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Apellido_1__c</fullName>
+        <description>Primer Apellido del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Primer Apellido</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Apellido_2__c</fullName>
+        <description>Segundo Apellido del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Segundo Apellido</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Cbanc_Codigo_Entidad__c</fullName>
+        <description>Código de la Entidad Bancaria del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: Código Entidad</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Cbanc_Digito_Control__c</fullName>
+        <description>Dígito de Control de la Cuenta del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: Dígito de Control</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Cbanc_IBAN__c</fullName>
+        <description>Código IBAN de la Cuenta del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: IBAN</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Cbanc_Numero__c</fullName>
+        <description>Número de Cuenta del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Cta. bancaria: Nº de Cuenta</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Cbanc_Sucursal_Oficina__c</fullName>
+        <description>Código de la Oficina de la Cuenta del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Cta.Bancaria: Código Sucursal</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Codigo_Postal__c</fullName>
+        <description>Código Postal del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Código Postal</label>
+        <length>5</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Descripcion_Perjudicado__c</fullName>
+        <description>Descripción del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Descripción del Perjudicado</label>
+        <length>90</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Direccion__c</fullName>
+        <description>Dirección del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Dirección</label>
+        <length>500</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Nombre__c</fullName>
+        <description>Nombre del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Nombre</label>
+        <length>300</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Pais__c</fullName>
+        <description>País del perjudicado</description>
+        <externalId>false</externalId>
+        <label>País</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Perjudicado_N_Documento__c</fullName>
+        <description>Número de documento del perjudicado</description>
+        <externalId>false</externalId>
+        <label>Nº Documento</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Perjudicado_Tipo_Documento__c</fullName>
+        <description>Tipo de documento perjudicado</description>
+        <externalId>false</externalId>
+        <label>Tipo de Documento</label>
+        <length>1</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Poblacion__c</fullName>
+        <description>Población del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Población</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Provincia__c</fullName>
+        <description>Provincia del perjudicado</description>
+        <externalId>false</externalId>
+        <label>Provincia</label>
+        <length>150</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IPE_TXT_Tipo_Perjudicado__c</fullName>
+        <description>Tipo de perjudicado</description>
+        <externalId>false</externalId>
+        <label>Tipo de perjudicado</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Integraciones: Perjudicados</label>
+    <nameField>
+        <label>Nombre de Integraciones: Perjudicados</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Integraciones: Perjudicados</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

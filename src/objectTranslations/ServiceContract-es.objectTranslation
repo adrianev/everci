@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Póliza/Contrato</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Pólizas/Contratos</value>
+    </caseValues>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Campo de póliza/contrato</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Campos de pólizas/contratos</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>servicecontract_field</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Nº de Póliza/Contrato</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Nº de Póliza/Contrato</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>servicecontract_name</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>POL_LKP_Compania__c</name>
+        <relationshipLabel><!-- Contratos de servicio --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Póliza complementaria --></label>
+        <name>POL_LKP_Poliza_Complementaria__c</name>
+        <relationshipLabel><!-- Contratos de servicio --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Producto --></label>
+        <name>POL_LKP_Producto_Cia__c</name>
+        <relationshipLabel><!-- Contratos de servicio --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Versión Actual --></label>
+        <name>POL_LKP_Version_Actual__c</name>
+        <relationshipLabel><!-- Contratos de servicio --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cliente Ensura --></label>
+        <name>POL_TXT_Cliente_Ensura__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Service Contract Layout</layout>
+        <sections>
+            <label><!-- Campos Ocultos --></label>
+            <section>Campos Ocultos</section>
+        </sections>
+        <sections>
+            <label><!-- Dirección --></label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Información de la Póliza/Contrato --></label>
+            <section>Información de la Póliza/Contrato</section>
+        </sections>
+        <sections>
+            <label><!-- Información del cliente --></label>
+            <section>Información del cliente</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Póliza --></label>
+        <name>POL_Poliza</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Si la Compañía Aseguradora no es SegurCaixa, el campo &quot;Control SegurCaixa&quot; no debe estar informado. --></errorMessage>
+        <name>Control_SegurCaixa</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Aviso_a_Compania --></label>
+        <name>Aviso_a_Compania</name>
+    </webLinks>
+</CustomObjectTranslation>

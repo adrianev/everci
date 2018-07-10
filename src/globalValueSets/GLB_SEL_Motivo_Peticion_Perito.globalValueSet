@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>14</fullName>
+        <default>false</default>
+        <label>SOLICITUD DE COMPAÑÍA</label>
+    </customValue>
+    <customValue>
+        <fullName>83</fullName>
+        <default>false</default>
+        <label>Aplicación de estética superior al límite (presupuesto de estéticos)</label>
+    </customValue>
+    <customValue>
+        <fullName>321</fullName>
+        <default>false</default>
+        <label>AVERIA EN TUBERIAS SUBTERRANEAS</label>
+    </customValue>
+    <customValue>
+        <fullName>32</fullName>
+        <default>false</default>
+        <label>AYUDAS</label>
+    </customValue>
+    <customValue>
+        <fullName>30</fullName>
+        <default>false</default>
+        <label>CAMBIO VERSION ASEGURADO</label>
+    </customValue>
+    <customValue>
+        <fullName>26</fullName>
+        <default>false</default>
+        <label>CLIENTE VIP</label>
+    </customValue>
+    <customValue>
+        <fullName>27</fullName>
+        <default>false</default>
+        <label>CONSORCIABLE</label>
+    </customValue>
+    <customValue>
+        <fullName>13</fullName>
+        <default>false</default>
+        <label>CORROSION</label>
+    </customValue>
+    <customValue>
+        <fullName>7</fullName>
+        <default>false</default>
+        <label>CUANDO EL SINIESTRO DE NUESTRO ASEGURADO CAUSA DAÑOS A LOCALES COMERCIALES</label>
+    </customValue>
+    <customValue>
+        <fullName>6</fullName>
+        <default>false</default>
+        <label>CUANDO EXISTA CONCURRENCIA CON OTRAS COMPAÑIAS</label>
+    </customValue>
+    <customValue>
+        <fullName>2</fullName>
+        <default>false</default>
+        <label>CUANDO EXISTA CORROSION EN TUBERIAS</label>
+    </customValue>
+    <customValue>
+        <fullName>9</fullName>
+        <default>false</default>
+        <label>CUANDO EXISTAN DAÑOS EN PARQUET/TARIMA PRODUCIDOS POR UN DAÑO POR AGUA</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>CUANDO FECHA EFECTO SEA INFERIOR A 10 DIAS (EXCEPTO APERTURA DE PUERTAS QUE NO NECESITA INTERVENCION PERICIAL)</label>
+    </customValue>
+    <customValue>
+        <fullName>82</fullName>
+        <default>false</default>
+        <label>Daños a terceros superiores al límite (presupuesto de daños a terceros)</label>
+    </customValue>
+    <customValue>
+        <fullName>3215</fullName>
+        <default>false</default>
+        <label>DAÑOS CAUSADOS POR NUESTRO ASEGURADO A  LOCALES COMERCIALES</label>
+    </customValue>
+    <customValue>
+        <fullName>21</fullName>
+        <default>false</default>
+        <label>DAÑOS ELECTRICOS</label>
+    </customValue>
+    <customValue>
+        <fullName>325</fullName>
+        <default>false</default>
+        <label>DAÑOS ELECTRICOS ANTIGÜEDAD</label>
+    </customValue>
+    <customValue>
+        <fullName>3210</fullName>
+        <default>false</default>
+        <label>DAÑOS EN MERCANCIAS O CONTENIDO IRREPARABLE EN SINIESTROS CON COBERTURA</label>
+    </customValue>
+    <customValue>
+        <fullName>5</fullName>
+        <default>false</default>
+        <label>DAÑOS MATERIALES CAUSADOS POR TERCERO</label>
+    </customValue>
+    <customValue>
+        <fullName>322</fullName>
+        <default>false</default>
+        <label>DAÑOS ORIGINADOS EN ARQUETAS O COLECTORES</label>
+    </customValue>
+    <customValue>
+        <fullName>3212</fullName>
+        <default>false</default>
+        <label>EL CONTADOR CORRE MÁS DE LO NORMAL, SALE AGUA POR LOS AZULEJOS/SOLERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>EN TODOS LOS SINIESTROS CUYA VALORACION SUPERE LOS 1500 E IVA INCLUIDO</label>
+    </customValue>
+    <customValue>
+        <fullName>15</fullName>
+        <default>false</default>
+        <label>ESTETICA</label>
+    </customValue>
+    <customValue>
+        <fullName>3217</fullName>
+        <default>false</default>
+        <label>EXISTEN DAÑOS DE PARQUET/TARIMA PRODUCIDOS POR UN DAÑO AGUA</label>
+    </customValue>
+    <customValue>
+        <fullName>20</fullName>
+        <default>false</default>
+        <label>EXTENSION GARANTIAS</label>
+    </customValue>
+    <customValue>
+        <fullName>328</fullName>
+        <default>false</default>
+        <label>FILTRACIONES POR TERRAZA PROPIA</label>
+    </customValue>
+    <customValue>
+        <fullName>326</fullName>
+        <default>false</default>
+        <label>HURTO EN EL INTERIOR DE LA VIVIENDA</label>
+    </customValue>
+    <customValue>
+        <fullName>29</fullName>
+        <default>false</default>
+        <label>IMPACTO VEHICULO</label>
+    </customValue>
+    <customValue>
+        <fullName>28</fullName>
+        <default>false</default>
+        <label>INCENDIO</label>
+    </customValue>
+    <customValue>
+        <fullName>86</fullName>
+        <default>false</default>
+        <label>Indicios de fraude (cambio version asegurado)</label>
+    </customValue>
+    <customValue>
+        <fullName>329</fullName>
+        <default>false</default>
+        <label>INTERVENCION CAMION CUBA</label>
+    </customValue>
+    <customValue>
+        <fullName>85</fullName>
+        <default>false</default>
+        <label>Inundaciones por lluvias extraordinarias</label>
+    </customValue>
+    <customValue>
+        <fullName>19</fullName>
+        <default>false</default>
+        <label>LOCALIZACION COMPLICADA</label>
+    </customValue>
+    <customValue>
+        <fullName>25</fullName>
+        <default>false</default>
+        <label>NO HAY DATOS CAUSANTE</label>
+    </customValue>
+    <customValue>
+        <fullName>88</fullName>
+        <default>false</default>
+        <label>Otros motivos</label>
+    </customValue>
+    <customValue>
+        <fullName>3211</fullName>
+        <default>false</default>
+        <label>PARALIZACIÓN DE ACTIVIDAD</label>
+    </customValue>
+    <customValue>
+        <fullName>99</fullName>
+        <default>false</default>
+        <label>Perito solicitado desde movilidad</label>
+    </customValue>
+    <customValue>
+        <fullName>999</fullName>
+        <default>false</default>
+        <label>Petición automática de perito</label>
+    </customValue>
+    <customValue>
+        <fullName>87</fullName>
+        <default>false</default>
+        <label>Petición del asegurado</label>
+    </customValue>
+    <customValue>
+        <fullName>34</fullName>
+        <default>false</default>
+        <label>Petición por valoraciones de GS</label>
+    </customValue>
+    <customValue>
+        <fullName>23</fullName>
+        <default>false</default>
+        <label>PLAZO CARENCIA</label>
+    </customValue>
+    <customValue>
+        <fullName>33</fullName>
+        <default>false</default>
+        <label>Polizas Pozo</label>
+    </customValue>
+    <customValue>
+        <fullName>323</fullName>
+        <default>false</default>
+        <label>POLIZAS QUE COMUNICAN 3 O MAS STROS.</label>
+    </customValue>
+    <customValue>
+        <fullName>8</fullName>
+        <default>false</default>
+        <label>POR IMPACTO DE VEHICULOS SIN DATOS DE CAUSANTE</label>
+    </customValue>
+    <customValue>
+        <fullName>4</fullName>
+        <default>false</default>
+        <label>POSIBLES SINIESTROS CONSORCIABLES</label>
+    </customValue>
+    <customValue>
+        <fullName>22</fullName>
+        <default>false</default>
+        <label>RC</label>
+    </customValue>
+    <customValue>
+        <fullName>31</fullName>
+        <default>false</default>
+        <label>RC LESIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>16</fullName>
+        <default>false</default>
+        <label>RECOBRO</label>
+    </customValue>
+    <customValue>
+        <fullName>1</fullName>
+        <default>false</default>
+        <label>RESTAURACION ESTETICA</label>
+    </customValue>
+    <customValue>
+        <fullName>17</fullName>
+        <default>false</default>
+        <label>ROBO</label>
+    </customValue>
+    <customValue>
+        <fullName>324</fullName>
+        <default>false</default>
+        <label>ROBO CONTENIDO</label>
+    </customValue>
+    <customValue>
+        <fullName>84</fullName>
+        <default>false</default>
+        <label>Robo interior de vivienda con sustracción superior al límite (presupuesto de objetos sustraidos)</label>
+    </customValue>
+    <customValue>
+        <fullName>3214</fullName>
+        <default>false</default>
+        <label>ROBO/HURTO DENTRO DEL HOGAR</label>
+    </customValue>
+    <customValue>
+        <fullName>81</fullName>
+        <default>false</default>
+        <label>Siniestro con causante superior al límite (presupuesto global del siniestro)</label>
+    </customValue>
+    <customValue>
+        <fullName>3</fullName>
+        <default>false</default>
+        <label>SINIESTRO POR LLUVIA, VIENTO Y PEDRISCO CUANDO SE TRATA DE UN ULTIMO PISO</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>SOLICITUD DE ASEGURADO</label>
+    </customValue>
+    <customValue>
+        <fullName>80</fullName>
+        <default>false</default>
+        <label>Superación del límite de autonomía (presupuesto global del siniestro)</label>
+    </customValue>
+    <customValue>
+        <fullName>24</fullName>
+        <default>false</default>
+        <label>TERCERO CAUSANTE</label>
+    </customValue>
+    <customValue>
+        <fullName>327</fullName>
+        <default>false</default>
+        <label>TODO RIESGO ACCIDENTAL</label>
+    </customValue>
+    <masterLabel>Motivo de la petición de perito</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

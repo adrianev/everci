@@ -1,0 +1,1236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <fieldSets>
+        <fullName>Campos</fullName>
+        <description>CA</description>
+        <displayedFields>
+            <field>TAR_LKP_Orden_Trabajo__r.OTR_FOR_Semaforo__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Campos</label>
+    </fieldSets>
+    <fields>
+        <fullName>ActivityDate</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>IsRecurrence</fullName>
+    </fields>
+    <fields>
+        <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>TaskSubtype</fullName>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <recordTypes>
+        <fullName>SMS</fullName>
+        <active>true</active>
+        <description>Tipo de Registro que sólo aplica a las actividades de envío de SMS por Marketing Cloud</description>
+        <label>SMS</label>
+        <picklistValues>
+            <picklist>FSL__Event_Type__c</picklist>
+            <values>
+                <fullName>Resource Absence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Appointment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Curso</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Finalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Apertura de Solicitud de Siniestro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambio de estado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cierre técnico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email entrante</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generar presupuesto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandar carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitar perito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Realizar llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar documentación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar órdenes de trabajo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado con más de 30 días abiertos</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Motivo_Anulacion_perito__c</picklist>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Prioridad__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TAR_Comun</fullName>
+        <active>true</active>
+        <description>Record Type utilizado para especificar un layout para la mayoría de tareas que comparten campos</description>
+        <label>Común</label>
+        <picklistValues>
+            <picklist>FSL__Event_Type__c</picklist>
+            <values>
+                <fullName>Resource Absence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Appointment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Curso</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Finalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Apertura de Solicitud de Siniestro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambio de estado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cierre técnico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email entrante</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generar presupuesto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandar carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitar perito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Realizar llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar documentación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar órdenes de trabajo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado con más de 30 días abiertos</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Motivo_Anulacion_perito__c</picklist>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Prioridad__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TAR_Presolicitud_Perito</fullName>
+        <active>true</active>
+        <description>Record Type utilizado para especificar un layout para tareas de asignación de perito</description>
+        <label>Presolicitud Perito</label>
+        <picklistValues>
+            <picklist>FSL__Event_Type__c</picklist>
+            <values>
+                <fullName>Resource Absence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Appointment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Curso</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Finalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Apertura de Solicitud de Siniestro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambio de estado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cierre técnico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email entrante</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generar presupuesto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandar carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitar perito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Realizar llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar documentación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar órdenes de trabajo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado con más de 30 días abiertos</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Motivo_Anulacion_perito__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Prioridad__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>11</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>12</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>13</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>14</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>15</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>TAR_Registro_Llamada</fullName>
+        <active>true</active>
+        <description>Record Type utilizado para especificar un layout distinto cuando la tarea sea de registro de llamada</description>
+        <label>Registro llamada</label>
+        <picklistValues>
+            <picklist>FSL__Event_Type__c</picklist>
+            <values>
+                <fullName>Resource Absence</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Service Appointment</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Alta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Baja</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Normal</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>En Curso</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Finalizado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitado</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Subject</picklist>
+            <values>
+                <fullName>Apertura de Solicitud de Siniestro</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cambio de estado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cierre técnico</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email entrante</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Enviar email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Generar presupuesto</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Mandar carta</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Presolicitar perito</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Realizar llamada</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar documentación</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Revisar órdenes de trabajo</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Siniestro Asignado con más de 30 días abiertos</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Motivo_Anulacion_perito__c</picklist>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>TAR_SEL_Prioridad__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>10</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>6</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>7</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>8</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>9</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>05</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>09</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>16</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Aceptar</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Aceptar</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/apex.js&quot;)} 
+debugger; 
+
+// Recoger caso
+var queryCaso = sforce.connection.query(&quot;SELECT Id, CAS_CAS_Informe_Preliminar_Recibido__c FROM Case WHERE Id = &apos;{!Task.What}&apos; LIMIT 1&quot;); 
+var registros = queryCaso.getArray(&quot;records&quot;);
+var caso = registros[0];
+caso.CAS_CAS_Informe_Preliminar_Recibido__c = true;
+
+var actCaso = sforce.connection.update([caso]); 
+if (actCaso[0].success == &apos;true&apos;) { 
+	var tareaActualizar = new sforce.SObject(&quot;Task&quot;); 
+	tareaActualizar.Id = &quot;{!Task.Id}&quot;; 
+	tareaActualizar.Status = &quot;Finalizado&quot;; 
+	var actTarea = sforce.connection.update([tareaActualizar]);
+	window.location.href = &quot;/&quot; + caso.Id; 
+}else{			
+	alert(actCaso[0].errors.message);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Asignacion_de_Perito</fullName>
+        <availability>online</availability>
+        <description>Botón para proceder con la asignación de un perito al caso</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Asignación de Perito</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/apex.js&quot;)} 
+debugger; 
+
+// Recoger caso
+var caso = new sforce.SObject(&quot;Case&quot;); 
+caso.id = &quot;{!Task.What}&quot;;
+var casoActualizado = sforce.apex.execute(&quot;Util_Botones_Personalizados&quot;, &quot;asignacionPeritoBoton&quot;, 
+{ 
+	propietario:caso.id
+});
+if(casoActualizado==&quot;&quot;){
+
+		var tareaActualizar = new sforce.SObject(&quot;Task&quot;); 
+		tareaActualizar.Id = &quot;{!Task.Id}&quot;; 
+		tareaActualizar.Status = &quot;Finalizado&quot;; 
+		var actTarea = sforce.connection.update([tareaActualizar]);
+		window.location.href = &quot;/&quot; + caso.id; 
+}else{
+	alert(casoActualizado);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Nueva_Tarea_Caso</fullName>
+        <availability>online</availability>
+        <description>Crea una nueva tarea en la lista relacionada &quot;Actividades&quot; de una intervención con el nº de Siniestro ya informado, para gestores que asignan tareas a otros</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Nueva Tarea Caso</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?Title=Call?&amp;who_id={!Case.Id}&amp;retURL={!Case.Id}&amp;what_id={!Case.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Rechazar</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Rechazar</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/apex.js&quot;)} 
+debugger; 
+
+if({!Task.TAR_SEL_Motivo_Anulacion_perito__c} == null){
+alert(&apos;tiene que rellenar el motivo de anulación del perito&apos;);
+}else{
+// Recoger caso
+var queryCaso = sforce.connection.query(&quot;SELECT Id, CAS_SEL_Estado_Perito__c FROM Case WHERE Id = &apos;{!Task.What}&apos; LIMIT 1&quot;); 
+var registros = queryCaso.getArray(&quot;records&quot;);
+var caso = registros[0];
+
+caso.CAS_SEL_Estado_Perito__c = &quot;{!$Label.PER_ESTADO_PDTE_VAL_PER}&quot;;
+var actCaso = sforce.connection.update([caso]); 
+if (actCaso[0].success == &apos;true&apos;) { 
+	var tareaActualizar = new sforce.SObject(&quot;Task&quot;); 
+	tareaActualizar.Id = &quot;{!Task.Id}&quot;; 
+	tareaActualizar.Status = &quot;Finalizado&quot;; 
+	var actTarea = sforce.connection.update([tareaActualizar]);
+	window.location.href = &quot;/&quot; + caso.Id; 
+}else{			
+	alert(actCaso[0].errors.message);
+}
+}</url>
+    </webLinks>
+</CustomObject>

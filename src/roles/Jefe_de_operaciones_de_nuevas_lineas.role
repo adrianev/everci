@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Jefe de operaciones de nuevas líneas</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Directora_de_tramitacion_de_nuevas_l_neas</parentRole>
+</Role>

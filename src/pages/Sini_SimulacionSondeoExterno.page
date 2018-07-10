@@ -1,0 +1,80 @@
+<apex:page standardController="Case" extensions="SiniSimulacionSondeoExternoController" showHeader="false" sidebar="false">
+	<style>
+		.labelNegrita{
+			font-weight: bold;
+		}
+	</style>
+	<apex:includeScript value="{!$Resource.jQuery}"/>
+	<script>
+		function redireccionParent(urlRedirect)
+		{
+            parent.document.location.href = urlRedirect;
+		}
+		function redireccion(urlRedirect)
+		{
+            document.location.href = urlRedirect;
+		}
+	</script>
+	<apex:form id="mainForm2">
+		 <apex:pageBlock title="Simulación de Sondeo Externo">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<a target="_parent" href="{!returnURLOK}" title="Retorno Sondeo OK">Retorno Sondeo OK HTML</a>
+				|&nbsp;
+				<a onclick="redireccionParent('{!returnURLOK}')" title="Retorno Sondeo OK">Retorno Sondeo OK FUNCION JS (Parent)</a>
+				|&nbsp;
+				<a onclick="redireccion('{!returnURLOK}')" title="Retorno Sondeo OK">Retorno Sondeo OK FUNCION JS</a>
+				|&nbsp;
+				<apex:commandLink target="_parent" action="{!retornoSondeoOK}" value="Retorno Sondeo OK" title="Retorno Sondeo OK"/>
+				|&nbsp;
+				<apex:commandLink target="_parent" action="{!retornoSondeoKO}" value="Retorno Sondeo KO" title="Retorno Sondeo KO"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection collapsible="false" columns="1">
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="CaseId: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!caseId}"/>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="CompanyExternalId: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!companyExternalId}"/> 
+				</apex:pageBlockSectionItem>
+				 <apex:pageBlockSectionItem > 
+					<apex:outputLabel value="CustomerEmail: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!customerEmail}"/> 
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="CustomerZipCode: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!customerZipCode}"/> 
+				</apex:pageBlockSectionItem>
+				 <apex:pageBlockSectionItem > 
+					<apex:outputLabel value="DocumentNumber: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!documentNumber}"/> 
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="Language: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!language}"/> 
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="PolicyCompanyExternalId: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!policyCompanyExternalId}"/> 
+				</apex:pageBlockSectionItem>
+				 <apex:pageBlockSectionItem > 
+					<apex:outputLabel value="TypeRisk: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!typeRisk}"/> 
+				</apex:pageBlockSectionItem>
+				 <apex:pageBlockSectionItem > 
+					<apex:outputLabel value="WhoCalls: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!whoCalls}"/> 
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="returnURLOK: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!returnURLOK}"/> 
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem > 
+					<apex:outputLabel value="returnURLKO: " styleClass="labelNegrita"/>
+					<apex:outputText value="{!returnURLKO}"/> 
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

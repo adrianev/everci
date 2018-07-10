@@ -1,0 +1,4 @@
+<design:component >
+    <design:attribute name="relatedListLabel" label="Related List Label" />
+	<design:attribute name="typeActivity" label="Activity Type" />
+</design:component>

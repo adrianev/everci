@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Histórico Estados Profesional</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Históricos Estados Profesional</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activo --></label>
+        <name>HEP_CAS_Activo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha --></label>
+        <name>HEP_DAT_Fecha__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profesional Contrato --></label>
+        <name>HEP_LKP_Cuenta__c</name>
+        <relationshipLabel><!-- Históricos Estados Profesional --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Recurso de servicio --></label>
+        <name>HEP_LKP_Recurso_Servicio__c</name>
+        <relationshipLabel><!-- Históricos Estados Profesional --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>HEP_SEL_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo de Baja --></label>
+        <name>HEP_TXT_Motivo_Baja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones --></label>
+        <name>HEP_TXT_Observaciones__c</name>
+    </fields>
+    <gender>Masculine</gender>
+</CustomObjectTranslation>

@@ -1,0 +1,105 @@
+<apex:page standardController="Case" extensions="Simulacion_CPQ"
+	showHeader="true" sidebar="false" tabStyle="WorkOrder">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<style>
+		.actionLink {
+			cursor: pointer;
+		}
+		.link24 {
+			height: 24px;
+			width: 24px;
+		}
+		.estiloFacet {
+			font-size: 1.2em;
+		}
+	</style>
+	<apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="seleccionarItemAF" action="{!seleccionarItem}" rerender="mainForm" status="iconoCargando">
+			<apex:param name="indiceResultado" assignTo="{!indiceListaItems}" value=""/>
+		</apex:actionFunction>
+		<apex:actionFunction name="eliminarItemAF" action="{!eliminarItem}" rerender="mainForm" status="iconoCargando">
+			<apex:param name="indiceListaItems" assignTo="{!indiceListaItems}" value=""/>
+		</apex:actionFunction>
+
+		<apex:sectionHeader title="Actualizar Partidas de {!$ObjectType.WorkOrder.label} [SIMULACIÓN]"
+			subtitle="{!if(agrupador != null, agrupador.WorkOrderNumber, '')}"/>
+
+		<apex:pageBlock title="Actualizar Partidas de {!$ObjectType.WorkOrder.label}">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!volver}" value="<< Volver"
+					title="Volver" rerender="mainForm" status="iconoCargando"/>
+				<apex:commandButton action="{!crearItem}" value="Nueva Partida"
+					title="Añadir Nueva Partida" immediate="true" rendered="{!!creacionItem}"
+					rerender="mainForm" status="iconoCargando"/>
+			</apex:pageBlockButtons>
+			
+			<c:Detalle_Caso atrCaso="{!caso}" rendered="{!tipoCaso == 1}"/>
+			<c:Detalle_B2B_B2B2C atrCase="{!caso}" atrAccount="{!cuenta}" atrB2C="{!esB2C}" rendered="{!tipoCaso == 2}"/>
+			
+			<apex:pageBlockSection collapsible="false" columns="2" title="Datos de {!$ObjectType.WorkOrder.label}">
+				<apex:outputField value="{!agrupador.WorkOrderNumber}"/>
+				<apex:outputField value="{!agrupador.OTR_SEL_Gremio__c}"/>
+				<apex:outputField value="{!agrupador.Status}"/>
+				<apex:outputField value="{!agrupador.OTR_CAS_Urgente__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection title="Partidas" collapsible="false" columns="1" showHeader="true">
+				<apex:variable value="{!0}" var="indiceCC"/>
+				<apex:facet name="header">
+					<apex:outputPanel styleClass="estiloFacet">
+						<apex:outputText value="Partidas de {!$ObjectType.WorkOrder.label}"/>
+						<apex:image url="/img/s.gif" styleClass="helper helperOff" onmouseover="this.className='helper helperOn'; this.nextElementSibling.style.display='inline';" onmouseout="this.className='helper helperOff'; this.nextElementSibling.style.display='none';"/>
+						<apex:outputPanel styleClass="helperText">
+							<apex:outputText value="Doble click sobre la partida para modificarla"/>
+						</apex:outputPanel>
+					</apex:outputPanel>
+				</apex:facet>
+				<apex:outputText value="No hay partidas." rendered="{!listaItems.size == 0}"/>
+				<apex:pageBlockTable value="{!listaItems}" var="item" title="Partidas" rendered="{!listaItems.size != 0}" 
+					onRowDblClick="seleccionarItemAF('{!indiceCC}', false);" style="cursor: pointer">
+					<apex:column headerValue="Acción">
+						<apex:variable value="{!indiceCC + 1}" var="indiceCC"/>
+						<apex:image url="/img/func_icons/util/recycle.gif" title="Eliminar" styleClass="actionLink link24"
+							onclick="if(confirm('¿Está seguro?')){eliminarItemAF('{!indiceCC}');} return false;" />
+					</apex:column>
+					<apex:column value="{!item.PAR_TXT_Baremo_Codigo__c}"/>
+					<apex:column value="{!item.Description}"/>
+					<apex:column value="{!item.Status}"/>
+					<apex:column value="{!item.PAR_DIV_Cargar_Comp_AI__c}"/>
+					<apex:column value="{!item.PAR_DIV_Cargar_Cliente_AI__c}"/>
+					<apex:column value="{!item.PAR_POR_Porcentaje_Imp_Cia_Cliente__c}"/>
+					<apex:column value="{!item.PAR_POR_Impuesto_Prof__c}"/>
+					<apex:column value="{!item.PAR_DIV_Facturacion_Total_AI__c}"/>
+					<apex:column value="{!item.PAR_DIV_Facturacion_Total_DI__c}"/>
+					<apex:column value="{!item.PAR_TXT_Detalle_WOLI__c}"/>
+				</apex:pageBlockTable>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection collapsible="false" columns="2" showHeader="true" title="Datos de Partida" rendered="{!creacionItem}">
+				<apex:inputField id="codigoBaremo" value="{!nuevoItem.PAR_TXT_Baremo_Codigo__c}" required="true"/>
+				<apex:inputField id="descripcion" value="{!nuevoItem.Description}" required="true"/>
+				<apex:inputField id="facturaciónTotalCiaAI" value="{!nuevoItem.PAR_DIV_Cargar_Comp_AI__c}" required="true"/>
+				<apex:inputField id="facturaciónTotalClienteAI" value="{!nuevoItem.PAR_DIV_Cargar_Cliente_AI__c}" required="true"/>
+				<apex:inputField id="impuestoCiaCliente" value="{!nuevoItem.PAR_POR_Porcentaje_Imp_Cia_Cliente__c}" required="true"/>
+				<apex:inputField id="impuestoProfesional" value="{!nuevoItem.PAR_POR_Impuesto_Prof__c}" required="true"/>
+				<apex:inputField id="liquidacionProfAI" value="{!nuevoItem.PAR_DIV_Liquidar_Prof_AI__c}" required="true"/>
+				<apex:inputField id="estado" value="{!nuevoItem.Status}" required="true"/>
+				<apex:inputField id="observaciones" value="{!nuevoItem.PAR_TXT_Detalle_WOLI__c}" required="false"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection collapsible="false" columns="1">
+				<apex:outputPanel style="padding-left:30.2%">
+					<apex:commandButton action="{!guardarItem}" value="Guardar" title="Guardar" rendered="{!creacionItem && !actualizacionItem}" rerender="mainForm" status="iconoCargando"/>
+					<apex:commandButton action="{!actualizarItem}" value="Guardar" title="Actualizar" rendered="{!actualizacionItem}" rerender="mainForm" status="iconoCargando"/>
+					<apex:commandButton action="{!cancelarCreacionItem}" value="Cancelar" title="Cancelar" immediate="true" rendered="{!creacionItem}" rerender="mainForm" status="iconoCargando"/>
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

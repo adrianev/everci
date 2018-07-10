@@ -1,0 +1,2 @@
+Id,GAR_LKP_Compania__c,GAR_TXT_Codigo_Garantia__c
+a0W9E000001hSq0,3329E00000UHDO5QAP,234

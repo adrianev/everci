@@ -1,0 +1,3 @@
+<apex:page standardController="Case" extensions="RedireccionesApp" showHeader="true" sidebar="false" action="{!redireccion}">
+<apex:pageMessages id="mensajes"/>
+</apex:page>

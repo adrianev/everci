@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Sí/No</fullName>
+        <default>false</default>
+        <label>Sí/No</label>
+    </customValue>
+    <customValue>
+        <fullName>Texto</fullName>
+        <default>false</default>
+        <label>Texto</label>
+    </customValue>
+    <customValue>
+        <fullName>Número</fullName>
+        <default>false</default>
+        <label>Número</label>
+    </customValue>
+    <customValue>
+        <fullName>Lista de Opciones</fullName>
+        <default>false</default>
+        <label>Lista de Opciones</label>
+    </customValue>
+    <customValue>
+        <fullName>Lista de Opciones (múltiple)</fullName>
+        <default>false</default>
+        <label>Lista de Opciones (múltiple)</label>
+    </customValue>
+    <masterLabel>Tipos de Respuesta Encuesta</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Skill xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <profiles>
+            <profile>Admin</profile>
+            <profile>SolutionManager</profile>
+            <profile>Administrador IT</profile>
+            <profile>Director CAU</profile>
+            <profile>Director Front%2F Tramitación%2F Reclamaciones</profile>
+            <profile>Director Gestión de la Demanda</profile>
+            <profile>Director IT</profile>
+            <profile>Director Territorial</profile>
+            <profile>Director de Red</profile>
+            <profile>Field Service Administrator</profile>
+            <profile>Field Service Dispatcher</profile>
+            <profile>Field Service Mobile</profile>
+            <profile>Gerente CAU</profile>
+            <profile>Gerente Gestión Demanda</profile>
+            <profile>Gerente IT</profile>
+            <profile>Gerente de Operaciones</profile>
+            <profile>Gestor CAU</profile>
+            <profile>Gestor Front%2FTramitacion</profile>
+            <profile>Gestor Gestión Demanda</profile>
+            <profile>Gestor Reclamaciones</profile>
+            <profile>Gestor de Red</profile>
+            <profile>Integracion</profile>
+            <profile>Jefe de Operaciones Red</profile>
+            <profile>Jefe de Operaciones%2FCoordinador Cuenta</profile>
+            <profile>Jefe de operaciones</profile>
+            <profile>Standard</profile>
+            <profile>ReadOnly</profile>
+            <profile>MarketingProfile</profile>
+            <profile>ContractManager</profile>
+            <profile>Responsible CAU</profile>
+            <profile>Service Agent</profile>
+            <profile>Subdirector Gestión Demanda</profile>
+            <profile>Subdirector IT</profile>
+            <profile>Supervisor Front%2FTramitacion</profile>
+            <profile>Supervisor Reclamaciones</profile>
+            <profile>Test Administrador</profile>
+        </profiles>
+        <users>
+            <user>gestor6.homeserve@everis.com</user>
+            <user>gestor1.homeserve@everis.com</user>
+            <user>gestor.homeserve@everis.com</user>
+            <user>gestor3.homeserve@everis.com</user>
+            <user>gestorreclamacion@gmail.com</user>
+            <user>gestor2.homeserve@everis.com</user>
+            <user>gestor4.homeserve@everis.com</user>
+            <user>gestor5.homeserve@everis.com</user>
+        </users>
+    </assignments>
+    <label>TÉCNICO GAMA BLANCA</label>
+</Skill>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MCH_CAS_estado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Estado de lectura de una respuesta por parte del usuario.</inlineHelpText>
+        <label>Estado Respuesta Leída</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MCH_DAT_fecha_alta_consulta__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Fecha de alta de la consulta.</inlineHelpText>
+        <label>Fecha Alta Consulta</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MCH_DAT_fecha_respuesta__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Fecha de la respuesta a una consulta</inlineHelpText>
+        <label>Fecha Respuesta Consulta</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MCH_LKP_Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Relación con el caso asociado.</inlineHelpText>
+        <label>Relación Mensaje y Caso</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Mensajes Clic Hogar</relationshipLabel>
+        <relationshipName>Mensajes_Clic_Hogar</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MCH_TXT_asunto__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Asunto de la consulta realizada a través de clic hogar.</inlineHelpText>
+        <label>Asunto</label>
+        <length>300</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MCH_TXT_consulta__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Texto de la consulta realizada a través de clic hogar.</inlineHelpText>
+        <label>Pregunta/Consulta</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MCH_TXT_respuesta__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Texto de la respuesta a la consulta realizada a través de clic hogar.</inlineHelpText>
+        <label>Respuesta Consulta</label>
+        <length>1000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Mensaje Clic Hogar</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <label>Nombre Mensaje Clic Hogar</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Mensajes Clic Hogar</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

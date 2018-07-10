@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canvasConfig>
+        <accessMethod>Get</accessMethod>
+        <canvasUrl>https://homeservetest.bigmachines.com/admin/oauth2/salesforce/oauth_callback.jsp</canvasUrl>
+        <lifecycleClass>BigMachines__OracleOAuthLifecycleHandler</lifecycleClass>
+        <locations>Visualforce</locations>
+        <locations>PageLayout</locations>
+        <samlInitiationMethod>None</samlInitiationMethod>
+    </canvasConfig>
+    <contactEmail>dverasor@everis.com</contactEmail>
+    <label>Oracle CPQ Cloud</label>
+    <oauthConfig>
+        <callbackUrl>https://homeservetest.bigmachines.com/admin/oauth2/salesforce/oauth_callback.jsp</callbackUrl>
+        <consumerKey>3MVG9lcxCTdG2Vbsg_63JbxMED9B6FvlKVXiTh5qHrzEvimoLcQvF3GzZslgAJmOMfHU1DDJO0rPsI94px8Me</consumerKey>
+        <scopes>Full</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

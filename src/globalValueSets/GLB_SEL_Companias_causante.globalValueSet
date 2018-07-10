@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>A.M.A., AGRUPACIÓN MUTUAL ASEGURADORA, MUTUA DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>A.M.A., AGRUPACIÓN MUTUAL ASEGURADORA, MUTUA DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>ABANCA VIDA Y PENSIONES DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ABANCA VIDA Y PENSIONES DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ACE EUROPEAN GROUP LIMITED</fullName>
+        <default>false</default>
+        <label>ACE EUROPEAN GROUP LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>ADMIRAL INSURANCE COMPANY SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>ADMIRAL INSURANCE COMPANY SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>AEGON SANTANDER GENERALES SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AEGON SANTANDER GENERALES SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AEGON SANTANDER VIDA SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AEGON SANTANDER VIDA SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AGA INTERNATIONAL SA SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>AGA INTERNATIONAL SA SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRUPACIÓ AMCI D`ASSEGURANCES I REASSEGURANCES, S.A.</fullName>
+        <default>false</default>
+        <label>AGRUPACIÓ AMCI D`ASSEGURANCES I REASSEGURANCES, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AGRUPACIÓN SANITARIA SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AGRUPACIÓN SANITARIA SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AIDE ASISTENCIA SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AIDE ASISTENCIA SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AIG EUROPE LIMITED SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>AIG EUROPE LIMITED SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>ALIANZA ESPAÑOLA, S.A. DE SEGUROS, LA</fullName>
+        <default>false</default>
+        <label>ALIANZA ESPAÑOLA, S.A. DE SEGUROS, LA</label>
+    </customValue>
+    <customValue>
+        <fullName>ALLIANZ, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ALLIANZ, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ALLIANZ GLOBAL CORPORATE &amp; SPECIALTY SE. SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>ALLIANZ GLOBAL CORPORATE &amp; SPECIALTY SE. SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>ALLIANZ POPULAR VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>ALLIANZ POPULAR VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>ALMUDENA COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ALMUDENA COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AMAYA COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AMAYA COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AME, ASISTENCIA MÉDICA COMPAÑÍA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AME, ASISTENCIA MÉDICA COMPAÑÍA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AMEFE, ASOCIACIÓN MÉDICO FERROVIARIA, MPS</fullName>
+        <default>false</default>
+        <label>AMEFE, ASOCIACIÓN MÉDICO FERROVIARIA, MPS</label>
+    </customValue>
+    <customValue>
+        <fullName>AMIC SEGUROS GENERALES, S.A.</fullName>
+        <default>false</default>
+        <label>AMIC SEGUROS GENERALES, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>AMSYR AGRUPACIÓ SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>AMSYR AGRUPACIÓ SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ARAG SE, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>ARAG SE, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>ASEFA, S. A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>ASEFA, S. A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASEGURADORA VALENCIANA S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>ASEGURADORA VALENCIANA S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASEGURADORES AGRUPADOS, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>ASEGURADORES AGRUPADOS, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASEMAS, MUTUA DE SEGUROS Y REASEGUROS A PRIMA FIJA</fullName>
+        <default>false</default>
+        <label>ASEMAS, MUTUA DE SEGUROS Y REASEGUROS A PRIMA FIJA</label>
+    </customValue>
+    <customValue>
+        <fullName>ASEQ VIDA Y ACCIDENTES, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>ASEQ VIDA Y ACCIDENTES, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASISA, ASISTENCIA SANITARIA INTERPROVINCIAL DE SEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>ASISA, ASISTENCIA SANITARIA INTERPROVINCIAL DE SEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>ASISTENCIA CLÍNICA UNIVERSITARIA DE NAVARRA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>ASISTENCIA CLÍNICA UNIVERSITARIA DE NAVARRA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASISTENCIA SANITARIA COLEGIAL, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>ASISTENCIA SANITARIA COLEGIAL, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ASOCIACIÓN EUROPEA COMPAÑÍA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ASOCIACIÓN EUROPEA COMPAÑÍA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ASOCIACIÓN MUTUALISTA DE LA INGENIERIA CIVIL, MPS</fullName>
+        <default>false</default>
+        <label>ASOCIACIÓN MUTUALISTA DE LA INGENIERIA CIVIL, MPS</label>
+    </customValue>
+    <customValue>
+        <fullName>ATLÁNTIDA MÉDICA DE ESPECIALIDADES, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>ATLÁNTIDA MÉDICA DE ESPECIALIDADES, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ATLANTIS COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ATLANTIS COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ATLANTIS VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS S.A.</fullName>
+        <default>false</default>
+        <label>ATLANTIS VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ATOCHA, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>ATOCHA, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ATRADIUS CREDIT INSURANCE, N.V. SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>ATRADIUS CREDIT INSURANCE, N.V. SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>AURA, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>AURA, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>AVIVA VIDA Y PENSIONES, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>AVIVA VIDA Y PENSIONES, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>AXA AURORA VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>AXA AURORA VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>AXA SEGUROS GENERALES, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>AXA SEGUROS GENERALES, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>AXA VIDA, SOCIEDAD ANÓNIMA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>AXA VIDA, SOCIEDAD ANÓNIMA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BANKIA MAPFRE VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BANKIA MAPFRE VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BANKINTER SEGUROS DE VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BANKINTER SEGUROS DE VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BANKINTER SEGUROS GENERALES, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BANKINTER SEGUROS GENERALES, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BANSABADELL SEGUROS GENERALES, SOCIEDAD ANÓNIMA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BANSABADELL SEGUROS GENERALES, SOCIEDAD ANÓNIMA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BANSABADELL VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BANSABADELL VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BARCLAYS VIDA Y PENSIONES COMPAÑÍA DE SEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>BARCLAYS VIDA Y PENSIONES COMPAÑÍA DE SEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>BBVASEGUROS, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BBVASEGUROS, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BBVA VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BBVA VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>BILBAO, C.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>BILBAO, C.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>CAI SEGUROS GENERALES DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CAI SEGUROS GENERALES DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CAIXA ENGINYERS VIDA-CAJA INGENIEROS VIDA, COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CAIXA ENGINYERS VIDA-CAJA INGENIEROS VIDA, COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJA DE SEGUROS REUNIDOS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A. (CASER)</fullName>
+        <default>false</default>
+        <label>CAJA DE SEGUROS REUNIDOS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A. (CASER)</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJA ESPAÑA VIDA , COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CAJA ESPAÑA VIDA , COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJA GRANADA VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CAJA GRANADA VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJAMAR SEGUROS GENERALES, SOCIEDAD ANÓNIMA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>CAJAMAR SEGUROS GENERALES, SOCIEDAD ANÓNIMA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJAMAR VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>CAJAMAR VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>CAJAMURCIA VIDA Y PENSIONES DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CAJAMURCIA VIDA Y PENSIONES DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CA LIFE INSURANCE EXPERTS COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>CA LIFE INSURANCE EXPERTS COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>CARDIF ASSURANCES RISQUES DIVERS, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>CARDIF ASSURANCES RISQUES DIVERS, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>CARDIF ASSURANCE VIE, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>CARDIF ASSURANCE VIE, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>CATALUNYACAIXA ASSEGURANCES GENERALS S.A. D`ASSEGURANCES I REASSEGURANCES</fullName>
+        <default>false</default>
+        <label>CATALUNYACAIXA ASSEGURANCES GENERALS S.A. D`ASSEGURANCES I REASSEGURANCES</label>
+    </customValue>
+    <customValue>
+        <fullName>CATALUNYACAIXA VIDA, S.A. D`ASSEGURANCES Y REASSEGURANCES</fullName>
+        <default>false</default>
+        <label>CATALUNYACAIXA VIDA, S.A. D`ASSEGURANCES Y REASSEGURANCES</label>
+    </customValue>
+    <customValue>
+        <fullName>CATOC VIDA, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>CATOC VIDA, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>CCM VIDA Y PENSIONES DE SEGUROS Y REASEGUROS S.A.</fullName>
+        <default>false</default>
+        <label>CCM VIDA Y PENSIONES DE SEGUROS Y REASEGUROS S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CESCE</fullName>
+        <default>false</default>
+        <label>CESCE</label>
+    </customValue>
+    <customValue>
+        <fullName>CHUBB INSURANCE COMPANY OF EUROPE SE SUC. ESPAÑA</fullName>
+        <default>false</default>
+        <label>CHUBB INSURANCE COMPANY OF EUROPE SE SUC. ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>CIGNA LIFE INSURANCE COMPANY OF EUROPE, S.A. SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>CIGNA LIFE INSURANCE COMPANY OF EUROPE, S.A. SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>CLINICUM SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CLINICUM SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>CNP PARTNERS DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>CNP PARTNERS DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPANHÍA DE SEGUROS TRANQUILIDADE, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>COMPANHÍA DE SEGUROS TRANQUILIDADE, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPAÑÍA DE SEGUROS IGUALATORIO MÉDICO QUIRÚRGICO Y DE ESPECIALIDADES DE NAVARRA, S.A.</fullName>
+        <default>false</default>
+        <label>COMPAÑÍA DE SEGUROS IGUALATORIO MÉDICO QUIRÚRGICO Y DE ESPECIALIDADES DE NAVARRA, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPAÑÍA DE SEGUROS PREVISIÓN MÉDICA, S.A.</fullName>
+        <default>false</default>
+        <label>COMPAÑÍA DE SEGUROS PREVISIÓN MÉDICA, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPAÑÍA ESPAÑOLA DE SEGUROS Y REASEGUROS DE CRÉDITO Y CAUCIÓN, S.A.</fullName>
+        <default>false</default>
+        <label>COMPAÑÍA ESPAÑOLA DE SEGUROS Y REASEGUROS DE CRÉDITO Y CAUCIÓN, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>COMPAÑÍA EUROPEA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>COMPAÑÍA EUROPEA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>COSALUD, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>COSALUD, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>D.A.S. DEFENSA DEL AUTOMOVILISTA Y DE SINIESTROS INTERNACIONAL, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>D.A.S. DEFENSA DEL AUTOMOVILISTA Y DE SINIESTROS INTERNACIONAL, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>DKV SEGUROS Y REASEGUROS S.A.E.</fullName>
+        <default>false</default>
+        <label>DKV SEGUROS Y REASEGUROS S.A.E.</label>
+    </customValue>
+    <customValue>
+        <fullName>ERGO GENERALES SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ERGO GENERALES SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ERGO VIDA SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>ERGO VIDA SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ESPAÑA, S.A., COMPAÑÍA NACIONAL DE SEGUROS</fullName>
+        <default>false</default>
+        <label>ESPAÑA, S.A., COMPAÑÍA NACIONAL DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>ETERNA ASEGURADORA, S.A. COMPAÑÍA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>ETERNA ASEGURADORA, S.A. COMPAÑÍA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>EURO INSURANCES LIMITED</fullName>
+        <default>false</default>
+        <label>EURO INSURANCES LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>EUROP ASSISTANCE ESPAÑA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>EUROP ASSISTANCE ESPAÑA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>EXPERTIA, SEGUROS DE DECESOS, S.A.</fullName>
+        <default>false</default>
+        <label>EXPERTIA, SEGUROS DE DECESOS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>FAMILIAR DE SEGUROS ACTIVE, S.A.</fullName>
+        <default>false</default>
+        <label>FAMILIAR DE SEGUROS ACTIVE, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>FÉNIX DIRECTO, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>FÉNIX DIRECTO, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>FIATC, MUTUA DE SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>FIATC, MUTUA DE SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>FIDELIDADE COMPANHIA DE SEGUROS, S. A. (PORTUGUESA) SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>FIDELIDADE COMPANHIA DE SEGUROS, S. A. (PORTUGUESA) SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>FINANCIAL ASSURANCE COMPANY LIMITED SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>FINANCIAL ASSURANCE COMPANY LIMITED SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>FINANCIAL INSURANCE COMPANY LIMITED SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>FINANCIAL INSURANCE COMPANY LIMITED SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>GENERALI ESPAÑA, S.A DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>GENERALI ESPAÑA, S.A DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>GENERAL REINSURANCE AG SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>GENERAL REINSURANCE AG SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>GES, SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>GES, SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>GNB SEGUROS VIDA, S.A. SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>GNB SEGUROS VIDA, S.A. SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>GREAT AMERICAN INTERNATIONAL INSURANCE LIMITED</fullName>
+        <default>false</default>
+        <label>GREAT AMERICAN INTERNATIONAL INSURANCE LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>HCC INTERNATIONAL INSURANCE COMPANY PLC SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>HCC INTERNATIONAL INSURANCE COMPANY PLC SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>HDI-GERLING INDUSTRIE VERSICHERUNG AG, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>HDI-GERLING INDUSTRIE VERSICHERUNG AG, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>HELVETIA COMPAÑÍA SUIZA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>HELVETIA COMPAÑÍA SUIZA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>HÉRCULES SALUD SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>HÉRCULES SALUD SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>HERMANDAD NACIONAL DE ARQUITECTOS SUPERIORES Y QUÍMICOS, MDAD DE PREVISIÓN SOCIAL A PRIMA FIJA</fullName>
+        <default>false</default>
+        <label>HERMANDAD NACIONAL DE ARQUITECTOS SUPERIORES Y QUÍMICOS, MDAD DE PREVISIÓN SOCIAL A PRIMA FIJA</label>
+    </customValue>
+    <customValue>
+        <fullName>IBERCAJA VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>IBERCAJA VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>IGUALATORIO MÉDICO QUIRÚRGICO, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>IGUALATORIO MÉDICO QUIRÚRGICO, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>IGUALATORIO MÉDICO QUIRÚRGICO COLEGIAL S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>IGUALATORIO MÉDICO QUIRÚRGICO COLEGIAL S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>IGUALATORIO MÉDICO QUIRÚRGICO Y DE ESPECIALIDADES DE ASTURIAS, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>IGUALATORIO MÉDICO QUIRÚRGICO Y DE ESPECIALIDADES DE ASTURIAS, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>IMA IBÉRICA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>IMA IBÉRICA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>INSTITUTO SANITARIO, S.A. DE SEGUROS (I.S.S.A)</fullName>
+        <default>false</default>
+        <label>INSTITUTO SANITARIO, S.A. DE SEGUROS (I.S.S.A)</label>
+    </customValue>
+    <customValue>
+        <fullName>INTER PARTNER ASSISTANCE, S.A. SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>INTER PARTNER ASSISTANCE, S.A. SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>IPRESA IGUALATORIO DE PREVISIÓN SANITARIA, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>IPRESA IGUALATORIO DE PREVISIÓN SANITARIA, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>KUTXABANK ASEGURADORA COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>KUTXABANK ASEGURADORA COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>KUTXABANK VIDA Y PENSIONES COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>KUTXABANK VIDA Y PENSIONES COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>LA FE PREVISORA COMPAÑÍA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>LA FE PREVISORA COMPAÑÍA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>LAIETANA GENERALES COMPAÑÍA DE SEGUROS DE LA CAJA DE AHORROS LAIETANA S.A., SOCIEDAD UNIPERSONAL</fullName>
+        <default>false</default>
+        <label>LAIETANA GENERALES COMPAÑÍA DE SEGUROS DE LA CAJA DE AHORROS LAIETANA S.A., SOCIEDAD UNIPERSONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>LAIETANA VIDA, COMPAÑÍA DE SEGUROS DE LA CAJA DE AHORROS LAIETANA, S.A., SOCIEDAD UNIPERSONAL</fullName>
+        <default>false</default>
+        <label>LAIETANA VIDA, COMPAÑÍA DE SEGUROS DE LA CAJA DE AHORROS LAIETANA, S.A., SOCIEDAD UNIPERSONAL</label>
+    </customValue>
+    <customValue>
+        <fullName>LA PREVISIÓN MALLORQUINA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>LA PREVISIÓN MALLORQUINA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>LA UNIÓN ALCOYANA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>LA UNIÓN ALCOYANA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>LA UNIÓN MADRILEÑA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>LA UNIÓN MADRILEÑA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>LEGALITAS COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.U.</fullName>
+        <default>false</default>
+        <label>LEGALITAS COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.U.</label>
+    </customValue>
+    <customValue>
+        <fullName>LIBERBANK VIDA Y PENSIONES, SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>LIBERBANK VIDA Y PENSIONES, SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>LIBERTY SEGUROS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>LIBERTY SEGUROS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>LÍNEA DIRECTA ASEGURADORA, S.A. COMPAÑÍA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>LÍNEA DIRECTA ASEGURADORA, S.A. COMPAÑÍA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MAPFRE ASISTENCIA, COMPAÑÍA INTERNACIONAL DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MAPFRE ASISTENCIA, COMPAÑÍA INTERNACIONAL DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MAPFRE FAMILIAR, COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MAPFRE FAMILIAR, COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MAPFRE GLOBAL RISKS, COMPAÑIA INTERNACIONAL DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MAPFRE GLOBAL RISKS, COMPAÑIA INTERNACIONAL DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MAPFRE RE, COMPAÑÍA DE REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MAPFRE RE, COMPAÑÍA DE REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MAPFRE SEGUROS DE EMPRESAS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MAPFRE SEGUROS DE EMPRESAS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MAPFRE VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>MAPFRE VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MARCH VIDA S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>MARCH VIDA S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MARTIERRA SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MARTIERRA SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDIOLANUM INTERNATIONAL LIFE LIMITED</fullName>
+        <default>false</default>
+        <label>MEDIOLANUM INTERNATIONAL LIFE LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>MEDITERRÁNEO SEGUROS DIVERSOS, COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>MEDITERRÁNEO SEGUROS DIVERSOS, COMPAÑIA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MERIDIANO, S.A., COMPAÑÍA ESPAÑOLA DE SEGUROS</fullName>
+        <default>false</default>
+        <label>MERIDIANO, S.A., COMPAÑÍA ESPAÑOLA DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>METLIFE EUROPE INSURANCE LIMITED SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>METLIFE EUROPE INSURANCE LIMITED SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>METLIFE EUROPE LIMITED SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>METLIFE EUROPE LIMITED SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>METRÓPOLIS, S.A., COMPAÑÍA NACIONAL DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>METRÓPOLIS, S.A., COMPAÑÍA NACIONAL DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MGS SEGUROS Y REASEGUROS S.A.</fullName>
+        <default>false</default>
+        <label>MGS SEGUROS Y REASEGUROS S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>MM GLOBALIS, S.A.U. SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>MM GLOBALIS, S.A.U. SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MM HOGAR SOCIEDAD ANÓNIMA UNIPERSONAL DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>MM HOGAR SOCIEDAD ANÓNIMA UNIPERSONAL DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MSIG INSURANCE EUROPE AG, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>MSIG INSURANCE EUROPE AG, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUNICH RE SUCURSAL ESPAÑA</fullName>
+        <default>false</default>
+        <label>MUNICH RE SUCURSAL ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>MURIMAR VIDA SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>MURIMAR VIDA SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>MUSAAT, MUTUA DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUSAAT, MUTUA DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUSSAP, MUTUA DE SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUSSAP, MUTUA DE SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA DE PROPIETARIOS, SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUTUA DE PROPIETARIOS, SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA DE RIESGO MARÍTIMO, SOCIEDAD DE SEGUROS APF (MURIMAR)</fullName>
+        <default>false</default>
+        <label>MUTUA DE RIESGO MARÍTIMO, SOCIEDAD DE SEGUROS APF (MURIMAR)</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA DE SEGUROS DE ARMADORES DE BUQUES DE PESCA DE ESPAÑA, SOCIEDAD MUTUA APF</fullName>
+        <default>false</default>
+        <label>MUTUA DE SEGUROS DE ARMADORES DE BUQUES DE PESCA DE ESPAÑA, SOCIEDAD MUTUA APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA GENERAL DE CATALUÑA DE SEGUROS Y REASEGUROS A PRIMA FIJA</fullName>
+        <default>false</default>
+        <label>MUTUA GENERAL DE CATALUÑA DE SEGUROS Y REASEGUROS A PRIMA FIJA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUALIDAD DE LEVANTE, ENTIDAD DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUTUALIDAD DE LEVANTE, ENTIDAD DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUALIDAD DE SEGUROS DE LA PANADERÍA DE VALENCIA, MUTUA APF</fullName>
+        <default>false</default>
+        <label>MUTUALIDAD DE SEGUROS DE LA PANADERÍA DE VALENCIA, MUTUA APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUALIDAD GENERAL DE LA ABOGACÍA</fullName>
+        <default>false</default>
+        <label>MUTUALIDAD GENERAL DE LA ABOGACÍA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUALITAT DE PREVISIÓ SOCIAL DEL COL·LEGI OFICIAL D`ENGINYERS INDUSTRIALS DE CATALUNYA A PRIMA FIXA</fullName>
+        <default>false</default>
+        <label>MUTUALITAT DE PREVISIÓ SOCIAL DEL COL·LEGI OFICIAL D`ENGINYERS INDUSTRIALS DE CATALUNYA A PRIMA FIXA</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA MADRILEÑA AUTOMOVILISTA, SOCIEDAD DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUTUA MADRILEÑA AUTOMOVILISTA, SOCIEDAD DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA MMT SEGUROS, SOCIEDAD MUTUA DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUTUA MMT SEGUROS, SOCIEDAD MUTUA DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA SEGORBINA DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUTUA SEGORBINA DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUASPORT, MUTUA DE SEGUROS DEPORTIVOS APF</fullName>
+        <default>false</default>
+        <label>MUTUASPORT, MUTUA DE SEGUROS DEPORTIVOS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUA TINERFEÑA, MUTUA DE SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>MUTUA TINERFEÑA, MUTUA DE SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>MUTUAVENIR, MUTUA DE SEGUROS Y REASEGUROS A PRIMA FIJA DE PAMPLONA</fullName>
+        <default>false</default>
+        <label>MUTUAVENIR, MUTUA DE SEGUROS Y REASEGUROS A PRIMA FIJA DE PAMPLONA</label>
+    </customValue>
+    <customValue>
+        <fullName>NACIONAL DE REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>NACIONAL DE REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>NATIONALE-NEDERLANDEN GENERALES, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A. ESPAÑOLA</fullName>
+        <default>false</default>
+        <label>NATIONALE-NEDERLANDEN GENERALES, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A. ESPAÑOLA</label>
+    </customValue>
+    <customValue>
+        <fullName>NATIONALE-NEDERLANDEN VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A. ESPAÑOLA</fullName>
+        <default>false</default>
+        <label>NATIONALE-NEDERLANDEN VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A. ESPAÑOLA</label>
+    </customValue>
+    <customValue>
+        <fullName>NORTEHISPANA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>NORTEHISPANA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>OCASO, S.A. COMPAÑIA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>OCASO, S.A. COMPAÑIA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>PAKEA, MUTUALIDAD DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>PAKEA, MUTUALIDAD DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>PARAISO UNIVERSAL, COMPAÑÍA ESPAÑOLA DE SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>PARAISO UNIVERSAL, COMPAÑÍA ESPAÑOLA DE SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>PASTOR VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>PASTOR VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>PATRIA HISPANA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>PATRIA HISPANA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>PELAYO, MUTUA DE SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>PELAYO, MUTUA DE SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>PELAYO VIDA SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>PELAYO VIDA SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>PLUS ULTRA SEGUROS GENERALES Y VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>PLUS ULTRA SEGUROS GENERALES Y VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>PREDICA, PREVOYANCE DIALOGUE DU C.A. SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>PREDICA, PREVOYANCE DIALOGUE DU C.A. SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>PREVENTIVA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>PREVENTIVA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>PREVISIÓN SANITARIA NACIONAL, P.S.N. MUTUA DE SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>PREVISIÓN SANITARIA NACIONAL, P.S.N. MUTUA DE SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>PREVISORA BILBAINA SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>PREVISORA BILBAINA SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>PREVISORA BILBAINA VIDA SEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>PREVISORA BILBAINA VIDA SEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>RACC SEGUROS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>RACC SEGUROS, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>REALE SEGUROS GENERALES, S.A.</fullName>
+        <default>false</default>
+        <label>REALE SEGUROS GENERALES, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>REALE VIDA Y PENSIONES, SOCIEDAD ANÓNIMA DE SEGUROS</fullName>
+        <default>false</default>
+        <label>REALE VIDA Y PENSIONES, SOCIEDAD ANÓNIMA DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>RGA INTERNATIONAL REINSURANCE COMPANY SUC. EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>RGA INTERNATIONAL REINSURANCE COMPANY SUC. EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>RGA RURAL VIDA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>RGA RURAL VIDA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>RGA SEGUROS GENERALES RURAL, S.A. DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>RGA SEGUROS GENERALES RURAL, S.A. DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>ROYAL &amp; SUN ALLIANCE INSURANCE PLC., SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>ROYAL &amp; SUN ALLIANCE INSURANCE PLC., SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>S.O.S. SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>S.O.S. SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SADYR, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>SADYR, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>SAHNA-E SERVICIOS INTEGRALES DE SALUD, SA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>SAHNA-E SERVICIOS INTEGRALES DE SALUD, SA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>SANITAS, S.A. DE SEGUROS</fullName>
+        <default>false</default>
+        <label>SANITAS, S.A. DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTA LUCÍA, SOCIEDAD ANÓNIMA, COMPAÑÍA DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>SANTA LUCÍA, SOCIEDAD ANÓNIMA, COMPAÑÍA DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTANDER INSURANCE EUROPE LIMITED</fullName>
+        <default>false</default>
+        <label>SANTANDER INSURANCE EUROPE LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTANDER INSURANCE LIFE LIMITED</fullName>
+        <default>false</default>
+        <label>SANTANDER INSURANCE LIFE LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>SANTANDER SEGUROS Y REASEGUROS, COMPAÑÍA ASEGURADORA, S.A.</fullName>
+        <default>false</default>
+        <label>SANTANDER SEGUROS Y REASEGUROS, COMPAÑÍA ASEGURADORA, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SCOR GLOBAL LIFE SE IBÉRICA SUCURSAL</fullName>
+        <default>false</default>
+        <label>SCOR GLOBAL LIFE SE IBÉRICA SUCURSAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SCOR GLOBAL P&amp;C SE IBERICA SUCURSAL</fullName>
+        <default>false</default>
+        <label>SCOR GLOBAL P&amp;C SE IBERICA SUCURSAL</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGURCAIXA ADESLAS, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>SEGURCAIXA ADESLAS, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS CATALANA OCCIDENTE, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>SEGUROS CATALANA OCCIDENTE, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS DE VIDA Y PENSIONES ANTARES, S.A.</fullName>
+        <default>false</default>
+        <label>SEGUROS DE VIDA Y PENSIONES ANTARES, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS EL CORTE INGLÉS, VIDA, PENSIONES Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>SEGUROS EL CORTE INGLÉS, VIDA, PENSIONES Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS LAGUN ARO, S.A.</fullName>
+        <default>false</default>
+        <label>SEGUROS LAGUN ARO, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS LAGUN ARO VIDA, S.A.</fullName>
+        <default>false</default>
+        <label>SEGUROS LAGUN ARO VIDA, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SEGUROS SEVILLA, S.A.</fullName>
+        <default>false</default>
+        <label>SEGUROS SEVILLA, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SOCIEDAD DE SEGUROS MUTUOS MARÍTIMOS DE VIGO, MUTUALIDAD DE SEGUROS Y REASEGUROS APF</fullName>
+        <default>false</default>
+        <label>SOCIEDAD DE SEGUROS MUTUOS MARÍTIMOS DE VIGO, MUTUALIDAD DE SEGUROS Y REASEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>SOLISS MUTUALIDAD DE SEGUROS Y REASEGUROS A PRIMA FIJA</fullName>
+        <default>false</default>
+        <label>SOLISS MUTUALIDAD DE SEGUROS Y REASEGUROS A PRIMA FIJA</label>
+    </customValue>
+    <customValue>
+        <fullName>SOLUNIÓN SEGUROS DE CRÉDITO, COMPAÑÍA INTERNACIONAL DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>SOLUNIÓN SEGUROS DE CRÉDITO, COMPAÑÍA INTERNACIONAL DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>SOMPO JAPAN NIPPONKOA INSURANCE COMPANY OF EUROPE Limited Sucursal en España</fullName>
+        <default>false</default>
+        <label>SOMPO JAPAN NIPPONKOA INSURANCE COMPANY OF EUROPE Limited Sucursal en España</label>
+    </customValue>
+    <customValue>
+        <fullName>TELEFÓNICA INSURANCE, S. A.</fullName>
+        <default>false</default>
+        <label>TELEFÓNICA INSURANCE, S. A.</label>
+    </customValue>
+    <customValue>
+        <fullName>TOKIO MARINE EUROPE INSURANCE LIMITED</fullName>
+        <default>false</default>
+        <label>TOKIO MARINE EUROPE INSURANCE LIMITED</label>
+    </customValue>
+    <customValue>
+        <fullName>UMAS, UNIÓN MUTUA ASISTENCIAL DE SEGUROS APF</fullName>
+        <default>false</default>
+        <label>UMAS, UNIÓN MUTUA ASISTENCIAL DE SEGUROS APF</label>
+    </customValue>
+    <customValue>
+        <fullName>UNICORP VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</fullName>
+        <default>false</default>
+        <label>UNICORP VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>UNIÓN DE AUTOMÓVILES CLUBS, S.A. DE SEGUROS Y REASEGUROS (UNACSA)</fullName>
+        <default>false</default>
+        <label>UNIÓN DE AUTOMÓVILES CLUBS, S.A. DE SEGUROS Y REASEGUROS (UNACSA)</label>
+    </customValue>
+    <customValue>
+        <fullName>UNIÓN DEL DUERO, COMPAÑÍA DE SEGUROS DE VIDA, S.A.</fullName>
+        <default>false</default>
+        <label>UNIÓN DEL DUERO, COMPAÑÍA DE SEGUROS DE VIDA, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>UNIÓN DEL DUERO, COMPAÑÍA DE SEGUROS GENERALES, S.A.</fullName>
+        <default>false</default>
+        <label>UNIÓN DEL DUERO, COMPAÑÍA DE SEGUROS GENERALES, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>UNIÓN MÉDICA LA FUENCISLA, S.A. COMPAÑÍA DE SEGUROS</fullName>
+        <default>false</default>
+        <label>UNIÓN MÉDICA LA FUENCISLA, S.A. COMPAÑÍA DE SEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>VERTI ASEGURADORA, COMPAÑIA DE SEGUROS Y REASEGUROS, S. A.</fullName>
+        <default>false</default>
+        <label>VERTI ASEGURADORA, COMPAÑIA DE SEGUROS Y REASEGUROS, S. A.</label>
+    </customValue>
+    <customValue>
+        <fullName>VIDACAIXA, S.A. DE SEGUROS Y REASEGUROS</fullName>
+        <default>false</default>
+        <label>VIDACAIXA, S.A. DE SEGUROS Y REASEGUROS</label>
+    </customValue>
+    <customValue>
+        <fullName>VITAL SEGURO, S.A.</fullName>
+        <default>false</default>
+        <label>VITAL SEGURO, S.A.</label>
+    </customValue>
+    <customValue>
+        <fullName>W.R. BERKLEY INSURANCE (EUROPE) LIMITED, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>W.R. BERKLEY INSURANCE (EUROPE) LIMITED, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>XL INSURANCE COMPANY S.E, SUCURSAL EN ESPAÑA</fullName>
+        <default>false</default>
+        <label>XL INSURANCE COMPANY S.E, SUCURSAL EN ESPAÑA</label>
+    </customValue>
+    <customValue>
+        <fullName>ZURICH INSURANCE P.L.C.</fullName>
+        <default>false</default>
+        <label>ZURICH INSURANCE P.L.C.</label>
+    </customValue>
+    <customValue>
+        <fullName>ZURICH VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A., S.U.</fullName>
+        <default>false</default>
+        <label>ZURICH VIDA, COMPAÑÍA DE SEGUROS Y REASEGUROS, S.A., S.U.</label>
+    </customValue>
+    <masterLabel>Compañías causante</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

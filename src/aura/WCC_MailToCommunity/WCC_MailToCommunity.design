@@ -1,0 +1,5 @@
+<design:component >
+    <design:attribute name="bCommunityManager" label="Community Manager Email" description="CheckBox" />
+    <design:attribute name="sName" label="Name" description="Name of the entity to send the email" />
+    <design:attribute name="sEmail" label="Email Address" description="Email Addres" />
+</design:component>

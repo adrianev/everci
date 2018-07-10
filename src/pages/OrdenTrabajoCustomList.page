@@ -1,0 +1,501 @@
+<apex:page standardController="WorkOrder" tabStyle="Servicios_Tratamiento_de_Filtros__tab"
+	extensions="OrdenTrabajoCustomList,Cambiar_Propietario_Orden_Trabajo,Cambiar_Estado_WorkOrder_al_pulsar_boton"
+	recordSetVar="registros" showHeader="true" docType="html-5.0">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:includeScript value="{!$Resource.jQuery}" />
+	<style type="text/css">
+		body .apexp .bPageBlock.apexDefaultPageBlock .pbBody .color1.color2.sincolor .pbSubheader
+			{
+			color: #4a4a56;
+			background-color: #f8f8f8;
+			margin-top: 0;
+		}
+		
+		body .apexp .bPageBlock.apexDefaultPageBlock .pbBody .sincolor .pbSubheader h3
+			{
+			font-size: 100%;
+		}
+		
+		body .apexp .bPageBlock.apexDefaultPageBlock .pbBody .color1.color2 .pbSubheader
+			{
+			background-color: #f26979;
+			margin-top: 0;
+		}
+		
+		body .apexp .bPageBlock.apexDefaultPageBlock .pbBody .color1 .pbSubheader
+			{
+			background-color: #e7342c;
+			margin-top: 0;
+		}
+		
+	</style>
+	<script type="text/javascript"> 
+
+	function stopRKey(evt) { 
+	  var evt = (evt) ? evt : ((event) ? event : null); 
+	  var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null); 
+	  if ((evt.keyCode == 13) && ((node.type=="text") || (node.type=="number")))  {return false;} 
+	} 
+	
+	document.onkeypress = stopRKey; 
+	
+	</script>
+	<apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	
+	<apex:actionStatus id="iconoCargandoPendiente" onStart="document.getElementById('{!$Component.pendienteForm}').style.display='none';" onStop="document.getElementById('{!$Component.pendienteForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+	
+	<apex:form id="pendienteForm" rendered="{!esPendiente}">
+		<script>
+			function continueUpdate(){
+				console.log('{!isOver}');
+				if('{!isOver}' != 'true')
+					updateWOAF();
+			}
+		
+		
+		</script>
+		<apex:actionFunction name="updateWOAF" action="{!marcarPendiente}" status="iconoCargandoPendiente" rerender="pendienteForm" oncomplete="continueUpdate();"/>
+		<apex:pageMessages />
+		<apex:pageBlock title="Seleccione motivo">
+			<apex:pageBlockButtons >
+				<apex:commandButton action="{!volverLista}" value="<< VOLVER"/>
+				<apex:commandButton action="{!marcarPendiente}" 
+							value="CONFIRMAR" rerender="pendienteForm" status="iconoCargandoPendiente" oncomplete="continueUpdate();"/>
+			</apex:pageBlockButtons>
+			<apex:pageBlocksection >
+				<apex:inputField value="{!woUpdate.OTR_SEL_AG_Motivo__c}"/>
+			</apex:pageBlocksection>
+			
+		</apex:pageBlock>
+	
+	</apex:form>
+	
+	
+
+	<apex:form id="mainForm" rendered="{!!esPendiente}">
+		<apex:actionFunction name="cargarRedireccion" action="{!cargarRedireccion}" status="iconoCargando" rerender="mainForm" oncomplete="cerrarseccion();"/>
+		<apex:sectionHeader title="Servicios"
+            subtitle="Tratamiento de filtros"/>
+
+		<apex:pageMessages />
+
+		<apex:pageBlock title="Seleccionar vista existente">
+			<apex:selectList value="{!vistaSeleccionada}" size="1"
+				label="Vistas existentes">
+				<apex:selectOptions value="{!vistas}" />
+			</apex:selectList>
+			<apex:commandButton value="Aplicar" title="Aplicar"
+				action="{!recargaFiltroExistente}" rerender="mainForm"
+				status="iconoCargando" oncomplete="cerrarseccion();"/>
+			<apex:commandButton value="Borrar vista" title="Borrar vista"
+				action="{!borrarVista}" rerender="mainForm" status="iconoCargando" oncomplete="cerrarseccion();"/>
+		</apex:pageBlock>
+		<apex:pageBlock title="Configurar nueva vista">
+			<apex:outputPanel layout="block" styleClass="color1">
+				<apex:pageBlockSection title="Datos del filtro" columns="1">
+					
+					<apex:pageBlockSectionItem labelStyle="width: 10%;">
+
+						<apex:outputLabel value="Nombre de la vista" for="nombrevista"/>
+						<apex:inputText value="{!nombreVistaNueva}"
+							label="Nombre de la vista" id="nombrevista"/>
+
+					</apex:pageBlockSectionItem>
+					
+					
+	
+					<!-- <apex:inputField value="{!woNuevoFiltro.OTR_SEL_Gremio__c}" />-->
+	
+					<!-- <apex:outputPanel styleClass="sincolor" layout="block">
+						<apex:pageBlockSection showHeader="false"
+							collapsible="false" columns="2">
+							<apex:selectList label="Gremio" value="{!gremioSeleccionado}"
+								size="3" multiselect="true">
+								<apex:selectOptions value="{!picklistGremios}" />
+							</apex:selectList>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirGremio}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>  -->
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Gremio"
+							collapsible="true" columns="2">
+							<apex:facet name="header">
+								<apex:outputtext value="Gremio">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!gremioSeleccionado.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistGremios}"
+							    rightLabel=""
+							    rightOption="{!gremioSeleccionado}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirGremio}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Companía"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Companía">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!companiaSeleccionada.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistCompanias}"
+							    rightLabel=""
+							    rightOption="{!companiaSeleccionada}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirCompania}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Producto"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Producto">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!productoSeleccionado.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistNombreTipoProducto}"
+							    rightLabel=""
+							    rightOption="{!productoSeleccionado}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirProducto}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Dirección Territorial"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Dirección Territorial">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!direccionTerritorialSeleccionada.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistDireccionesTerritoriales}"
+							    rightLabel=""
+							    rightOption="{!direccionTerritorialSeleccionada}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirDireccionTerritorial}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Provincia"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Provincia">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!provinciaSeleccionada.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistProvincias}"
+							    rightLabel=""
+							    rightOption="{!provinciaSeleccionada}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirProvincia}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Tipología de Servicio"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Tipología de Servicio">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!tipologiaDeServicioSeleccionada.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistTiposServicio}"
+							    rightLabel=""
+							    rightOption="{!tipologiaDeServicioSeleccionada}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirTipologiaServicio}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Tipo de Intervención"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Tipo de Intervención">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!!tipoIntervencionSeleccionada.empty}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<c:MultiselectPicklist leftLabel=""
+							    leftOption="{!picklistTipoIntervencion}"
+							    rightLabel=""
+							    rightOption="{!tipoIntervencionSeleccionada}"
+							    size="20"
+							    width="300px"
+							    showUpDownButtons="false"/>
+							<apex:inputCheckbox label="Excluir selección" value="{!excluirTipoIntervencion}"/>
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+					
+					<apex:outputPanel layout="block" styleClass="color1 color2">
+						<apex:pageBlockSection title="Otros campos"
+							collapsible="true" columns="2">
+							
+							<apex:facet name="header">
+								<apex:outputtext value="Otros campos">
+									<apex:image url="/img/permissions_confirm16.gif" rendered="{!woNuevoFiltro.OTR_LKP_Recurso_Servicio__c != null
+																								|| numeroPartidasMin != null
+																								|| numeroPartidasMax != null
+																								|| (filtroConfianzaRed != null && filtroConfianzaRed != '')
+																								|| (filtroRequierePerito != null && filtroRequierePerito != '')
+																								|| (importeLiquidarProfMin != null && importeLiquidarProfMin != '')
+																								|| (importeLiquidarProfMax != null && importeLiquidarProfMax != '')
+																								|| (importeSubtotalPartidasMin != null && importeSubtotalPartidasMin != '')
+																								|| (importeSubtotalPartidasMax != null && importeSubtotalPartidasMax != '')
+																								|| inicioRecepcionAlbaran != null
+																								|| finRecepcionAlbaran != null
+																								|| inicioCierre != null
+																								|| finCierre != null
+																								|| misServicios
+																								|| rechazados
+																								|| woNuevoFiltro.OTR_CAS_Pendiente_de_Gestor__c
+																								|| (woNuevoFiltro.OTR_SEL_AG_Motivo__c != null && woNuevoFiltro.OTR_SEL_AG_Motivo__c != '')
+																								|| (importeCIAIntervencionMin != null && importeCIAIntervencionMin != '')
+																								|| (importeCIAIntervencionMax != null && importeCIAIntervencionMax != '')
+																								|| (filtroCodigoBaremo != null && filtroCodigoBaremo != '')}"/>
+								</apex:outputtext>
+							</apex:facet>
+							
+							<apex:outputPanel styleClass="color1 color2 sincolor" id="ipart" layout="block">
+								<apex:pageBlockSection title="Número de partidas"
+									collapsible="false">
+									<apex:input label="Entre" value="{!numeroPartidasMin}" />
+									<apex:input label="Y" value="{!numeroPartidasMax}" />
+								</apex:pageBlockSection>
+							</apex:outputPanel>
+							
+							<apex:inputField value="{!woNuevoFiltro.OTR_LKP_Recurso_Servicio__c}" />
+							
+							<apex:outputPanel styleClass="color1 color2 sincolor" id="iprof" layout="block">
+								<apex:pageBlockSection title="Rango de importe de profesional antes de imp"
+									collapsible="false">
+									<apex:input label="Entre" value="{!importeLiquidarProfMin}" />
+									<apex:input label="Y" value="{!importeLiquidarProfMax}" />
+								</apex:pageBlockSection>
+							</apex:outputPanel>
+							
+							<apex:selectRadio label="Confianza en la red" value="{!filtroConfianzaRed}">
+			            		<apex:selectOption itemValue="true" itemLabel="Si"/>
+			           			<apex:selectOption itemValue="false" itemLabel="No"/>
+			            		<apex:selectOption itemValue="" itemLabel="Ignorar filtro"/>
+			            	</apex:selectRadio>	
+							
+							<apex:outputPanel styleClass="color1 color2 sincolor" id="icia" layout="block">
+								<apex:pageBlockSection title="Importe CIA antes de imp"
+									collapsible="false">
+									<apex:input label="Entre" value="{!importeSubtotalPartidasMin}" />
+									<apex:input label="Y" value="{!importeSubtotalPartidasMax}" />
+								</apex:pageBlockSection>
+							</apex:outputPanel>
+							
+							
+							
+			            	<apex:selectRadio label="Siniestro Peritado" value="{!filtroRequierePerito}">
+			            		<apex:selectOption itemValue="true" itemLabel="Si"/>
+			           			<apex:selectOption itemValue="false" itemLabel="No"/>
+			            		<apex:selectOption itemValue="" itemLabel="Ignorar filtro"/>
+			            	</apex:selectRadio>
+			            	
+			            	
+			            	<apex:outputPanel styleClass="color1 color2 sincolor" layout="block">
+								<apex:pageBlockSection title="Importe Total Intervención CIA Antes Imp"
+									collapsible="false">
+									<apex:input label="Entre" value="{!importeCIAIntervencionMin}" />
+									<apex:input label="Y" value="{!importeCIAIntervencionMax}" />
+								</apex:pageBlockSection>
+							</apex:outputPanel>
+							
+			            	<apex:inputField value="{!woNuevoFiltro.OTR_CAS_Pendiente_de_Gestor__c}" />
+			            	
+			            	<apex:outputPanel styleClass="color1 color2 sincolor" id="frec" layout="block">
+								<apex:pageBlockSection title="Fecha recepción albarán"
+									collapsible="false">
+									<apex:input type="date" label="Desde" value="{!inicioRecepcionAlbaran}" />
+									<apex:input type="date" label="Hasta" value="{!finRecepcionAlbaran}" />
+								</apex:pageBlockSection>
+							</apex:outputPanel>
+							
+							<apex:inputField value="{!woNuevoFiltro.OTR_SEL_AG_Motivo__c}" />
+							
+							<apex:outputPanel styleClass="color1 color2 sincolor" id="fcierre" layout="block">
+								<apex:pageBlockSection title="Fecha cierre servicio"
+									collapsible="false">
+									<apex:input type="date" label="Desde" value="{!inicioCierre}" />
+									<apex:input type="date" label="Hasta" value="{!finCierre}" />
+								</apex:pageBlockSection>
+							</apex:outputPanel>
+							
+							<apex:inputtext label="Códigos de baremo" value="{!filtroCodigoBaremo}" />
+							
+							<apex:pageBlockSectionItem />
+							
+							<apex:inputCheckbox label="Mostrar mis servicios asignados" value="{!misServicios}" rendered="{!!esGestor}"/>
+			            	
+			            	<apex:pageBlockSectionItem rendered="{!!esGestor}"/>
+							
+							<apex:inputCheckbox label="Mostrar servicios rechazados" value="{!rechazados}" />
+			            	
+							
+						</apex:pageBlockSection>
+					</apex:outputPanel>
+	
+	
+					<apex:pageBlockSection />
+					
+					<apex:pageBlockSectionItem >
+						<apex:outputPanel layout="none">
+							<apex:commandButton value="Aplicar" action="{!recargaFiltroNuevo}"
+								rerender="mainForm" status="iconoCargando" oncomplete="cerrarseccion();"/>
+							<apex:commandButton value="Aplicar y Guardar"
+								action="{!recargaFiltroGuardar}" rerender="mainForm"
+								status="iconoCargando" oncomplete="cerrarseccion();"/>
+							<apex:commandButton value="Limpiar filtros"
+								action="{!limpiarFiltros}" rerender="mainForm"
+								status="iconoCargando" oncomplete="cerrarseccion();"/>
+						</apex:outputPanel>
+					</apex:pageBlockSectionItem>
+				</apex:pageBlockSection>
+			</apex:outputPanel>
+		</apex:pageBlock>
+		<apex:pageBlock >
+			<apex:outputLabel value="Nº Elementos a seleccionar: " for="elSeleccionar"/>
+			<apex:input type="number" value="{!woSeleccionar}" id="elSeleccionar" rendered="{!!esGestor}">
+				<!-- <apex:actionSupport event="onchange" action="{!initController}"
+					rerender="mainForm" status="iconoCargando" oncomplete="cerrarseccion();"/>  -->
+			</apex:input>
+			<apex:commandButton value="<" title="Página Anterior"
+				action="{!antPag}" rendered="{!hayPrev}" reRender="mainForm"
+				status="iconoCargando" oncomplete="cerrarseccion();"/>
+			<apex:commandButton value=">" title="Página Siguiente"
+				action="{!sigPag}" rendered="{!haySig}" reRender="mainForm"
+				status="iconoCargando" oncomplete="cerrarseccion();"/>
+			<apex:commandButton value="Cambiar propietario" title=""
+				action="{!cambioPropietario}" rendered="{!!esGestor}"/>
+			<apex:commandButton value="Revisar automáticamente" title=""
+				action="{!revisarAutomaticamente}" rendered="{!!esGestor}"/>
+			<apex:commandButton value="Marcar pendientes gestor" title=""
+				action="{!pendienteGestor}" />
+			<apex:outputText value="Página {!enPag+1} de {!numPag}. {!woEnPag} elementos en la página. {!woTotal} elementos en total."
+				rendered="{!woTotal != 0}" />
+
+			<apex:pageBlockTable id="tablaOrdenesTrabajo"
+				value="{!registrosMostrar}" var="sel" title="Servicios"
+				columnsWidth="1%,10%" rendered="{!registros != 0}">
+
+				<apex:column >
+					<apex:facet name="header">
+						<apex:inputCheckbox id="chkbox" value="{!masterCheckbox}" rendered="{!!esGestor}">
+							<apex:actionSupport event="onchange" action="{!seleccionarTodos}"
+								rerender="mainForm" status="iconoCargando" oncomplete="cerrarseccion();"/>
+						</apex:inputCheckbox>
+					</apex:facet>
+					<apex:inputCheckbox value="{!checkboxes[sel.Id]}" rendered="{!!esGestor}"/>
+				</apex:column>
+				<apex:column headerValue="">
+					<apex:outputLink value="/{!sel.id}">{!sel.WorkOrderNumber}</apex:outputLink>
+				</apex:column>
+				<apex:column headerValue="Compañia">
+                    <apex:outputField value="{!sel.Case.CAS_LKP_Compania__c}" />
+                </apex:column>
+                <apex:column headerValue="Dirección territorial">
+                    <apex:outputField value="{!sel.OTR_FOR_DT__c}" />
+                </apex:column>
+                <apex:column headerValue="Provincia">
+                    <apex:outputField value="{!sel.OTR_FOR_Provincia__c}" />
+                </apex:column>
+                <apex:column headerValue="Tipo de intervención">
+                    <apex:outputField value="{!sel.OTR_FOR_Tipo_de_Caso__c}" />
+                </apex:column>
+                <apex:column headerValue="Tipología de servicio">
+                    <apex:outputField value="{!sel.OTR_SEL_Tipologia_de_Servicio__c}" />
+                </apex:column>
+                <apex:column headerValue="Profesional asignado">
+                    <apex:outputField value="{!sel.OTR_LKP_Recurso_Servicio__c}" />
+                </apex:column>
+                <apex:column headerValue="Gremio">
+                    <apex:outputField value="{!sel.OTR_SEL_Gremio__c}" />
+                </apex:column>
+                <apex:column headerValue="Partidas">
+                    <apex:outputField value="{!sel.OTR_RES_Partidas__c}" />
+                </apex:column>
+                <apex:column headerValue="Importe total liquidado">
+                    <apex:outputField value="{!sel.OTR_RES_Liquidar_prof_AI__c}" />
+                </apex:column>
+                <apex:column headerValue="Confianza en la red">
+                    <apex:outputField value="{!sel.OTR_CAS_Confianza_en_la_red__c}" />
+                </apex:column>
+                <apex:column headerValue="Gestor Asignado">
+                    <apex:outputField value="{!sel.OwnerId}" />
+                </apex:column>
+			</apex:pageBlockTable>
+
+		</apex:pageBlock>
+	</apex:form>
+	
+	<script>
+	function cerrarseccion(){
+		console.log(document.getElementsByClassName('color2'));
+		var listElem = document.getElementsByClassName('color2');
+		for(i in listElem){
+			twistSection(listElem[i].getElementsByTagName('img')[0]);
+		}
+	}
+	
+	window.onload = function(){
+		
+		if('{!existeRedireccion}' == 'true'){
+			cargarRedireccion();
+		}
+		cerrarseccion();
+	}
+	
+	</script>
+
+</apex:page>

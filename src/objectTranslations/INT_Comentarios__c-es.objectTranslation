@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integraciones: Comentarios</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integraciones: Comentarios</value>
+    </caseValues>
+    <fields>
+        <label><!-- Integraciones: Movimiento CIA --></label>
+        <name>ICC_LKP_Movimiento_CIA__c</name>
+        <relationshipLabel><!-- Integraciones: Comentarios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comentario Rechazo --></label>
+        <name>ICC_TXT_Comentario_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentario Siniestro Indemnizable --></label>
+        <name>ICC_TXT_Comentario_Sin_Indem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentario Siniestro Reparable --></label>
+        <name>ICC_TXT_Comentario_Sin_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentario --></label>
+        <name>ICC_TXT_Comentario__c</name>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

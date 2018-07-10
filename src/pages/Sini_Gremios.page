@@ -1,0 +1,151 @@
+<apex:page standardController="Case" extensions="SiniGremiosController"
+	showHeader="true" sidebar="false">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+	<apex:includeScript value="{!$Resource.jQuery}" />
+	<style type="text/css">
+		.filasSeleccionables {
+			cursor: pointer;
+		}
+		
+		.listaGremio {
+			width: 60%;
+			border-left: 3px solid #C00;
+		}
+		
+		.inputDisabled {
+			width: 16px;
+			height: 16px;
+		}
+	</style>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:actionStatus id="iconoCargandoSalir" onStop="salir_paso2AF();">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		<apex:actionFunction name="continuar_paso1AF" action="{!continuar_paso1}"
+			rerender="mainForm" status="iconoCargando" onComplete="continuar_paso2AF();"/>
+		<apex:actionFunction name="continuar_paso2AF" action="{!continuar_paso2}"
+			rerender="mainForm" status="iconoCargando"/>
+
+		<apex:actionFunction name="salir_paso1AF" action="{!salir_paso1}" status="iconoCargandoSalir" rerender="formulario"/>
+		<apex:actionFunction name="salir_paso2AF" action="{!salir_paso2}" rerender="formulario"/>
+
+		<apex:actionStatus onstart="cargando(true);" onStop="cargando(false);" id="cargandoFiltro"/>
+		<apex:actionStatus id="cargandoSalir" onStart="cargandoIcono(true);" onStop="salir_paso2AF();cargandoIcono(false);"/>
+		<apex:actionStatus id="cargandoContinuar" onstart="cargandoIcono(true);" onStop="cargandoIcono(false);"/>
+
+		<apex:sectionHeader title="{!if(fase == $Label.SINI_FASE_APERTURA, 'Proceso de Apertura de Siniestro', 
+			if(fase == $Label.SINI_FASE_CONFIRMACION, 'Proceso de Confirmación de Siniestro', 'Tramitación de Siniestro'))}: Nuevo Gremio" 
+			subtitle="{!if(caso != null, caso.CaseNumber, '')}"/>
+
+		<apex:pageBlock id="formulario" title="{!if(fase == $Label.SINI_FASE_APERTURA,
+			if(gravesGremioUrg, 'Agregar Gremio Urgente al Siniestro', 'Agregar Gremio Principal al Siniestro'),
+			'Agregar Gremio Adicional al Siniestro')}">
+			<apex:pageMessages />
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="<< Salir" title="Salir" immediate="true"
+					onclick="if(confirm('¿Está seguro de salir?')){salir_paso1AF();} return false;"
+					rendered="{!fase == $Label.SINI_FASE_APERTURA && !gravesGremioUrg}"/>
+				<apex:commandButton value="<< Cancelar" title="Cancelar" action="{!continuar_paso1}" immediate="true"
+					onclick="if(confirm('¿Está seguro de salir sin guardar los cambios?')){continuar_paso1AF();}return false;" 
+					rendered="{!fase != $Label.SINI_FASE_APERTURA || gravesGremioUrg}"/>
+				<apex:commandButton value="Continuar >>" title="Continuar Apertura" action="{!guardar}" status="iconoCargando"
+					rerender="mainForm" rendered="{!fase == $Label.SINI_FASE_APERTURA && !gravesGremioUrg && !(esSiniestro && caso.Status == $Label.CAS_ESTADO_CERRADO)}"/>
+				<apex:commandButton value="Guardar >>" title="Guardar" action="{!guardar}" status="iconoCargando"
+					rerender="mainForm" rendered="{!fase != $Label.SINI_FASE_APERTURA || gravesGremioUrg}"/>
+				<!-- Nº48 - 07_06_2018 / SMM -->
+				<apex:commandButton value="Reabrir intervención" title="Reabrir intervención"
+					action="{!reabrirIntervencion}" rerender="mainForm" status="iconoCargando" rendered="{!esSiniestro && caso.Status == $Label.CAS_ESTADO_CERRADO}"/>
+				<!-- FIN Nº48 -->
+			</apex:pageBlockButtons>
+
+			<c:Detalle_Caso atrCaso="{!caso}"/>
+
+			<apex:pageBlockSection id="seccionSeleccionGremio" title="Selección de gremio" collapsible="false" columns="2">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Gremio" for="listaGremiosVF"/>
+					<apex:selectList id="listaGremiosVF" value="{!gremio}" size="1" styleClass="listaGremio">
+						<apex:selectOptions value="{!listaGremios}"/>
+						<apex:actionSupport event="onchange" action="{!buscarTiposTrabajo}" status="iconoCargando"/>
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:inputCheckbox id="urgente" label="Urgente" value="{!booleanUrgente}" rendered="{!!gravesGremioUrg}"/>
+				<apex:pageBlockSectionItem rendered="{!gravesGremioUrg}">
+					<apex:outputLabel value="Urgente"/>	
+					<apex:image url="/img/checkbox_checked.gif" styleClass="inputDisabled checkImg"/>
+				</apex:pageBlockSectionItem>
+				<!-- Nº48 - 07_06_2018 / SMM -->
+				<apex:inputField styleClass="requerido" value="{!caso.CAS_LKP_Compania__r.CUE_SEL_Motivo_Reapertura__c}" rendered="{!esSiniestro && caso.Status == $Label.CAS_ESTADO_CERRADO}"/>
+				<!-- FIN Nº48 -->
+				<apex:inputTextarea id="newDesc" label="Comentario de Gremio"
+					value="{!nuevoComentario.COT_TXT_Comentario__c}" title="Comentario" styleClass="requerido"/>
+			</apex:pageBlockSection>
+			<apex:pageBlockSection id="seccionSucesos" title="Sucesos" collapsible="false" columns="1" rendered="{!listaResultados != null}">
+				<apex:variable value="{!0}" var="indice"/>
+				<apex:pageBlockTable id="tablaResultados" value="{!listaResultados}" var="resultado" title="Sucesos" 
+					columnsWidth="1%,99%" rendered="{!listaResultados.size != 0}">
+					<apex:column headerValue="">
+						<apex:variable value="{!indice + 1}" var="indice"/>
+						<apex:inputCheckbox value="{!resultado.seleccionado}" onchange="$('input[name*=tablaResultados][type=checkbox]').not(this).prop('checked', false);"/>
+					</apex:column>
+					<apex:column headerValue="Nombre">
+						<apex:outputText value="{!resultado.tipoTrabajo.Name}"/>
+					</apex:column>
+				</apex:pageBlockTable>
+				<apex:outputPanel rendered="{!listaResultados.size == 0}">
+					<apex:outputText value="No hay resultados"/>
+				</apex:outputPanel>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+		<script>
+			// get a reference to the select component in the page
+			var selectList = $("select[id$='listaGremiosVF']");
+			// a javascript object to collect the elements in each type
+			var tipoGremios = {};
+			// iterate all of the options and collect them by type
+			$('option', selectList).each(function (i) {
+				if (i === 0) {
+					return; // skip the first element in the list
+				}
+				var oElement = $(this);
+				var tipoGremiosArray = oElement.val().split('_');
+				// create an array entry for the type name if there is not one
+				if (!tipoGremios[tipoGremiosArray[0]]) {
+					tipoGremios[tipoGremiosArray[0]] = [];
+				}
+				// add the item to the array for this type
+				tipoGremios[tipoGremiosArray[0]].push(oElement);
+			});
+			// iterate all of the type names
+			for (var tipoGremio in tipoGremios) {
+				// make sure the name did not come from the prototype
+				if (tipoGremios.hasOwnProperty(tipoGremio)) {
+					// turn the array of items into a single jQuery collection
+					var groupElements = $(tipoGremios[tipoGremio]).map(function () {
+					return this.toArray();
+				});
+				// create the group and set the label
+				var optgroup = $('<optgroup/>');
+				optgroup.attr('label', tipoGremio);
+				// wrap the option elements in an optgroup
+				groupElements.wrapAll(optgroup);
+				}
+			}
+		</script>
+	</apex:form>
+</apex:page>

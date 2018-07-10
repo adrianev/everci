@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa la conexión de las preguntas elegidas para la encuesta del tipo de encuesta elegido con la Encuesta.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ENT_LKP_Cuenta__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Compañía vinculada a la encuesta tipo.</description>
+        <externalId>false</externalId>
+        <label>Compañía</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Encuestas Tipo</relationshipLabel>
+        <relationshipName>EncuestasTipo</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENT_LKP_PrimeraPregunta__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Primera pregunta de la encuesta tipo.</description>
+        <externalId>false</externalId>
+        <label>Primera Pregunta</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>ENC_Pregunta__c.ENP_LKP_Encuesta_Tipo__c</field>
+                <operation>equals</operation>
+                <valueField>$Source.Id</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ENC_Pregunta__c</referenceTo>
+        <relationshipLabel>Encuestas Tipo</relationshipLabel>
+        <relationshipName>EncuestasTipo</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ENT_SEL_Long_Encuesta__c</fullName>
+        <description>Clasificación de la encuesta tipo: Corta/Larga</description>
+        <externalId>false</externalId>
+        <label>Tipo</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_Encuesta</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ENT_TXT_Descripcion__c</fullName>
+        <description>Descripción breve de la encuesta.</description>
+        <externalId>false</externalId>
+        <label>Descripción</label>
+        <length>240</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ENT_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Indica el identificador de la encuesta (T-Nº encuesta_cod_CIA_Tipo encuesta)</description>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>50</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Encuesta Tipo</label>
+    <listViews>
+        <fullName>Todas_las_Encuestas</fullName>
+        <columns>NAME</columns>
+        <columns>ENT_LKP_Cuenta__c</columns>
+        <columns>ENT_TXT_Identificador__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todas las Encuestas</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Nombre</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Encuestas Tipo</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Editar_campo_identificador</fullName>
+        <active>true</active>
+        <description>El campo identificador  no puede ser modificado</description>
+        <errorConditionFormula>IF(AND(NOT(ISBLANK(PRIORVALUE(ENT_TXT_Identificador__c ))),ISCHANGED(ENT_TXT_Identificador__c )), true, false)</errorConditionFormula>
+        <errorMessage>El campo identificador  no puede ser modificado</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Requerimiento_de_identificador</fullName>
+        <active>false</active>
+        <description>Regla de validación para requerir el campo Identificador</description>
+        <errorConditionFormula>OR(ISBLANK( ENT_TXT_Identificador__c),ISNULL( ENT_TXT_Identificador__c))</errorConditionFormula>
+        <errorDisplayField>ENT_TXT_Identificador__c</errorDisplayField>
+        <errorMessage>El campo Identificador es requerido</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

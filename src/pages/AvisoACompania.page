@@ -1,0 +1,109 @@
+<apex:page controller="AvisoACompaniaController" showHeader="false"
+	sidebar="false">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+
+		<apex:sectionHeader title="Aviso a Compañía"
+			subtitle="{!subtituloVF}" />
+
+		<apex:pageBlock id="formulario" title="Aviso a Compañía">
+			<apex:pageMessages id="mensajesError" />
+			<apex:pageBlockButtons location="top">
+				<apex:commandButton value="Enviar Email" title="Enviar Email"
+					action="{!enviarEmail}" rendered="{!!emailEnviadoConExito}"
+					status="iconoCargando" rerender="mainForm" />
+				<apex:commandButton value="Cerrar" title="Cerrar"
+					onclick="window.close()" immediate="true" />
+			</apex:pageBlockButtons>
+			<apex:pageBlockSection collapsible="false"
+				columns="{!numeroDeColumnasVF}">
+				<!-- Datos de la Póliza (Sólo lectura)-->
+				<apex:pageBlockSection collapsible="false" columns="1"
+					title="Datos originales" rendered="{!poliza.Id != null}">
+					<apex:outputText label="Compañía"
+						value="{!poliza.POL_LKP_Compania__r.Name}" />
+					<apex:outputText label="Póliza" value="{!poliza.Name}" />
+					<apex:outputText label="Nombre y Apellidos"
+						value="{!nombreClientePoliza}" />
+					<apex:outputText label="Nº Documento"
+						value="{!numeroDocumentoClientePoliza}" />
+					<apex:outputText id="direccionOriginal"
+						value="{!versionPoliza.POLV_TXT_Calle__c}" />
+					<apex:outputText id="codigoPostalOriginal"
+						value="{!versionPoliza.POLV_TXT_Codigo_Postal__c}" />
+					<apex:outputText id="poblacionOriginal"
+						value="{!versionPoliza.POLV_TXT_Poblacion__c}" />
+					<apex:outputText label="Provincia" value="{!provinciaPoliza}" />
+				</apex:pageBlockSection>
+				<!-- Datos de la Compañía -->
+				<apex:pageBlockSection id="seccionCompania" collapsible="false"
+					columns="1" title="{!tituloSeccionCompaniaVF}">
+
+					<apex:outputText label="Compañía" value="{!compania.Name}" />
+
+					<apex:inputText label="Póliza" value="{!numeroPolizaModificado}"
+						rendered="{!poliza.Id ==null}" />
+					<apex:outputText label="Póliza" value="{!numeroPolizaModificado}"
+						rendered="{!poliza.Id !=null}" />
+
+					<apex:inputText label="Nombre y Apellidos"
+						value="{!nombreCompletoModificado}" styleClass="requerido" />
+
+					<apex:inputText label="Nº Documento"
+						value="{!numeroDocumentoClientePoliza}"
+						rendered="{!poliza.Id ==null}" styleClass="requerido" />
+					<apex:outputText label="Nº Documento"
+						value="{!numeroDocumentoClientePoliza}"
+						rendered="{!poliza.Id !=null}" />
+
+					<apex:inputText label="Vía/Domicilio"
+						value="{!domicilioModificado}" styleClass="requerido" />
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Código Postal" />
+						<apex:inputText value="{!codigoPostal}" styleClass="requerido">
+							<apex:actionSupport event="onchange" status="iconoCargando"
+								action="{!cargarUbicacion}" rerender="seccionCompania" />
+						</apex:inputText>
+					</apex:pageBlockSectionItem>
+
+					<apex:pageBlockSectionItem helpText="Introduzca un código postal o seleccione una provincia">
+						<apex:outputLabel value="Población" />
+						<apex:selectList value="{!poblacion}" size="1"
+							styleClass="requerido">
+							<apex:selectOptions value="{!listaPoblaciones}" />
+							<apex:actionSupport event="onchange" status="iconoCargando"
+								action="{!cargarCodigoPostal}" rerender="seccionCompania" />
+						</apex:selectList>
+					</apex:pageBlockSectionItem>
+
+					<apex:pageBlockSectionItem >
+						<apex:outputLabel value="Provincia" />
+						<apex:selectList value="{!provincia}" size="1"
+							styleClass="requerido">
+							<apex:selectOptions value="{!listaProvincias}" />
+							<apex:actionSupport event="onchange" status="iconoCargando"
+								action="{!cargarPoblacion}" rerender="seccionCompania" />
+						</apex:selectList>
+					</apex:pageBlockSectionItem>
+
+					<apex:inputTextarea label="Comentarios" value="{!comentarios}"
+						styleClass="requerido" />
+					<!-- Muestro el Email del contacto para no mostrar datos erróneos por pantalla -->
+					<apex:outputText label="Email Destino" value="{!contactTo.email}" />
+				</apex:pageBlockSection>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

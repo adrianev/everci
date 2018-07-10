@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Mizad</fullName>
+        <default>false</default>
+        <label>Mizad</label>
+    </customValue>
+    <description>Representa las tipologías de servicios a las que puede pertenecer una orden de trabajo o una cita de servicio.</description>
+    <masterLabel>Tipos de Servicio</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

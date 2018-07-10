@@ -1,0 +1,72 @@
+<apex:page standardController="WorkOrder" extensions="Rectificacion_Albaranes" showHeader="true" sidebar="false">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/> 
+	<apex:includeScript value="{!$Resource.jQuery}" />
+	<style type="text/css">
+		.lista {
+			width: 60%;
+			border-left: 3px solid #C00;
+		}
+	</style>
+
+	<apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+		
+		<apex:sectionHeader title="Rectificación de Albarán de {!$ObjectType.WorkOrder.label}"
+			subtitle="{!if(ot != null, ot.ParentWorkOrder.WorkOrderNumber, '')}" />
+
+		<apex:pageBlock id="formulario" title="Rectificación Albaranes">
+			<apex:pageMessages />
+			<apex:pageBlockButtons >
+				<apex:commandButton value="Volver" title="Volver" action="{!volver}" immediate="true"
+					onclick="return confirm('¿Está seguro de salir?');return false;" rerender="mainForm"/>
+				<apex:commandButton value="Grabar" title="Grabar"
+					action="{!aceptar}" status="iconoCargando" rerender="formulario" />
+			</apex:pageBlockButtons>
+			
+			<!-- Datos del Servicio -->
+			<apex:pageBlockSection title="Datos del Servicio" columns="2"
+				id="seccionDatos">
+				<apex:outputField label="Nº Servicio" value="{!ot.ParentWorkOrder.WorkOrderNumber}" />
+				<apex:outputText label="Dirección Territorial" value="{!ot.ParentWorkOrder.OTR_FOR_DT__c}"/>
+				<apex:outputText label="Nº Profesional" value="{!ot.OTR_FOR_Codigo_Profesional__c}" />
+				<apex:outputText label="Nombre del Profesional" value="{!ot.OTR_LKP_Recurso_Servicio__r.Name}"/>
+				<apex:outputText label="Categoría del Profesional" value="{!ot.OTR_SEL_Categoria_del_profesional__c}"/>
+			</apex:pageBlockSection>
+			<!-- Importes de cierre -->
+			<apex:pageBlockSection title="Importes de cierre" columns="2" id="seccionImportes">
+				<apex:outputText label="Importe Original" value="{!ot.ParentWorkOrder.OTR_RES_Liquidar_prof_AI__c}"/>
+				<apex:outputText label="Importe Nuevo" value="{!ot.OTR_RES_Liquidar_prof_AI__c}" />
+				<apex:outputField label="Diferencia importe" value="{!ot.OTR_DIV_Importe_diferencia__c}"/>
+			</apex:pageBlockSection>
+			<!--  Datos de la rectificación -->
+			<apex:pageBlockSection title="Datos de la Rectificación" columns="2" id="seccionRectificacion">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Motivo de Rectificación" for="listaMotivosVF" />
+					<apex:selectList id="listaMotivosVF" value="{!motivo}" size="1"
+						styleClass="lista">
+						<apex:selectOptions value="{!listaMotivos}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Penalización" for="listaPenalizacionVF" />
+					<apex:selectList id="listaPenalizacionVF" value="{!penalizacion}" size="1"
+						styleClass="lista">
+						<apex:selectOptions value="{!listaPenalizaciones}" />
+					</apex:selectList>
+				</apex:pageBlockSectionItem>
+				<apex:inputTextarea label="Texto ampliado de la rectificación" styleClass="requerido" value="{!comentario}" />
+				<apex:inputTextarea label="Comentario auditoría" value="{!comentarioAuditoria}" />
+			</apex:pageBlockSection>
+			
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Factura</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Facturas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Con Fichero --></label>
+        <name>FAC_CAS_Con_Fichero__c</name>
+    </fields>
+    <fields>
+        <label><!-- Factura de Gestión --></label>
+        <name>FAC_CAS_Factura_de_Gestion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicador Pago Franquicia --></label>
+        <name>FAC_CAS_IndicadorPagoFranquicia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Factura --></label>
+        <name>FAC_DAT_FechaFactura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe de factura --></label>
+        <name>FAC_DIV_ImporteFactura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Franquicia --></label>
+        <name>FAC_DIV_ImporteFranquicia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Pago --></label>
+        <name>FAC_DIV_Importe_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retencion Pago --></label>
+        <name>FAC_DIV_RetencionPago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Intervención --></label>
+        <name>FAC_LKP_Caso__c</name>
+        <relationshipLabel><!-- Facturas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Id Cuenta --></label>
+        <name>FAC_LKP_Cuenta__c</name>
+        <relationshipLabel><!-- Facturas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Id Servicio --></label>
+        <name>FAC_LKP_WorkOrkder__c</name>
+        <relationshipLabel><!-- Facturas --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Año Pago --></label>
+        <name>FAC_NUM_Ano_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Imponible --></label>
+        <name>FAC_NUM_Base_Imponible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Final --></label>
+        <name>FAC_NUM_ImporteFinal__c</name>
+    </fields>
+    <fields>
+        <label><!-- ImporteIVA --></label>
+        <name>FAC_NUM_ImporteIVA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicador Quincena --></label>
+        <name>FAC_NUM_IndicadorQuincena__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mes Pago --></label>
+        <name>FAC_NUM_MesPago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Importes --></label>
+        <name>FAC_NUM_TotalImportes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje IVA --></label>
+        <name>FAC_POR_PorcentajeIVA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Codigo Capital --></label>
+        <name>FAC_TXT_Codigo_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de factura --></label>
+        <name>FAC_TXT_Numero_factura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo Registro --></label>
+        <name>FAC_TXT_Tipo_Registro__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Factura</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

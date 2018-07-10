@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Tarea de Tipo de Trabajo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Tareas de Tipo de Trabajo</value>
+    </caseValues>
+    <fields>
+        <label><!-- Tipo de trabajo --></label>
+        <name>TTT_LKP_Tipo_Trabajo__c</name>
+        <relationshipLabel><!-- Tareas de Tipo de Trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Código de Baremo --></label>
+        <name>TTT_TXT_Baremo_Codigo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador (Ext Id) --></label>
+        <name>TTT_TXT_Identificador__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Tarea de Tipo de Trabajo</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Histórico de Asignaciones</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Históricos de Asignaciones</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asignación Directa --></label>
+        <name>HAS_CAS_Asignacion_Directa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Cambio  Estado --></label>
+        <name>HAS_DAT_Fecha_Cambio_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asignación Directa --></label>
+        <name>HAS_FOR_Asignacion_Directa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cita de Servicio --></label>
+        <name>HAS_LKP_Cita_de_Servicio__c</name>
+        <relationshipLabel><!-- Históricos de Asignaciones --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Servicio --></label>
+        <name>HAS_LKP_Orden_de_trabajo__c</name>
+        <relationshipLabel><!-- Histórico de asignaciones --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Profesional --></label>
+        <name>HAS_LKP_Profesional__c</name>
+        <relationshipLabel><!-- Históricos de Asignaciones --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estado Antiguo Cita --></label>
+        <name>HAS_TXT_Estado_Antiguo_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado Nuevo Cita --></label>
+        <name>HAS_TXT_Estado_Nuevo_Cita__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo Rechazo/Desasignación --></label>
+        <name>HAS_TXT_Motivo_Rechazo_Desasignacion__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Histórico de Asignaciones</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Árbol de Decisión</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Árboles de Decisión</value>
+    </caseValues>
+    <fields>
+        <label><!-- Compañía Id --></label>
+        <name>ADC_FOR_Compania_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>ADC_FOR_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Producto --></label>
+        <name>ADC_FOR_Tipo_Producto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Producto --></label>
+        <name>ADC_LKP_Producto_CIA__c</name>
+        <relationshipLabel><!-- Árboles de Decisión --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Versión --></label>
+        <name>ADC_NUM_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>ADC_SEL_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador (Ext Id) --></label>
+        <name>ADC_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Árbol de Decisión: Cabecera</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Apertura --></label>
+        <name>Apertura</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Confirmacion --></label>
+        <name>Confirmacion</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

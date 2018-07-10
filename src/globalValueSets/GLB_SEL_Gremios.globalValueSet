@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>21</fullName>
+        <default>false</default>
+        <label>AIRE ACONDICIONADO</label>
+    </customValue>
+    <customValue>
+        <fullName>31</fullName>
+        <default>false</default>
+        <label>ALARMAS</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <label>ALBAÑIL</label>
+    </customValue>
+    <customValue>
+        <fullName>37</fullName>
+        <default>false</default>
+        <label>AMBULANCIAS</label>
+    </customValue>
+    <customValue>
+        <fullName>16</fullName>
+        <default>false</default>
+        <label>ANTENISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>41</fullName>
+        <default>false</default>
+        <label>ANULACIÓN TARJETAS</label>
+    </customValue>
+    <customValue>
+        <fullName>42</fullName>
+        <default>false</default>
+        <label>AUTOMÁTICOS CASER</label>
+    </customValue>
+    <customValue>
+        <fullName>24</fullName>
+        <default>false</default>
+        <label>BARNIZADOR</label>
+    </customValue>
+    <customValue>
+        <fullName>19</fullName>
+        <default>false</default>
+        <label>CALEFACCIÓN</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>CARPINTERO MADERA</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>CARPINTERO METÁLICO</label>
+    </customValue>
+    <customValue>
+        <fullName>07</fullName>
+        <default>false</default>
+        <label>CERRAJERO</label>
+    </customValue>
+    <customValue>
+        <fullName>06</fullName>
+        <default>false</default>
+        <label>CRISTALERO</label>
+    </customValue>
+    <customValue>
+        <fullName>05</fullName>
+        <default>false</default>
+        <label>ELECTRICISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>23</fullName>
+        <default>false</default>
+        <label>ENMOQUETADOR</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <label>ESCAYOLA</label>
+    </customValue>
+    <customValue>
+        <fullName>28</fullName>
+        <default>false</default>
+        <label>FACHADAS</label>
+    </customValue>
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>FONTANERO</label>
+    </customValue>
+    <customValue>
+        <fullName>49</fullName>
+        <default>false</default>
+        <label>FRIGORISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>20</fullName>
+        <default>false</default>
+        <label>FRÍO INDUSTRIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>57</fullName>
+        <default>false</default>
+        <label>FUMIGACIÓN</label>
+    </customValue>
+    <customValue>
+        <fullName>18</fullName>
+        <default>false</default>
+        <label>GAS</label>
+    </customValue>
+    <customValue>
+        <fullName>70</fullName>
+        <default>false</default>
+        <label>GRANDES SINIESTROS</label>
+    </customValue>
+    <customValue>
+        <fullName>38</fullName>
+        <default>false</default>
+        <label>HOTEL</label>
+    </customValue>
+    <customValue>
+        <fullName>13</fullName>
+        <default>false</default>
+        <label>IMPERMEABILIZACIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>33</fullName>
+        <default>false</default>
+        <label>INSPECCIÓN DE SERVICIOS</label>
+    </customValue>
+    <customValue>
+        <fullName>75</fullName>
+        <default>false</default>
+        <label>INSTALACIONES AIRE ACONDICIONADO</label>
+    </customValue>
+    <customValue>
+        <fullName>56</fullName>
+        <default>false</default>
+        <label>JARDINERÍA</label>
+    </customValue>
+    <customValue>
+        <fullName>40</fullName>
+        <default>false</default>
+        <label>LAVANDERÍA</label>
+    </customValue>
+    <customValue>
+        <fullName>25</fullName>
+        <default>false</default>
+        <label>LIMPIEZAS</label>
+    </customValue>
+    <customValue>
+        <fullName>58</fullName>
+        <default>false</default>
+        <label>LOZAS</label>
+    </customValue>
+    <customValue>
+        <fullName>44</fullName>
+        <default>false</default>
+        <label>MANITAS</label>
+    </customValue>
+    <customValue>
+        <fullName>51</fullName>
+        <default>false</default>
+        <label>MANITAS ELÉCTRICO</label>
+    </customValue>
+    <customValue>
+        <fullName>52</fullName>
+        <default>false</default>
+        <label>MANITAS FONTANERO</label>
+    </customValue>
+    <customValue>
+        <fullName>55</fullName>
+        <default>false</default>
+        <label>MANITAS GAMA BLANCA</label>
+    </customValue>
+    <customValue>
+        <fullName>54</fullName>
+        <default>false</default>
+        <label>MANTENIMIENTO AIRE ACONDICIONADO</label>
+    </customValue>
+    <customValue>
+        <fullName>62</fullName>
+        <default>false</default>
+        <label>MANTENIMIENTO CERRAJERO</label>
+    </customValue>
+    <customValue>
+        <fullName>59</fullName>
+        <default>false</default>
+        <label>MANTENIMIENTO FONTANERO</label>
+    </customValue>
+    <customValue>
+        <fullName>60</fullName>
+        <default>false</default>
+        <label>MANTENIMIENTO PERSIANISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>14</fullName>
+        <default>false</default>
+        <label>MARMOLISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>64</fullName>
+        <default>false</default>
+        <label>OTROS (AEGON)</label>
+    </customValue>
+    <customValue>
+        <fullName>08</fullName>
+        <default>false</default>
+        <label>PARQUETISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>09</fullName>
+        <default>false</default>
+        <label>PERSIANISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>48</fullName>
+        <default>false</default>
+        <label>PERSIANISTA INDUSTRIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>35</fullName>
+        <default>false</default>
+        <label>PERSONAL DE SEGURIDAD</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>PINTOR</label>
+    </customValue>
+    <customValue>
+        <fullName>29</fullName>
+        <default>false</default>
+        <label>PLADUR</label>
+    </customValue>
+    <customValue>
+        <fullName>26</fullName>
+        <default>false</default>
+        <label>POCERO CAMIÓN CUBA</label>
+    </customValue>
+    <customValue>
+        <fullName>17</fullName>
+        <default>false</default>
+        <label>PORTEROS AUTOMÁTICOS</label>
+    </customValue>
+    <customValue>
+        <fullName>63</fullName>
+        <default>false</default>
+        <label>PRESUPUESTOS ASISTENCIA</label>
+    </customValue>
+    <customValue>
+        <fullName>34</fullName>
+        <default>false</default>
+        <label>REFORMAS</label>
+    </customValue>
+    <customValue>
+        <fullName>74</fullName>
+        <default>false</default>
+        <label>REFORMAS FONTANERIA</label>
+    </customValue>
+    <customValue>
+        <fullName>43</fullName>
+        <default>false</default>
+        <label>REPARACIONES DE ORDENADORES</label>
+    </customValue>
+    <customValue>
+        <fullName>47</fullName>
+        <default>false</default>
+        <label>REPARADOR APARATOS MAQUINARIA INDUSTRIAL</label>
+    </customValue>
+    <customValue>
+        <fullName>50</fullName>
+        <default>false</default>
+        <label>REPARADOR CAJAS CAUDAL</label>
+    </customValue>
+    <customValue>
+        <fullName>45</fullName>
+        <default>false</default>
+        <label>REPASOS PROMOCIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>39</fullName>
+        <default>false</default>
+        <label>RESTAURANTE</label>
+    </customValue>
+    <customValue>
+        <fullName>46</fullName>
+        <default>false</default>
+        <label>ROTULISTA Y LUMINISTA</label>
+    </customValue>
+    <customValue>
+        <fullName>36</fullName>
+        <default>false</default>
+        <label>SUMINISTRADOR</label>
+    </customValue>
+    <customValue>
+        <fullName>22</fullName>
+        <default>false</default>
+        <label>TAPICERO</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>TÉCNICO GAMA BLANCA</label>
+    </customValue>
+    <customValue>
+        <fullName>15</fullName>
+        <default>false</default>
+        <label>TÉCNICO GAMA MARRÓN</label>
+    </customValue>
+    <customValue>
+        <fullName>27</fullName>
+        <default>false</default>
+        <label>TEJADOS</label>
+    </customValue>
+    <customValue>
+        <fullName>53</fullName>
+        <default>false</default>
+        <label>TOLDOS</label>
+    </customValue>
+    <customValue>
+        <fullName>30</fullName>
+        <default>false</default>
+        <label>VOZ Y DATOS</label>
+    </customValue>
+    <customValue>
+        <fullName>76</fullName>
+        <default>false</default>
+        <label>INSTALACIÓN DE CALDERAS</label>
+    </customValue>
+    <customValue>
+        <fullName>77</fullName>
+        <default>false</default>
+        <label>MULTIMANITAS</label>
+    </customValue>
+    <customValue>
+        <fullName>78</fullName>
+        <default>false</default>
+        <label>FOTOGRAFO</label>
+    </customValue>
+    <customValue>
+        <fullName>79</fullName>
+        <default>false</default>
+        <label>CEE</label>
+    </customValue>
+    <customValue>
+        <fullName>61</fullName>
+        <default>false</default>
+        <label>MANTINIMIENTO CARPINTERO MADERA</label>
+    </customValue>
+    <customValue>
+        <fullName>71</fullName>
+        <default>false</default>
+        <label>REAL ESTATE</label>
+    </customValue>
+    <customValue>
+        <fullName>72</fullName>
+        <default>false</default>
+        <label>MANITAS TECNOLÓGICO</label>
+    </customValue>
+    <customValue>
+        <fullName>73</fullName>
+        <default>false</default>
+        <label>GRANDES REFORMAS</label>
+    </customValue>
+    <customValue>
+        <fullName>80</fullName>
+        <default>false</default>
+        <label>CONTROL DE PLAGAS</label>
+    </customValue>
+    <customValue>
+        <fullName>32</fullName>
+        <default>false</default>
+        <label>PERITO</label>
+    </customValue>
+    <customValue>
+        <fullName>81</fullName>
+        <default>false</default>
+        <label>MANTENIMIENTO DE CALDERAS</label>
+    </customValue>
+    <description>Listado de gremios.</description>
+    <masterLabel>Gremios</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

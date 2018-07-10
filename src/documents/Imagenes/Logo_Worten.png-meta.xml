@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Logo de la empresa Worten</description>
+    <internalUseOnly>false</internalUseOnly>
+    <name>Logo_Worten</name>
+    <public>true</public>
+</Document>

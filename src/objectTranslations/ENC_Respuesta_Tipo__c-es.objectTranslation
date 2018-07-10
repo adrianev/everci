@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Encuesta Tipo: Respuesta</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Encuestas Tipo: Respuesta</value>
+    </caseValues>
+    <fields>
+        <label><!-- Tipo de Respuesta --></label>
+        <name>ENRT_FOR_Tipo_Respuesta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pregunta Destino --></label>
+        <name>ENRT_LKP_PreguntaDestino__c</name>
+        <relationshipLabel><!-- Respuestas Origen --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Pregunta --></label>
+        <name>ENRT_LKP_Pregunta__c</name>
+        <relationshipLabel><!-- Respuestas Posibles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ordenación --></label>
+        <name>ENRT_NUM_Ordenacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor --></label>
+        <name>ENRT_TXT_Valor__c</name>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

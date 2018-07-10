@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Histórico Call</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Históricos Call</value>
+    </caseValues>
+    <fields>
+        <label><!-- Borrado --></label>
+        <name>HC_CAS_ISDELETED__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha creación --></label>
+        <name>HC_DAT_CREATED_DATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nuevo Valor --></label>
+        <name>HC_TXA_NEWVALUE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creado Por --></label>
+        <name>HC_TXT_CREATED_BY__c</name>
+    </fields>
+    <fields>
+        <label><!-- HC_TXT_FIELD --></label>
+        <name>HC_TXT_FIELD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id del historico --></label>
+        <name>HC_TXT_HISTORYID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Salesforce --></label>
+        <name>HC_TXT_ID_SALESFORCE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objeto --></label>
+        <name>HC_TXT_OBJECT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor anterior --></label>
+        <name>HC_TXT_OLDVALUE__c</name>
+    </fields>
+    <gender>Masculine</gender>
+</CustomObjectTranslation>

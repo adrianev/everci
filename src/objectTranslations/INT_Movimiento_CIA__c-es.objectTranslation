@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integraciones: Movimiento CIA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integraciones: Movimiento CIA</value>
+    </caseValues>
+    <fields>
+        <label><!-- Profesional requerido --></label>
+        <name>MOV_CAS_Profesional_requerido__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de creación del cliente --></label>
+        <name>MOV_DAT_Fecha_Alta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Apertura --></label>
+        <name>MOV_DAT_Fecha_Apertura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Cierre --></label>
+        <name>MOV_DAT_Fecha_Cierre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Factura Perito --></label>
+        <name>MOV_DAT_Fecha_Factura_Perito__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Factura --></label>
+        <name>MOV_DAT_Fecha_Factura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Generación --></label>
+        <name>MOV_DAT_Fecha_Generacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Informe Pericial --></label>
+        <name>MOV_DAT_Fecha_Informe_Pericial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de Ocurrencia --></label>
+        <name>MOV_DAT_Fecha_Ocurrencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de la Póliza --></label>
+        <name>MOV_DAT_Fecha_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- Base Imponible --></label>
+        <name>MOV_DIV_Base_Imponible__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Final --></label>
+        <name>MOV_DIV_Importe_Final__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Franquicia --></label>
+        <name>MOV_DIV_Importe_Franquicia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe de Gastos --></label>
+        <name>MOV_DIV_Importe_Gastos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe de Gestion --></label>
+        <name>MOV_DIV_Importe_Gestion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Honorarios Perito --></label>
+        <name>MOV_DIV_Importe_Honorarios__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe IVA Gestión --></label>
+        <name>MOV_DIV_Importe_IVA_Gestion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe IVA de la Factura --></label>
+        <name>MOV_DIV_Importe_IVA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Pago --></label>
+        <name>MOV_DIV_Importe_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Reserva --></label>
+        <name>MOV_DIV_Importe_Reserva__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retención Pago --></label>
+        <name>MOV_DIV_Retencion_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valoración Siniestro --></label>
+        <name>MOV_DIV_Valoracion_Siniestro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Asegurado --></label>
+        <name>MOV_EMA_Email_Asegurado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Tipo de Vía --></label>
+        <name>MOV_FOR_Causante_Tipo_Via__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agencia pagadora --></label>
+        <name>MOV_FOR_Cons_Agencia_Pagadora__c</name>
+    </fields>
+    <fields>
+        <label><!-- Constante Cliente --></label>
+        <name>MOV_FOR_Cons_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Municipio --></label>
+        <name>MOV_FOR_Cons_Cod_Municipio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Registro --></label>
+        <name>MOV_FOR_Cons_Codigo_Registro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código --></label>
+        <name>MOV_FOR_Cons_Codigo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Especial --></label>
+        <name>MOV_FOR_Cons_Especial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº Documento HomeServe --></label>
+        <name>MOV_FOR_Cons_Num_Doc_HS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Registro --></label>
+        <name>MOV_FOR_Cons_Num_Registro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Riesgo --></label>
+        <name>MOV_FOR_Cons_Num_Riesgo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicador si se pagó la Franquicia --></label>
+        <name>MOV_FOR_Cons_Pago_Franquicia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intervención Profesional --></label>
+        <name>MOV_FOR_Intervencion_Profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Póliza en Suspensión de Garantías --></label>
+        <name>MOV_FOR_Poliza_Suspension_Garantia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bitácora --></label>
+        <name>MOV_LKP_Bitacora__c</name>
+        <relationshipLabel><!-- Integraciones: Movimiento CIA --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Intervención --></label>
+        <name>MOV_LKP_Caso__c</name>
+        <relationshipLabel><!-- Integraciones: Movimiento CIA --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Cliente --></label>
+        <name>MOV_LKP_Cliente__c</name>
+        <relationshipLabel><!-- Integraciones: Movimiento CIA (Cliente) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>MOV_LKP_Compania__c</name>
+        <relationshipLabel><!-- Integraciones: Movimiento CIA (Compañía) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Servicio --></label>
+        <name>MOV_LKP_Orden_de_Trabajo__c</name>
+        <relationshipLabel><!-- Integraciones: Movimiento CIA --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje Retención --></label>
+        <name>MOV_NUM_Porc_Retencion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje IVA Gestión --></label>
+        <name>MOV_NUM_Porcentaje_IVA_Gestion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje IVA --></label>
+        <name>MOV_NUM_Porcentaje_IVA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador del proveedor externo --></label>
+        <name>MOV_SEL_Encuestador__c</name>
+        <picklistValues>
+            <masterLabel>HomeServe</masterLabel>
+            <translation><!-- HomeServe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Asignado</masterLabel>
+            <translation><!-- No Asignado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Servitelco</masterLabel>
+            <translation><!-- Servitelco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stiga</masterLabel>
+            <translation><!-- Stiga --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Estado de Movimiento --></label>
+        <name>MOV_SEL_Estado_Movimiento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Teléfono --></label>
+        <name>MOV_TFN_Causante_Telefono__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Teléfono --></label>
+        <name>MOV_TFN_Perjudicado1_Telefono__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono de Asegurado --></label>
+        <name>MOV_TFN_Telefono_Asegurado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Acción --></label>
+        <name>MOV_TXT_Accion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agrupación de la procedencia --></label>
+        <name>MOV_TXT_Agrupacion_Procedencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Año Pago --></label>
+        <name>MOV_TXT_Ano_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cambio Versión Declaración --></label>
+        <name>MOV_TXT_Cambio_Version_Declaracion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causa de Modificación --></label>
+        <name>MOV_TXT_Causa_Modificacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causa de Rechazo --></label>
+        <name>MOV_TXT_Causa_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causa de Siniestro --></label>
+        <name>MOV_TXT_Causa_Siniestro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Apellido 1 --></label>
+        <name>MOV_TXT_Causante_Apellido1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Apellido 2 --></label>
+        <name>MOV_TXT_Causante_Apellido2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Compañía --></label>
+        <name>MOV_TXT_Causante_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Dirección --></label>
+        <name>MOV_TXT_Causante_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Nombre --></label>
+        <name>MOV_TXT_Causante_Nombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Nº de Documento --></label>
+        <name>MOV_TXT_Causante_Num_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Nº de Póliza --></label>
+        <name>MOV_TXT_Causante_Num_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Población --></label>
+        <name>MOV_TXT_Causante_Poblacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Provincia --></label>
+        <name>MOV_TXT_Causante_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Responsable --></label>
+        <name>MOV_TXT_Causante_Responsable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Causante: Tipo de Documento --></label>
+        <name>MOV_TXT_Causante_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Apertura (garantía) --></label>
+        <name>MOV_TXT_Codigo_Apertura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Capital --></label>
+        <name>MOV_TXT_Codigo_Capital__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Cierre --></label>
+        <name>MOV_TXT_Codigo_Cierre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Cliente CIA --></label>
+        <name>MOV_TXT_Codigo_Cliente_CIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Corrosión --></label>
+        <name>MOV_TXT_Codigo_Corrosion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Error --></label>
+        <name>MOV_TXT_Codigo_Error__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Gestor (Póliza) --></label>
+        <name>MOV_TXT_Codigo_Gestor_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Modificación (Descripción) --></label>
+        <name>MOV_TXT_Codigo_Modificacion_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Modificación --></label>
+        <name>MOV_TXT_Codigo_Modificacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Pago --></label>
+        <name>MOV_TXT_Codigo_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Perito --></label>
+        <name>MOV_TXT_Codigo_Perito__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Postal --></label>
+        <name>MOV_TXT_Codigo_Postal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de la procedencia --></label>
+        <name>MOV_TXT_Codigo_Procedencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Producto --></label>
+        <name>MOV_TXT_Codigo_Producto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Ramo --></label>
+        <name>MOV_TXT_Codigo_Ramo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Reapertura --></label>
+        <name>MOV_TXT_Codigo_Reapertura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Rechazo --></label>
+        <name>MOV_TXT_Codigo_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Profesional --></label>
+        <name>MOV_TXT_Codigo_Recurso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentarios Rechazo --></label>
+        <name>MOV_TXT_Comentarios_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentarios Siniestro Indemnizable --></label>
+        <name>MOV_TXT_Comentarios_Sin_Indem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comentarios Siniestro Reparable --></label>
+        <name>MOV_TXT_Comentarios_Sin_Rep__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contador de Gremio --></label>
+        <name>MOV_TXT_Contador_Gremios__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contador de Teléfonos --></label>
+        <name>MOV_TXT_Contador_Telefonos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripcion del Error --></label>
+        <name>MOV_TXT_Desc_Error__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción del Causante --></label>
+        <name>MOV_TXT_Descripcion_Causante__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción Perjudicado --></label>
+        <name>MOV_TXT_Descripcion_Perjudicado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción --></label>
+        <name>MOV_TXT_Descripcion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dirección --></label>
+        <name>MOV_TXT_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Garantias --></label>
+        <name>MOV_TXT_Error_Gar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Polizas --></label>
+        <name>MOV_TXT_Error_Pol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error --></label>
+        <name>MOV_TXT_Error__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado del Siniestro --></label>
+        <name>MOV_TXT_Estado_Siniestro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha del envío --></label>
+        <name>MOV_TXT_Fecha_Envio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio (Descripción) --></label>
+        <name>MOV_TXT_Gremio_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>MOV_TXT_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción del grupo de causa --></label>
+        <name>MOV_TXT_Grupo_Causa_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grupo de Causa --></label>
+        <name>MOV_TXT_Grupo_Causa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador de Procedencia --></label>
+        <name>MOV_TXT_Id_Procedencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador del Cliente --></label>
+        <name>MOV_TXT_Identificador_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Idioma --></label>
+        <name>MOV_TXT_Idioma__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicador Franquicia --></label>
+        <name>MOV_TXT_Indicador_Franquicia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Indicador Quincena --></label>
+        <name>MOV_TXT_Indicador_Quincena__c</name>
+    </fields>
+    <fields>
+        <label><!-- Listado de Garantías --></label>
+        <name>MOV_TXT_Listado_Garantias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mes Pago --></label>
+        <name>MOV_TXT_Mes_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Modalidad --></label>
+        <name>MOV_TXT_Modalidad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo de No Reparación --></label>
+        <name>MOV_TXT_Motivo_No_Reparacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo Peticion Perito Observaciones --></label>
+        <name>MOV_TXT_Motivo_Perito_Obs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo Petición Perito --></label>
+        <name>MOV_TXT_Motivo_Perito__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nombre de la procedencia --></label>
+        <name>MOV_TXT_Nombre_Procedencia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Intervención CIA --></label>
+        <name>MOV_TXT_Num_Caso_CIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Intervención HS --></label>
+        <name>MOV_TXT_Num_Caso_HS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de certificado (Póliza) --></label>
+        <name>MOV_TXT_Num_Certificado_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº Documento Profesional --></label>
+        <name>MOV_TXT_Num_Doc_Profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº Documento Cliente --></label>
+        <name>MOV_TXT_Num_Documento_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de envío --></label>
+        <name>MOV_TXT_Num_Envio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Garantías Enviadas --></label>
+        <name>MOV_TXT_Num_Garantias_Enviadas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Servicio HS --></label>
+        <name>MOV_TXT_Num_OrdenTrabajo_HS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº Póliza Complementaria --></label>
+        <name>MOV_TXT_Num_Poliza_Comp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Póliza --></label>
+        <name>MOV_TXT_Num_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numero de Registros Garantias Devueltas --></label>
+        <name>MOV_TXT_Num_Reg_Dev_Gar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numero de Registros Polizas Devueltos --></label>
+        <name>MOV_TXT_Num_Reg_Dev_Pol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de Registros Devueltos --></label>
+        <name>MOV_TXT_Num_Reg_Dev__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numero de Registros Garantias --></label>
+        <name>MOV_TXT_Num_Reg_Gar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numero de Registro Polizas --></label>
+        <name>MOV_TXT_Num_Reg_Pol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numero de Registros Garantias Procesados --></label>
+        <name>MOV_TXT_Num_Reg_Proc_Gar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Numero de Registros Polizas Procesados --></label>
+        <name>MOV_TXT_Num_Reg_Proc_Pol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de Registros Procesados --></label>
+        <name>MOV_TXT_Num_Reg_Proc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de Registros --></label>
+        <name>MOV_TXT_Num_Reg__c</name>
+    </fields>
+    <fields>
+        <label><!-- DNI Cliente --></label>
+        <name>MOV_TXT_Numero_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de Pago --></label>
+        <name>MOV_TXT_Numero_Pago__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Factura --></label>
+        <name>MOV_TXT_Numero_factura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones Corrosión --></label>
+        <name>MOV_TXT_Obs_Corrosion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perceptor --></label>
+        <name>MOV_TXT_Perceptor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Apellido 1 --></label>
+        <name>MOV_TXT_Perjudicado1_Apellido1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Apellido 2 --></label>
+        <name>MOV_TXT_Perjudicado1_Apellido2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Código Postal --></label>
+        <name>MOV_TXT_Perjudicado1_Codigo_Postal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Dirección --></label>
+        <name>MOV_TXT_Perjudicado1_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Nombre --></label>
+        <name>MOV_TXT_Perjudicado1_Nombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Nº de Documento --></label>
+        <name>MOV_TXT_Perjudicado1_Num_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): País --></label>
+        <name>MOV_TXT_Perjudicado1_Pais__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Población --></label>
+        <name>MOV_TXT_Perjudicado1_Poblacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Provincia --></label>
+        <name>MOV_TXT_Perjudicado1_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Tipo de Documento --></label>
+        <name>MOV_TXT_Perjudicado1_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Tipo de Perjudicado --></label>
+        <name>MOV_TXT_Perjudicado1_Tipo_Perjudicado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (1): Tipo de Vía --></label>
+        <name>MOV_TXT_Perjudicado1_Tipo_Via__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Apellido 1 --></label>
+        <name>MOV_TXT_Perjudicado2_Apellido1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Apellido 2 --></label>
+        <name>MOV_TXT_Perjudicado2_Apellido2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Dirección --></label>
+        <name>MOV_TXT_Perjudicado2_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Nombre --></label>
+        <name>MOV_TXT_Perjudicado2_Nombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Nº de Documento --></label>
+        <name>MOV_TXT_Perjudicado2_Num_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Población --></label>
+        <name>MOV_TXT_Perjudicado2_Poblacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Provincia --></label>
+        <name>MOV_TXT_Perjudicado2_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Tipo de Documento --></label>
+        <name>MOV_TXT_Perjudicado2_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (2): Tipo de Perjudicado --></label>
+        <name>MOV_TXT_Perjudicado2_Tipo_Perjudicado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Apellido 1 --></label>
+        <name>MOV_TXT_Perjudicado3_Apellido_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Apellido 2 --></label>
+        <name>MOV_TXT_Perjudicado3_Apellido_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Dirección --></label>
+        <name>MOV_TXT_Perjudicado3_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Nombre --></label>
+        <name>MOV_TXT_Perjudicado3_Nombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Nº de Documento --></label>
+        <name>MOV_TXT_Perjudicado3_Num_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Población --></label>
+        <name>MOV_TXT_Perjudicado3_Poblacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Provincia --></label>
+        <name>MOV_TXT_Perjudicado3_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Tipo de Documento --></label>
+        <name>MOV_TXT_Perjudicado3_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perjudicado (3): Tipo de Perjudicado --></label>
+        <name>MOV_TXT_Perjudicado3_Tipo_Perjudicado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Existe Perjudicado --></label>
+        <name>MOV_TXT_Perjudicado_Existe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Presupuesto --></label>
+        <name>MOV_TXT_Presup_Importe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origen Presupuesto --></label>
+        <name>MOV_TXT_Presup_Origen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo Presupuesto --></label>
+        <name>MOV_TXT_Presup_Tipo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>MOV_TXT_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registro Erroeno Garantias --></label>
+        <name>MOV_TXT_Registro_Erroneo_Gar__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registro Erroneo Polizas --></label>
+        <name>MOV_TXT_Registro_Erroneo_Pol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Registro Erróneo / Confirmación --></label>
+        <name>MOV_TXT_Registro_Erroneo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reparación Urgente --></label>
+        <name>MOV_TXT_Reparacion_Urgente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Responsable Siniestro --></label>
+        <name>MOV_TXT_Responsable_Siniestro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rol del Asegurado --></label>
+        <name>MOV_TXT_Rol_Asegurado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Siniestro Consorciable --></label>
+        <name>MOV_TXT_Siniestro_Consorciable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submodalidad --></label>
+        <name>MOV_TXT_Submodalidad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suplemento Pendiente (Póliza) --></label>
+        <name>MOV_TXT_Suplemento_Pdte__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Actuación (Descripción) --></label>
+        <name>MOV_TXT_Tipo_Actuacion_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Actuación --></label>
+        <name>MOV_TXT_Tipo_Actuacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Encuesta --></label>
+        <name>MOV_TXT_Tipo_Encuesta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de IVA --></label>
+        <name>MOV_TXT_Tipo_IVA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Movimiento (Descripción) --></label>
+        <name>MOV_TXT_Tipo_Movimiento_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Movimiento --></label>
+        <name>MOV_TXT_Tipo_Movimiento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Producto --></label>
+        <name>MOV_TXT_Tipo_Producto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Rechazo --></label>
+        <name>MOV_TXT_Tipo_Rechazo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Registro --></label>
+        <name>MOV_TXT_Tipo_Registro__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número Total de Asistencias --></label>
+        <name>MOV_TXT_Total_Asistencias__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Integraciones: Movimiento</layout>
+        <sections>
+            <label><!-- Causante --></label>
+            <section>Causante</section>
+        </sections>
+        <sections>
+            <label><!-- Detalles del Movimiento --></label>
+            <section>Detalles del Movimiento</section>
+        </sections>
+        <sections>
+            <label><!-- Facturación --></label>
+            <section>Facturación</section>
+        </sections>
+        <sections>
+            <label><!-- Perito --></label>
+            <section>Perito</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label><!-- Enviar_Movimientos --></label>
+        <name>Enviar_Movimientos</name>
+    </webLinks>
+</CustomObjectTranslation>

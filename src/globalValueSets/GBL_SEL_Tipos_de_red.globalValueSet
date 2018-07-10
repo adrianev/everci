@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Mizad</fullName>
+        <default>false</default>
+        <label>Mizad</label>
+    </customValue>
+    <customValue>
+        <fullName>Urgencias</fullName>
+        <default>false</default>
+        <label>Urgencias</label>
+    </customValue>
+    <masterLabel>Tipos de red</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

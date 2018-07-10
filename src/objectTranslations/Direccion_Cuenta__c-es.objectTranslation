@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dirección Cuenta</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Direcciones Cuenta</value>
+    </caseValues>
+    <fields>
+        <label><!-- Dirección Completa --></label>
+        <name>DCU_FOR_DireccionCompleta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cuenta --></label>
+        <name>DCU_LKP_Cuenta__c</name>
+        <relationshipLabel><!-- Direcciones Cuenta --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- País --></label>
+        <name>DCU_SEL_Pais__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>DCU_SEL_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Postal --></label>
+        <name>DCU_TXT_Codigo_Postal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dirección --></label>
+        <name>DCU_TXT_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>DCU_TXT_Identificador__c</name>
+    </fields>
+    <fields>
+        <label><!-- Población --></label>
+        <name>DCU_TXT_Poblacion__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <validationRules>
+        <errorMessage><!-- El campo identificador no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Contiene configuraciones para las programaciones de las citas de servicio en función de la compañía, gremio, código postal, etc.</description>
+    <fields>
+        <fullName>PRC_CAS_Capital_Provincia__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determina si la configuración aplica para registros relacionados con una capital de provincia.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Capital de provincia</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PRC_NUM_Plazo__c</fullName>
+        <description>Horas que se aplaza la cita de servicio.</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Plazo (horas)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRC_TXT_Gremios__c</fullName>
+        <description>Gremios para los que aplica la configuración.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Gremios</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRC_TXT_Identificador_CIA__c</fullName>
+        <description>Identificador de la compañía.</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Identificador de la compañía</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRC_TXT_Segmentacion__c</fullName>
+        <description>Segmentación de la cuenta (Normal, Vip, Valor, Oro, Premium)</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Segmentación</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Programación cita</label>
+    <pluralLabel>Programaciones citas</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

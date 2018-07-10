@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Configuración General</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Configuraciones Generales</value>
+    </caseValues>
+    <fields>
+        <label><!-- Valor (Fecha) --></label>
+        <name>CF_DAT_Valor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor (Decimal) --></label>
+        <name>CF_DEC_Valor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor (Número) --></label>
+        <name>CF_NUM_Valor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Categoría --></label>
+        <name>CF_SEL_Categoria_Habilidad__c</name>
+        <picklistValues>
+            <masterLabel>Aparatos</masterLabel>
+            <translation><!-- Aparatos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carnets</masterLabel>
+            <translation><!-- Carnets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Especialidad</masterLabel>
+            <translation><!-- Especialidad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Herramientas</masterLabel>
+            <translation><!-- Herramientas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marcas</masterLabel>
+            <translation><!-- Marcas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unidad de medida --></label>
+        <name>CF_SEL_Unidad_Medida__c</name>
+        <picklistValues>
+            <masterLabel>Años</masterLabel>
+            <translation><!-- Años --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Días</masterLabel>
+            <translation><!-- Días --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Horas</masterLabel>
+            <translation><!-- Horas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meses</masterLabel>
+            <translation><!-- Meses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Minutos</masterLabel>
+            <translation><!-- Minutos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segundos</masterLabel>
+            <translation><!-- Segundos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semanas</masterLabel>
+            <translation><!-- Semanas --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valor (Texto) --></label>
+        <name>CF_TXT_Valor__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Configuración General</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

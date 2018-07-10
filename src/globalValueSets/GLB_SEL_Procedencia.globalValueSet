@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Servicio B2B/B2B2C</fullName>
+        <default>false</default>
+        <label>Servicio B2B/B2B2C</label>
+    </customValue>
+    <customValue>
+        <fullName>Servicio B2C</fullName>
+        <default>false</default>
+        <label>Servicio B2C</label>
+    </customValue>
+    <customValue>
+        <fullName>Servicios de Manitas</fullName>
+        <default>false</default>
+        <label>Servicios de Manitas</label>
+    </customValue>
+    <customValue>
+        <fullName>Servicios Especiales</fullName>
+        <default>false</default>
+        <label>Servicios Especiales</label>
+    </customValue>
+    <customValue>
+        <fullName>Siniestro</fullName>
+        <default>false</default>
+        <label>Siniestro</label>
+    </customValue>
+    <masterLabel>Procedencia</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

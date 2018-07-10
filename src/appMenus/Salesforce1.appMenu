@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <appMenuItems>
+        <name>Mi_Perfil</name>
+        <type>CustomTab</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Servicios_Cerrados</name>
+        <type>CustomTab</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Servicios_En_Curso</name>
+        <type>CustomTab</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Reclamaciones</name>
+        <type>CustomTab</type>
+    </appMenuItems>
+</AppMenu>

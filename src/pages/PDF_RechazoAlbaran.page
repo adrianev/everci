@@ -1,0 +1,64 @@
+<apex:page applyBodyTag="false" renderAs="pdf" docType="html-5.0" standardstylesheets="false"
+	showHeader="false" controller="PDF_RechazoAlbaran">
+<html>
+        
+        
+        <body>
+			<div class="header" style="page-break-after:never;margin-bottom:100px">
+        		<div><img alt="HomeServe" src="{!$Resource.LogoHS}" width="33%"/></div>
+        		<div style="text-align:right; font-family: monospace; font-size: 10pt; font-weight:bold" >{!nombreCuenta} <br/> <apex:outputText escape="false" value="{!dirEnvio}"/></div>
+    		</div>
+			
+			
+			<div style="font-family: monospace; font-size: 10pt;">
+				<p>
+					Estimado colaborador,
+				</p>
+				<p>
+					Le devolvemos el presente albarán por las razones que le indicamos a continuación:
+				</p>
+				<div style="font-family: monospace; font-size: 10pt; font-weight:bold;margin-left: 10px;">
+				
+					<apex:repeat value="{!resultados}" var="res" id="theRepeat">
+						<p style="padding-left:50px;text-indent:-50px">
+							<apex:image url="{!$Resource.CheckBoxFalse}" rendered="{!!res.seleccionado}" style="vertical-align: middle;"/>
+							<apex:image url="{!$Resource.CheckBoxTrue}" rendered="{!res.seleccionado}" style="vertical-align: middle;"/>
+					        <apex:outputText value="{!res.motivo}" id="motivo" style="margin-left: 5px;"/>
+					        <apex:outputText id="comm" value="{!res.comentarios}" style="font-weight: normal; font-style: italic; padding-right:50px; padding-left:20px;" />
+				        </p>
+				    </apex:repeat>
+				
+				</div>
+				
+				<p>
+					Como usted sabe, los albaranes que se envían a las compañías, tienen que estar
+					correctamente cumplimentados, tanto en la descripción de los trabajos como en códigos
+					de baremo. En caso de no poder aplicar estos y tener que pasar mano de obra adicional,
+					tiene que estar claramente justificado.
+				</p>
+				<p>
+					Así mismo, le recordamos la importancia de enviar los albaranes a la mayor brevedad
+					posible para facturar a la compañía cliente y proceder a realizar su liquidación.
+				</p>
+				<p>
+					Para cualquier duda póngase en contacto con su gestor/a de red.
+				</p>
+				<p>
+					Devolución de albarán del servicio número: {!wo.WorkOrderNumber}
+				</p>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+			</div>
+		
+		</body>
+        
+    </html>
+</apex:page>

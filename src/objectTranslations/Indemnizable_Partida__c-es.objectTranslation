@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Indemnizable: Partida</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Indemnizable: Partidas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Importe --></label>
+        <name>INDP_DIV_Importe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Documento Indemnizable --></label>
+        <name>INDP_LKP_Documento_Indemnizable__c</name>
+        <relationshipLabel><!-- Partidas Indemnizable --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>INDP_SEL_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción --></label>
+        <name>INDP_TXT_Descripcion__c</name>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

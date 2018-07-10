@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Internal SLR HomeAddress Geolocation --></label>
+        <name>FSL__Internal_SLR_HomeAddress_Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Creado para guardia --></label>
+        <name>MTS_CAS_Creado_para_guardia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Procesado Festivo --></label>
+        <name>MTS_CAS_Procesado_Festivo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>MTS_FOR_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>MTS_TXT_Identificador__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot save Service Territory Member of type secondary with Operating Hours or Address --></errorMessage>
+        <name>FSL__Secondary_STM</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe rellenar el campo &quot;Provincia&quot; --></errorMessage>
+        <name>Provincia_obligatoria</name>
+    </validationRules>
+</CustomObjectTranslation>

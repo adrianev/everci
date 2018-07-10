@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Error del gestor</fullName>
+        <default>false</default>
+        <label>Error del gestor</label>
+    </customValue>
+    <customValue>
+        <fullName>Siniestro rechazado</fullName>
+        <default>false</default>
+        <label>Siniestro rechazado</label>
+    </customValue>
+    <customValue>
+        <fullName>Valoración estimada menor que el límite de graves</fullName>
+        <default>false</default>
+        <label>Valoración estimada menor que el límite de graves</label>
+    </customValue>
+    <description>Lista de valores para la anulación de un siniestro grave.</description>
+    <masterLabel>Motivo Anulación Grave</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

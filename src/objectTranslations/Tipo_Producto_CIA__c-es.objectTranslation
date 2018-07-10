@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Compañía: Tipo de Producto</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Compañía: Tipos de Producto</value>
+    </caseValues>
+    <fields>
+        <label><!-- Importe Material Manitas --></label>
+        <name>TPR_DIV_Imp_Material_Manitas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe Material Serv.Especial --></label>
+        <name>TPR_DIV_Imp_Material_ServicioEsp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>TPR_LKP_Compania__c</name>
+        <relationshipLabel><!-- Compañía: Tipos de Producto --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Horas Mano de Obra Manitas --></label>
+        <name>TPR_NUM_Hrs_Mano_Obra_Manitas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Horas Mano de Obra Serv.Especial --></label>
+        <name>TPR_NUM_Hrs_Mano_Obra_ServicioEsp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Límite de Servicios Manitas --></label>
+        <name>TPR_NUM_Limite_Servicios_Manitas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interlocutores Autorizados --></label>
+        <name>TPR_SEL_Interlocutores_Autorizados__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interlocutores Seleccionables --></label>
+        <name>TPR_SEL_Interlocutores_Seleccionables__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Producto --></label>
+        <name>TPR_SEL_Tipo_Producto__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipos de Riesgo Seleccionables --></label>
+        <name>TPR_SEL_TiposRiesgo_Seleccionables__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>TPR_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Tipo de Producto CIA</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Tipo de producto</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

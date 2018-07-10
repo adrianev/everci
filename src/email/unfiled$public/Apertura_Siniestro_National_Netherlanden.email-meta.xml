@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Plantilla para notificar la apertura de siniestros de Nationale Netherlanden</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Apertura Siniestro Nationale Netherlanden</name>
+    <style>none</style>
+    <subject>Apertura Siniestro Nationale Netherlanden</subject>
+    <textOnly>EMAIL  APERTURA
+
+Fecha Siniestro: {!Case.CreatedDate}
+
+Nº Siniestro: {!Case.CaseNumber}
+
+Nº Póliza: {!Case.00N9E000001uR9S}
+
+Estimado/a {!Case.Account},
+
+Muchas gracias por confiar en NATIONALE NEDERLANDEN para la gestión de su siniestro, que afecta a la garantía de “{!Case.00N9E000001uR9S}”. A partir de ahora ponemos en marcha todos los procedimientos para resolverlo de la manera más ágil.
+
+Tenemos el placer de comunicarle que puede seguir todos los pasos de la evolución de su siniestro, a través del Portal Clic Hogar que hemos desarrollado para mejorar el servicio prestado a nuestros clientes. Además, puede utilizar este medio para hacernos llegar las dudas que puedan surgirle sobre el mismo.
+
+Para comenzar a disfrutar de todas las ventajas que le ofrece nuestro portal, simplemente tendrá que entrar en el link que le indicamos e introducir su usuario y contraseña:
+
+Link: https://www.clichogar.es
+
+Usuario: 	{!Case.CAS_TXT_Usuario_Clic_Hogar__c}
+
+Contraseña: 	{!Case.CAS_TXT_Password_Clic_Hogar__c}
+
+Estamos a su disposición para ayudarle y prestarle el mejor servicio.
+
+Reciba un cordial saludo,
+NATIONALE NEDERLANDEN
+
+*Nota: este correo es informativo, rogamos no responda al mismo.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

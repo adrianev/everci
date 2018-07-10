@@ -1,0 +1,139 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Presupuesto | HomeServe</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; ">
+	<title>Presupuesto | HomeServe</title>
+    <style>
+        body,td,div,p,ul,li,ol,span { font-family: arial,helvetica; }
+        .button {
+            background-color:#e7342c;
+        }
+    </style>
+</head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+<div style="background-color: #ededed;width:100%; font-family: Arial, Helvetica; font-size: 12px; -webkit-text-size-adjust:none !important; margin:0; padding: 0;">
+    <table border="0" cellpadding="30" cellspacing="0" height="100%" width="600" style="background-color: #fff; width:600px; padding: 0; margin: 0 auto; font-family: Arial, Helvetica; -webkit-text-size-adjust:none !important;">
+        <tr>
+            <td align="center" valign="top">
+                <table style="width:100%; background-color:white; border-bottom:1px solid #e7342c; border-top:1px solid #e7342c; margin: 0;" cellpadding="20" cellspacing="0">
+                    <tr style="">
+                        <td style="width:25%; text-align: left;">
+                            <img style="width:120px;" alt="HomeServe" src="https://www.homeserve.es/img/logo-homeserve.png" />
+                        </td>
+                        <td style="color: #e7342c;width: 50%; text-align: right;padding: 0 12px 0 0;font-size: 12px;font-weight: normal;">
+                            Asistencias HomeServe                        
+						</td>
+                        <td  style="width:25%; text-align:right; white-space: nowrap;">
+                        </td>
+                    </tr>
+                </table>
+<!--content -->
+			<table border="0" cellpadding="0" cellspacing="0" width="600" id="template_container" style="width:100%;margin: 0 ">
+				<tr>
+					<td align="center" valign="top">
+						<div style="">
+						<!--row 1 -->
+							<table style="width:100%;color:#4e4e4e;">
+								<tr>
+									<td colspan="2" style="background-color:white;">
+										<h1 style="font-weight: normal; font-size: 30px;">(CAT) ¡Hola  {!Contact.FirstName} {!Contact.LastName}!</h1>
+										<p style="color: #505050;">(CAT) Adjunto le enviamos el presupuesto correspondiente a los trabajos que nos ha solicitado. Recordamos que este presupuesto tiene una validez de 30 días desde la fecha de emisión.</p>
+										<img src="https://www.homeserve.es/img/cartela-email-presu.jpg"/>
+
+<p style="color: #505050; text-align:center;">(CAT) Para cualquier duda, póngase en contacto con nosotros.</p>
+                                        
+											<strong style='display:block; font-size:13px; text-align:center;'>(CAT) Servicio 24h/365 días del año</strong>
+											<table cellpadding='5' cellspacing='0' style='margin:auto'>
+												<tr>
+													<td> 
+														<img src='https://www.homeserve.es/img/icons/phone-red-round.png' />
+													</td>
+													<td>
+														<span style='color:#e7342c; font-size:25px;'> {!Case.CAS_FOR_Telefono_VDN__c}</span>
+													</td>
+												</tr>
+											</table>
+										</p>
+									</td>
+								</tr>
+							</table>
+							<table style="padding:0;margin:0;">
+								<tr>
+									<td style="width:296px;background: white;vertical-align: bottom;padding:0;margin:0;border:0;margin-left:-2px;">
+										<table cellpadding="0" cellspacing="0" style="color:#4e4e4e;width:100%;padding:0;margin:0;height:180px">
+											<tr style="padding:0;margin:0;">
+												<td style="vertical-align: top;">
+													<p style="color: #e7342c; font-size:16px; line-height:24px; font-weight:bold; margin-top:0;">Descarga nuestra App
+													</p>
+													<img src="https://www.homeserve.es/img/app-email.jpg" style="border:0;"/>
+													<p style="font-size:12px;">Protege tu hogar con la App gratuita de HomeServe: Pulsa su botón y te llamamos sin coste las 24 horas del día.
+													</p>
+													<a href="https://play.google.com/store/apps/details?id=es.homeserve.homeserve"style="border: 0;text-decoration: none;">
+														<img style="border: 0;text-decoration: none;" src="https://www.homeserve.es/img/icons/getongoogleplay.png"/>
+													</a>
+													<a href="https://itunes.apple.com/es/app/homeserve/id699655567?mt=8" style="border: 0;text-decoration: none;">
+														<img style="border: 0;text-decoration: none;" src="https://www.homeserve.es/img/icons/getonappstore.png"/>
+													</a>                              
+												</td>
+											</tr>
+										</table>
+									</td>
+									<td style="width:8px;padding:0;margin:0;border:0;">
+									</td>
+									<td style="width:296px;background: white;vertical-align: top;padding:0;margin:0;border:0;">
+										<table cellpadding="0" cellspacing="0" style="color:#4e4e4e;width:100%;padding:0;margin:0;height:180px">
+											<tr style="padding:0;margin:0;">
+												<td style="vertical-align: top;padding-left: 10px;">
+													<p style="color: #e7342c; font-size:16px; line-height:24px; font-weight:bold; margin-top:0;">Visita nuestro blog
+													</p>
+													<a href="https://www.homeserve.es/blog?utm_source=web_mail&utm_medium=mail&utm_campaign=mail_booking" style="border: 0;text-decoration: none;">
+														<img src="https://www.homeserve.es/img/email-blog.jpg" style="border:0;"/>
+														<p style="font-size:12px; color:#505050;">Trucos y consejos para cuidar y disfrutar de tu hogar con Salvador de la Casa. Visita nuestro blog y conócelos todos. 
+														</p>
+													</a>
+												</td>
+											</tr>
+										</table>
+
+									</td>
+
+								</tr>
+							</table>
+                <!--row 3 END-->
+						</div>
+					</td>
+				</tr>
+			</table>
+			<p style="color: #e7342c; text-align: center; font-weight:bold;">Gracias por confiar en HomeServe
+			</p>
+			</td>
+		</tr>
+		<tr>
+			<td height="80px" valign="top" style="background-color: #ededed; mso-line-height-rule: exactly; color:#333; padding:20px; text-align: center; font-size:12px;">(CAT) Para cualquier pregunta o sugerencia puede ponerse en contacto con nosotros en el correo electrónico 
+					<a href="email:atencion.cliente@homeserve.es">atencion.cliente@homeserve.es
+					</a> 
+				o en el teléfono {!Case.CAS_FOR_Telefono_VDN__c}.
+			</td>
+		</tr>
+		<tr>
+			<td valign="top" style="padding:20px; background-color: #ededed;">
+				<table style="width:100%;color:white;">
+				</table>
+				<table style="width:310px;color:white;">
+				</table>
+			</td>
+		</tr>
+<!--footer END-->
+	</table>
+</div>
+</body>
+</html>
+</body>
+</html>

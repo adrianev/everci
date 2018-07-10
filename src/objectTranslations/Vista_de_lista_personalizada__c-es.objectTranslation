@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Vista de lista personalizada</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Vistas de lista personalizadas</value>
+    </caseValues>
+    <fields>
+        <label><!-- Compartir con --></label>
+        <name>Compartir_con__c</name>
+        <picklistValues>
+            <masterLabel>Gestores de auditoría</masterLabel>
+            <translation><!-- Gestores de auditoría --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nadie</masterLabel>
+            <translation><!-- Nadie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supervisores de Auditoría</masterLabel>
+            <translation><!-- Supervisores de Auditoría --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Todos</masterLabel>
+            <translation><!-- Todos --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de objeto --></label>
+        <name>Tipo_de_objeto__c</name>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

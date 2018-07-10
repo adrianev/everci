@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account --></label>
+        <name>BigMachines__Account__c</name>
+        <relationshipLabel><!-- Oracle Quotes and Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Summary Amount --></label>
+        <name>BigMachines__Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>BigMachines__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Forced Sync --></label>
+        <name>BigMachines__Is_Forced_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Primary? --></label>
+        <name>BigMachines__Is_Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Items --></label>
+        <name>BigMachines__Line_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>BigMachines__Opportunity__c</name>
+        <relationshipLabel><!-- Oracle Quotes and Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Prep Sync --></label>
+        <name>BigMachines__Prep_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricebook Id --></label>
+        <name>BigMachines__Pricebook_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Process Sync --></label>
+        <name>BigMachines__Process_Sync__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oracle CPQ Cloud Site --></label>
+        <name>BigMachines__Site__c</name>
+        <relationshipLabel><!-- Oracle Quotes and Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>BigMachines__Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>BigMachines__Total_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>BigMachines__Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Id --></label>
+        <name>BigMachines__Transaction_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- External_Id --></label>
+        <name>External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Order --></label>
+        <name>OQU_LKP_Work_Order__c</name>
+        <relationshipLabel><!-- Oracle Quotes and Orders --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Standard --></label>
+        <name>Standard</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Clone_Quote_Detail --></label>
+        <name>BigMachines__Clone_Quote_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Clone_Quote_List --></label>
+        <name>BigMachines__Clone_Quote_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Move_Quote_List --></label>
+        <name>BigMachines__Move_Quote_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Quote_List --></label>
+        <name>BigMachines__New_Quote_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Set_Primary_List --></label>
+        <name>BigMachines__Set_Primary_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Quote_WO --></label>
+        <name>New_Quote_WO</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Quote_ant --></label>
+        <name>New_Quote_ant</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- TEST_CALL_CPQ_HARDCODED --></label>
+        <name>TEST_CALL_CPQ_HARDCODED</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- setAsPrimary --></label>
+        <name>setAsPrimary</name>
+    </webLinks>
+</CustomObjectTranslation>

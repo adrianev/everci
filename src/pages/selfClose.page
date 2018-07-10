@@ -1,0 +1,32 @@
+<apex:page >
+ <apex:includeScript value="/support/console/42.0/integration.js"/>
+ <script type="text/javascript">
+        function openPrimaryTab() {
+            sforce.console.openPrimaryTab(undefined, 
+               'http://www.example.com', true, 'example');
+        }
+        //The callback function that openSubtab will call once it has the ID for its primary tab
+        var callOpenSubtab=function callOpenSubtab(result) {
+            sforce.console.openSubtab(result.id, 
+               'http://www.example.com', true, 'example');
+        };
+        function openSubtab() {
+            sforce.console.getEnclosingPrimaryTabId(callOpenSubtab);
+        }
+
+        //Sets the title of the current tab to "Example"
+        function setTitle() {
+            sforce.console.setTabTitle('Example');
+        }
+        
+        //The callback function that closeTab will call once it has the ID for its tab
+        var callCloseTab= function callCloseTab(result) {
+            sforce.console.closeTab(result.id);
+        }
+        function closeTab() {
+            sforce.console.getEnclosingTabId(callCloseTab);
+        }
+        closeTab();
+  </script>
+   <p/><A HREF="#" onClick="closeTab();return false">Llamada realizada, puede cerrar esta ventana</A> 
+</apex:page>

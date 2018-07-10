@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integraciones: Envío Programado CIA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integraciones: Envío Programado CIA</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activo --></label>
+        <name>ENV_CAS_Activo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Inicio --></label>
+        <name>ENV_DAT_Fecha_Inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Puntual --></label>
+        <name>ENV_DAT_Fecha_Puntual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Compañía --></label>
+        <name>ENV_FOR_CompaniaId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>ENV_FOR_CompaniaNombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Fichero --></label>
+        <name>ENV_LKP_Fichero__c</name>
+        <relationshipLabel><!-- Integraciones: Envío Programado CIA --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contador Lote --></label>
+        <name>ENV_NUM_Contador_Lote__c</name>
+    </fields>
+    <fields>
+        <label><!-- Días de la Semana --></label>
+        <name>ENV_SEL_Dias_Semana__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hora --></label>
+        <name>ENV_SEL_Hora__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Integraciones Envio Programado CIA</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Si desea una tarea puntual rellene solamente el campo &apos;Fecha Puntual&apos;, en caso contrario, rellene los campos &apos;Días de la Semana&apos; y/o &apos;Fecha Inicio&apos; (Opcional) --></errorMessage>
+        <name>Validacion_de_fechas_1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Campos insuficientes. Cumplimente el campo &apos;Días de la Semana&apos; si desea una tarea recurrente o &apos;Fecha Puntual&apos; si desea una tarea puntual. --></errorMessage>
+        <name>Validacion_de_fechas_2</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Vesta --></label>
+        <name>Vesta</name>
+    </webLinks>
+</CustomObjectTranslation>

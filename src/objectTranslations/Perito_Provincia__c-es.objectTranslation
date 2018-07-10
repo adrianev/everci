@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Perito: Provincia</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Perito: Provincias</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asignación Real --></label>
+        <name>PERP_FOR_Asignacion_Real__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>PERP_FOR_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Desvío Asignación --></label>
+        <name>PERP_FOR_Desvio_Asignacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Perito --></label>
+        <name>PERP_LKP_Perito__c</name>
+        <relationshipLabel><!-- Perito: Provincias --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Siniestros por provincia y compañía --></label>
+        <name>PERP_NUM_Sini_Provincia_Compania__c</name>
+    </fields>
+    <fields>
+        <label><!-- Siniestros Asignados --></label>
+        <name>PERP_NUM_Siniestros_Asignados__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje de asignación --></label>
+        <name>PERP_POR_Porcentaje_Asignacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>PERP_SEL_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>PERP_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Perito: Provincia</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

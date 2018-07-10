@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Contiene información de las órdenes de trabajo asociadas a los movimientos que se envían a las aseguradoras</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>IOT_DAT_Fecha_Cierre_servicio__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de  cierre de servicio</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>IOT_DAT_Fecha_Creacion_Asistencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Creación de la asistencia</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>IOT_DAT_Fecha_Primera_Cita__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de apertura del servicio</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>IOT_DIV_Importe_Valoracion__c</fullName>
+        <externalId>false</externalId>
+        <label>Total importe valoracion sin IVA</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>IOT_LKP_Movimiento_CIA__c</fullName>
+        <description>Relación con el objeto Integraciones: Movimiento CIA, movimiento que se envía a la aseguradora.</description>
+        <externalId>false</externalId>
+        <label>Movimiento CIA</label>
+        <referenceTo>INT_Movimiento_CIA__c</referenceTo>
+        <relationshipLabel>Integraciones: Servicios</relationshipLabel>
+        <relationshipName>Integraciones_Ordenes_Trabajo</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Agente_Anula_Asistencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Código Agente que ha anulado el servicio</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Agente_Crea_Asistencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Código Agente que creó la Asistencia</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Canal__c</fullName>
+        <externalId>false</externalId>
+        <label>Código canal de entrada</label>
+        <length>3</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Codigo_Asistencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de la asistencia</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Codigo_Profesional__c</fullName>
+        <externalId>false</externalId>
+        <label>Código profesional</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_DT__c</fullName>
+        <externalId>false</externalId>
+        <label>DT laboral del profesional</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Descripcion_Canal__c</fullName>
+        <externalId>false</externalId>
+        <label>Descripción corta de entrada</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Estado__c</fullName>
+        <externalId>false</externalId>
+        <label>Último estado del servicio</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Gremio_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Descripción del gremio</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Gremio__c</fullName>
+        <externalId>false</externalId>
+        <label>Código</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Modo_de_pago__c</fullName>
+        <externalId>false</externalId>
+        <label>Forma de pago del cliente</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Motivo_Anulacion__c</fullName>
+        <description>Motivo de anulación. Reflejo del respectivo campo en el objeto Órdenes de Trabajo para el envío de movimientos.</description>
+        <externalId>false</externalId>
+        <label>Motivo Anulación</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Num_OrdenTrabajo_HS__c</fullName>
+        <description>Campo copia para el envío de movimientos por ficheros</description>
+        <externalId>false</externalId>
+        <label>Nº de Servicio HS</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Presupuesto__c</fullName>
+        <description>Indica si tiene presupuesto</description>
+        <externalId>false</externalId>
+        <label>Presupuesto</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IOT_TXT_Urgente__c</fullName>
+        <description>Indica si la Orden de Trabajo es urgente</description>
+        <externalId>false</externalId>
+        <label>Urgente</label>
+        <length>2</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Integraciones: Servicio</label>
+    <nameField>
+        <label>Identificador</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Integraciones: Servicios</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

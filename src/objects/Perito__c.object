@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa cada uno de los peritos y/o gabinetes periciales susceptibles de ser asignados a un siniestro.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>PER_CAS_No_Asignar__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Asignación de un perito</description>
+        <externalId>false</externalId>
+        <label>No asignar</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PER_EMA_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PER_LKP_Compania__c</fullName>
+        <description>Compañía asociada al perito</description>
+        <externalId>false</externalId>
+        <label>Compañía</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>La compañía asociada al perito debe ser del tipo de registro Cliente Asegurado</errorMessage>
+            <filterItems>
+                <field>Account.RecordType.DeveloperName</field>
+                <operation>equals</operation>
+                <value>CUE_Compania</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Peritos</relationshipLabel>
+        <relationshipName>PRT_REL_Compania</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>PER_RES_Siniestros_Asignados__c</fullName>
+        <description>Campo resumen que suma todos los siniestros asignados del perito en sus diferentes provincias.</description>
+        <externalId>false</externalId>
+        <label>Siniestros Asignados</label>
+        <summarizedField>Perito_Provincia__c.PERP_NUM_Siniestros_Asignados__c</summarizedField>
+        <summaryForeignKey>Perito_Provincia__c.PERP_LKP_Perito__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>PER_SEL_Tipo_Documento__c</fullName>
+        <description>Tipo de Documento de Identificación del Perito.</description>
+        <externalId>false</externalId>
+        <label>Tipo de Documento</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_DocumentoId</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PER_TLF_Telefono__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PER_TXT_Codigo_Perito__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Código de perito</label>
+        <length>13</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>PER_TXT_Empresa__c</fullName>
+        <externalId>false</externalId>
+        <label>Empresa</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PER_TXT_Numero_Documento__c</fullName>
+        <description>Número de Documento de Identificación del Perito</description>
+        <externalId>false</externalId>
+        <label>Nº de Documento</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Perito</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>PER_LKP_Compania__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Código de perito</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Peritos</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Datos_Documento_Identidad_Obligatorios</fullName>
+        <active>true</active>
+        <description>Se deben informar los datos del Documento de Identidad.</description>
+        <errorConditionFormula>IF( 
+OR(ISPICKVAL(PER_SEL_Tipo_Documento__c,&apos;&apos;),ISBLANK(PER_TXT_Numero_Documento__c)), 
+true,
+false)</errorConditionFormula>
+        <errorMessage>Se deben informar los datos del Documento de Identidad.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Digito_Control_NIE_Correcto</fullName>
+        <active>true</active>
+        <description>Si el tipo de documento es NIE, comprueba que el dígito de control sea correcto</description>
+        <errorConditionFormula>IF( ISPICKVAL(PER_SEL_Tipo_Documento__c, &apos;E&apos;), 
+AND( 
+NOT(ISBLANK(PER_TXT_Numero_Documento__c )), 
+REGEX( PER_TXT_Numero_Documento__c , &quot;[XYZ]{1}[0-9]{7}[A-Z]{1}&quot;), 
+IF( 
+CASE( MOD( VALUE( LEFT( SUBSTITUTE(SUBSTITUTE(SUBSTITUTE(PER_TXT_Numero_Documento__c, &apos;X&apos;, &apos;0&apos;), &apos;Y&apos;, &apos;1&apos;), &apos;Z&apos;, &apos;2&apos;) , 8)) ,23), 
+0, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;T&apos;,&apos;true&apos;,&apos;false&apos;), 
+1, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;R&apos;,&apos;true&apos;,&apos;false&apos;), 
+2, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;W&apos;,&apos;true&apos;,&apos;false&apos;), 
+3, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;A&apos;,&apos;true&apos;,&apos;false&apos;), 
+4, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;G&apos;,&apos;true&apos;,&apos;false&apos;), 
+5, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;M&apos;,&apos;true&apos;,&apos;false&apos;), 
+6, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;Y&apos;,&apos;true&apos;,&apos;false&apos;), 
+7, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;F&apos;,&apos;true&apos;,&apos;false&apos;), 
+8, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;P&apos;,&apos;true&apos;,&apos;false&apos;), 
+9, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;D&apos;,&apos;true&apos;,&apos;false&apos;), 
+10, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;X&apos;,&apos;true&apos;,&apos;false&apos;), 
+11, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;B&apos;,&apos;true&apos;,&apos;false&apos;), 
+12, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;N&apos;,&apos;true&apos;,&apos;false&apos;), 
+13, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;J&apos;,&apos;true&apos;,&apos;false&apos;), 
+14, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;Z&apos;,&apos;true&apos;,&apos;false&apos;), 
+15, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;S&apos;,&apos;true&apos;,&apos;false&apos;), 
+16, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;Q&apos;,&apos;true&apos;,&apos;false&apos;), 
+17, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;V&apos;,&apos;true&apos;,&apos;false&apos;), 
+18, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;H&apos;,&apos;true&apos;,&apos;false&apos;), 
+19, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;L&apos;,&apos;true&apos;,&apos;false&apos;), 
+20, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;C&apos;,&apos;true&apos;,&apos;false&apos;), 
+21, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;K&apos;,&apos;true&apos;,&apos;false&apos;), 
+22, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;E&apos;,&apos;true&apos;,&apos;false&apos;), 
+&apos;false&apos;) = &apos;false&apos;, true, false 
+), 
+!$Setup.Baipas__c.Saltar_Regla_Validacion__c 
+), 
+false)</errorConditionFormula>
+        <errorDisplayField>PER_TXT_Numero_Documento__c</errorDisplayField>
+        <errorMessage>Dígito de control para el NIE incorrecto</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Digito_Control_NIF_Correcto</fullName>
+        <active>true</active>
+        <description>Si el tipo de documento es NIF, comprueba que el dígito de control sea correcto</description>
+        <errorConditionFormula>IF( ISPICKVAL(PER_SEL_Tipo_Documento__c, &apos;N&apos;), 
+AND( 
+NOT(ISBLANK(PER_TXT_Numero_Documento__c )), 
+REGEX( PER_TXT_Numero_Documento__c , &quot;[0-9]{8}[A-Z]{1}&quot;), 
+IF( 
+CASE( MOD( VALUE( LEFT( PER_TXT_Numero_Documento__c , 8)) ,23), 
+0, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;T&apos;,&apos;true&apos;,&apos;false&apos;), 
+1, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;R&apos;,&apos;true&apos;,&apos;false&apos;), 
+2, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;W&apos;,&apos;true&apos;,&apos;false&apos;), 
+3, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;A&apos;,&apos;true&apos;,&apos;false&apos;), 
+4, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;G&apos;,&apos;true&apos;,&apos;false&apos;), 
+5, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;M&apos;,&apos;true&apos;,&apos;false&apos;), 
+6, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;Y&apos;,&apos;true&apos;,&apos;false&apos;), 
+7, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;F&apos;,&apos;true&apos;,&apos;false&apos;), 
+8, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;P&apos;,&apos;true&apos;,&apos;false&apos;), 
+9, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;D&apos;,&apos;true&apos;,&apos;false&apos;), 
+10, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;X&apos;,&apos;true&apos;,&apos;false&apos;), 
+11, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;B&apos;,&apos;true&apos;,&apos;false&apos;), 
+12, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;N&apos;,&apos;true&apos;,&apos;false&apos;), 
+13, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;J&apos;,&apos;true&apos;,&apos;false&apos;), 
+14, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;Z&apos;,&apos;true&apos;,&apos;false&apos;), 
+15, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;S&apos;,&apos;true&apos;,&apos;false&apos;), 
+16, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;Q&apos;,&apos;true&apos;,&apos;false&apos;), 
+17, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;V&apos;,&apos;true&apos;,&apos;false&apos;), 
+18, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;H&apos;,&apos;true&apos;,&apos;false&apos;), 
+19, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;L&apos;,&apos;true&apos;,&apos;false&apos;), 
+20, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;C&apos;,&apos;true&apos;,&apos;false&apos;), 
+21, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;K&apos;,&apos;true&apos;,&apos;false&apos;), 
+22, IF(RIGHT( PER_TXT_Numero_Documento__c , 1) = &apos;E&apos;,&apos;true&apos;,&apos;false&apos;), 
+&apos;false&apos;) = &apos;false&apos;, true, false 
+), 
+!$Setup.Baipas__c.Saltar_Regla_Validacion__c 
+), 
+false)</errorConditionFormula>
+        <errorDisplayField>PER_TXT_Numero_Documento__c</errorDisplayField>
+        <errorMessage>Dígito de control para el NIF incorrecto.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Formato_CIF_Correcto</fullName>
+        <active>true</active>
+        <description>Si el tipo de documento es CIF, comprueba que el formato sea correcto: 
+-Sea de 9 dígitos 
+-El primero sea una letra 
+-Los 7 de en medio un número 
+-El último un número o una letra</description>
+        <errorConditionFormula>IF( ISPICKVAL(PER_SEL_Tipo_Documento__c, &apos;C&apos;), 
+AND( 
+NOT(ISBLANK(PER_TXT_Numero_Documento__c )), 
+NOT(REGEX( PER_TXT_Numero_Documento__c , &quot;[A-Z]{1}[0-9]{7}[A-Z0-9]{1}&quot;)) , 
+!$Setup.Baipas__c.Saltar_Regla_Validacion__c 
+), 
+false)</errorConditionFormula>
+        <errorDisplayField>PER_TXT_Numero_Documento__c</errorDisplayField>
+        <errorMessage>Formato del CIF incorrecto. Ej: X1234567X, X12345678 
+REGEX: &quot;[A-Z]{1}[0-9]{7}[A-Z0-9]{1}&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Formato_NIE_Correcto</fullName>
+        <active>true</active>
+        <description>Si el tipo de documento es NIE, comprueba que el formato sea correcto: 
+-Sea de 9 dígitos 
+-El primero sea X, Y o Z 
+-Los 7 de en medio un número 
+-El último una letra</description>
+        <errorConditionFormula>IF( ISPICKVAL(PER_SEL_Tipo_Documento__c, &apos;E&apos;), 
+AND( 
+NOT(ISBLANK(PER_TXT_Numero_Documento__c )), 
+NOT(REGEX( PER_TXT_Numero_Documento__c , &quot;[XYZ]{1}[0-9]{7}[A-Z]{1}&quot;)) , 
+!$Setup.Baipas__c.Saltar_Regla_Validacion__c 
+), 
+false)</errorConditionFormula>
+        <errorDisplayField>PER_TXT_Numero_Documento__c</errorDisplayField>
+        <errorMessage>Formato del NIE incorrecto. Ej: X1234567X 
+REGEX: &quot;[XYZ]{1}[0-9]{7}[A-Z]{1}&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Formato_NIF_Correcto</fullName>
+        <active>true</active>
+        <description>Si el tipo de documento es NIF, comprueba que el formato sea correcto: 
+-Sea de 9 dígitos 
+-Los 8 primeros números 
+-El último una letra</description>
+        <errorConditionFormula>IF( ISPICKVAL(PER_SEL_Tipo_Documento__c, &apos;N&apos;), 
+AND( 
+NOT(ISBLANK(PER_TXT_Numero_Documento__c )), 
+NOT(REGEX( PER_TXT_Numero_Documento__c , &quot;[0-9]{8}[A-Z]{1}&quot;)) , 
+!$Setup.Baipas__c.Saltar_Regla_Validacion__c
+), 
+false)</errorConditionFormula>
+        <errorDisplayField>PER_TXT_Numero_Documento__c</errorDisplayField>
+        <errorMessage>Formato del NIF incorrecto. Ej: 12345678X 
+REGEX: &quot;[0-9]{8}[A-Z]{1}&quot;</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

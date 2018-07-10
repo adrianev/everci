@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa el registro histórico de las modificaciones realizadas sobre la entidad Cita de Servicio desde que fue dada de alta en el sistema. 
+Se creará un registo en esta tabla siempre que se cree o modifique la entidad cita de servicio.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>HCC_LKP_Cita_de_Servicio__c</fullName>
+        <description>Cita de servicio asociada al histórico de cambios.</description>
+        <externalId>false</externalId>
+        <label>Cita de servicio</label>
+        <referenceTo>ServiceAppointment</referenceTo>
+        <relationshipLabel>Histórico de Cambios de Cita</relationshipLabel>
+        <relationshipName>HCC_REL_Historico_de_Usuarios</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>HCC_LKP_Usuario__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Usuario asociado al cambio de cita.</description>
+        <externalId>false</externalId>
+        <label>Usuario</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>HCC_REL_Historico_Citas_de_Servicio</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Histórico de Cambios de Cita</label>
+    <nameField>
+        <displayFormat>{00000000}</displayFormat>
+        <label>Identificador</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Históricos de Cambios de Cita</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

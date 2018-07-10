@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSetTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <valueTranslation>
+        <masterLabel>ALBACETE</masterLabel>
+        <translation>ALBACETE</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ALICANTE</masterLabel>
+        <translation>ALICANTE</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ALMERÍA</masterLabel>
+        <translation>ALMERÍA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ANDORRA</masterLabel>
+        <translation>ANDORRA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ASTURIAS</masterLabel>
+        <translation>ASTURIAS</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BADAJOZ</masterLabel>
+        <translation>BADAJOZ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BALEARES</masterLabel>
+        <translation>BALEARES</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BARCELONA</masterLabel>
+        <translation>BARCELONA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>BURGOS</masterLabel>
+        <translation>BURGOS</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CANTABRIA</masterLabel>
+        <translation>CANTABRIA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CASTELLÓN</masterLabel>
+        <translation>CASTELLÓN</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CEUTA</masterLabel>
+        <translation>CEUTA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CIUDAD REAL</masterLabel>
+        <translation>CIUDAD REAL</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CUENCA</masterLabel>
+        <translation>CUENCA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CÁCERES</masterLabel>
+        <translation>CÁCERES</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CÁDIZ</masterLabel>
+        <translation>CÁDIZ</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>CÓRDOBA</masterLabel>
+        <translation>CÓRDOBA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>DESCONOCIDO</masterLabel>
+        <translation>DESCONOCIDO</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GERONA</masterLabel>
+        <translation>GERONA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GRANADA</masterLabel>
+        <translation>GRANADA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GUADALAJARA</masterLabel>
+        <translation>GUADALAJARA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>GUIPÚZCOA</masterLabel>
+        <translation>GUIPÚZCOA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>HUELVA</masterLabel>
+        <translation>HUELVA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>HUESCA</masterLabel>
+        <translation><!-- HUESCA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>JAÉN</masterLabel>
+        <translation><!-- JAÉN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LA CORUÑA</masterLabel>
+        <translation><!-- LA CORUÑA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LA RIOJA</masterLabel>
+        <translation><!-- LA RIOJA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LAS PALMAS</masterLabel>
+        <translation><!-- LAS PALMAS --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LEÓN</masterLabel>
+        <translation><!-- LEÓN --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LUGO</masterLabel>
+        <translation><!-- LUGO --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>LÉRIDA</masterLabel>
+        <translation><!-- LÉRIDA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MADRID</masterLabel>
+        <translation><!-- MADRID --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MELILLA</masterLabel>
+        <translation><!-- MELILLA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>MÁLAGA</masterLabel>
+        <translation><!-- MÁLAGA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>NAVARRA</masterLabel>
+        <translation><!-- NAVARRA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ORENSE</masterLabel>
+        <translation><!-- ORENSE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>PALENCIA</masterLabel>
+        <translation><!-- PALENCIA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>PONTEVEDRA</masterLabel>
+        <translation><!-- PONTEVEDRA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>REGIÓN DE MURCIA</masterLabel>
+        <translation><!-- REGIÓN DE MURCIA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SALAMANCA</masterLabel>
+        <translation><!-- SALAMANCA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SANTA CRUZ DE TENERIFE</masterLabel>
+        <translation><!-- SANTA CRUZ DE TENERIFE --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SEGOVIA</masterLabel>
+        <translation><!-- SEGOVIA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SEVILLA</masterLabel>
+        <translation><!-- SEVILLA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>SORIA</masterLabel>
+        <translation><!-- SORIA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TARRAGONA</masterLabel>
+        <translation><!-- TARRAGONA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TERUEL</masterLabel>
+        <translation><!-- TERUEL --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>TOLEDO</masterLabel>
+        <translation><!-- TOLEDO --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VALENCIA</masterLabel>
+        <translation><!-- VALENCIA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VALLADOID</masterLabel>
+        <translation><!-- VALLADOID --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>VIZCAYA</masterLabel>
+        <translation><!-- VIZCAYA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ZAMORA</masterLabel>
+        <translation><!-- ZAMORA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ZARAGOZA</masterLabel>
+        <translation><!-- ZARAGOZA --></translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ÁLAVA</masterLabel>
+        <translation>ÁLAVA</translation>
+    </valueTranslation>
+    <valueTranslation>
+        <masterLabel>ÁVILA</masterLabel>
+        <translation>ÁVILA</translation>
+    </valueTranslation>
+</GlobalValueSetTranslation>

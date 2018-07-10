@@ -1,0 +1,74 @@
+<!-- Página de VisualForce referente a la visualización de una Encuesta realizada de:
+        -SegurCaixa Reparables/Mixtos (SMS)         -> T1_1018_CS
+    	-SegurCaixa Reparables/Mixtos (TEL)         -> T2_1018_CT
+    	-SegurCaixa Reparables/Mixtos (SMS)(CAT)    -> T5_1018_CS_CAT
+    	-SegurCaixa Reparables/Mixtos (TEL)(CAT)    -> T6_1018_CT_CAT
+
+
+-->
+
+
+
+<apex:page Controller="EncuestaRealizadaController" sidebar="false"
+	showHeader="false" readonly="true">
+	<style>
+.tabla {
+	border: 0.8px solid black;
+	font-weight: bold;
+	-webkit-border-radius: 5px;
+	background-color: #E9967A; ! important;
+	-webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+	color: #CC0000 !important;
+	font-size: 100% !important;
+}
+
+.headerRow .TableTitle {
+	color: #CC0000s !important;
+	background-color: #E9967A !important;
+	font-size: 100% !important;
+	font-weight: bold;
+}
+
+.pregunta {
+	font-weight: bold;
+	font-size: 120% !important;
+}
+</style>
+
+	<apex:form >
+
+
+		<!-- PAGINA PRINCIPAL DE ENCUESTA -->
+
+		<apex:pageMessages ></apex:pageMessages>
+
+
+		<apex:pageBlock id="encuesta" title="Encuesta">
+			
+
+				<apex:pageBlockSection columns="1" id="Pregunta1">
+				<apex:variable var="p1" value="{!Respuestas1}"/>
+					<apex:outputText value="Pregunta 1" styleClass="pregunta" />
+					<apex:outputText value="{0}">
+						<apex:param value="{!listaPreguntas[0].ENP_TXT_Pregunta__c} " />
+					</apex:outputText>
+					<apex:pageBlockSection columns="1" id="Pregunta1Radio">
+						<apex:selectRadio id="idSelectRadio" label="{!respuestaTxt}"
+							value="{!p1.respPrinc}"
+							readonly="true" disabled="true">
+							<apex:selectOptions value="{!listaMotsSN1}" />
+						</apex:selectRadio>
+					</apex:pageBlockSection>
+					<apex:pageBlockSection columns="3" id="Pregunta1SeleccionyTexto">
+							<apex:selectList label="{!motivosTxt}" required="true" rendered="{!p1.renderizar[1]}"
+								value="{!p1.listaResp[0].motivo}" size="1" disabled="true">
+								<apex:selectOptions value="{!p1.motivos}" />
+							</apex:selectList>
+						<apex:inputTextArea label="{!comentarioTxt}" value="{!p1.listaResp[0].comentario}"
+						 disabled="true" rendered="{!p1.renderizar[1]}"/>
+					</apex:pageBlockSection>
+			</apex:pageBlockSection>
+			
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

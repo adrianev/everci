@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Guardia</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Guardias</value>
+    </caseValues>
+    <fields>
+        <label><!-- Tratada Fin --></label>
+        <name>GUA_CAS_Tratada_Fin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tratada Inicio --></label>
+        <name>GUA_CAS_Tratada_Inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Fin --></label>
+        <name>GUA_DAT_Fecha_Fin__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Inicio --></label>
+        <name>GUA_DAT_Fecha_Inicio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profesional --></label>
+        <name>GUA_LKP_Profesional__c</name>
+        <relationshipLabel><!-- Guardias --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Territorio --></label>
+        <name>GUA_LKP_Territorio__c</name>
+        <relationshipLabel><!-- Guardias --></relationshipLabel>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

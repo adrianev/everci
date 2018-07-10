@@ -1,0 +1,25 @@
+<apex:page standardController="Case" extensions="SiniConfirmacionFinalizadaController">
+	<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+    <apex:actionStatus id="iconoCargando"
+		onStart="document.getElementById('{!$Component.mainForm}').style.display='none';"
+		onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+	<apex:form id="mainForm">
+    	<apex:sectionHeader title="Proceso de Confirmación de Siniestro: Confirmación Finalizada"
+			subtitle="{!if(intervencion != null, intervencion.CaseNumber, '')}" />
+
+        <apex:pageBlock title="Confirmación Finalizada">
+            <apex:pageMessages id="mensajes" escape="false"/> 
+            <apex:pageBlockButtons > 
+                <apex:commandButton value="Finalizar Confirmación >>" title="Finalizar Confirmación" action="{!navegarDetalleCaso}"
+                	status="iconoCargando" rerender="mainForm" onComplete="return false;"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock> 
+    </apex:form>
+</apex:page>

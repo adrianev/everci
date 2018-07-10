@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>TPR_DIV_Imp_Material_Manitas__c</fullName>
+        <description>Representa el Importe de Material que está cubierto para los Siniestros con Tipo de Actuación &quot;Manitas&quot;.</description>
+        <externalId>false</externalId>
+        <label>Importe Material Manitas</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TPR_DIV_Imp_Material_ServicioEsp__c</fullName>
+        <description>Representa el Importe de Material que está cubierto para los Siniestros con Tipo de Actuación &quot;Servicio Especial Reparable&quot;.</description>
+        <externalId>false</externalId>
+        <label>Importe Material Serv.Especial</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TPR_LKP_Compania__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Compañía a la que pertenece el tipo de producto. Representa la FK al objeto Account para la compañía. Para resolver esta FK en integración (servicios web) y migración (plantillas DataLoader) se debe informar el valor del campo External Id (Account.CUE_TXT_Identificador__c):Código de compañía HomeServe</description>
+        <externalId>false</externalId>
+        <label>Compañía</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Compañía</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Compañía: Tipos de Producto</relationshipLabel>
+        <relationshipName>Tipos_de_Producto_CIA</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>TPR_NUM_Hrs_Mano_Obra_Manitas__c</fullName>
+        <description>Representa el Número de Horas de Mano de Obra que están cubiertas para los Siniestros con Tipo de Actuación &quot;Manitas&quot;.</description>
+        <externalId>false</externalId>
+        <label>Horas Mano de Obra Manitas</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TPR_NUM_Hrs_Mano_Obra_ServicioEsp__c</fullName>
+        <description>Representa el Número de Horas de Mano de Obra que están cubiertas para los Siniestros con Tipo de Actuación &quot;Servicio Especial Reparable&quot;.</description>
+        <externalId>false</externalId>
+        <label>Horas Mano de Obra Serv.Especial</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TPR_NUM_Limite_Servicios_Manitas__c</fullName>
+        <externalId>false</externalId>
+        <label>Límite de Servicios Manitas</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TPR_SEL_Interlocutores_Autorizados__c</fullName>
+        <description>Listado de Interlocutores Autorizados por la Compañía para ese tipo de producto</description>
+        <externalId>false</externalId>
+        <label>Interlocutores Autorizados</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_Interlocutor</valueSetName>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TPR_SEL_Interlocutores_Seleccionables__c</fullName>
+        <description>Listado de Interlocutores que el gestor puede seleccionar</description>
+        <externalId>false</externalId>
+        <label>Interlocutores Seleccionables</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_Interlocutor</valueSetName>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TPR_SEL_Tipo_Producto__c</fullName>
+        <description>Tipología del Producto</description>
+        <externalId>false</externalId>
+        <label>Tipo de Producto</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_Producto_CIA</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>TPR_SEL_TiposRiesgo_Seleccionables__c</fullName>
+        <description>Conjunto de Tipos de Riesgo que pueden ser seleccionados al establecer una póliza del Tipo de Producto.</description>
+        <externalId>false</externalId>
+        <label>Tipos de Riesgo Seleccionables</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_de_Riesgo</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TPR_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Es la concatenación de Compañía y Tipo de Producto</description>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Compañía: Tipo de Producto</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>TPR_LKP_Compania__c</columns>
+        <columns>TPR_SEL_Tipo_Producto__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Identificador</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Compañía: Tipos de Producto</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Editar_campo_identificador</fullName>
+        <active>true</active>
+        <description>El campo identificador  no puede ser modificado</description>
+        <errorConditionFormula>IF(AND(ISCHANGED(TPR_TXT_Identificador__c ), TPR_TXT_Identificador__c &lt;&gt; TPR_LKP_Compania__r.CUE_TXT_Identificador__c +&apos;_&apos;+ TEXT(TPR_SEL_Tipo_Producto__c)), true, false)</errorConditionFormula>
+        <errorMessage>El campo identificador  no puede ser modificado</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Población</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Poblaciones</value>
+    </caseValues>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>POB_SEL_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>POB_TXT_Identificador__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Poblacion</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

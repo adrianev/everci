@@ -1,0 +1,2 @@
+Id,Name,PROC_NUM_Contador__c,PROC_NUM_Contador_Rechazos__c,PROC_LKP_Cuenta__c,PROC_TXT_Identificador__c,PROC_SEL_Tipos_Caso__c,PROC_SEL_Gremios_Disp__c,PROC_NUM_Contador_Servicio_B2B_B2B2C__c
+a1d9E000000xV06,101801,0,0,1019E00000P9vBIQAZ,101801,CAS_Siniestro,,0

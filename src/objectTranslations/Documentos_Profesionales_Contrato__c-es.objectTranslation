@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Documento de Profesional Contrato</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Documentos de Profesional Contrato</value>
+    </caseValues>
+    <fields>
+        <label><!-- Fecha Baja --></label>
+        <name>DPC_DAT_Fecha_Baja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Entrega --></label>
+        <name>DPC_DAT_Fecha_Entrega__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Expiración --></label>
+        <name>DPC_DAT_Fecha_Expiracion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profesional Contrato --></label>
+        <lookupFilter>
+            <errorMessage><!-- La cuenta seleccionada no es válida. --></errorMessage>
+        </lookupFilter>
+        <name>DPC_LKP_Profesional_Contrato__c</name>
+        <relationshipLabel><!-- Documentos de Profesional Contrato --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Documento --></label>
+        <name>DPC_LKP_Tipo_de_Documento__c</name>
+        <relationshipLabel><!-- Documentos de Profesional Contrato --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>DPC_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Documento de Profesional Contrato</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Este tipo de documento no requiere fecha de expiración --></errorMessage>
+        <name>Documento_sin_fecha_expiracion</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Este tipo de documento requiere fecha de expiración. --></errorMessage>
+        <name>Fecha_de_expiracion_obligatoria</name>
+    </validationRules>
+    <workflowTasks>
+        <name>Alerta_expiracion_documento</name>
+        <subject><!-- Alerta Expiración Documento --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- La cuenta Profesional Contrato va ha pasar a estado &quot;Baja Temporal&quot; en los próximos días al expirar uno de sus documentos requeridos. --></description>
+        <name>Profesional_Baja</name>
+        <subject><!-- Profesional dado de Baja --></subject>
+    </workflowTasks>
+    <workflowTasks>
+        <description><!-- La cuenta Profesional Contrato ha pasado a estafo &quot;Vetado&quot; al expirar uno de sus documentos requeridos (Recibo del Seguro de Responsabilidad Civil). --></description>
+        <name>Profesional_Vetado_RC</name>
+        <subject><!-- Profesional Vetado Recibo RC --></subject>
+    </workflowTasks>
+</CustomObjectTranslation>

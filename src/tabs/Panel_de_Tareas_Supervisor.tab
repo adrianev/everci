@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <frameHeight>9999</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Panel de Tareas Supervisor</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom100: TV Widescreen</motif>
+    <url>https://homeserve--develop.cs88.my.salesforce.com/007?fcf=00B9E000001HsmV&amp;rolodexIndex=-1&amp;page=1</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

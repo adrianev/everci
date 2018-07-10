@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Alimentos refrigerados</fullName>
+        <default>false</default>
+        <label>Alimentos refrigerados</label>
+    </customValue>
+    <customValue>
+        <fullName>Factura exceso consumo agua</fullName>
+        <default>false</default>
+        <label>Factura exceso consumo agua</label>
+    </customValue>
+    <customValue>
+        <fullName>Lesiones corporales</fullName>
+        <default>false</default>
+        <label>Lesiones corporales</label>
+    </customValue>
+    <customValue>
+        <fullName>Tejado</fullName>
+        <default>false</default>
+        <label>Tejado</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros daños continente</fullName>
+        <default>false</default>
+        <label>Otros daños continente</label>
+    </customValue>
+    <customValue>
+        <fullName>Otros daños contenido</fullName>
+        <default>false</default>
+        <label>Otros daños contenido</label>
+    </customValue>
+    <description>Otros daños</description>
+    <masterLabel>Otros daños</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

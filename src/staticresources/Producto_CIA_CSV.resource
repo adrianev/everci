@@ -1,0 +1,2 @@
+Id,Name,PRD_TXT_Cod_Producto__c,PRD_LKP_Tipo_Producto_CIA__c
+a0V9E000000mN18UAE,KIT 107,08,a0v9E000000QqrG

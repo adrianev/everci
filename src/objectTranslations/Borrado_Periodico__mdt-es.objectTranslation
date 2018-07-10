@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Borrado Periódico</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Borrados Periódicos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activo --></label>
+        <name>Activo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Días desde creación --></label>
+        <name>Dias_desde_creacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Query --></label>
+        <name>Query__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <validationRules>
+        <errorMessage><!-- No se permite introducir días negativos --></errorMessage>
+        <name>Dias_positivos</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Determina la query para el borrado periódico de casos</description>
+    <fields>
+        <fullName>Activo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determina si el borrado está activo</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Activo</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Dias_desde_creacion__c</fullName>
+        <defaultValue>2</defaultValue>
+        <description>Tipifica el número de días a partir el cual se borrarán los datos tomando de referencia el CreatedDate</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Días desde creación</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Query__c</fullName>
+        <description>Indica la query para el borrado de casos</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Query</label>
+        <length>2000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Borrado Periódico</label>
+    <pluralLabel>Borrados Periódicos</pluralLabel>
+    <validationRules>
+        <fullName>Dias_positivos</fullName>
+        <active>true</active>
+        <description>No permite poner días negativos</description>
+        <errorConditionFormula>Dias_desde_creacion__c &lt;0</errorConditionFormula>
+        <errorMessage>No se permite introducir días negativos</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Movimiento IR</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Movimientos IR</value>
+    </caseValues>
+    <fields>
+        <label><!-- MIR CAS ENVIADO --></label>
+        <name>MIR_CAS_ENVIADO__c</name>
+    </fields>
+    <fields>
+        <label><!-- FECHA_CIERRE --></label>
+        <name>MIR_DAT_FECHACIERRE__c</name>
+    </fields>
+    <fields>
+        <label><!-- APELLIDOS --></label>
+        <name>MIR_TXT_APELLIDOS__c</name>
+    </fields>
+    <fields>
+        <label><!-- CLIENTE VALOR --></label>
+        <name>MIR_TXT_CLIENTE_VALOR__c</name>
+    </fields>
+    <fields>
+        <label><!-- CONF PENDIENTE --></label>
+        <name>MIR_TXT_CONF_PENDIENTE__c</name>
+    </fields>
+    <fields>
+        <label><!-- DNI --></label>
+        <name>MIR_TXT_DNI__c</name>
+    </fields>
+    <fields>
+        <label><!-- GESTOR RECLAMA --></label>
+        <name>MIR_TXT_GESTOR_RECLAMA__c</name>
+    </fields>
+    <fields>
+        <label><!-- GESTOR SINIESTRO --></label>
+        <name>MIR_TXT_GESTOR_SINIESTRO__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID CASO --></label>
+        <name>MIR_TXT_ID_CASO__c</name>
+    </fields>
+    <fields>
+        <label><!-- ID PROCEDENCIA --></label>
+        <name>MIR_TXT_ID_PROCEDENCIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- NOMBRE --></label>
+        <name>MIR_TXT_NOMBRE__c</name>
+    </fields>
+    <fields>
+        <label><!-- NUM SERVICIO --></label>
+        <name>MIR_TXT_NUM_SERVICIO__c</name>
+    </fields>
+    <fields>
+        <label><!-- NUM SINIESTRO --></label>
+        <name>MIR_TXT_NUM_SINIESTRO__c</name>
+    </fields>
+    <fields>
+        <label><!-- MIR_TXT_OPERACION --></label>
+        <name>MIR_TXT_OPERACION__c</name>
+    </fields>
+    <fields>
+        <label><!-- RECLA NO CERRADA --></label>
+        <name>MIR_TXT_RECLA_NO_CERRADA__c</name>
+    </fields>
+    <fields>
+        <label><!-- SERV INDEMNI --></label>
+        <name>MIR_TXT_SERV_INDEMNI__c</name>
+    </fields>
+    <fields>
+        <label><!-- SINI NO CERRADO --></label>
+        <name>MIR_TXT_SINI_NO_CERRADO__c</name>
+    </fields>
+    <fields>
+        <label><!-- TELEFONO --></label>
+        <name>MIR_TXT_TELEFONO__c</name>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

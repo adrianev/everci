@@ -1,0 +1,223 @@
+<apex:page renderAs="pdf" applyBodyTag="false" standardController="Case" extensions="PDF_ComprobanteServicioControllerExt">
+	<head>
+		<style type="text/css" media="print">
+			@page {
+			@top-center {
+			}
+			@bottom-left {
+			content: element(footer);
+			}
+			margin-left: 3cm;
+			margin-right: 3cm;
+			margin-top: 3cm;
+			margin-bottom: 2cm;
+			}
+			@page :first {
+			@top-center {
+			content: element(header);
+			}
+			@bottom-left {
+			content: element(footer);
+			}
+			margin-left: 3cm;
+			margin-right: 3cm;
+			margin-top: 3cm;
+			margin-bottom: 2cm;
+			}
+			* {
+			margin: 0px;
+			padding: 0px;
+			}
+			div.header {
+			margin-top: 50px;
+			height: 120px;
+			width: 715;
+			position: running(header);
+			}
+			
+			div.content {
+			padding-top: 105px;
+			}
+			
+			div.footer {
+			display: block;
+			padding: 0px;
+			position: running(footer);
+			}
+			div.subfooter {
+			display: inline-block;
+			}
+			div.right {
+			float: right;
+			}
+			.pagenumber:before {
+			content: counter(page);
+			}
+			.pagecount:before {
+			content: counter(pages);
+			}
+		</style>
+	</head>
+	<div class="header">
+		<span style="float:right">
+			<apex:outputfield value="{!Case.CAS_FOR_Codigo_de_barras__c}"></apex:outputfield>
+		</span>
+		<img alt="" height="85.5" src="{!$Resource.BricoDepot}" width="141" />
+		<div style="font-size:10px; font-family:arial,helvetica,sans-serif;">
+			Fecha: 
+			<apex:outputText value="{0,date,MM/dd/yyyy}">
+				<apex:param value="{!Case.CreatedDate}"/>
+			</apex:outputText>
+			<br />
+			Hora: 
+			<apex:outputText value="{0,date,HH:MM a}">
+				<apex:param value="{!Case.CreatedDate}"/>
+			</apex:outputText>
+		</div>
+		<div style="text-align: center;font-size:10px; font-family:arial,helvetica,sans-serif;">COMPROBANTE DE COMPRA DE<br />
+			<strong>{!Case.CAS_LKP_Tipo_Trabajo__r.name}</strong>
+		</div>
+		<br />
+		<hr />
+	</div>
+	<div class="footer">
+		<div style="text-align: center; font-family:arial,helvetica,sans-serif;">
+			<p style="font-size:22px;"><strong>www.bricodepot.es</strong></p>
+			<p style="font-size:7px;">Euro Depôt S.A.U. CIF A-62018064. Calle la Selva, 10. Edificio Inblau A1ª. 08820 El Prat de Llobregat (Barcelona)</p>
+		</div>
+		<br />
+		<hr />
+	</div>
+	<div class="content">
+		<div style="text-align:center; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<table bgcolor="#999999" border="1" bordercolor="black" cellspacing="0" style="margin: 0px auto; width: 250px;">
+				<tbody>
+					<tr>
+						<td><strong>CÓDIGO ACTIVACIÓN</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<br />
+			<table bgcolor="#999999" border="1" bordercolor="black" cellspacing="0" style="margin: 0 auto; width: 250px;">
+				<tbody>
+					<tr>
+						<td><strong>{!Case.Id}</strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="text-align: justify; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<br />
+			<p>El presente documento constituye el comprobante de compra del servicio de instalación a domicilio de los productos adquiridos en los establecimientos comerciales de Bricodepôt.</p>
+			<br />
+			<p><strong>{!Case.CAS_LKP_Tipo_Trabajo__r.name}</strong></p>
+			<br />
+			<p>El precio de la instalación es de <strong>{!Case.cas_div_importe_total__c}€</strong> IVA incluido.</p>
+		</div>
+		<br />
+		<div style="text-align: left; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<table border="1" bordercolor="black" cellspacing="0" style="width: 590px;">
+				<tbody>
+					<tr>
+						<td>
+							<p>El servicio incluye:</p>
+							<br />
+							<apex:repeat var="listaInclusiones" value="{!baremosInc_string}">
+								<p  style="padding-left:4em">{!listaInclusiones}</p>
+								<br />
+							</apex:repeat>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br />
+		<div style="text-align: left; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<table border="1" bordercolor="black" cellspacing="0" style="width: 590px;">
+				<tbody>
+					<tr>
+						<td>
+							<p>Queda excluido del servicio de instalación:</p>
+							<br />
+							 <apex:repeat var="listaExclusiones" value="{!baremosEx_string}">
+								<p  style="padding-left:4em">{!listaExclusiones}</p>
+								<br />
+							</apex:repeat>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		&nbsp;
+		<div style="text-align: left; font-size:10px; font-family:arial,helvetica,sans-serif;">Si necesita realizar cualquier modificación a su cita puede llamar al <strong>teléfono 911 126 996. (9 a 20h, L-V).</strong></div>
+		&nbsp;
+		<div style="text-align: left; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<table border="1" bordercolor="black" cellspacing="0" style="width: 590px;">
+				<tbody>
+					<tr>
+						<td>
+							<br />
+							 <apex:repeat var="listaCondiciones" value="{!baremosRec_string}">
+								<p  style="padding-left:4em">{!listaCondiciones}</p>
+								<br />
+							</apex:repeat>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div style="text-align: justify; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<br />
+			<p><strong>PLAZO</strong></p>
+			<br />
+			<p>En el caso de que desee realizar una modificación de su cita, podrá hacerla llamando al teléfono 911 126 996. Las modificaciones no podrán realizarse con menos de 48 horas laborables antes de la cita.</p>
+			<br />
+			<p><strong>GARANTÍA</strong></p>
+			<br />
+			<p>Les ofrecemos 1 año de garantía sobre la instalación a contar desde la fecha de realización del servicio. Esta garantía no constituye una ampliación de la garantía que tengan los materiales a instalar. La garantía tampoco será aplicable a los materiales en caso de que estos estén defectuosos. Para tener derecho a esta garantía, usted deberá conservar la factura/albarán que se le entregará una vez realizada la instalación.</p>
+			<br />
+			<p><strong>DEVOLUCIÓN</strong></p>
+			<br />
+			<p>No será posible la rescisión del servicio de instalación con menos de 48 horas antes de su prestación. En este caso deberá llamar al número 911 12 69 96 y cancelar la cita con el instalador. Sólo será posible resolver éste servicio fuera del plazo de 48 horas antes citado, si antes del inicio de la instalación del producto, se decidiera ejercer el derecho de desistimiento de la compra venta según lo establecido en la política comercial de BricoDepôt, debiéndose respetar, en cualquier caso, el plazo de 15 días para el ejercicio de ese derecho desde que se produjo su entrega.</p>
+		</div>
+		<br />
+		<hr />
+		<div style="text-align: left; font-size:10px; font-family:arial,helvetica,sans-serif;">
+			<table bordercolor="black" cellpadding="2" cellspacing="5" style="text-align: justify; width: 590px;">
+				<tbody>
+					<tr>
+						<td rowspan="2">El cliente declara haber leído, entendido y aceptado las anteriores condiciones de prestación del servicio de instalación a domicilio y reconoce tener todos los equipos necesarios en su domicilio para la correcta realización del servicio. En caso de no disponer de alguno de los dispositivos el técnico no podrá realizar el servicio y no será devuelto el importe del mismo.</td>
+						<td style="width: 85px;">
+							<table border="1" bordercolor="black" cellspacing="0" style="margin: 0px auto; width: 100px; height: 100px;">
+								<tbody>
+									<tr>
+										<td>
+											<table border="0" cellspacing="0" style="margin: 0px auto; width: 100px; height: 100px;">
+												<tbody>
+													<tr>
+														<td>
+															<br />
+															<br /> 
+															DNI:
+															<br />
+															<br />
+															<br /> 
+															Firma:
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<hr />
+		<br />
+		<img alt="" height="748.64" src="{!$Resource.BricoDepot2}" width="590" />
+	</div>
+</apex:page>

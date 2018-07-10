@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MilestoneType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>El tiempo proporcionado para resolver el problema del cliente. La cuenta atrás comienza cuando se crea el caso, y finaliza cuando el estado del caso cambia a Cerrado.</description>
+    <recurrenceType>none</recurrenceType>
+</MilestoneType>

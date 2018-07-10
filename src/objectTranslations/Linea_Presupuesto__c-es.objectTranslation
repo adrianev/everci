@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Línea de Presupuesto</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Líneas de Presupuesto</value>
+    </caseValues>
+    <fields>
+        <label><!-- Facturación Cliente antes de impuestos --></label>
+        <name>PREL_DIV_Cargar_Cliente_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Cliente después de impuesto --></label>
+        <name>PREL_DIV_Cargar_Cliente_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Cía antes de impuestos --></label>
+        <name>PREL_DIV_Cargar_Comp_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Cía después de impuesto --></label>
+        <name>PREL_DIV_Cargar_Comp_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Total antes de impuestos --></label>
+        <name>PREL_DIV_Facturacion_Total_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Total después de impuestos --></label>
+        <name>PREL_DIV_Facturacion_Total_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Servicio --></label>
+        <name>PREL_LKP_Orden_Trabajo__c</name>
+        <relationshipLabel><!-- Líneas de Presupuesto --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Presupuesto --></label>
+        <name>PREL_LKP_Presupuesto__c</name>
+        <relationshipLabel><!-- Líneas de Presupuesto --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unidades --></label>
+        <name>PREL_NUM_Unidades__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje impuesto cliente/compañía --></label>
+        <name>PREL_POR_Impuesto_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Baremo --></label>
+        <name>PREL_TXT_Codigo_Baremo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Estado --></label>
+        <name>PREL_TXT_Codigo_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Gremio --></label>
+        <name>PREL_TXT_Codigo_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción Baremo --></label>
+        <name>PREL_TXT_Descripcion_Baremo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción --></label>
+        <name>PREL_TXT_Descripcion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones --></label>
+        <name>PREL_TXT_Detalle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estado --></label>
+        <name>PREL_TXT_Estado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>PREL_TXT_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Servicio --></label>
+        <name>PREL_TXT_Num_Orden_Trabajo__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato Línea Presupuesto</layout>
+        <sections>
+            <label><!-- Datos económicos --></label>
+            <section>Datos económicos</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Línea Presupuesto FSL</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa cada una de las versiones de una Póliza o Contrato.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>POLV_CAS_Activa__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Activa</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>POLV_CAS_Corresponde_a_HomeServe__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Campo que representa si la gestión de la póliza/contrato de un cliente asegurado corresponde a HomeServe</description>
+        <externalId>false</externalId>
+        <label>Corresponde a HomeServe</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>POLV_CAS_IsGold__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>VESTA nos indica si la póliza de RGA es o no Oro con este campo</description>
+        <externalId>false</externalId>
+        <label>Póliza Oro RGA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DAT_FechaFin__c</fullName>
+        <description>Fecha de finalización</description>
+        <externalId>false</externalId>
+        <label>Fecha de finalización</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DAT_FechaInicio__c</fullName>
+        <description>Fecha de inicio</description>
+        <externalId>false</externalId>
+        <label>Fecha de inicio</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DAT_Fecha_Alta_CIA__c</fullName>
+        <description>Fecha/hora de alta para CIA</description>
+        <externalId>false</externalId>
+        <label>Fecha de alta para CIA</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DIV_Capital_Contenido__c</fullName>
+        <description>Capital contenido</description>
+        <externalId>false</externalId>
+        <label>Capital Contenido</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DIV_Capital_Continente__c</fullName>
+        <description>Capital continente</description>
+        <externalId>false</externalId>
+        <label>Capital Continente</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DIV_Capital_Objetos__c</fullName>
+        <description>Capital objetos</description>
+        <externalId>false</externalId>
+        <label>Capital Objetos</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>POLV_DIV_Importe_Franquicia__c</fullName>
+        <description>Importe franquicia</description>
+        <externalId>false</externalId>
+        <label>Importe Franquicia</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>POLV_FOR_Activo__c</fullName>
+        <externalId>false</externalId>
+        <formula>POLV_LKP_PolizaContrato__r.POL_LKP_Version_Actual__c = Id</formula>
+        <label>Versión Activa</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>POLV_FOR_Cod_Segmentacion__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( POLV_LKP_PolizaContrato__r.POL_LKP_Compania__r.CUE_TXT_Identificador__c == $Label.IDE_SEGURCAIXA , 
+IF( POLV_TXT_VIPCompany__c == &apos;A&apos; || POLV_TXT_VIPCompany__c == &apos;P&apos;|| POLV_TXT_VIPCompany__c == &apos;S&apos;,&apos;03&apos;, 
+IF ( POLV_TXT_VIPCompany__c == &apos;B&apos; || POLV_TXT_VIPCompany__c == &apos;F&apos;,&apos;02&apos;, 
+IF ( POLV_TXT_VIPCompany__c == &apos;N&apos;,&apos;01&apos;,&apos;01&apos;) 
+) 
+), 
+
+IF( POLV_LKP_PolizaContrato__r.POL_LKP_Compania__r.CUE_TXT_Identificador__c == $Label.IDE_RGA, 
+IF( POLV_CAS_IsGold__c == true , 
+&apos;04&apos;, 
+IF( POLV_LKP_PolizaContrato__r.POL_LKP_Compania__r.CUE_TXT_Identificador__c == $Label.IDE_NATIONALE_NETHERLANDEN, 
+IF( POLV_LKP_PolizaContrato__r.POL_LKP_Producto_Cia__r.PRD_TXT_Cod_Producto__c == &apos;PH6&apos;, 
+&apos;05&apos;, 
+&apos;01&apos;) 
+,&apos;01&apos;) 
+) 
+,&apos;01&apos;))</formula>
+        <label>Segmentación (Código)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_FOR_Direccion__c</fullName>
+        <externalId>false</externalId>
+        <formula>POLV_TXT_Calle__c + &quot;, &quot; + POLV_TXT_Codigo_Postal__c + &quot;,&quot; + POLV_TXT_Poblacion__c + &quot;, &quot; + TEXT(POLV_SEL_Estado_Provincia__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dirección</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_FOR_Segmentacion__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(POLV_FOR_Cod_Segmentacion__c == &apos;01&apos;, &apos;&apos;, 
+IF(POLV_FOR_Cod_Segmentacion__c == &apos;02&apos;, &apos;VALOR&apos;, 
+IF(POLV_FOR_Cod_Segmentacion__c == &apos;03&apos;, &apos;VIP&apos;, 
+IF(POLV_FOR_Cod_Segmentacion__c == &apos;04&apos;, &apos;ORO&apos;, 
+IF(POLV_FOR_Cod_Segmentacion__c == &apos;05&apos;, &apos;PREMIUM&apos;, &apos;&apos;)))) 
+)</formula>
+        <label>Segmentación Póliza</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_LKP_PolizaContrato__c</fullName>
+        <externalId>false</externalId>
+        <label>Póliza/Contrato</label>
+        <referenceTo>ServiceContract</referenceTo>
+        <relationshipLabel>Versiones Póliza/Contrato</relationshipLabel>
+        <relationshipName>Versiones_Poliza_Contrato</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>POLV_NUM_Control_SegurCaixa__c</fullName>
+        <description>Número que identifica si la póliza debe ser atendida por HomeServe u por otra compañía</description>
+        <externalId>false</externalId>
+        <label>Control SegurCaixa</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_NUM_Superficie_Garaje__c</fullName>
+        <description>Superficie garaje</description>
+        <externalId>false</externalId>
+        <label>Superficie garaje</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_NUM_Superficie_Trastero__c</fullName>
+        <description>Superficie trastero</description>
+        <externalId>false</externalId>
+        <label>Superficie trastero</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_NUM_Superficie_Vivienda__c</fullName>
+        <description>Superficie vivienda</description>
+        <externalId>false</externalId>
+        <label>Superficie vivienda</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_NUM_Tipo_Transferencia__c</fullName>
+        <description>Tipo de transferencia</description>
+        <externalId>false</externalId>
+        <label>Tipo de transferencia</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_SEL_Estado_Provincia__c</fullName>
+        <description>Provincia</description>
+        <externalId>false</externalId>
+        <label>Provincia</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Provincias</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>POLV_SEL_Idioma__c</fullName>
+        <description>Idioma</description>
+        <externalId>false</externalId>
+        <label>Idioma</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Idiomas</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>POLV_SEL_Pais__c</fullName>
+        <description>País</description>
+        <externalId>false</externalId>
+        <label>País</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Paises</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>POLV_SEL_Tipo_Riesgo__c</fullName>
+        <description>Representa la tipología de Dirección de Riesgo dónde la póliza ampara al asegurado. El tipo de Riesgo influye en el árbol de decisión de apertura.</description>
+        <externalId>false</externalId>
+        <label>Tipo de riesgo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_de_Riesgo</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Calle__c</fullName>
+        <description>Vía/Domicilio</description>
+        <externalId>false</externalId>
+        <label>Vía/Domicilio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Certificado__c</fullName>
+        <description>Certificado</description>
+        <externalId>false</externalId>
+        <label>Certificado</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Cod_Delegacion__c</fullName>
+        <description>Código de Delegación</description>
+        <externalId>false</externalId>
+        <label>Código de Delegación</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Cod_Sucursal__c</fullName>
+        <description>Código de Sucursal</description>
+        <externalId>false</externalId>
+        <label>Código de Sucursal</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Codigo_Cliente_ING__c</fullName>
+        <description>Código Cliente ING</description>
+        <externalId>false</externalId>
+        <label>Código Cliente ING</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Codigo_Gestor_CIA__c</fullName>
+        <description>Código Gestor</description>
+        <externalId>false</externalId>
+        <label>Código Gestor</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Codigo_Postal__c</fullName>
+        <description>Código  Postal</description>
+        <externalId>false</externalId>
+        <label>Código  Postal</label>
+        <length>15</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Datos_Vivienda__c</fullName>
+        <description>Datos de la vivienda</description>
+        <externalId>false</externalId>
+        <label>Datos de la vivienda</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Identificador Externo</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Poblacion__c</fullName>
+        <description>Población</description>
+        <externalId>false</externalId>
+        <label>Población</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Suplemento_Poliza__c</fullName>
+        <description>Suplemento en la póliza</description>
+        <externalId>false</externalId>
+        <label>Suplemento en la póliza</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Tipo_Divisa__c</fullName>
+        <description>Tipo de divisa</description>
+        <externalId>false</externalId>
+        <label>Tipo de divisa</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_Tipo_Reg_Vivienda__c</fullName>
+        <description>Tipo de régimen de vivienda</description>
+        <externalId>false</externalId>
+        <label>Tipo de régimen de vivienda</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>POLV_TXT_VIPCompany__c</fullName>
+        <description>Código Segmentación SegurCaixa</description>
+        <externalId>false</externalId>
+        <label>Código Segmentación SegurCaixa</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Versión Póliza/Contrato</label>
+    <nameField>
+        <label>Versión Póliza</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Versiones Póliza/Contrato</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Editar_campo_identificador</fullName>
+        <active>true</active>
+        <description>El campo identificador no puede ser modificado</description>
+        <errorConditionFormula>IF(AND(ISCHANGED(POLV_TXT_Identificador__c ),POLV_TXT_Identificador__c &lt;&gt; Name), true, false)</errorConditionFormula>
+        <errorDisplayField>POLV_TXT_Identificador__c</errorDisplayField>
+        <errorMessage>El campo identificador no puede ser modificado</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

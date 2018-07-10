@@ -1,0 +1,2 @@
+<apex:page standardController="Case" extensions="WS_Actualizar_Caso" action="{!actualizarSiniestroVesta}">
+</apex:page>

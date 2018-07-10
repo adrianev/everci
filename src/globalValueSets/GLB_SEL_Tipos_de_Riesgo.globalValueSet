@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>COMERCIO</fullName>
+        <default>false</default>
+        <label>COMERCIO</label>
+    </customValue>
+    <customValue>
+        <fullName>COMUNIDAD</fullName>
+        <default>false</default>
+        <label>COMUNIDAD</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL ALQUILADO</fullName>
+        <default>false</default>
+        <label>LOCAL ALQUILADO</label>
+    </customValue>
+    <customValue>
+        <fullName>LOCAL EN PROPIEDAD</fullName>
+        <default>false</default>
+        <label>LOCAL EN PROPIEDAD</label>
+    </customValue>
+    <customValue>
+        <fullName>OFICINAS Y DESPACHOS</fullName>
+        <default>false</default>
+        <label>OFICINAS Y DESPACHOS</label>
+    </customValue>
+    <customValue>
+        <fullName>PISO</fullName>
+        <default>false</default>
+        <label>PISO</label>
+    </customValue>
+    <customValue>
+        <fullName>PYMES</fullName>
+        <default>false</default>
+        <label>PYMES</label>
+    </customValue>
+    <customValue>
+        <fullName>VIVIENDA UNIFAMILIAR</fullName>
+        <default>false</default>
+        <label>VIVIENDA UNIFAMILIAR</label>
+    </customValue>
+    <masterLabel>Tipos de Riesgo</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

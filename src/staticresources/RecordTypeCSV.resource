@@ -1,0 +1,4 @@
+Id,Name,DeveloperName,SobjectType
+0129E0000005TpgQAE,Cliente B2B/B2B2C secundario,CUE_Cliente_B2B_B2B2C_sec,Account
+0129E0000004pcTQAQ,Cliente B2B/B2B2C principal,CUE_Cliente_B2B_B2B2C_ppal,Account
+0129E0000004pcJQAQ,Cliente Asegurado,CUE_Cliente_Asegurado,Account

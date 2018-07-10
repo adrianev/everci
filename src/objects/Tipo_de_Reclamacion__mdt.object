@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>MTD_TIPORECL_TXT_Identificador__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Identificador</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MTD_TIPORECL_TXT_Tipo_de_la_Reclamacion__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Tipo de la Reclamación</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <label>Tipo de Reclamación</label>
+    <pluralLabel>Tipos de Reclamación</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

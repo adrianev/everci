@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Integración: Traducción a Sistemas Ext.</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Integración: Traducciones a Sistema Ext.</value>
+    </caseValues>
+    <fields>
+        <label><!-- Campo --></label>
+        <name>Campo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Idioma --></label>
+        <name>CodigoIdioma__c</name>
+    </fields>
+    <fields>
+        <label><!-- Id Sistema Externo --></label>
+        <name>IdSistemaExterno__c</name>
+    </fields>
+    <fields>
+        <label><!-- Objeto --></label>
+        <name>Objeto__c</name>
+        <picklistValues>
+            <masterLabel>Account</masterLabel>
+            <translation><!-- Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Case</masterLabel>
+            <translation><!-- Case --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perjudicado_Siniestro__c</masterLabel>
+            <translation><!-- Perjudicado_Siniestro__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tipo_Producto_CIA__c</masterLabel>
+            <translation><!-- Tipo_Producto_CIA__c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkOrder</masterLabel>
+            <translation><!-- WorkOrder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WorkOrderLineItem</masterLabel>
+            <translation><!-- WorkOrderLineItem --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Valor Externo --></label>
+        <name>ValorExterno__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valor Salesforce --></label>
+        <name>ValorSalesforce__c</name>
+    </fields>
+    <gender>Feminine</gender>
+</CustomObjectTranslation>

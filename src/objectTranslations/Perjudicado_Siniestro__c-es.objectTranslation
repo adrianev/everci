@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Perjudicado Siniestro</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Perjudicados Siniestro</value>
+    </caseValues>
+    <fields>
+        <label><!-- Correo electrónico --></label>
+        <name>PRJ_EMA_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Siniestro --></label>
+        <name>PRJ_LKP_Siniestro__c</name>
+        <relationshipLabel><!-- Perjudicados Siniestro --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Otros Daños --></label>
+        <name>PRJ_SEL_Otros_Danos__c</name>
+        <picklistValues>
+            <masterLabel>Alimentos refrigerados</masterLabel>
+            <translation><!-- Alimentos refrigerados --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lesiones Corporales</masterLabel>
+            <translation><!-- Lesiones Corporales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTROS DAÑOS PERJUDICADO</masterLabel>
+            <translation><!-- OTROS DAÑOS PERJUDICADO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Documento --></label>
+        <name>PRJ_SEL_Perjudicado_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>PRJ_SEL_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Situación Daños --></label>
+        <name>PRJ_SEL_Situacion_Danos__c</name>
+        <picklistValues>
+            <masterLabel>ACUARIOS</masterLabel>
+            <translation><!-- ACUARIOS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CRISTALES</masterLabel>
+            <translation><!-- CRISTALES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enseres</masterLabel>
+            <translation><!-- Enseres --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobiliario</masterLabel>
+            <translation><!-- Mobiliario --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pared</masterLabel>
+            <translation><!-- Pared --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Puerta</masterLabel>
+            <translation><!-- Puerta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Suelo</masterLabel>
+            <translation><!-- Suelo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Techo</masterLabel>
+            <translation><!-- Techo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tipo de perjudicado --></label>
+        <name>PRJ_SEL_Tipo_Perjudicado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono Móvil --></label>
+        <name>PRJ_TFN_Movil__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono --></label>
+        <name>PRJ_TFN_Telefono_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono Adicional --></label>
+        <name>PRJ_TFN_Telefono_Adicional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primer Apellido --></label>
+        <name>PRJ_TXT_Apellido_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segundo Apellido --></label>
+        <name>PRJ_TXT_Apellido_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cta. Bancaria: Código Entidad --></label>
+        <name>PRJ_TXT_Cbanc_Codigo_Entidad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cta. Bancaria: Dígito de Control &quot;IBAN&quot; --></label>
+        <name>PRJ_TXT_Cbanc_Digito_Control_IBAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cta. Bancaria: Dígito de Control --></label>
+        <name>PRJ_TXT_Cbanc_Digito_Control__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cta. bancaria: Nº de Cuenta --></label>
+        <name>PRJ_TXT_Cbanc_Numero__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cta. Bancaria: Código País --></label>
+        <name>PRJ_TXT_Cbanc_Pais__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cta.Bancaria: Código Sucursal --></label>
+        <name>PRJ_TXT_Cbanc_Sucursal_Oficina__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código Postal --></label>
+        <name>PRJ_TXT_Codigo_Postal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dirección --></label>
+        <name>PRJ_TXT_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nombre --></label>
+        <name>PRJ_TXT_Nombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- País --></label>
+        <name>PRJ_TXT_Pais__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº Documento --></label>
+        <name>PRJ_TXT_Perjudicado_N_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Población --></label>
+        <name>PRJ_TXT_Poblacion__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Perjudicado Siniestro</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- La longitud de los campos tipo teléfono no puede ser mayor a 20 dígitos. --></errorMessage>
+        <name>Longitud_de_campo_de_telefonos</name>
+    </validationRules>
+</CustomObjectTranslation>

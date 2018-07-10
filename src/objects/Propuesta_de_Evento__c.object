@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Objeto utilizado para modelar el proceso de liquidación y/o facturación a profesionales, clientes y compañías aseguradoras</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>EV_AB_CAS_Confianza_en_la_red__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Confianza en la red</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_CAS_Evento_Ab_Facturado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Evento Facturado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_CAS_Evento_Ab_Liquidado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Evento Liquidado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_CAS_Evento_Automatico__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>este check estará seleccionado cuando el evento sea automático</description>
+        <externalId>false</externalId>
+        <label>Evento automático</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_CAS_Evento_Bloqueado__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Evento Bloqueado</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_DAT_Fecha_Facturacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Facturación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_DAT_Fecha_Liquidacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha Liquidación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_DIV_Importe_a_liquidar_prof__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe a liquidar (Prof)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_DIV_Importe_gestor__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe a Imputar (Gestor)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_DIV_Importe_profesional__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe a Imputar (Prof)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_FOR_Compania__c</fullName>
+        <externalId>false</externalId>
+        <formula>EV_AB_LKP_Caso__r.CAS_LKP_Compania__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Compañia</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EV_AB_FOR_Descripcion__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(TEXT(EV_AB_SEL_Descripcion__c),
+&apos;E01&apos;,&apos;Penalización de Guardia&apos;,
+&apos;E02&apos;,&apos;Bonificación de Guardia&apos;,
+&apos;E03&apos;,&apos;Pago Desplazamiento&apos;,
+&apos;E04&apos;,&apos;Cobro Inspección Servicio&apos;,
+&apos;E05&apos;,&apos;Impago liquidación&apos;,
+&apos;E06&apos;,&apos;Gasto gestión impago liquidación&apos;,
+&apos;E11&apos;,&apos;Cobro Reclamación&apos;,
+&apos;E15&apos;,&apos;Pago Tramitación Errónea&apos;,
+&apos;E16&apos;,&apos;Pago Gestión Errónea PER&apos;,
+&apos;E17&apos;,&apos;Indemnización por Daños&apos;,
+&apos;E18&apos;,&apos;Cobro Diferencia detectada en Auditoría&apos;,
+&apos;E19&apos;,&apos;Sobrecoste Gestión por Tramitación de Factura&apos;,
+&apos;E20&apos;,&apos;Devolución Sobrecoste Gestión por Tramitación de Factura&apos;,
+&apos;E21&apos;,&apos;Sobrecoste de Gestión Telefónica&apos;,
+&apos;E22&apos;,&apos;Devolución Sobrecoste Gestión Telefónica&apos;,
+&apos;E29&apos;,&apos;Penalización por Desasignación de Servicio&apos;,
+&apos;E37&apos;,&apos;Devolución penalización por desasignación&apos;,
+&apos;E30&apos;,&apos;Penalización por &quot;Mala Calidad&quot;&apos;,
+&apos;E31&apos;,&apos;Penalización por entregar &quot;Albarán Sin Firma&quot; del Cliente&apos;,
+&apos;E34&apos;,&apos;Devolución penalización Albarán Sin firma&apos;,
+&apos;E32&apos;,&apos;Penalización por &quot;Demora&quot; en la cita con el Cliente&apos;,
+&apos;E33&apos;,&apos;Penalización por &quot;Servicio No Finalizado&quot; y Cerrado&apos;,
+&apos;E36&apos;,&apos;Pago reparaciones MENBERSHIP SAE&apos;,
+&apos;E25&apos;,&apos;Penalización Albaranes de Asistencia&apos;,
+&apos;E26&apos;,&apos;Devolución Penalización Albaranes de Asistencia&apos;,
+&apos;E27&apos;,&apos;Penalización Anulación Servicios&apos;, 
+&apos;E23&apos;,&apos;Cobro de uniformes&apos;,
+&apos;E24&apos;,&apos;Cobro rotulación y pintura furgonetas&apos;,
+&apos;E28&apos;,&apos;Cobro Rappel Profesionales AF&apos;,
+&apos;E35&apos;,&apos;Pago regularización E28&apos;,
+&apos;E39&apos;,&apos;Pago regularización E23&apos;,
+&apos;E12&apos;,&apos;Pago Reclamación&apos;,
+&apos;E111&apos;,&apos;Imputación a Gestor&apos;,
+&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Descripción</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EV_AB_FOR_Direccion_Territorial__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(EV_AB_LKP_Caso__r.CAS_SEL_Direccion_Territorial__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dirección Territorial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EV_AB_FOR_Procedencia__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK(EV_AB_LKP_Caso__c) , EV_AB_LKP_Orden_de_Trabajo__r.Case.CAS_LKP_Procedencia__r.Name , EV_AB_LKP_Caso__r.CAS_LKP_Procedencia__r.Name)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Procedencia</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Abono__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Abono padre</label>
+        <referenceTo>Propuesta_de_Abono__c</referenceTo>
+        <relationshipLabel>Propuestas de Eventos</relationshipLabel>
+        <relationshipName>Propuestas_de_Eventos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Caso relacionado al Evento/Abono</description>
+        <externalId>false</externalId>
+        <label>Intervención</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Propuestas de Eventos</relationshipLabel>
+        <relationshipName>EV_AB_REL_Caso</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Cuenta_Profesional_Historico__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Cuenta Profesional Contrato (Histórico) vinculada al Evento. Representa la FK al objeto Account. Para resolver esta FK en integración (servicios web) y migración (plantillas DataLoader) se debe informar el valor del campo External ID del objeto Account (Account.CUE_TXT_Identificador): Código único del Profesional Contrato</description>
+        <externalId>false</externalId>
+        <label>Cuenta Profesional (Histórico)</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>El valor no existe o no coinciden los criterios de filtro. La cuenta debe ser un Profesional Contrato.</errorMessage>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>equals</operation>
+                <value>Profesional Contrato</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Propuestas de Eventos histórico</relationshipLabel>
+        <relationshipName>Propuestas_de_Eventos1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Cuenta_profesional__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Campo para vincular eventos a cuentas de profesional</description>
+        <externalId>false</externalId>
+        <label>Cuenta Profesional Contrato</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Account.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Profesional Contrato</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Propuestas de Eventos</relationshipLabel>
+        <relationshipName>Propuestas_de_Eventos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Imputar_a_gestor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Imputar a (Gestor)</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Propuestas_de_Eventos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Imputar_a_profesional__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Imputar a (Prof)</label>
+        <referenceTo>ServiceResource</referenceTo>
+        <relationshipLabel>Propuestas de Eventos (Imputar a)</relationshipLabel>
+        <relationshipName>Propuestas_de_Eventos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Liquidar_a_prof__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Liquidar a</label>
+        <referenceTo>ServiceResource</referenceTo>
+        <relationshipLabel>Propuestas de Eventos (Liquidar a)</relationshipLabel>
+        <relationshipName>Propuestas_de_Eventos1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Orden_de_Trabajo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Orden de Trabajo relacionada al Evento/Abono</description>
+        <externalId>false</externalId>
+        <label>Número Servicio</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipName>EV_AB_REL_Orden_de_Trabajo</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_LKP_Propuesta_de_Evento_Economico__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Evento padre</label>
+        <referenceTo>Propuesta_de_Evento__c</referenceTo>
+        <relationshipLabel>Propuestas de Eventos</relationshipLabel>
+        <relationshipName>Propuestas_de_Eventos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Departamento_Imputacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Departamento Imputación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Comercial</fullName>
+                    <default>false</default>
+                    <label>Comercial</label>
+                </value>
+                <value>
+                    <fullName>IT</fullName>
+                    <default>false</default>
+                    <label>IT</label>
+                </value>
+                <value>
+                    <fullName>Otros</fullName>
+                    <default>false</default>
+                    <label>Otros</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Departamento_Solicitante__c</fullName>
+        <externalId>false</externalId>
+        <label>Departamento Solicitante</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Departamento_Solicitante</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Descripcion__c</fullName>
+        <externalId>false</externalId>
+        <label>Código</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GBL_SEL_Codigo_evento</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Estado__c</fullName>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>02</fullName>
+                    <default>false</default>
+                    <label>Aprobado</label>
+                </value>
+                <value>
+                    <fullName>03</fullName>
+                    <default>false</default>
+                    <label>Rechazado</label>
+                </value>
+                <value>
+                    <fullName>04</fullName>
+                    <default>true</default>
+                    <label>Nuevo</label>
+                </value>
+                <value>
+                    <fullName>01</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>En Curso</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Motivo_devolucion__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo devolución</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>EV_AB_SEL_Descripcion__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>01</fullName>
+                    <default>false</default>
+                    <label>Error en revisión de albarán</label>
+                </value>
+                <value>
+                    <fullName>02</fullName>
+                    <default>false</default>
+                    <label>Error Informático</label>
+                </value>
+                <value>
+                    <fullName>03</fullName>
+                    <default>false</default>
+                    <label>Pago diferencia material</label>
+                </value>
+                <value>
+                    <fullName>04</fullName>
+                    <default>false</default>
+                    <label>Error apertura</label>
+                </value>
+                <value>
+                    <fullName>05</fullName>
+                    <default>false</default>
+                    <label>Error confirmación</label>
+                </value>
+                <value>
+                    <fullName>06</fullName>
+                    <default>false</default>
+                    <label>Error en tramitación</label>
+                </value>
+                <value>
+                    <fullName>07</fullName>
+                    <default>false</default>
+                    <label>Servicio anulado</label>
+                </value>
+                <value>
+                    <fullName>08</fullName>
+                    <default>false</default>
+                    <label>Visita por reclamación</label>
+                </value>
+                <value>
+                    <fullName>09</fullName>
+                    <default>false</default>
+                    <label>OTROS</label>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>ERROR TRAMITACIÓN</label>
+                </value>
+                <value>
+                    <fullName>11</fullName>
+                    <default>false</default>
+                    <label>TRABAJOS MAL REALIZADO</label>
+                </value>
+                <value>
+                    <fullName>12</fullName>
+                    <default>false</default>
+                    <label>SUPERA LÍMITE</label>
+                </value>
+                <value>
+                    <fullName>13</fullName>
+                    <default>false</default>
+                    <label>DEVOLUCIÓN PRIMA</label>
+                </value>
+                <value>
+                    <fullName>14</fullName>
+                    <default>false</default>
+                    <label>LOCALIZACIÓN ERRÓNEA</label>
+                </value>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                    <label>DEVOLUCIÓN CONTADO</label>
+                </value>
+                <value>
+                    <fullName>16</fullName>
+                    <default>false</default>
+                    <label>NO COBERTURA</label>
+                </value>
+                <value>
+                    <fullName>17</fullName>
+                    <default>false</default>
+                    <label>DESPERFECTOS</label>
+                </value>
+                <value>
+                    <fullName>18</fullName>
+                    <default>false</default>
+                    <label>ERROR INFORMATICO</label>
+                </value>
+                <value>
+                    <fullName>19</fullName>
+                    <default>false</default>
+                    <label>ERROR VALORACIONES</label>
+                </value>
+                <value>
+                    <fullName>20</fullName>
+                    <default>false</default>
+                    <label>DEVOLUCIÓN VISITA</label>
+                </value>
+                <value>
+                    <fullName>21</fullName>
+                    <default>false</default>
+                    <label>GESTO COMERCIAL</label>
+                </value>
+                <value>
+                    <fullName>22</fullName>
+                    <default>false</default>
+                    <label>MINUTA PERITO</label>
+                </value>
+                <value>
+                    <fullName>23</fullName>
+                    <default>false</default>
+                    <label>ERROR IVA</label>
+                </value>
+                <value>
+                    <fullName>24</fullName>
+                    <default>false</default>
+                    <label>EXCESO MANO DE OBRA</label>
+                </value>
+                <value>
+                    <fullName>25</fullName>
+                    <default>false</default>
+                    <label>EXCESO MATERIAL</label>
+                </value>
+                <value>
+                    <fullName>26</fullName>
+                    <default>false</default>
+                    <label>EXCESO MANO DE OBRA Y MATERIAL</label>
+                </value>
+                <value>
+                    <fullName>27</fullName>
+                    <default>false</default>
+                    <label>DEVOLUCIÓN FEE</label>
+                </value>
+                <value>
+                    <fullName>28</fullName>
+                    <default>false</default>
+                    <label>INDEMNIZACIÓN</label>
+                </value>
+                <value>
+                    <fullName>29</fullName>
+                    <default>false</default>
+                    <label>ERROR VALORACIONES (BAREMO CIA)</label>
+                </value>
+                <value>
+                    <fullName>30</fullName>
+                    <default>false</default>
+                    <label>ERROR CEVECO</label>
+                </value>
+                <value>
+                    <fullName>31</fullName>
+                    <default>false</default>
+                    <label>ERROR LZ</label>
+                </value>
+                <value>
+                    <fullName>32</fullName>
+                    <default>false</default>
+                    <label>INTERPRETACIÓN CEVECO</label>
+                </value>
+                <value>
+                    <fullName>33</fullName>
+                    <default>false</default>
+                    <label>INTERPRETACIÓN LZ</label>
+                </value>
+                <value>
+                    <fullName>34</fullName>
+                    <default>false</default>
+                    <label>M2/UNIDADES</label>
+                </value>
+                <value>
+                    <fullName>35</fullName>
+                    <default>false</default>
+                    <label>ERROR HOMESERVE</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>E22</controllingFieldValue>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>09</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E22</controllingFieldValue>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>35</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>10</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>11</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>12</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>13</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>14</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>15</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>16</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>17</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>18</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>19</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>20</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>21</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>22</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>23</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>24</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>25</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>26</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>27</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>28</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>29</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>30</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>31</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>32</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>33</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <valueName>34</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>01</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>02</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>03</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>04</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>05</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>06</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>07</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <valueName>08</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Procedencias_bloqueadas__c</fullName>
+        <externalId>false</externalId>
+        <label>Procedencias bloqueadas</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GBL_SEL_N_Procedencia</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Tipo_de_Evento__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Evento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>EV_AB_SEL_Descripcion__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cobro</fullName>
+                    <default>false</default>
+                    <label>Cobro</label>
+                </value>
+                <value>
+                    <fullName>Pago</fullName>
+                    <default>false</default>
+                    <label>Pago</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>E25</controllingFieldValue>
+                <controllingFieldValue>E23</controllingFieldValue>
+                <controllingFieldValue>E24</controllingFieldValue>
+                <controllingFieldValue>E28</controllingFieldValue>
+                <controllingFieldValue>E111</controllingFieldValue>
+                <controllingFieldValue>E05</controllingFieldValue>
+                <controllingFieldValue>E19</controllingFieldValue>
+                <controllingFieldValue>E06</controllingFieldValue>
+                <controllingFieldValue>E27</controllingFieldValue>
+                <controllingFieldValue>E21</controllingFieldValue>
+                <controllingFieldValue>E29</controllingFieldValue>
+                <controllingFieldValue>E30</controllingFieldValue>
+                <controllingFieldValue>E31</controllingFieldValue>
+                <controllingFieldValue>E32</controllingFieldValue>
+                <controllingFieldValue>E01</controllingFieldValue>
+                <controllingFieldValue>E04</controllingFieldValue>
+                <controllingFieldValue>E11</controllingFieldValue>
+                <controllingFieldValue>E17</controllingFieldValue>
+                <controllingFieldValue>E18</controllingFieldValue>
+                <controllingFieldValue>E33</controllingFieldValue>
+                <valueName>Cobro</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>E26</controllingFieldValue>
+                <controllingFieldValue>E35</controllingFieldValue>
+                <controllingFieldValue>E12</controllingFieldValue>
+                <controllingFieldValue>E39</controllingFieldValue>
+                <controllingFieldValue>E20</controllingFieldValue>
+                <controllingFieldValue>E22</controllingFieldValue>
+                <controllingFieldValue>E37</controllingFieldValue>
+                <controllingFieldValue>E34</controllingFieldValue>
+                <controllingFieldValue>E02</controllingFieldValue>
+                <controllingFieldValue>E03</controllingFieldValue>
+                <controllingFieldValue>E15</controllingFieldValue>
+                <controllingFieldValue>E16</controllingFieldValue>
+                <controllingFieldValue>E36</controllingFieldValue>
+                <valueName>Pago</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EV_AB_SEL_Tipo_de_red__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de red</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GBL_SEL_Tipos_de_red</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EV_AB_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Identificador externo para la carga de eventos</description>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>EV_AB_TXT_Observaciones__c</fullName>
+        <description>Campo que será obligatorio  rellenar si se rechaza la propuesta de evento económico.</description>
+        <externalId>false</externalId>
+        <label>Observaciones</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>EV_DIV_Importe_a_imputar_Departamento__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe a imputar (Departamento)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Propuesta de Evento Económico</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>EV_AB_LKP_Caso__c</columns>
+        <columns>EV_AB_FOR_Descripcion__c</columns>
+        <columns>EV_AB_SEL_Estado__c</columns>
+        <columns>EV_AB_LKP_Propuesta_de_Evento_Economico__c</columns>
+        <columns>EV_AB_CAS_Evento_Ab_Facturado__c</columns>
+        <columns>EV_AB_SEL_Descripcion__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <displayFormat>EV-{0000000}</displayFormat>
+        <label>Evento</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Propuestas de Eventos</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Cobro_Imputacion</fullName>
+        <active>true</active>
+        <errorConditionFormula>!$Setup.Baipas__c.Saltar_Regla_Validacion__c
+
+&amp;&amp;
+
+ISPICKVAL(EV_AB_SEL_Tipo_de_Evento__c , &apos;Cobro&apos;)
+
+&amp;&amp;
+
+(
+
+(
+
+ ISBLANK(EV_AB_LKP_Imputar_a_gestor__c)  &amp;&amp; 
+
+ ISBLANK(EV_AB_LKP_Imputar_a_profesional__c) &amp;&amp; 
+
+ ISBLANK(EV_DIV_Importe_a_imputar_Departamento__c )
+
+)
+
+||
+
+NOT( ISBLANK( EV_AB_LKP_Liquidar_a_prof__c ))
+
+)</errorConditionFormula>
+        <errorMessage>El evento es de cobro, debe rellenar los campos correspondientes a imputación. Los campos de liquidación no deben estar rellenos.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Gestor_Ev_estado_Nuevo</fullName>
+        <active>true</active>
+        <description>El gestor de reclamaciones solamente puede crear Eventos manuales en estado &quot;Nuevo&quot;.</description>
+        <errorConditionFormula>AND($Profile.Name = &quot;Gestor Reclamaciones&quot;,
+     EV_AB_CAS_Evento_Automatico__c == false,
+     NOT(ISPICKVAL(EV_AB_SEL_Estado__c,&quot;04&quot;)),
+      ISNEW()
+         
+)</errorConditionFormula>
+        <errorMessage>El evento solo se puede crear en estado &quot;Nuevo&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Importes_incorrectos</fullName>
+        <active>true</active>
+        <errorConditionFormula>!$Setup.Baipas__c.Saltar_Regla_Validacion__c
+
+&amp;&amp;
+
+CASE( TEXT(EV_AB_SEL_Descripcion__c) ,
+ &apos;E19&apos;,  IF(AND(EV_AB_DIV_Importe_profesional__c &lt;&gt; 10,
+             EV_AB_DIV_Importe_profesional__c &lt;&gt; 40,
+             EV_AB_DIV_Importe_profesional__c &lt;&gt; 90),1,0),
+ &apos;E02&apos;, IF(EV_AB_DIV_Importe_a_liquidar_prof__c &lt;&gt; 90,1,0),
+ &apos;E25&apos;, IF(EV_AB_DIV_Importe_profesional__c &lt;&gt; 15,1,0),
+ &apos;E26&apos;, IF(EV_AB_DIV_Importe_a_liquidar_prof__c &lt;&gt; 15,1,0),
+ &apos;E37&apos;, IF(EV_AB_DIV_Importe_a_liquidar_prof__c &lt;&gt; 25,1,0),
+ &apos;E30&apos;, IF(EV_AB_DIV_Importe_profesional__c &lt;&gt; 30,1,0),
+ &apos;E31&apos;, IF(EV_AB_DIV_Importe_profesional__c &lt;&gt; 25,1,0),
+ &apos;E32&apos;, IF(EV_AB_DIV_Importe_profesional__c &lt;&gt; 15,1,0),
+ &apos;E33&apos;, IF(EV_AB_DIV_Importe_profesional__c &lt;&gt; 20,1,0),
+ &apos;E34&apos;, IF(EV_AB_DIV_Importe_a_liquidar_prof__c &lt;&gt; 25,1,0),
+ 0) = 1</errorConditionFormula>
+        <errorMessage>El importe introducido es incorrecto para este código de evento.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_se_puede_modificar_evento_liquidado</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISCHANGED(EV_AB_CAS_Evento_Ab_Facturado__c)), EV_AB_CAS_Evento_Ab_Facturado__c,NOT(ISNEW()),
+!$Setup.Baipas__c.Saltar_Regla_Validacion__c)</errorConditionFormula>
+        <errorMessage>No se pueden modificar eventos que ya estén liquidados</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Pago_Liquidacion</fullName>
+        <active>true</active>
+        <errorConditionFormula>!$Setup.Baipas__c.Saltar_Regla_Validacion__c
+
+&amp;&amp;
+
+ISPICKVAL(EV_AB_SEL_Tipo_de_Evento__c , &apos;Pago&apos;)
+
+&amp;&amp;
+(
+(
+
+ NOT(ISBLANK(EV_AB_LKP_Imputar_a_gestor__c))  ||
+
+ NOT(ISBLANK(EV_AB_LKP_Imputar_a_profesional__c)) ||
+
+ NOT(ISBLANK(EV_DIV_Importe_a_imputar_Departamento__c))
+
+)
+
+||
+
+ISBLANK( EV_AB_LKP_Liquidar_a_prof__c )
+)</errorConditionFormula>
+        <errorMessage>El evento es de pago, debe rellenar los campos correspondientes a liquidación. Los campos de  imputación no deben estar rellenos.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rellenar_Observaciones_Evento_Rechazado</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(EV_AB_SEL_Estado__c ,&quot;03&quot;)&amp;&amp; (EV_AB_TXT_Observaciones__c = &apos;&apos;)</errorConditionFormula>
+        <errorMessage>Si se rechaza la propuesta de Evento hay que indicar el motivo en el campo &apos;Observaciones&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rellenar_registro_asociado</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISBLANK( EV_AB_LKP_Cuenta_profesional__c ),ISBLANK( EV_AB_LKP_Caso__c ),ISBLANK( EV_AB_LKP_Orden_de_Trabajo__c ))</errorConditionFormula>
+        <errorMessage>Es necesario asociar al evento un servicio, una cuenta o una intervención.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Nueva_propuesta_de_evento</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Nueva propuesta de evento</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/26.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/30.0/integration.js&quot;)} 
+
+var idObjeto = &quot;{!WorkOrder.Id}&quot;;
+
+var url = &apos;&apos;;
+
+if(idObjeto != &apos;&apos;){
+url = &apos;/a17/e?CF00N9E000001iIzy={!WorkOrder.WorkOrderNumber}&amp;CF00N9E000001iIzy_lkid={!WorkOrder.Id}&amp;CF00N9E000001iJ0N={!WorkOrder.Case}&amp;CF00N9E000001iJ0N_lkid={!WorkOrder.CaseId}&amp;retURL=/{!WorkOrder.Id}&apos;;
+
+} else {
+idObjeto = &quot;{!Case.Id}&quot;;
+if(idObjeto != &apos;&apos;){
+url = &apos;/a17/e?CF00N9E000001iJ0N={!Case.CaseNumber}&amp;CF00N9E000001iJ0N_lkid={!Case.Id}&amp;retURL=/{!Case.Id}&apos;;
+} else {
+alert(&apos;ERROR: Este botón no está diseñado para ser utilizado aquí&apos;);
+}
+
+}
+
+if(url != &apos;&apos;){
+
+if (sforce.console.isInConsole()) { 
+srcUp(url+&apos;&amp;isdtp=vw&apos;);
+} else {
+window.location = url;
+}
+
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>enviar_a_flujo_de_aprobacion</fullName>
+        <availability>online</availability>
+        <description>cambia el estado del evento a aprobado</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>enviar a flujo de aprobacion &gt;&gt;</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/42.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/42.0/apex.js&quot;)}
+debugger;
+
+var eventoHijo = &quot;{!Propuesta_de_Evento__c.EV_AB_LKP_Propuesta_de_Evento_Economico__c}&quot;;
+
+if (eventoHijo == null  || eventoHijo == &apos;&apos;){
+  var url = new URL(window.location.href); 
+  var eventoId = url.pathname;
+
+  eventoId= eventoId.substring(1,eventoId.length);
+
+  var isUpdate = sforce.apex.execute(&quot;Util_Abonos_Y_Eventos&quot;,&quot;cambiarEstadoEvento&quot;, 
+  {eventoId:eventoId});
+
+  if (isUpdate == &apos;true&apos;) {
+     document.location.reload(true);
+     alert(&apos;Se ha enviado al proceso de aprobación con éxito&apos;);
+     }else if(isUpdate == &apos;false&apos;){
+           alert(&apos;El estado del evento es distinto a nuevo&apos;);
+     }else{
+         alert(&quot;{!$Label.ERROR_PERMISOS_USUARIO}&quot;);
+      }
+
+
+}
+else {
+  alert(&quot;{!$Label.WARNING_EVENTO_PADRE}&quot;);
+}</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Ayuda árbol: Grupo de causa</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Grupo de causa</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Tipo de avería</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Tipo de avería</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Detalle de la avería</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Detalle de la avería</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Causa de la avería</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Causa de la avería</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Daños propios</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Daños propios</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Daños a Perjudicados</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Daños a Perjudicados</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Argumentario rechazo</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Argumentario rechazo</label>
+    </customValue>
+    <customValue>
+        <fullName>Ayuda árbol: Indemnizable</fullName>
+        <default>false</default>
+        <label>Ayuda árbol: Indemnizable</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <label>Póliza Pertenece a Multiasistencias</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>Póliza Pertenece</label>
+    </customValue>
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>No existen resultados</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <label>Póliza de Baja</label>
+    </customValue>
+    <description>Tipos de ayudas que se muestran en las páginas VF de la aplicación</description>
+    <masterLabel>Tipos de ayuda</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa el registro histórico de integraciones entre Salesforce y otros sistemas de forma que se puedan monitorizar los estados de los envíos y los errores obtenidos.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>BIT_FOR_Id_Fichero__c</fullName>
+        <externalId>false</externalId>
+        <formula>BIT_LKP_Envio_Programado_CIA__r.ENV_LKP_Fichero__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id Fichero</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Compania__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Compañía</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora</relationshipLabel>
+        <relationshipName>Integraciones_Bitacora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Envio_Programado_CIA__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Envío Programado CIA</label>
+        <referenceTo>INT_Envio_Programado__c</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora</relationshipLabel>
+        <relationshipName>Integraciones_Bit_cora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Id_Registro_caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Registro de caso que falla en una integración</description>
+        <externalId>false</externalId>
+        <label>Registro no integrado caso</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora</relationshipLabel>
+        <relationshipName>Integraciones_Bitacora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Id_Registro_contacto__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Registro de contacto que falla en una integración</description>
+        <externalId>false</externalId>
+        <label>Registro no integrado contacto</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora</relationshipLabel>
+        <relationshipName>Integraciones_Bit_cora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Id_Registro_cuenta__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Registro de compañia/cliente/profesional que falla en una integración</description>
+        <externalId>false</externalId>
+        <label>Registro no integrado cuenta</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora (Registro no integrado cuenta)</relationshipLabel>
+        <relationshipName>Integraciones_Bit_cora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Id_Registro_factura__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Registro de factura que falla en una integración</description>
+        <externalId>false</externalId>
+        <label>Registro no integrado factura</label>
+        <referenceTo>Factura__c</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora</relationshipLabel>
+        <relationshipName>Integraciones_Bit_cora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Id_Registro_orden__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Registro de orden de trabajo que falla en una integración</description>
+        <externalId>false</externalId>
+        <label>Registro no integrado orden</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipLabel>Integraciones: Bitácora</relationshipLabel>
+        <relationshipName>Integraciones_Bit_cora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_LKP_Id_Usuario__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Lookup al Id de usuario para el Callout de CPQ</description>
+        <externalId>false</externalId>
+        <label>Usuario</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Integraciones_Bit_cora</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BIT_NUM_Lote__c</fullName>
+        <description>Indica el número de lote de envío</description>
+        <externalId>false</externalId>
+        <label>Lote</label>
+        <precision>6</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_NUM_Orden_RGA__c</fullName>
+        <description>Orden de integración de llamadas a RGA. Debido a la casuística concreta de este sistema que no está operativo las 24 horas de la semana, es necesario indicar el orden de las llamadas.</description>
+        <externalId>false</externalId>
+        <label>Orden RGA</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_NUM_Reintentos__c</fullName>
+        <description>Contador de reintentos realizados tras la integración errónea contra un sistema tercero.</description>
+        <externalId>false</externalId>
+        <label>Reintentos</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_SEL_Estado__c</fullName>
+        <description>Indica el estado del movimiento</description>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Estados_Bitacora</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BIT_SEL_Tipo_Integracion__c</fullName>
+        <description>Tipo de integración para el registro en la bitácora</description>
+        <externalId>false</externalId>
+        <label>Tipo de Integración</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_de_Integracion</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_EndPoint__c</fullName>
+        <description>Almacenamos el EndPoint del servicio web del tercero (PSI) para poder tener almacenada la información y se pueda recuperar en la lógica que se va a implementar de re intentos.</description>
+        <externalId>false</externalId>
+        <label>EndPoint</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Error__c</fullName>
+        <description>Indica los errores en el envío del movimiento</description>
+        <externalId>false</externalId>
+        <label>Error</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Id_Secuencia_Indemnizables__c</fullName>
+        <description>Campo para almacenar el identificador de la secuencia devuelva por Previsora.</description>
+        <externalId>false</externalId>
+        <label>Secuencia Previsora</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Json__c</fullName>
+        <description>Campo que almacena el Json con la información de la petición que se le va a enviar al sistema tercero. Con este campo tendremos la posibilidad de revisar la información de salida y poder depurar.</description>
+        <externalId>false</externalId>
+        <label>Json</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Method__c</fullName>
+        <description>El tipo de operación a realizar en la invocación de callouts por reintento.</description>
+        <externalId>false</externalId>
+        <label>Método</label>
+        <length>7</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Nombre_Fichero__c</fullName>
+        <description>Nombre del fichero enviado</description>
+        <externalId>false</externalId>
+        <label>Nombre del Fichero</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Nombre_Integracion__c</fullName>
+        <description>Será necesario introducir el código de la integración de negocio que ha fallado</description>
+        <externalId>false</externalId>
+        <label>Nombre Integración Web</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BIT_TXT_Sistema_externo__c</fullName>
+        <description>Nombre literal del sistema externo al que va dirigida un callout.</description>
+        <externalId>false</externalId>
+        <label>Sistema externo</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Feminine</gender>
+    <label>Integraciones: Bitácora</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>BIT_SEL_Tipo_Integracion__c</columns>
+        <columns>BIT_NUM_Lote__c</columns>
+        <columns>BIT_SEL_Estado__c</columns>
+        <columns>BIT_TXT_Error__c</columns>
+        <columns>BIT_TXT_Nombre_Fichero__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>contains</operation>
+            <value>Pablo</value>
+        </filters>
+        <label>Busqueda</label>
+        <language>es</language>
+    </listViews>
+    <listViews>
+        <fullName>Bitacora_Ficheros</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>BIT_LKP_Compania__c</columns>
+        <columns>BIT_SEL_Estado__c</columns>
+        <columns>BIT_TXT_Error__c</columns>
+        <columns>BIT_LKP_Envio_Programado_CIA__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>INT_Bitacora__c.Fichero</value>
+        </filters>
+        <label>Bitácora Ficheros</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <displayFormat>BIT{000000}</displayFormat>
+        <label>Identificador</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Integraciones: Bitácora</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Fichero</fullName>
+        <active>true</active>
+        <description>Registros de integraciones por fichero</description>
+        <label>Fichero</label>
+        <picklistValues>
+            <picklist>BIT_SEL_Estado__c</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>04</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>07</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BIT_SEL_Tipo_Integracion__c</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Servicio_Web</fullName>
+        <active>true</active>
+        <description>Registros de integraciones web</description>
+        <label>Servicio Web</label>
+        <picklistValues>
+            <picklist>BIT_SEL_Estado__c</picklist>
+            <values>
+                <fullName>01</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>02</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>03</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>06</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>08</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>BIT_SEL_Tipo_Integracion__c</picklist>
+            <values>
+                <fullName>02</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>BTN_Reintentar_Llamada</fullName>
+        <availability>online</availability>
+        <description>Botón para reintentar llamada/callout</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Reintentar Llamada</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)}
+var body = &apos;{!INT_Bitacora__c.BIT_TXT_Json__c}&apos;;
+var endPoint = &apos;{!INT_Bitacora__c.BIT_TXT_EndPoint__c}&apos;;
+var id = &apos;{!INT_Bitacora__c.Name}&apos;;
+var result = sforce.apex.execute(&quot;Reintento_Llamada_Controller&quot;,&quot;solicitarReintento&quot;,{body:body,endPoint:endPoint, identificador:id});
+
+window.location.reload();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Reenviar_Bitacora</fullName>
+        <availability>online</availability>
+        <description>Botón para reenvío de bitácora (RecordType Fichero)</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Reenviar Bitácora</masterLabel>
+        <openType>sidebar</openType>
+        <page>Reenvio_Bitacora</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

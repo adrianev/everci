@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa las personas que están afectadas por un Siniestro.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>PRJ_EMA_Email__c</fullName>
+        <description>Email del perjudicado del siniestro</description>
+        <externalId>false</externalId>
+        <label>Correo electrónico</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_LKP_Siniestro__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Siniestro al que se vincula el Perjudicado. Representa la FK al objeto Case. Para resolver esta FK en integración (servicios web) y migración (plantillas DataLoader) se debe informar el valor del campo External ID del objeto Case (Case.CAS_TXT_Identificador__c) para Siniestros: &quot;[Código de CIA]_[Nº de Siniestro HomeServe]&quot;</description>
+        <externalId>false</externalId>
+        <label>Siniestro</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Perjudicados Siniestro</relationshipLabel>
+        <relationshipName>PER_REL_Siniestro</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PRJ_SEL_Otros_Danos__c</fullName>
+        <description>Otros Daños (Lista de Selección múltiple).</description>
+        <externalId>false</externalId>
+        <label>Otros Daños</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Alimentos refrigerados</fullName>
+                    <default>false</default>
+                    <label>Alimentos refrigerados</label>
+                </value>
+                <value>
+                    <fullName>LESIONES CORPORALES</fullName>
+                    <default>false</default>
+                    <label>Lesiones Corporales</label>
+                </value>
+                <value>
+                    <fullName>OTROS DAÑOS PERJUDICADO</fullName>
+                    <default>false</default>
+                    <label>OTROS DAÑOS PERJUDICADO</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PRJ_SEL_Perjudicado_Tipo_Documento__c</fullName>
+        <description>Tipo de documento del perjudicado del siniestro</description>
+        <externalId>false</externalId>
+        <label>Tipo de Documento</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_DocumentoId</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PRJ_SEL_Provincia__c</fullName>
+        <description>Provincia del perjudicado.</description>
+        <externalId>false</externalId>
+        <label>Provincia</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Provincias</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PRJ_SEL_Situacion_Danos__c</fullName>
+        <externalId>false</externalId>
+        <label>Situación Daños</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ACUARIOS</fullName>
+                    <default>false</default>
+                    <label>ACUARIOS</label>
+                </value>
+                <value>
+                    <fullName>TECHO</fullName>
+                    <default>false</default>
+                    <label>Techo</label>
+                </value>
+                <value>
+                    <fullName>SUELO</fullName>
+                    <default>false</default>
+                    <label>Suelo</label>
+                </value>
+                <value>
+                    <fullName>CRISTALES</fullName>
+                    <default>false</default>
+                    <label>CRISTALES</label>
+                </value>
+                <value>
+                    <fullName>Enseres</fullName>
+                    <default>false</default>
+                    <label>Enseres</label>
+                </value>
+                <value>
+                    <fullName>Mobiliario</fullName>
+                    <default>false</default>
+                    <label>Mobiliario</label>
+                </value>
+                <value>
+                    <fullName>Pared</fullName>
+                    <default>false</default>
+                    <label>Pared</label>
+                </value>
+                <value>
+                    <fullName>Puerta</fullName>
+                    <default>false</default>
+                    <label>Puerta</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PRJ_SEL_Tipo_Perjudicado__c</fullName>
+        <description>Tipo de perjudicado</description>
+        <externalId>false</externalId>
+        <label>Tipo de perjudicado</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Tipos_Perjudicado_Sini</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PRJ_TFN_Movil__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono Móvil</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PRJ_TFN_Telefono_1__c</fullName>
+        <description>Teléfono 1 del perjudicado del siniestro</description>
+        <externalId>false</externalId>
+        <label>Teléfono</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PRJ_TFN_Telefono_Adicional__c</fullName>
+        <description>Teléfono 2 del perjudicado del siniestro</description>
+        <externalId>false</externalId>
+        <label>Teléfono Adicional</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Apellido_1__c</fullName>
+        <description>Primer apellido del perjudicado. Este campo se utiliza para el guardado en la tabla de movimientos que se envía a las empresas aseguradoras.</description>
+        <externalId>false</externalId>
+        <label>Primer Apellido</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Apellido_2__c</fullName>
+        <description>Segundo apellido del perjudicado. Este campo se utiliza para el guardado en la tabla de movimientos que se envía a las empresas aseguradoras.</description>
+        <externalId>false</externalId>
+        <label>Segundo Apellido</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Cbanc_Codigo_Entidad__c</fullName>
+        <description>Código de entidad bancaria de la Cuenta Bancaria.</description>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: Código Entidad</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Cbanc_Digito_Control_IBAN__c</fullName>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: Dígito de Control &quot;IBAN&quot;</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Cbanc_Digito_Control__c</fullName>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: Dígito de Control</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Cbanc_Numero__c</fullName>
+        <description>Representa los últimos números de la cuenta bancaria</description>
+        <externalId>false</externalId>
+        <label>Cta. bancaria: Nº de Cuenta</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Cbanc_Pais__c</fullName>
+        <description>Código de País de la Cuenta Bancaria.</description>
+        <externalId>false</externalId>
+        <label>Cta. Bancaria: Código País</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Cbanc_Sucursal_Oficina__c</fullName>
+        <description>Código sucursal/oficina de la Cuenta Bancaria.</description>
+        <externalId>false</externalId>
+        <label>Cta.Bancaria: Código Sucursal</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Codigo_Postal__c</fullName>
+        <description>Código postal del perjudicado del siniestro.</description>
+        <externalId>false</externalId>
+        <label>Código Postal</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Direccion__c</fullName>
+        <description>Vía/Domicilio.</description>
+        <externalId>false</externalId>
+        <label>Dirección</label>
+        <length>500</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Nombre__c</fullName>
+        <description>Nombre del Perjudicado</description>
+        <externalId>false</externalId>
+        <label>Nombre</label>
+        <length>300</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Pais__c</fullName>
+        <description>País del perjudicado. Este campo se utiliza para el guardado en la tabla de movimientos que se envía a las empresas aseguradoras.</description>
+        <externalId>false</externalId>
+        <label>País</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Perjudicado_N_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº Documento</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRJ_TXT_Poblacion__c</fullName>
+        <description>Población del perjudicado</description>
+        <externalId>false</externalId>
+        <label>Población</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Perjudicado Siniestro</label>
+    <nameField>
+        <displayFormat>{00000000}</displayFormat>
+        <label>Nombre</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Perjudicados Siniestro</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Longitud_de_campo_de_telefonos</fullName>
+        <active>true</active>
+        <description>La longitud de los campos tipo teléfono no puede ser mayor a 20 dígitos.</description>
+        <errorConditionFormula>OR( LEN(PRJ_TFN_Telefono_1__c)&gt;20, LEN(PRJ_TFN_Telefono_Adicional__c)&gt;20, LEN(PRJ_TFN_Movil__c)&gt;20)</errorConditionFormula>
+        <errorMessage>La longitud de los campos tipo teléfono no puede ser mayor a 20 dígitos.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,24 @@
+<apex:page standardController="Task" extensions="Historico">
+	<apex:form id="mainFormVF">
+		<apex:pageBlock title="Histórico de cambios">
+			<apex:pageBlockTable value="{!listaHistoricos}" var="hist" rendered="{!listaHistoricos.size != 0}">
+				<apex:column headerValue="Fecha">
+					<apex:outputText value="{0,date,dd/MM/yyyy HH:mm:ss}">
+						<apex:param value="{!hist.fecha}" />
+					</apex:outputText>
+				</apex:column>
+				<apex:column headerValue="Objeto" value="{!hist.objeto}"/>
+				<apex:column headerValue="Registro relacionado">
+					<apex:outputLink value="/{!hist.idRegistro}" target="_parent">{!hist.nombreRegistro}</apex:outputLink>
+				</apex:column>
+				<apex:column headerValue="Campo/Acción" value="{!hist.campo}"/>
+				<!-- <apex:column headerValue="¿Eliminado?" value="{!hist.borrado}"/> -->
+				<apex:column headerValue="Valor nuevo" value="{!hist.valorNuevo}"/>
+				<apex:column headerValue="Valor antiguo" value="{!hist.valorAntiguo}"/>
+			</apex:pageBlockTable>
+			<apex:outputPanel rendered="{!listaHistoricos.size == 0}">
+				<apex:outputText value="No hay resultados"/>
+			</apex:outputPanel>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

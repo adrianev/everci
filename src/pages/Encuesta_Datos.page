@@ -1,0 +1,28 @@
+<!-- Página de VisualForce referente a la petición de los datos según los que se va a realizar la Encuesta-->
+
+
+<apex:page standardController="ENC_Encuesta__c"
+	extensions="Encuesta_Datos_Controller">
+<apex:stylesheet value="{!URLFOR($Resource.VF_CSS_General)}"/>
+	<apex:actionStatus id="iconoCargando" onStart="document.getElementById('{!$Component.mainForm}').style.display='none';" onStop="document.getElementById('{!$Component.mainForm}').style.display='block';">
+		<apex:facet name="start">
+			<apex:outputPanel styleClass="panelFondo">
+				<div class="contenedorCargando">Cargando...</div>
+			</apex:outputPanel>
+		</apex:facet>
+	</apex:actionStatus>
+
+<apex:form id="mainForm">
+<apex:pageBlock id="peticion" title="Peticion de datos">
+			<apex:pageBlockSection columns="1">
+				<apex:inputField id="idCaso" required="true" value="{!encNueva.ENC_LKP_Caso__c}" rendered="{!casoPendiente}"/>
+				<apex:inputField id="idEncTipo" required="true" value="{!encNueva.ENC_LKP_Encuesta_Tipo__c}"/>
+			</apex:pageBlockSection>
+			<apex:pageblockbuttons >
+				<!-- action="{!renderEncuesta}" -->
+				<apex:commandbutton value="Empezar encuesta" action="{!redirect}" status="iconoCargando" rerender="mainForm">
+				</apex:commandbutton>
+			</apex:pageblockbuttons>
+		</apex:pageBlock>
+		</apex:form>
+</apex:page>

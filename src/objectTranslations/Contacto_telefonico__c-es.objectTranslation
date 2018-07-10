@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contacto Telefónico</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contactos Telefónicos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contacto Poliza --></label>
+        <name>CTF_CAS_Contacto_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- SMS --></label>
+        <name>CTF_CAS_SMS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apellidos --></label>
+        <name>CTF_FOR_Apellidos__c</name>
+    </fields>
+    <fields>
+        <label><!-- CIA Póliza --></label>
+        <name>CTF_FOR_CIA_Poliza__c</name>
+    </fields>
+    <fields>
+        <label><!-- Correo Electrónico --></label>
+        <name>CTF_FOR_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nombre --></label>
+        <name>CTF_FOR_Nombre__c</name>
+    </fields>
+    <fields>
+        <label><!-- Póliza/Contrato --></label>
+        <name>CTF_FOR_Poliza_Contrato__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono Adic. --></label>
+        <name>CTF_FOR_TelefonoAdicional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono Móvil --></label>
+        <name>CTF_FOR_TelefonoMovil__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono --></label>
+        <name>CTF_FOR_Telefono__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intervención --></label>
+        <name>CTF_LKP_Caso__c</name>
+        <relationshipLabel><!-- Contactos Telefónicos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contacto Telefónico --></label>
+        <name>CTF_LKP_Contacto_Telefonico__c</name>
+        <relationshipLabel><!-- Contactos Telefónicos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contacto --></label>
+        <name>CTF_LKP_Contacto__c</name>
+        <relationshipLabel><!-- Contactos Telefónicos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Póliza/Contrato --></label>
+        <name>CTF_LKP_Poliza_Contrato__c</name>
+        <relationshipLabel><!-- Contactos Telefónicos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Hora desde --></label>
+        <name>CTF_SEL_Hora_desde__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hora hasta --></label>
+        <name>CTF_SEL_Hora_hasta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo/Relación --></label>
+        <name>CTF_SEL_Tipo_Relacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>CTF_TXT_Identificador__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones --></label>
+        <name>CTF_TXT_Observaciones__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Contacto Caso</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato Contacto Póliza</layout>
+        <sections>
+            <label><!-- Detalles de Contacto --></label>
+            <section>Detalles de Contacto</section>
+        </sections>
+        <sections>
+            <label><!-- Detalles de Póliza --></label>
+            <section>Detalles de Póliza</section>
+        </sections>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Contacto telefonico caso --></label>
+        <name>Contacto_telefonico_caso</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contacto telefonico póliza --></label>
+        <name>Contacto_telefonico_poliza</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,2369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>Movimientos</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Movimientos</fullName>
+        <fields>MOV_LKP_Bitacora__c</fields>
+        <fields>MOV_LKP_Caso__c</fields>
+        <label>Movimientos</label>
+    </compactLayouts>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa el conjunto de eventos susceptibles de ser informados a las diferentes aseguradoras.
+En función de la parametrización, Salesforce guardará una imagen del siniestro en el momento en el cuál se disparó el evento.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>MOV_CAS_Profesional_requerido__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indica si es requerido el profesional</description>
+        <externalId>false</externalId>
+        <label>Profesional requerido</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Alta__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de creación del cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Apertura__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de Apertura</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Cierre__c</fullName>
+        <description>Fecha de Cierre del siniestro que se envía a la aseguradora.</description>
+        <externalId>false</externalId>
+        <label>Fecha de Cierre</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Factura_Perito__c</fullName>
+        <description>Fecha de la Factura emitida al Perito</description>
+        <externalId>false</externalId>
+        <label>Fecha Factura Perito</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Factura__c</fullName>
+        <description>Fecha de la factura informada por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Fecha de Factura</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Generacion__c</fullName>
+        <description>Fecha y hora real en la que se genera el movimiento. Al crear los movimientos de manera asíncrona, no nos sirve el campo CreatedDate, ya que sería igual en todos.</description>
+        <externalId>false</externalId>
+        <label>Fecha Generación</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Informe_Pericial__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de Informe Pericial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Ocurrencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha de Ocurrencia</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DAT_Fecha_Poliza__c</fullName>
+        <description>Fecha de venta de la póliza</description>
+        <externalId>false</externalId>
+        <label>Fecha de la Póliza</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Base_Imponible__c</fullName>
+        <description>Base imponible informada por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Base Imponible</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Final__c</fullName>
+        <description>Importe Final de la factura informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Importe Final</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Franquicia__c</fullName>
+        <description>Campo reflejo del FAC_DIV_ImporteFactura para el envío de movimientos por ficheros a compañías</description>
+        <externalId>false</externalId>
+        <label>Importe Franquicia</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Gastos__c</fullName>
+        <description>Importe de gastos del perito</description>
+        <externalId>false</externalId>
+        <label>Importe de Gastos</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Gestion__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe de Gestion</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Honorarios__c</fullName>
+        <description>Importe de los honorarios del perito</description>
+        <externalId>false</externalId>
+        <label>Importe Honorarios Perito</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_IVA_Gestion__c</fullName>
+        <description>Importe del IVA de la gestión, informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Importe IVA Gestión</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_IVA__c</fullName>
+        <description>Importe del IVA de la factura informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Importe IVA de la Factura</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Pago__c</fullName>
+        <description>Importe del pago informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Importe Pago</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Importe_Reserva__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe Reserva</label>
+        <precision>13</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Retencion_Pago__c</fullName>
+        <description>Valor de la Retención del Pago informada por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Retención Pago</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_DIV_Valoracion_Siniestro__c</fullName>
+        <externalId>false</externalId>
+        <label>Valoración Siniestro</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>MOV_EMA_Email_Asegurado__c</fullName>
+        <externalId>false</externalId>
+        <label>Email Asegurado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Causante_Tipo_Via__c</fullName>
+        <externalId>false</externalId>
+        <formula>null</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Causante: Tipo de Vía</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Agencia_Pagadora__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_ALMUDENA , &apos;028101&apos;, null)</formula>
+        <label>Agencia pagadora</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Cliente__c</fullName>
+        <description>Campo enviado Almudena. Siempre es &apos;CLIENTE&apos;</description>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_ALMUDENA , &apos;CLIENTE&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Constante Cliente</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Cod_Municipio__c</fullName>
+        <description>Código de Municipio enviado a NN. SIempre es &apos;00000&apos;</description>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_NATIONALE_NETHERLANDEN , &apos;00000&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Código de Municipio</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Codigo_Registro__c</fullName>
+        <description>Código de Registro enviado a aseguradoras Almudena y RGA. Siempre es 1.</description>
+        <externalId>false</externalId>
+        <formula>IF(  OR(MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_ALMUDENA,MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_RGA) , &apos;1&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Código de Registro</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Codigo__c</fullName>
+        <description>Código que se envía a Almudena en los movimientos de pagos. Siempre es 2.</description>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_ALMUDENA , &apos;2&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Código</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Especial__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_ALMUDENA , &apos;1&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Especial</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Num_Doc_HS__c</fullName>
+        <description>NIF de HomeServe. Este dato se envía en los ficheros de Pagos de IVA</description>
+        <externalId>false</externalId>
+        <formula>&apos;A82451410&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nº Documento HomeServe</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Num_Registro__c</fullName>
+        <description>Campo Número de Registro enviado a aseguradora RGA. Siempre es 001</description>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_RGA , &apos;001&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nº de Registro</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Num_Riesgo__c</fullName>
+        <description>Campo Número de Riesgo enviado a aseguradora RGA. Siempre es 001</description>
+        <externalId>false</externalId>
+        <formula>IF( MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_RGA , &apos;001&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nº de Riesgo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Cons_Pago_Franquicia__c</fullName>
+        <description>Campo Indicador si se pagó la franquicia enviado a aseguradora RGA o SegurCaixa. Siempre es N.</description>
+        <externalId>false</externalId>
+        <formula>IF( OR(MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_RGA,MOV_LKP_Compania__r.CUE_TXT_Identificador__c = $Label.IDE_SEGURCAIXA), &apos;N&apos;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Indicador si se pagó la Franquicia</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Intervencion_Profesional__c</fullName>
+        <description>Campo enviado a SC. Posición 20 del fichero de siniestros</description>
+        <externalId>false</externalId>
+        <formula>&apos;N&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Intervención Profesional</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_FOR_Poliza_Suspension_Garantia__c</fullName>
+        <description>Póliza en suspensión de garantías</description>
+        <externalId>false</externalId>
+        <formula>&apos;N&apos;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Póliza en Suspensión de Garantías</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_LKP_Bitacora__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Bitácora</label>
+        <referenceTo>INT_Bitacora__c</referenceTo>
+        <relationshipName>MOV_REL_Integraciones_Movimientos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MOV_LKP_Caso__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Intervención</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Integraciones: Movimiento CIA</relationshipLabel>
+        <relationshipName>MOV_REL_Integraciones_Movimientos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MOV_LKP_Cliente__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cliente</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>MOV_REL_Integraciones_Movimientos2</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MOV_LKP_Compania__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Compañía</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>MOV_REL_Integraciones_Movimientos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MOV_LKP_Orden_de_Trabajo__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Servicio</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipLabel>Integraciones: Movimiento CIA</relationshipLabel>
+        <relationshipName>MOV_REL_Integraciones_Movimientos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>MOV_NUM_Porc_Retencion__c</fullName>
+        <description>Porcentaje de Retención aplicado en la factura</description>
+        <externalId>false</externalId>
+        <label>Porcentaje Retención</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_NUM_Porcentaje_IVA_Gestion__c</fullName>
+        <description>Porcentaje de IVA de la gestión informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Porcentaje IVA Gestión</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_NUM_Porcentaje_IVA__c</fullName>
+        <description>Porcentaje de IVA informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Porcentaje IVA</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_SEL_Encuestador__c</fullName>
+        <externalId>false</externalId>
+        <label>Identificador del proveedor externo</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Servitelco</fullName>
+                    <default>false</default>
+                    <label>Servitelco</label>
+                </value>
+                <value>
+                    <fullName>Stiga</fullName>
+                    <default>false</default>
+                    <label>Stiga</label>
+                </value>
+                <value>
+                    <fullName>HomeServe</fullName>
+                    <default>false</default>
+                    <label>HomeServe</label>
+                </value>
+                <value>
+                    <fullName>No Asignado</fullName>
+                    <default>false</default>
+                    <label>No Asignado</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MOV_SEL_Estado_Movimiento__c</fullName>
+        <externalId>false</externalId>
+        <label>Estado de Movimiento</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Estados_Bitacora</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MOV_TFN_Causante_Telefono__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Teléfono</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>MOV_TFN_Perjudicado1_Telefono__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Teléfono</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>MOV_TFN_Telefono_Asegurado__c</fullName>
+        <externalId>false</externalId>
+        <label>Teléfono de Asegurado</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Accion__c</fullName>
+        <description>Nombre de la acción desencadenadora del movimiento</description>
+        <externalId>false</externalId>
+        <label>Acción</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Agrupacion_Procedencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Agrupación de la procedencia</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Ano_Pago__c</fullName>
+        <description>Año en el que se realiza el pago informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Año Pago</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Cambio_Version_Declaracion__c</fullName>
+        <description>Campo de envío fichero a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Cambio Versión Declaración</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causa_Modificacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Causa de Modificación</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causa_Rechazo__c</fullName>
+        <externalId>false</externalId>
+        <label>Causa de Rechazo</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causa_Siniestro__c</fullName>
+        <externalId>false</externalId>
+        <label>Causa de Siniestro</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Apellido1__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Apellido 1</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Apellido2__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Apellido 2</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Compania__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Compañía</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Direccion__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Dirección</label>
+        <length>90</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Nombre__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Nombre</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Num_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Nº de Documento</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Num_Poliza__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Nº de Póliza</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Poblacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Población</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Provincia__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Provincia</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Responsable__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Responsable</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Causante_Tipo_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Causante: Tipo de Documento</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Apertura__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Apertura (garantía)</label>
+        <length>7</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Capital__c</fullName>
+        <description>Campo para envío a compañías en ficheros de facturación. Reflejo de objeto factura</description>
+        <externalId>false</externalId>
+        <label>Código Capital</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Cierre__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Cierre</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Cliente_CIA__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Cliente CIA</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Corrosion__c</fullName>
+        <description>Campo de envío a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Código de Corrosión</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Error__c</fullName>
+        <description>Código de error recibido de la carga de pólizas</description>
+        <externalId>false</externalId>
+        <label>Código de Error</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Gestor_Poliza__c</fullName>
+        <externalId>false</externalId>
+        <label>Código Gestor (Póliza)</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Modificacion_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Modificación (Descripción)</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Modificacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Modificación</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Pago__c</fullName>
+        <description>Campo de Código de Pago enviado aseguradoras</description>
+        <externalId>false</externalId>
+        <label>Código de Pago</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Perito__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Perito</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Postal__c</fullName>
+        <externalId>false</externalId>
+        <label>Código Postal</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Procedencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de la procedencia</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Producto__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Producto</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Ramo__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Ramo</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Reapertura__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Reapertura</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Rechazo__c</fullName>
+        <externalId>false</externalId>
+        <label>Código de Rechazo</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Codigo_Recurso__c</fullName>
+        <description>Código del profesional enviado a aseguradora en ficheros de movimiento</description>
+        <externalId>false</externalId>
+        <label>Código de Profesional</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Comentarios_Rechazo__c</fullName>
+        <description>Comentarios de Rechazo de Siniestro</description>
+        <externalId>false</externalId>
+        <label>Comentarios Rechazo</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Comentarios_Sin_Indem__c</fullName>
+        <description>Comentarios de Siniestros Indemnizables</description>
+        <externalId>false</externalId>
+        <label>Comentarios Siniestro Indemnizable</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Comentarios_Sin_Rep__c</fullName>
+        <description>Comentarios de Siniestros Reparables</description>
+        <externalId>false</externalId>
+        <label>Comentarios Siniestro Reparable</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Contador_Gremios__c</fullName>
+        <externalId>false</externalId>
+        <label>Contador de Gremio</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Contador_Telefonos__c</fullName>
+        <externalId>false</externalId>
+        <label>Contador de Teléfonos</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Desc_Error__c</fullName>
+        <description>Descripción del error recibido de la carga de pólizas</description>
+        <externalId>false</externalId>
+        <label>Descripcion del Error</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Descripcion_Causante__c</fullName>
+        <description>Descripción del Causante</description>
+        <externalId>false</externalId>
+        <label>Descripción del Causante</label>
+        <length>90</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Descripcion_Perjudicado__c</fullName>
+        <description>Campo de envío de ficheros para SC</description>
+        <externalId>false</externalId>
+        <label>Descripción Perjudicado</label>
+        <length>90</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Descripcion__c</fullName>
+        <externalId>false</externalId>
+        <label>Descripción</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Direccion__c</fullName>
+        <externalId>false</externalId>
+        <label>Dirección</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Error_Gar__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Garantias</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Error_Pol__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Polizas</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Error__c</fullName>
+        <externalId>false</externalId>
+        <label>Error</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Estado_Siniestro__c</fullName>
+        <description>Estado del siniestro asociado a los movimientos que se envían a la aseguradora</description>
+        <externalId>false</externalId>
+        <label>Estado del Siniestro</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Fecha_Envio__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha del envío</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Gremio_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Gremio (Descripción)</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Gremio__c</fullName>
+        <externalId>false</externalId>
+        <label>Gremio</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Grupo_Causa_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Descripción del grupo de causa</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Grupo_Causa__c</fullName>
+        <externalId>false</externalId>
+        <label>Grupo de Causa</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Id_Procedencia__c</fullName>
+        <description>Identificador de la procedencia recibida de la carga de pólizas</description>
+        <externalId>false</externalId>
+        <label>Identificador de Procedencia</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Identificador_Cliente__c</fullName>
+        <externalId>false</externalId>
+        <label>Identificador del Cliente</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Idioma__c</fullName>
+        <externalId>false</externalId>
+        <label>Idioma</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Indicador_Franquicia__c</fullName>
+        <description>Campo reflejo de FAC_CAS_IndicadorPagoFranquicia__c para el envío de movimientos por ficheros a compañías</description>
+        <externalId>false</externalId>
+        <label>Indicador Franquicia</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Indicador_Quincena__c</fullName>
+        <description>Campo reflejo de FAC_NUM_IndicadorQuincena__c para el envío de movimientos por fichero a compañías</description>
+        <externalId>false</externalId>
+        <label>Indicador Quincena</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Listado_Garantias__c</fullName>
+        <externalId>false</externalId>
+        <label>Listado de Garantías</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Mes_Pago__c</fullName>
+        <description>Mes en el que se realiza el pago informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Mes Pago</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Modalidad__c</fullName>
+        <description>Modalidad</description>
+        <externalId>false</externalId>
+        <label>Modalidad</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Motivo_No_Reparacion__c</fullName>
+        <description>Campo de envío a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Motivo de No Reparación</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Motivo_Perito_Obs__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo Peticion Perito Observaciones</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Motivo_Perito__c</fullName>
+        <externalId>false</externalId>
+        <label>Motivo Petición Perito</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Nombre_Procedencia__c</fullName>
+        <externalId>false</externalId>
+        <label>Nombre de la procedencia</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Caso_CIA__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº de Intervención CIA</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Caso_HS__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº de Intervención HS</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Certificado_Poliza__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº de certificado (Póliza)</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Doc_Profesional__c</fullName>
+        <description>Número de documento de identificación del profesional</description>
+        <externalId>false</externalId>
+        <label>Nº Documento Profesional</label>
+        <length>9</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Documento_Cliente__c</fullName>
+        <description>Número de Documento de Identidad del cliente</description>
+        <externalId>false</externalId>
+        <label>Nº Documento Cliente</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Envio__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de envío</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Garantias_Enviadas__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº de Garantías Enviadas</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_OrdenTrabajo_HS__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº de Servicio HS</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Poliza_Comp__c</fullName>
+        <description>Número de la póliza complementaria</description>
+        <externalId>false</externalId>
+        <label>Nº Póliza Complementaria</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Poliza__c</fullName>
+        <externalId>false</externalId>
+        <label>Nº de Póliza</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Dev_Gar__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero de Registros Garantias Devueltas</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Dev_Pol__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero de Registros Polizas Devueltos</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Dev__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de Registros Devueltos</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Gar__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero de Registros Garantias</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Pol__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero de Registro Polizas</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Proc_Gar__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero de Registros Garantias Procesados</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Proc_Pol__c</fullName>
+        <externalId>false</externalId>
+        <label>Numero de Registros Polizas Procesados</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg_Proc__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de Registros Procesados</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Num_Reg__c</fullName>
+        <externalId>false</externalId>
+        <label>Número de Registros</label>
+        <length>8</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Numero_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>DNI Cliente</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Numero_Pago__c</fullName>
+        <description>Número del pago realizado que se envía a la aseguradora vía fichero</description>
+        <externalId>false</externalId>
+        <label>Número de Pago</label>
+        <length>9</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Numero_factura__c</fullName>
+        <description>Número de factura informado por el Facturador</description>
+        <externalId>false</externalId>
+        <label>Nº de Factura</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Obs_Corrosion__c</fullName>
+        <description>Campo de envío a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Observaciones Corrosión</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perceptor__c</fullName>
+        <description>Persona que recibe el pago y que se envía a la aseguradora vía fichero</description>
+        <externalId>false</externalId>
+        <label>Perceptor</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Apellido1__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Apellido 1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Apellido2__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Apellido 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Codigo_Postal__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Código Postal</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Direccion__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Dirección</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Nombre__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Nombre</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Num_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Nº de Documento</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Pais__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): País</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Poblacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Población</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Provincia__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Provincia</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Tipo_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Tipo de Documento</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Tipo_Perjudicado__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Tipo de Perjudicado</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado1_Tipo_Via__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (1): Tipo de Vía</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Apellido1__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Apellido 1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Apellido2__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Apellido 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Direccion__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Dirección</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Nombre__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Nombre</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Num_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Nº de Documento</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Poblacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Población</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Provincia__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Provincia</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Tipo_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Tipo de Documento</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado2_Tipo_Perjudicado__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (2): Tipo de Perjudicado</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Apellido_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Apellido 1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Apellido_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Apellido 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Direccion__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Dirección</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Nombre__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Nombre</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Num_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Nº de Documento</label>
+        <length>12</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Poblacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Población</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Provincia__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Provincia</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Tipo_Documento__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Tipo de Documento</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado3_Tipo_Perjudicado__c</fullName>
+        <externalId>false</externalId>
+        <label>Perjudicado (3): Tipo de Perjudicado</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Perjudicado_Existe__c</fullName>
+        <description>Campo de envío en fichero a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Existe Perjudicado</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Presup_Importe__c</fullName>
+        <externalId>false</externalId>
+        <label>Importe Presupuesto</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Presup_Origen__c</fullName>
+        <description>Campo de envío de ficheros a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Origen Presupuesto</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Presup_Tipo__c</fullName>
+        <description>Campo de envío a SC Siniestros</description>
+        <externalId>false</externalId>
+        <label>Tipo Presupuesto</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Provincia__c</fullName>
+        <externalId>false</externalId>
+        <label>Provincia</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Registro_Erroneo_Gar__c</fullName>
+        <externalId>false</externalId>
+        <label>Registro Erroeno Garantias</label>
+        <length>3800</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Registro_Erroneo_Pol__c</fullName>
+        <externalId>false</externalId>
+        <label>Registro Erroneo Polizas</label>
+        <length>3800</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Registro_Erroneo__c</fullName>
+        <externalId>false</externalId>
+        <label>Registro Erróneo / Confirmación</label>
+        <length>3800</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Reparacion_Urgente__c</fullName>
+        <externalId>false</externalId>
+        <label>Reparación Urgente</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Responsable_Siniestro__c</fullName>
+        <externalId>false</externalId>
+        <label>Responsable Siniestro</label>
+        <length>9</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Rol_Asegurado__c</fullName>
+        <description>Rol del Asegurado que se envía a la aseguradora</description>
+        <externalId>false</externalId>
+        <label>Rol del Asegurado</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Siniestro_Consorciable__c</fullName>
+        <externalId>false</externalId>
+        <label>Siniestro Consorciable</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Submodalidad__c</fullName>
+        <description>Submodalidad</description>
+        <externalId>false</externalId>
+        <label>Submodalidad</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Suplemento_Pdte__c</fullName>
+        <description>Indicador de que el siniestro se ha abierto a una póliza con Suplemento pendiente</description>
+        <externalId>false</externalId>
+        <label>Suplemento Pendiente (Póliza)</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Actuacion_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Actuación (Descripción)</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Actuacion__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Actuación</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Encuesta__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Encuesta</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_IVA__c</fullName>
+        <description>Tipo de IVA aplicado en la factura</description>
+        <externalId>false</externalId>
+        <label>Tipo de IVA</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Movimiento_Desc__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Movimiento (Descripción)</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Movimiento__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Movimiento</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Producto__c</fullName>
+        <externalId>false</externalId>
+        <label>Tipo de Producto</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Rechazo__c</fullName>
+        <description>Indica el tipo de rechazo del siniestro que se informará en ficheros de encuestas</description>
+        <externalId>false</externalId>
+        <label>Tipo de Rechazo</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Tipo_Registro__c</fullName>
+        <description>Tipo de Registro de Pagos enviado a la aseguradora vía ficheros.</description>
+        <externalId>false</externalId>
+        <label>Tipo de Registro</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MOV_TXT_Total_Asistencias__c</fullName>
+        <description>Total de Asistencias</description>
+        <externalId>false</externalId>
+        <label>Número Total de Asistencias</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Integraciones: Movimiento CIA</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>MOV_DAT_Fecha_Generacion__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>MOV_LKP_Caso__c</columns>
+        <columns>MOV_LKP_Compania__c</columns>
+        <columns>MOV_TXT_Accion__c</columns>
+        <columns>MOV_SEL_Estado_Movimiento__c</columns>
+        <columns>MOV_LKP_Bitacora__c</columns>
+        <columns>MOV_TXT_Tipo_Movimiento__c</columns>
+        <columns>MOV_TXT_Codigo_Modificacion__c</columns>
+        <columns>MOV_SEL_Encuestador__c</columns>
+        <columns>MOV_TXT_Desc_Error__c</columns>
+        <columns>MOV_TXT_Tipo_Encuesta__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <listViews>
+        <fullName>Facturacion_PH</fullName>
+        <columns>NAME</columns>
+        <columns>MOV_TXT_Accion__c</columns>
+        <columns>MOV_SEL_Estado_Movimiento__c</columns>
+        <columns>MOV_LKP_Bitacora__c</columns>
+        <columns>MOV_LKP_Compania__c</columns>
+        <columns>MOV_DAT_Fecha_Generacion__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MOV_TXT_Accion__c</field>
+            <operation>equals</operation>
+            <value>Facturacion_PH</value>
+        </filters>
+        <label>Facturacion PH</label>
+        <language>es</language>
+    </listViews>
+    <listViews>
+        <fullName>Movimientos_Patria</fullName>
+        <columns>NAME</columns>
+        <columns>MOV_TXT_Accion__c</columns>
+        <columns>MOV_LKP_Bitacora__c</columns>
+        <columns>MOV_LKP_Compania__c</columns>
+        <columns>MOV_SEL_Estado_Movimiento__c</columns>
+        <columns>MOV_DAT_Fecha_Generacion__c</columns>
+        <columns>MOV_TXT_Num_Caso_HS__c</columns>
+        <columns>MOV_TXT_Num_Poliza__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>MOV_LKP_Compania__c</field>
+            <operation>equals</operation>
+            <value>Patria Hispana</value>
+        </filters>
+        <filters>
+            <field>MOV_SEL_Estado_Movimiento__c</field>
+            <operation>equals</operation>
+            <value>01</value>
+        </filters>
+        <label>Movimientos Patria No enviados</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <displayFormat>MOV{000000}</displayFormat>
+        <label>Identificador</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Integraciones: Movimiento CIA</pluralLabel>
+    <searchLayouts>
+        <listViewButtons>Enviar_Movimientos</listViewButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Enviar_Movimientos</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Enviar Movimientos</masterLabel>
+        <openType>sidebar</openType>
+        <page>Envio_Mov_Manual</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

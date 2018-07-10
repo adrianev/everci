@@ -1,0 +1,14 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="WCCMailToCommunityController">
+	<aura:attribute name="sName" type="String"/>
+	<aura:attribute name="sEmail" type="String"/>
+    <aura:attribute name="bCommunityManager" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.getEmail}"/>
+    
+    <aura:if isTrue="{!v.bCommunityManager}">
+        <a class="mailToClass" href="{!'mailto:'+v.sEmail}">Contactar con el Gestor</a>
+ 	<aura:set attribute="else">
+		<a class="mailToClass" href="{!'mailto:'+v.sEmail}">{!v.sName}</a>
+ 	</aura:set>
+    </aura:if> 
+</aura:component>

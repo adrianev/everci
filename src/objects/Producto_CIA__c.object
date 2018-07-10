@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa las diferentes tipologías de póliza y/o de contratos que ofrece cada compañía aseguradora. Cada producto determina un conjunto de garantías.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>PRD_CAS_Activo__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Check que indica si el producto está activo</description>
+        <externalId>false</externalId>
+        <label>Activo</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PRD_FOR_CompaniaIdSF__c</fullName>
+        <externalId>false</externalId>
+        <formula>PRD_LKP_Tipo_Producto_CIA__r.TPR_LKP_Compania__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id SF Compañía</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRD_FOR_CompaniaId__c</fullName>
+        <externalId>false</externalId>
+        <formula>PRD_LKP_Tipo_Producto_CIA__r.TPR_LKP_Compania__r.CUE_TXT_Identificador__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Id Compañía</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRD_FOR_Compania__c</fullName>
+        <externalId>false</externalId>
+        <formula>PRD_LKP_Tipo_Producto_CIA__r.TPR_LKP_Compania__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Compañía</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRD_FOR_Tipo_Producto__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(PRD_LKP_Tipo_Producto_CIA__r.TPR_SEL_Tipo_Producto__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Tipo de Producto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRD_LKP_Tipo_Producto_CIA__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <description>Tipo de Producto CIA al que pertenece el producto. Representa la FK al objeto Tipo_Producto_CIA_c. Para resolver esta FK en integración (servicios web) y migración (plantillas DataLoader) se debe informar el valor del campo External Id del objeto Tipo_Producto_CIA_c (Tipo_Producto_CIA_c .TPR_TXT_Identificador__c): Código único del Tipo de Producto</description>
+        <externalId>false</externalId>
+        <label>Tipo de Producto CIA</label>
+        <referenceTo>Tipo_Producto_CIA__c</referenceTo>
+        <relationshipLabel>Compañía: Productos</relationshipLabel>
+        <relationshipName>Compania_Productos</relationshipName>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>PRD_TXT_Cod_Producto__c</fullName>
+        <description>Código del producto para la cía</description>
+        <externalId>false</externalId>
+        <label>Codigo Producto</label>
+        <length>50</length>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PRD_TXT_Descripcion__c</fullName>
+        <externalId>false</externalId>
+        <label>Descripción</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>PRD_TXT_Identificador__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Identificador externo para los productos. Será la concatenación de la compañía, el código del tipo de producto y el Código del Prdocuto.</description>
+        <externalId>true</externalId>
+        <label>Identificador</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Compañía: Producto</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>PRD_TXT_Cod_Producto__c</columns>
+        <columns>PRD_LKP_Tipo_Producto_CIA__c</columns>
+        <columns>PRD_FOR_Tipo_Producto__c</columns>
+        <columns>PRD_FOR_Compania__c</columns>
+        <columns>PRD_FOR_CompaniaId__c</columns>
+        <columns>PRD_TXT_Identificador__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+        <language>es</language>
+    </listViews>
+    <listViews>
+        <fullName>Productos_Patria_Hispana</fullName>
+        <columns>NAME</columns>
+        <columns>PRD_TXT_Cod_Producto__c</columns>
+        <columns>PRD_FOR_Tipo_Producto__c</columns>
+        <columns>PRD_LKP_Tipo_Producto_CIA__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>PRD_FOR_Compania__c</field>
+            <operation>equals</operation>
+            <value>Patria Hispana</value>
+        </filters>
+        <label>Productos Patria Hispana</label>
+        <language>es</language>
+    </listViews>
+    <nameField>
+        <label>Nombre</label>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Compañía: Productos</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>PRD_FOR_Compania__c</lookupDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>Editar_campo_identificador</fullName>
+        <active>true</active>
+        <description>El campo identificador  no puede ser modificado</description>
+        <errorConditionFormula>IF(AND(ISCHANGED(PRD_TXT_Identificador__c ),PRD_TXT_Identificador__c &lt;&gt; PRD_LKP_Tipo_Producto_CIA__r.TPR_LKP_Compania__r.CUE_TXT_Identificador__c + &apos;_&apos; + PRD_TXT_Cod_Producto__c), true, false)</errorConditionFormula>
+        <errorMessage>El campo identificador  no puede ser modificado</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

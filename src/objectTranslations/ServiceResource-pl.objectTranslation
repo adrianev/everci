@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label><!-- Emergency Fields --></label>
+        <name>Emergency_Fields</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Get Candidates Resource Details --></label>
+        <name>Get_Candidates_Resource_Details</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Resource Gantt Filter --></label>
+        <name>Resource_Gantt_Filter</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Resource Lightbox --></label>
+        <name>Resource_Lightbox</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Efficiency --></label>
+        <name>FSL__Efficiency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gantt Label --></label>
+        <name>FSL__GanttLabel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online Offset --></label>
+        <name>FSL__Online_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picture Link --></label>
+        <name>FSL__Picture_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>FSL__Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Travel Speed --></label>
+        <name>FSL__Travel_Speed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asignación Directa --></label>
+        <name>RSE_CAS_Asignacion_Directa__c</name>
+    </fields>
+    <fields>
+        <label><!-- Disponible 24 horas --></label>
+        <name>RSE_CAS_Disponible_24Hrs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profesional hace Guardias --></label>
+        <name>RSE_CAS_Guardias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Procesado Festivo --></label>
+        <name>RSE_CAS_Procesado_Festivo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehículo con pegatinas --></label>
+        <name>RSE_CAS_Vehiculo_Pegatinas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehículo rotulado --></label>
+        <name>RSE_CAS_Vehiculo_Rotulado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha Alta Profesionales --></label>
+        <name>RSE_DAT_Fecha_Alta_Profesionales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de baja temporal --></label>
+        <name>RSE_DAT_Fecha_BajaTemp_Venc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha de baja definitiva --></label>
+        <name>RSE_DAT_Fecha_Baja__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha confirmación alta --></label>
+        <name>RSE_DAT_Fecha_activacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segunda dirección de correo electrónico --></label>
+        <name>RSE_EMA_Email_Adicional__c</name>
+    </fields>
+    <fields>
+        <label><!-- E-Mail --></label>
+        <name>RSE_EMA_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activo Servicio en curso --></label>
+        <name>RSE_FOR_Activo_OT_en_curso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Activo Servicio mensual --></label>
+        <name>RSE_FOR_Activo_OT_mensual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Categoría del profesional --></label>
+        <name>RSE_FOR_Categoria_del_profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Límite de Servicios en curso --></label>
+        <name>RSE_FOR_Lim_OT_EnCurso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Num Asociado Mizad --></label>
+        <name>RSE_FOR_Num_Asociado_Mizad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Num Asociado Urgencias --></label>
+        <name>RSE_FOR_Num_Asociado_Urgencias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prioridad de franquiciado --></label>
+        <name>RSE_FOR_Prioridad_de_franquiciado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recurso de Servicio Principal --></label>
+        <name>RSE_FOR_Recurso_Servicio_Principal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Professional Seniority --></label>
+        <name>RSE_FOR_Seniority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cuenta de Profesional --></label>
+        <name>RSE_LKP_Cuenta__c</name>
+        <relationshipLabel><!-- Recursos de servicios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Profesional Gremio --></label>
+        <name>RSE_LKP_Profesional_Gremio__c</name>
+        <relationshipLabel><!-- Recursos de servicios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Límite mensual con/sin franquicia --></label>
+        <name>RSE_NUM_Limite_mensual_con_sin_franq__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número Serv Mensual Con/Sin Franquicia --></label>
+        <name>RSE_NUM_NumOT_Mensual_Con_Sin_Franquicia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Número de Servicios en curso --></label>
+        <name>RSE_NUM_Numero_Ordenes_Trabajo_En_Curso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>RSE_SEL_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo de baja definitiva --></label>
+        <name>RSE_SEL_Motivo_Baja_Def__c</name>
+    </fields>
+    <fields>
+        <label><!-- Motivo de baja temporal --></label>
+        <name>RSE_SEL_Motivo_Baja_Temp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de provincia --></label>
+        <name>RSE_SEL_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Documento --></label>
+        <name>RSE_SEL_Tipo_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Red --></label>
+        <name>RSE_SEL_Tipo_de_red__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono 1 --></label>
+        <name>RSE_TEL_Telefono1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono 2 --></label>
+        <name>RSE_TEL_Telefono2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Teléfono 3 --></label>
+        <name>RSE_TEL_Telefono3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apellidos --></label>
+        <name>RSE_TXT_Apellidos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Recurso --></label>
+        <name>RSE_TXT_Codigo_Recurso__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código postal --></label>
+        <name>RSE_TXT_Codigo_postal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dirección --></label>
+        <name>RSE_TXT_Direccion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nº de Documento --></label>
+        <name>RSE_TXT_Numero_Documento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones baja definitiva --></label>
+        <name>RSE_TXT_Observaciones_BajaDef__c</name>
+    </fields>
+    <fields>
+        <label><!-- Observaciones baja temporal --></label>
+        <name>RSE_TXT_Observaciones_BajaTemp__c</name>
+    </fields>
+    <fields>
+        <label><!-- Población --></label>
+        <name>RSE_TXT_Poblacion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compañía Aseguradora RC --></label>
+        <name>RSE_TXT_Prof_Compania_Aseguradora__c</name>
+    </fields>
+    <fields>
+        <label><!-- Color vehículo --></label>
+        <name>RSE_TXT_Vehiculo_Color__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marca vehículo --></label>
+        <name>RSE_TXT_Vehiculo_Marca__c</name>
+    </fields>
+    <fields>
+        <label><!-- Matrícula vehículo --></label>
+        <name>RSE_TXT_Vehiculo_Matricula__c</name>
+    </fields>
+    <layouts>
+        <layout>Profesional Layout App</layout>
+        <sections>
+            <label><!-- Información adicional --></label>
+            <section>Información adicional</section>
+        </sections>
+        <sections>
+            <label><!-- Resource Views --></label>
+            <section>Resource Views</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Service Resource Gestor</layout>
+        <sections>
+            <label><!-- CONF FSL --></label>
+            <section>CONF FSL</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Seguro RC --></label>
+            <section>Datos Seguro RC</section>
+        </sections>
+        <sections>
+            <label><!-- Datos Vehículo --></label>
+            <section>Datos Vehículo</section>
+        </sections>
+        <sections>
+            <label><!-- Datos de contacto --></label>
+            <section>Datos de contacto</section>
+        </sections>
+        <sections>
+            <label><!-- Dirección --></label>
+            <section>Dirección</section>
+        </sections>
+        <sections>
+            <label><!-- Disponibilidad --></label>
+            <section>Disponibilidad</section>
+        </sections>
+        <sections>
+            <label><!-- Estado --></label>
+            <section>Estado</section>
+        </sections>
+        <sections>
+            <label>Wyświetlania zasobów</label>
+            <section>Resource Views</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- Únicamente se puede asociar el Recurso Asignado a una cuenta de tipo Profesional Contrato --></errorMessage>
+        <name>Cuenta_Asociada_Solo_PR_Contrato</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Capacity Resource Can&apos;t Be of Type Crew --></errorMessage>
+        <name>FSL__Capacity_Resource_of_Type_Crew</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Resource travel speed must be greater than 0. --></errorMessage>
+        <name>FSL__Resource_travel</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No tiene permisos para modificar el valor del campo --></errorMessage>
+        <name>FSL_no_modifica_SR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El formato del nombre no es correcto. EJ: PR123456_01_1 REGEX: RSE_LKP_Cuenta__r.CUE_TXT_Identificador__c+&quot;_&quot;+RSE_SEL_Gremio+&quot;_[0-9]{1,2}&quot; --></errorMessage>
+        <name>Formato_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El Profesional Gremio no es Válido o no existe. --></errorMessage>
+        <name>Profesional_Gremio_Valido</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No es posible activar manualmente esta entidad ya que el Contrato principal del que depende no se encuentra en estado &quot;Activo&quot;. --></errorMessage>
+        <name>Profesional_no_activo</name>
+    </validationRules>
+</CustomObjectTranslation>

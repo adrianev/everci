@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Representa el histórico de todos los cambios de estados por los que pasa el profesional</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>HEP_CAS_Activo__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Activo</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>HEP_DAT_Fecha__c</fullName>
+        <description>Representa la fecha del cambio de estado</description>
+        <externalId>false</externalId>
+        <label>Fecha</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>HEP_LKP_Cuenta__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Representa el lookup al profesional Contrato vinculado</description>
+        <externalId>false</externalId>
+        <label>Profesional Contrato</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Históricos Estados Profesional</relationshipLabel>
+        <relationshipName>Historicos_Estados_Profesional</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>HEP_LKP_Recurso_Servicio__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Representa el lookup al Recurso de Servicio vinculado</description>
+        <externalId>false</externalId>
+        <label>Recurso de servicio</label>
+        <referenceTo>ServiceResource</referenceTo>
+        <relationshipLabel>Históricos Estados Profesional</relationshipLabel>
+        <relationshipName>Historicos_Estados_Profesional</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>HEP_SEL_Estado__c</fullName>
+        <description>Representa el estado de cada cambio registrado en el ciclo de vida de un Profesional Contrato o Recurso de Servicio</description>
+        <externalId>false</externalId>
+        <label>Estado</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>GLB_SEL_Estado_Profesional</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HEP_TXT_Motivo_Baja__c</fullName>
+        <description>Representa los motivos de baja definitivos o temporales</description>
+        <externalId>false</externalId>
+        <label>Motivo de Baja</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HEP_TXT_Observaciones__c</fullName>
+        <description>Representa las observaciones de una baja temporal o definitiva</description>
+        <externalId>false</externalId>
+        <label>Observaciones</label>
+        <length>1000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <gender>Masculine</gender>
+    <label>Histórico Estados Profesional</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>OBJECT_ID</columns>
+        <filterScope>Everything</filterScope>
+        <label>Todos</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{00}</displayFormat>
+        <label>Nombre de Histórico Estados Profesional</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Históricos Estados Profesional</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

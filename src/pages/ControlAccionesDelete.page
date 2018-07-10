@@ -1,0 +1,2 @@
+<apex:page standardController="Case" extensions="ControlAccionesController" showHeader="true" sidebar="false" action="{!navegacionControlAccion}">
+</apex:page>

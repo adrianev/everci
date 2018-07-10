@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>M04_ESP_01</fullName>
+        <default>false</default>
+        <label>Demora</label>
+    </customValue>
+    <customValue>
+        <fullName>M04_ESP_02</fullName>
+        <default>false</default>
+        <label>Informalidad</label>
+    </customValue>
+    <customValue>
+        <fullName>M04_ESP_03</fullName>
+        <default>false</default>
+        <label>Otros</label>
+    </customValue>
+    <description>Encuestas</description>
+    <masterLabel>Motivos Asistencia del Profesional</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

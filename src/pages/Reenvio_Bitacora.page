@@ -1,0 +1,7 @@
+<apex:page standardController="INT_Bitacora__c" extensions="Reenvio_Bitacora" action="{!autoRun}">
+	<apex:sectionHeader title="Auto-Running Apex Code"/>
+	  <apex:outputPanel >
+	     La bitácora que ha seleccionado no se ha podido reenviar.
+	  </apex:outputPanel>
+	  <apex:outputText value="{!mensajeError}" />
+</apex:page>

@@ -1,0 +1,88 @@
+<aura:component implements="force:hasRecordId,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global" controller="WorkOrderHistoryController">
+    <aura:attribute name="loaded" type="Boolean" default="true" />
+    <aura:attribute name="nWoHistory" type="Integer" default="0" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="relatedListLabel" type="String" default="Historial de sservicio" />
+    <aura:attribute name="typeActivity" type="String" />
+    <aura:attribute name="lOrders" type="WorkOrder[]" default="[]" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <aura:if isTrue="{!v.loaded}">
+                    <div class="slds-media__figure"> 
+                        <span class="slds-icon_container slds-icon-standard-contact" title="order">
+								<lightning:icon iconName="standard:work_order" alternativeText="wo" size="small" />
+                            <span class="slds-assistive-text">Historial de Servicios</span>
+                        </span>
+                    </div>
+                    <aura:set attribute="else">
+                        <lightning:spinner />
+                    </aura:set>
+                </aura:if>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                             <aura:if isTrue="{!v.loaded}">
+								<span class="slds-text-heading_small">{!v.relatedListLabel} ({!v.nWoHistory})</span>
+                                 <aura:set attribute="else">
+								<span class="slds-text-heading_small">{!v.relatedListLabel}</span>
+								</aura:set>
+                             </aura:if>    
+							</h2>
+                </div>
+            </header>
+        </div>
+        
+        
+        
+        <aura:if isTrue="{!v.loaded}">
+            <aura:if isTrue="{!v.nWoHistory > 0}">
+                 <div class="slds-card__body">
+                    <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="CreatedDate">Fecha</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Field">Campo</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="OldValue">Valor original</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Newvalue">Valor nuevo</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.lOrders}" var="order">
+                            <tr>
+ 
+                                <td>
+                                    <lightning:formattedDateTime value="{!order.CreatedDate}" timeZone="Europe/Berlin" 
+                                                                 year="numeric" month="numeric" day="numeric"
+                                                                 hour="2-digit" minute="2-digit"/>
+                                 <!-- <ui:outputDateTime value="{!order.CreatedDate}" timezone="Europe/Berlin" />
+                                  <ui:outputDate value="{!order.CreatedDate}"/>
+                                   <div class="slds-truncate" title="{!order.CreatedDate}">{!order.CreatedDate}</div>
+                              -->  </td>
+                                <td>
+                                    <div class="slds-truncate" title="{!order.Field}">{!order.Field}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-truncate" title="{!order.NewValue}">{!order.NewValue}</div>
+                                </td>
+                                <td>
+                                    <div class="slds-truncate" title="{!order.OldValue}">{!order.OldValue}</div>
+                                </td>
+                            </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+            </aura:if>
+        </aura:if>    
+    </article>
+</aura:component>

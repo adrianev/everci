@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Partida de servicios</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Partidas de servicios</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Deprecated --></label>
+        <name>Emergency_Current_WOLineItem</name>
+    </fieldSets>
+    <fieldSets>
+        <label><!-- Gantt Lightbox --></label>
+        <name>Gantt_Lightbox</name>
+    </fieldSets>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Id. de partida de servicios principal</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>parent_workorderlineitem_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Id. de partida de servicios raíz</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>root_workorderlineitem_id</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Modificación de partida de servicios</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>workorderlineitem_edit</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Número de partida de servicios</value>
+        </caseValues>
+        <caseValues>
+            <plural>true</plural>
+            <value>Números de partidas de servicios</value>
+        </caseValues>
+        <gender>Masculine</gender>
+        <name>workorderlineitem_name</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Partida de servicios principal</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>workorderlineitem_parentworkorderlineitem</name>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Partida de servicios raíz</value>
+        </caseValues>
+        <gender>Feminine</gender>
+        <name>workorderlineitem_rootworkorderlineitem</name>
+    </fields>
+    <fields>
+        <label><!-- Direccion Establecimiento --></label>
+        <name>CUE_TXT_Direccion_Establecimiento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Fill In Candidate --></label>
+        <name>FSL__IsFillInCandidate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Visiting Hours --></label>
+        <name>FSL__VisitingHours__c</name>
+        <relationshipLabel><!-- Work Order Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Daños Estéticos --></label>
+        <name>PAR_CAS_Danos_Esteticos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Orden de Trabajo Anulada --></label>
+        <name>PAR_CAS_Orden_Trabajo_Anulada__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cantidad Venta --></label>
+        <name>PAR_DIV_Cantidad_Venta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación a Cliente antes de impuestos --></label>
+        <name>PAR_DIV_Cargar_Cliente_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación a CIA antes de impuesto --></label>
+        <name>PAR_DIV_Cargar_Comp_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Total antes de impuestos --></label>
+        <name>PAR_DIV_Facturacion_Total_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación Total después de impuestos --></label>
+        <name>PAR_DIV_Facturacion_Total_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a Imputar --></label>
+        <name>PAR_DIV_Importe_a_Imputar_gestor1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a Imputar --></label>
+        <name>PAR_DIV_Importe_a_Imputar_gestor2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a Imputar --></label>
+        <name>PAR_DIV_Importe_a_Imputar_gestor3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a Imputar --></label>
+        <name>PAR_DIV_Importe_a_Imputar_prof1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a Imputar --></label>
+        <name>PAR_DIV_Importe_a_Imputar_prof2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a Imputar --></label>
+        <name>PAR_DIV_Importe_a_Imputar_prof3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Importe a imputar (Departamento) --></label>
+        <name>PAR_DIV_Importe_a_imputar_Departamento__c</name>
+    </fields>
+    <fields>
+        <label><!-- Liquidación prof antes de impuestos --></label>
+        <name>PAR_DIV_Liquidar_Prof_AI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Liquidación prof después de impuestos --></label>
+        <name>PAR_DIV_Liquidar_Prof_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Liquidar al profesional --></label>
+        <name>PAR_DIV_Liquidar_al_profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- List Price --></label>
+        <name>PAR_DIV_ListPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Precio Unitario Venta --></label>
+        <name>PAR_DIV_Precio_Unitario_Venta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>PAR_DIV_UnitPrice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación a Cliente después impuestos --></label>
+        <name>PAR_FOR_Cargar_Cliente_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facturación a CIA después de impuestos --></label>
+        <name>PAR_FOR_Cargar_Comp_DI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Precio Unitario Venta --></label>
+        <name>PAR_FOR_Precio_Unitario_Venta_Cli__c</name>
+    </fields>
+    <fields>
+        <label><!-- Usuario profesional --></label>
+        <name>PAR_FOR_Usuario_profesional__c</name>
+    </fields>
+    <fields>
+        <label><!-- Imputar a --></label>
+        <name>PAR_LKP_Imputar_a_gestor1__c</name>
+        <relationshipLabel><!-- Partidas de servicios (Imputar a) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imputar a --></label>
+        <name>PAR_LKP_Imputar_a_gestor2__c</name>
+        <relationshipLabel><!-- Partidas de servicios (Imputar a) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imputar a --></label>
+        <name>PAR_LKP_Imputar_a_gestor3__c</name>
+        <relationshipLabel><!-- Partidas de servicios (Imputar a) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imputar a --></label>
+        <name>PAR_LKP_Imputar_a_prof1__c</name>
+        <relationshipLabel><!-- Partidas de órdenes de trabajo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imputar a --></label>
+        <name>PAR_LKP_Imputar_a_prof2__c</name>
+        <relationshipLabel><!-- Partidas de órdenes de trabajo (Imputar a) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Imputar a --></label>
+        <name>PAR_LKP_Imputar_a_prof3__c</name>
+        <relationshipLabel><!-- Partidas de órdenes de trabajo (Imputar a) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Altura --></label>
+        <name>PAR_NUM_Altura__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ancho --></label>
+        <name>PAR_NUM_Ancho__c</name>
+    </fields>
+    <fields>
+        <label><!-- Igic --></label>
+        <name>PAR_NUM_Igic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ipsi --></label>
+        <name>PAR_NUM_Ipsi__c</name>
+    </fields>
+    <fields>
+        <label><!-- Iva --></label>
+        <name>PAR_NUM_Iva__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unidades --></label>
+        <name>PAR_NUM_Unidades__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descuento --></label>
+        <name>PAR_POR_Descuento__c</name>
+    </fields>
+    <fields>
+        <help><!-- Porcentaje  impuesto liquidación profesional --></help>
+        <label><!-- Porcentaje impuestos aplicado a Profesio --></label>
+        <name>PAR_POR_Impuesto_Prof__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje Materiales --></label>
+        <name>PAR_POR_Materiales__c</name>
+    </fields>
+    <fields>
+        <label><!-- Porcentaje Impuestos Cliente/CIA --></label>
+        <name>PAR_POR_Porcentaje_Imp_Cia_Cliente__c</name>
+    </fields>
+    <fields>
+        <label><!-- Codigo Impuesto Venta --></label>
+        <name>PAR_SEL_Codigo_Impuesto_Venta__c</name>
+        <picklistValues>
+            <masterLabel>IGICREP7</masterLabel>
+            <translation><!-- IGICREP7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IPSIREP4</masterLabel>
+            <translation><!-- IPSIREP4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVAREP10</masterLabel>
+            <translation><!-- IVAREP10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVAREP21</masterLabel>
+            <translation><!-- IVAREP21 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Daños Del --></label>
+        <name>PAR_SEL_Danios_Del__c</name>
+        <picklistValues>
+            <masterLabel>Asegurado</masterLabel>
+            <translation><!-- Asegurado --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perjudicado</masterLabel>
+            <translation><!-- Perjudicado --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Departamento Imputación --></label>
+        <name>PAR_SEL_Departamento_Imputacion__c</name>
+        <picklistValues>
+            <masterLabel>Comercial</masterLabel>
+            <translation><!-- Comercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Otros</masterLabel>
+            <translation><!-- Otros --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Motivo de rechazo de una partida --></label>
+        <name>PAR_SEL_Motivo_Rechazo__c</name>
+        <picklistValues>
+            <masterLabel>Otros</masterLabel>
+            <translation><!-- Otros --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rechazada</masterLabel>
+            <translation><!-- Rechazada --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unidades Medida --></label>
+        <name>PAR_SEL_Unidades_Medida__c</name>
+        <picklistValues>
+            <masterLabel>horas</masterLabel>
+            <translation><!-- horas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>m</masterLabel>
+            <translation><!-- m --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>m2</masterLabel>
+            <translation><!-- m2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ud</masterLabel>
+            <translation><!-- ud --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Código de Baremo --></label>
+        <name>PAR_TXT_Baremo_Codigo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción Baremo --></label>
+        <name>PAR_TXT_Baremo_Desc__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ceco --></label>
+        <name>PAR_TXT_Ceco__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detalle Venta --></label>
+        <name>PAR_TXT_Detalle_Venta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detalle Woli --></label>
+        <name>PAR_TXT_Detalle_WOLI__c</name>
+    </fields>
+    <fields>
+        <help><!-- CPQ Line item Number --></help>
+        <label><!-- Nº de Partida CPQ --></label>
+        <name>PAR_TXT_Identificador__c</name>
+    </fields>
+    <fields>
+        <label><!-- SRef --></label>
+        <name>PAR_TXT_S_Ref__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unidades Medida Gastos --></label>
+        <name>PAR_TXT_Unidades_Medida_Gastos__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oracle Quote --></label>
+        <name>Quote_Id__c</name>
+        <relationshipLabel><!-- Work Order Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Última modificación por --></label>
+        <name>WOLI_Ultima_modificacion__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Formato de partida de orden de trabajo</layout>
+        <sections>
+            <label><!-- Datos económicos --></label>
+            <section>Datos económicos</section>
+        </sections>
+        <sections>
+            <label><!-- Imputación a gestor --></label>
+            <section>Imputación a gestor</section>
+        </sections>
+        <sections>
+            <label><!-- Imputación a profesional --></label>
+            <section>Imputación a profesional</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Formato de partida de orden de trabajo FSL</layout>
+        <sections>
+            <label><!-- Imputación a profesional --></label>
+            <section>Imputación a profesional</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Las partidas solo pueden ser imputadas por el departamento de Reclamaciones --></errorMessage>
+        <name>Imputacion_partidas_Reclamaciones</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Debe rellenarse tanto el profesional como el importe a imputar --></errorMessage>
+        <name>Relacion_imputar_importe</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- el sumatorio de los importes a imputar de los gestores tiene que ser menor a la facturación CIA antes de impuestos --></errorMessage>
+        <name>desbordamiento_gestor</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- el sumatorio de los importes a imputar de los profesionales y de los gestores tiene que ser menor a la facturacion a la CIA antes de impuestos --></errorMessage>
+        <name>desbordamiento_gestor_prof</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- el sumatorio de los importes a imputar de los profesionales tiene que ser menor a liquidación del prof antes de impuestos --></errorMessage>
+        <name>desbordamiento_profesional</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No se puede modificar el estado de una partida de una orden de trabajo anulada --></errorMessage>
+        <name>orden_de_trabajo_anulada</name>
+    </validationRules>
+</CustomObjectTranslation>

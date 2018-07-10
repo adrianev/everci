@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email de cierre de siniestro</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Cierre Siniestro SegurCaixa</name>
+    <style>none</style>
+    <subject>Notificación de Cierre de Siniestro SegurCaixa</subject>
+    <textOnly>EMAIL  CIERRE
+
+
+
+
+
+Fecha Siniestro: {!Case.CreatedDate}
+
+Nº Siniestro: {!Case.CaseNumber}
+
+Nº Póliza: {!Case.00N9E000001uR9S}
+
+
+
+
+Estimado/a {!Case.Account},
+
+
+Le informamos que el proceso de reparación de su siniestro ha terminado. Esperamos que tanto la resolución, como los trámites necesarios para su reparación, hayan sido de su agrado y le hayan causado las menores molestias posibles.
+
+
+Si quisiera hacernos llegar algún comentario, por favor, háganoslo saber a través del Portal Clic Hogar, simplemente tendrá que entrar a https://www.clichogar.ese introducir su usuario y contraseña, recuerde que en caso de olvidar sus credenciales puede solicitar unas nuevas en el mismo portal.
+
+La información de su siniestro permanecerá activa en nuestro Portal hasta 30 días después del cierre del siniestro.
+
+
+Recuerde que también puede realizar todas sus gestiones llamando al 91 489 43 17, opción 1.2.
+
+
+Muchas gracias por su atención.
+
+Reciba un cordial saludo,
+
+SEGURCAIXA ADESLAS
+
+
+*Nota: este correo es informativo, rogamos no responda al mismo.
+
+
+
+
+HOMESERVE
+Departamento Siniestros</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

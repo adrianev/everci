@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>399</fullName>
+        <default>false</default>
+        <label>399 NO HAY SINIESTRO</label>
+    </customValue>
+    <customValue>
+        <fullName>699</fullName>
+        <default>false</default>
+        <label>699 DEFECTO DE CONSTRUCCIÓN</label>
+    </customValue>
+    <customValue>
+        <fullName>799</fullName>
+        <default>false</default>
+        <label>799 FALTA DE MANTENIMIENTO</label>
+    </customValue>
+    <customValue>
+        <fullName>899</fullName>
+        <default>false</default>
+        <label>899 FILTRACIONES</label>
+    </customValue>
+    <customValue>
+        <fullName>999</fullName>
+        <default>false</default>
+        <label>999 GARANTÍA NO CONTRATADA</label>
+    </customValue>
+    <customValue>
+        <fullName>05</fullName>
+        <default>false</default>
+        <label>05 No contrata contenido</label>
+    </customValue>
+    <customValue>
+        <fullName>03</fullName>
+        <default>false</default>
+        <label>03 Exclusión específica establecida en una de las garantías</label>
+    </customValue>
+    <customValue>
+        <fullName>01</fullName>
+        <default>false</default>
+        <label>01 No existir Daños</label>
+    </customValue>
+    <customValue>
+        <fullName>06</fullName>
+        <default>false</default>
+        <label>06 Vicio propio, defecto de construcción o montaje y mala conservación, mantenimiento o reparación de los bienes asegurados</label>
+    </customValue>
+    <customValue>
+        <fullName>02</fullName>
+        <default>false</default>
+        <label>02 Daños no están ocasionados por las garantías del contrato de seguro</label>
+    </customValue>
+    <customValue>
+        <fullName>04</fullName>
+        <default>false</default>
+        <label>04 No contrata continente</label>
+    </customValue>
+    <customValue>
+        <fullName>07</fullName>
+        <default>false</default>
+        <label>07 Se ha producido durante el periodo de construcción de la vivienda o mientras ésta no ha sido ocupada</label>
+    </customValue>
+    <customValue>
+        <fullName>08</fullName>
+        <default>false</default>
+        <label>08 Anterior a la contratación de la póliza o inclusión de la cobertura (continente/ contenido)</label>
+    </customValue>
+    <customValue>
+        <fullName>09</fullName>
+        <default>false</default>
+        <label>09 La responsabilidad de los daños no recae sobre el asegurado</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>10 Amparado en su totalidad por el CCS</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>11 Exclusión general común a todas las garantías</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>12 Ha ocurrido fuera del mes de gracia y el recibo se encuentra impagado</label>
+    </customValue>
+    <customValue>
+        <fullName>13</fullName>
+        <default>false</default>
+        <label>13 Ha ocurrido a una persona que no se contempla como asegurado en el contrato</label>
+    </customValue>
+    <customValue>
+        <fullName>14</fullName>
+        <default>false</default>
+        <label>14 No forma parte del mobiliario asegurado</label>
+    </customValue>
+    <masterLabel>Motivo de rechazo</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

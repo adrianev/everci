@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Baremo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Baremos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Agrupador de Baremo --></label>
+        <name>BAR_LKP_Agrupador_Baremo__c</name>
+        <relationshipLabel><!-- Baremos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Compañía --></label>
+        <name>BAR_LKP_Compania__c</name>
+        <relationshipLabel><!-- Baremos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Gremio --></label>
+        <name>BAR_SEL_Gremio__c</name>
+    </fields>
+    <fields>
+        <label><!-- Código de Barras --></label>
+        <name>BAR_TXT_Codigo_Barra__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción Corta --></label>
+        <name>BAR_TXT_Descripcion_Corta__c</name>
+    </fields>
+    <fields>
+        <label><!-- Descripción Larga --></label>
+        <name>BAR_TXT_Descripcion_Larga__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador Único --></label>
+        <name>BAR_TXT_Identificador_Unico__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>BAR_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Baremo</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

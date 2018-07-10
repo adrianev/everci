@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Festivo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Festivos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Procesado --></label>
+        <name>FES_CAS_Procesado__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fecha --></label>
+        <name>FES_DAT_Fecha__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territorio --></label>
+        <name>FES_LKP_Territorio__c</name>
+        <relationshipLabel><!-- Festivos --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Provincia --></label>
+        <name>FES_SEL_Provincia__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tipo de Festivo --></label>
+        <name>FES_SEL_Tipo_de_Festivo__c</name>
+        <picklistValues>
+            <masterLabel>Local</masterLabel>
+            <translation><!-- Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nacional</masterLabel>
+            <translation><!-- Nacional --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Provincial</masterLabel>
+            <translation><!-- Provincial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Identificador --></label>
+        <name>FES_TXT_Identificador__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Formato Festivo</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
+    <validationRules>
+        <errorMessage><!-- El campo identificador  no puede ser modificado --></errorMessage>
+        <name>Editar_campo_identificador</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- El campo Identificador es requerido --></errorMessage>
+        <name>Requerimiento_de_identificador</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network xmlns="http://soap.sforce.com/2006/04/metadata">
+    <allowInternalUserLogin>false</allowInternalUserLogin>
+    <allowMembersToFlag>false</allowMembersToFlag>
+    <changePasswordTemplate>unfiled$public/CommunityChangePasswordEmailTemplate</changePasswordTemplate>
+    <communityRoles/>
+    <disableReputationRecordConversations>true</disableReputationRecordConversations>
+    <emailSenderAddress>dencinasgutierrez@gmail.com</emailSenderAddress>
+    <emailSenderName>Web de Clientes</emailSenderName>
+    <enableCustomVFErrorPageOverrides>false</enableCustomVFErrorPageOverrides>
+    <enableDirectMessages>true</enableDirectMessages>
+    <enableGuestChatter>false</enableGuestChatter>
+    <enableGuestFileAccess>true</enableGuestFileAccess>
+    <enableInvitation>false</enableInvitation>
+    <enableKnowledgeable>false</enableKnowledgeable>
+    <enableNicknameDisplay>false</enableNicknameDisplay>
+    <enablePrivateMessages>false</enablePrivateMessages>
+    <enableReputation>false</enableReputation>
+    <enableShowAllNetworkSettings>false</enableShowAllNetworkSettings>
+    <enableSiteAsContainer>true</enableSiteAsContainer>
+    <enableTalkingAboutStats>true</enableTalkingAboutStats>
+    <enableTopicAssignmentRules>true</enableTopicAssignmentRules>
+    <enableTopicSuggestions>false</enableTopicSuggestions>
+    <enableUpDownVote>true</enableUpDownVote>
+    <forgotPasswordTemplate>unfiled$public/CommunityForgotPasswordEmailTemplate</forgotPasswordTemplate>
+    <gatherCustomerSentimentData>false</gatherCustomerSentimentData>
+    <navigationLinkSet>
+        <navigationMenuItem>
+            <label>Siniestros</label>
+            <position>1</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/siniestros</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Intervenciones - B2C</label>
+            <position>2</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/intervenciones</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Intervenciones</label>
+            <position>3</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/asistencias</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Servicios</label>
+            <position>4</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/servicios</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>Mensajeria</label>
+            <position>5</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/mensajeria</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+        <navigationMenuItem>
+            <label>KPIs</label>
+            <position>6</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/kpis</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
+    </navigationLinkSet>
+    <networkMemberGroups>
+        <profile>Admin</profile>
+        <profile>HomeServe Customer Community Plus Login</profile>
+        <profile>HomeServe Customer Community Plus Login Extendido</profile>
+        <profile>HomeServe Customer Community Plus Login B2B2C</profile>
+        <profile>HomeServe Customer Community Plus Login Insurer</profile>
+    </networkMemberGroups>
+    <networkPageOverrides>
+        <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
+        <forgotPasswordPageOverrideSetting>Designer</forgotPasswordPageOverrideSetting>
+        <homePageOverrideSetting>Designer</homePageOverrideSetting>
+        <loginPageOverrideSetting>Designer</loginPageOverrideSetting>
+        <selfRegProfilePageOverrideSetting>Designer</selfRegProfilePageOverrideSetting>
+    </networkPageOverrides>
+    <picassoSite>Web_de_Clientes1</picassoSite>
+    <recommendationDefinition>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://mailto:david.encinas.gutierrez@everis.com</actionUrl>
+            <description>Aquí podrás ponerte en contacto con nuestros especialistas</description>
+            <linkText>Email Link</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>DefaultChannel</channel>
+                    <enabled>false</enabled>
+                    <rank>1</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Mensajería</setupName>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://www.homeserve.com</actionUrl>
+            <description>Conoce nuestro Blog y aconseja a tus clientes para rentabilizar tu negocio</description>
+            <linkText>Accede</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>DefaultChannel</channel>
+                    <enabled>true</enabled>
+                    <rank>2</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Recomendation3</setupName>
+            <title>Accede a Nuestro Blog</title>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://www.homeserve.com</actionUrl>
+            <description>Ven a nuestro evento y ten la oportunidad de conocer a nuestros técnicos</description>
+            <linkText>Suscribirme</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>DefaultChannel</channel>
+                    <enabled>false</enabled>
+                    <rank>4</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Recommendation1</setupName>
+            <title>Conoce a Nuestros Técnicos</title>
+        </recommendationDefinitionDetails>
+        <recommendationDefinitionDetails>
+            <actionUrl>https://www.homeserve.com</actionUrl>
+            <description>Conoce todas nuestras capacidades y extiende el catálogo de Servicios</description>
+            <linkText>Accede</linkText>
+            <scheduledRecommendations>
+                <scheduledRecommendationDetails>
+                    <channel>DefaultChannel</channel>
+                    <enabled>false</enabled>
+                    <rank>3</rank>
+                    <recommendationAudience>000000000000000</recommendationAudience>
+                </scheduledRecommendationDetails>
+            </scheduledRecommendations>
+            <setupName>Recommendation2</setupName>
+            <title>Protección y tranquilidad para tu hogar</title>
+        </recommendationDefinitionDetails>
+    </recommendationDefinition>
+    <selfRegistration>false</selfRegistration>
+    <sendWelcomeEmail>true</sendWelcomeEmail>
+    <site>Web_de_Clientes</site>
+    <status>Live</status>
+    <tabs>
+        <defaultTab>home</defaultTab>
+        <standardTab>Chatter</standardTab>
+    </tabs>
+    <urlPathPrefix>homeserve</urlPathPrefix>
+    <welcomeTemplate>unfiled$public/CommunityWelcomeEmailTemplate</welcomeTemplate>
+</Network>

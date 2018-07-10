@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Presupuesto - CIA - ESP</name>
+    <style>none</style>
+    <subject>Presupuesto Intervencion {!Case.CaseNumber} - {!Case.Thread_Id}</subject>
+    <textOnly>Asistencias HomeServe
+
+¡Hola {!Contact.FirstName} {!Contact.LastName}!
+
+Adjunto enviamos el presupuesto correspondiente a los trabajos pendientes de autorización.
+
+Para cualquier duda, póngase en contacto con nosotros.
+
+Servicio 24h/365 días del año 
+
+{!Case.CAS_FOR_Telefono_VDN__c}
+
+Gracias por confiar en HomeServe
+
+Para cualquier pregunta o sugerencia puede ponerse en contacto con nosotros en el correo electrónico atencion.cliente@homeserve.es  o en el teléfono {!Case.CAS_FOR_Telefono_VDN__c}.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>
