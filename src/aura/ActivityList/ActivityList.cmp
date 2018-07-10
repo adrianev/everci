@@ -1,21 +1,25 @@
-<aura:component implements="force:hasRecordId,forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global" controller="ActivityListController">
+<aura:component implements="force:hasRecordId,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global" controller="ActivityListController">
     <aura:attribute name="loaded" type="Boolean" default="true" />
     <aura:attribute name="nTasks" type="Integer" default="0" />
     <aura:attribute name="recordId" type="String" />
-    <aura:attribute name="relatedListLabel" type="String" default="Histórico de actividades" />
-    <aura:attribute name="typeActivity" type="String" />
     <aura:attribute name="lTasks" type="Task[]" default="[]" />
+    <aura:attribute name="columns" type="List" />
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
-    <article class="slds-card">
+    <lightning:card title="Actividades" iconName="standard:task">
+        <lightning:datatable data="{!v.lTasks}" 
+                             columns="{!v.columns}" 
+                             keyField="Id"/>
+    </lightning:card>
+    <!--<article class="slds-card">
         <div class="slds-card__header slds-grid">
             <header class="slds-media slds-media_center slds-has-flexi-truncate">
                 <aura:if isTrue="{!v.loaded}">
                     <div class="slds-media__figure">
                         <span class="slds-icon_container slds-icon-standard-contact" title="task">
-								<lightning:icon iconName="standard:task" alternativeText="task" size="small" />
-                            <span class="slds-assistive-text">Actividades</span>
+								<lightning:icon iconName="standard:task" alternativeText="task" />
+                            <span class="slds-assistive-text">task</span>
                         </span>
                     </div>
                     <aura:set attribute="else">
@@ -25,9 +29,9 @@
                 <div class="slds-media__body">
                     <h2 class="slds-card__header-title">
                              <aura:if isTrue="{!v.loaded}">
-								<span class="slds-text-heading_small">{!v.relatedListLabel} ({!v.nTasks})</span>
+								<span class="slds-text-heading_small">Actividades ({!v.nTasks})</span>
                                  <aura:set attribute="else">
-								<span class="slds-text-heading_small">{!v.relatedListLabel}</span>
+								<span class="slds-text-heading_small">Actividades</span>
 								</aura:set>
                              </aura:if>    
 							</h2>
@@ -35,49 +39,45 @@
             </header>
         </div>
         <aura:if isTrue="{!v.loaded}">
-            <aura:if isTrue="{!v.nTasks > 0}">
-                 <div class="slds-card__body">
-                    <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
-                        <thead>
-                            <tr class="slds-text-title_caps">
-                                <th scope="col">
-                                    <div class="slds-truncate" title="Subject">Asunto</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="slds-truncate" title="Status">Estado</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="slds-truncate" title="Created Date">Fecha de creación</div>
-                                </th>
-                                <th scope="col">
-                                    <div class="slds-truncate" title="Last Modified Date">Fecha de modificación</div>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <aura:iteration items="{!v.lTasks}" var="task">
-                            <tr>
-                                <th scope="row">
-                                    <div class="slds-truncate" title="{!task.Subject}">
-                                        <!--{!task.Subject}-->
-                                       <a onclick="{!c.navigateTo}" id="{!task.Id}">{!task.Subject}</a>
-                                    </div>
-                                </th>
-                                <td>
-                                    <div class="slds-truncate" title="{!task.Status}">{!task.Status}</div>
-                                </td>
-                                <td>
-                                    <div class="slds-truncate" title="{!task.CreatedDate}">{!task.CreatedDate}</div>
-                                </td>
-                                <td>
-                                    <div class="slds-truncate" title="{!task.LastModifiedDate}">{!task.LastModifiedDate}</div>
-                                </td>
-                            </tr>
-                            </aura:iteration>
-                        </tbody>
-                    </table>
-                </div>
-            </aura:if>
-        </aura:if>    
-    </article>
+
+            <div class="slds-card__body">
+                <table class="slds-table slds-table_fixed-layout slds-table_bordered slds-no-row-hover slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Name">Subject</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Company">Name</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Title">Status</div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Email">Created By</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.lTasks}" var="task">
+                            <th scope="row">
+                                <div class="slds-truncate" title="{!task.Subject}">
+                                    <a href="{!'/s/detail/'+task.Id}">{!task.Subject}</a>
+                                </div>
+                            </th>
+                            <td>
+                                <div class="slds-truncate" title="{!task.Status}">{!task.Status}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="{!task.CreatedDate}">{!task.CreatedDate}</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title="{!task.LastModifiedDate}">{!task.LastModifiedDate}</div>
+                            </td>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </aura:if>
+    </article>-->
 </aura:component>

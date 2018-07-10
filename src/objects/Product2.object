@@ -39,16 +39,25 @@
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
     <fields>
-        <fullName>BigMachines__Part_Number__c</fullName>
-        <caseSensitive>false</caseSensitive>
-        <deprecated>false</deprecated>
-        <externalId>true</externalId>
-        <label>Oracle CPQ Cloud Part Number</label>
-        <length>255</length>
+        <fullName>Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost</label>
+        <precision>18</precision>
         <required>false</required>
+        <scale>2</scale>
         <trackHistory>false</trackHistory>
-        <type>Text</type>
-        <unique>true</unique>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Current_Inventory__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Inventory</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -77,21 +86,31 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
-        <fullName>Name</fullName>
+        <fullName>Lifespan_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Lifespan Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
         <trackHistory>false</trackHistory>
+        <type>Number</type>
+        <unique>false</unique>
     </fields>
     <fields>
-        <fullName>PRO_LKP_Compania__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <description>Compañía asociada al Producto</description>
+        <fullName>Maintenance_Cycle__c</fullName>
+        <description>Number of days required before routine maintenance is needed</description>
         <externalId>false</externalId>
-        <label>Compañía</label>
-        <referenceTo>Account</referenceTo>
-        <relationshipLabel>Productos</relationshipLabel>
-        <relationshipName>PRO_REL_Compania</relationshipName>
+        <label>Maintenance Cycle (Days)</label>
+        <precision>18</precision>
         <required>false</required>
+        <scale>0</scale>
         <trackHistory>false</trackHistory>
-        <type>Lookup</type>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>ProductCode</fullName>
@@ -103,8 +122,26 @@
         <type>Picklist</type>
     </fields>
     <fields>
+        <fullName>Replacement_Part__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Replacement Part</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>StockKeepingUnit</fullName>
         <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>Warehouse_SKU__c</fullName>
+        <externalId>true</externalId>
+        <label>Warehouse SKU</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllProducts</fullName>

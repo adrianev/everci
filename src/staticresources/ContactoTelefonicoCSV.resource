@@ -1,3 +1,0 @@
-Id,CTF_LKP_Caso__c,CTF_LKP_Contacto__c,CTF_LKP_Poliza_Contrato__c,CTF_CAS_Contacto_Poliza__c,CTF_TXT_Observaciones__c,CTF_SEL_Tipo_Relacion__c,CTF_SEL_Hora_desde__c,CTF_SEL_Hora_hasta__c,CTF_CAS_SMS__c,RecordTypeId
-a0b9E0000048T4W,5009E000006j4XOQAY,0039E00000P18ib,1Hh9E0000008ilv,TRUE,destacable,Asegurado,14:00,20:00,TRUE,0129E0000005B3F
-a0b9E0000048T4Z,6009E000006j4XOQAY,1039E00000P18ib,2Hh9E0000008ilv,TRUE,destacablee,Asegurado,15:00,21:00,TRUE,

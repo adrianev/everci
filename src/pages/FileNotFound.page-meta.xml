@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com Page/Data Not Found page</description>
+    <description>Default Lightning Platform Page/Data Not Found page</description>
     <label>FileNotFound</label>
 </ApexPage>

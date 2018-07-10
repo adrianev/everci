@@ -1,9 +1,0 @@
-<apex:page standardController="Ayuda__c" extensions="Visor_Ayuda" showHeader="false" sidebar="false">
-		<apex:pageBlock title="Ayuda/Argumentario">
-			 <apex:pageBlockSection >
-				<apex:pageBlockSectionItem >
-					<apex:outputText value="{!ayuda.AYU_TXT_Descripcion__c}"/>
-				</apex:pageBlockSectionItem>
-			 </apex:pageBlockSection>
-		</apex:pageBlock> 
-</apex:page>

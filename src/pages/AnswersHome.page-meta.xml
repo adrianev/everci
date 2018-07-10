@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com home page for Answers sites</description>
+    <description>Default Lightning Platform home page for Answers sites</description>
     <label>AnswersHome</label>
 </ApexPage>

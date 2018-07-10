@@ -1,37 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
-    <assignmentRule>
-        <fullName>Asignación de gestores</fullName>
-        <active>false</active>
-        <ruleEntry>
-            <assignedTo>Buzon_General_Servicios_B2B_B2B2C</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <formula>AND(
-	OR(CAS_LKP_Procedencia__r.Name = &quot;5075081&quot;,
-	   CAS_LKP_Procedencia__r.Name = &quot;5550011&quot;, 
-	   CAS_LKP_Procedencia__r.Name = &quot;000000&quot;),
-	ISPICKVAL(CAS_LKP_Procedencia__r.PROC_SEL_Canal__c, &apos;140&apos;),
-	ISPICKVAL(CAS_LKP_Procedencia__r.PROC_SEL_Subcanal__c, &apos;1042&apos;)
-	)</formula>
-        </ruleEntry>
-        <ruleEntry>
-            <assignedTo>B2B_Tramit_Grupo_Especifico</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <formula>AND(CAS_LKP_Procedencia__r.Name = &quot;556001&quot;, 
-ISPICKVAL(CAS_LKP_Procedencia__r.PROC_SEL_Canal__c, &apos;140&apos;), 
-ISPICKVAL(CAS_LKP_Procedencia__r.PROC_SEL_Subcanal__c, &apos;1042&apos;) 
-)</formula>
-        </ruleEntry>
-        <ruleEntry>
-            <assignedTo>Buzon_General_Servicios_B2C</assignedTo>
-            <assignedToType>Queue</assignedToType>
-            <formula>AND( 
-OR(CAS_LKP_Procedencia__r.Name = &quot;5075082&quot;, 
-CAS_LKP_Procedencia__r.Name = &quot;5550012&quot;, 
-CAS_LKP_Procedencia__r.Name = &quot;000000&quot;), 
-ISPICKVAL(CAS_LKP_Procedencia__r.PROC_SEL_Canal__c, &apos;140&apos;), 
-ISPICKVAL(CAS_LKP_Procedencia__r.PROC_SEL_Subcanal__c, &apos;1042&apos;) 
-)</formula>
-        </ruleEntry>
-    </assignmentRule>
-</AssignmentRules>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
+

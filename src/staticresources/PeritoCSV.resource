@@ -1,2 +1,0 @@
-Id,Name,PER_NUM_Siniestros_Asignados__c,PER_LKP_Compania__c
-a0T9E000001naO0,00001,1,1019E00000P9vBIQAZ

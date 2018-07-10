@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Miembro Equipo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Miembros Equipo</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Miembros Equipo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Equipo --></label>
+        <name>Equipo__c</name>
+        <relationshipLabel><!-- Miembros Equipo --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Jefe de equipo --></label>
+        <name>Jefe_de_equipo__c</name>
+    </fields>
+    <layouts>
+        <layout>Miembro Equipo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

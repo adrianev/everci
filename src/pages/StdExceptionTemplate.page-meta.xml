@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com template for standard exception pages</description>
+    <description>Default Lightning Platform template for standard exception pages</description>
     <label>StdExceptionTemplate</label>
 </ApexPage>

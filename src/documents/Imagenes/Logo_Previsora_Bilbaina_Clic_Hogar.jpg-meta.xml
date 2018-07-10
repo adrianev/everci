@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Document xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Logo a utilizar en los email templates asociados al Portal Clic Hogar para siniestros de Previsora</description>
-    <internalUseOnly>false</internalUseOnly>
-    <name>Logo Previsora Bilbaina Clic Hogar</name>
-    <public>true</public>
-</Document>

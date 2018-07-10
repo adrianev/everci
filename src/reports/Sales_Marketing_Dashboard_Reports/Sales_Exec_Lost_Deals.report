@@ -49,7 +49,6 @@
             <operator>equals</operator>
             <value>Closed Lost</value>
         </criteriaItems>
-        <language>es</language>
     </filter>
     <format>Matrix</format>
     <groupingsAcross>

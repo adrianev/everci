@@ -2,17 +2,22 @@
 	getListTask : function(component, event, helper) {
 		var action=component.get("c.getListTasks");
         action.setParams(
-            {"idRelatedTo" : component.get("v.recordId"),
-             "filter" : component.get("v.typeActivity")
+            {"idRelatedTo" : component.get("v.recordId")
         });
         // Create a callback that is executed after 
         // the server-side action returns
         action.setCallback(this, function(response) {
             var state = response.getState();
             if (state === "SUCCESS") {
+                // Alert the user with the value returned 
+                // from the server
                 component.set("v.nTasks",response.getReturnValue().length);
                 component.set("v.lTasks",response.getReturnValue());
-                component.set("v.loaded","true");
+                component.set("v.loaded","false");
+
+                // You would typically fire a event here to trigger 
+                // client-side notification that the server-side 
+                // action is complete
             }
             else if (state === "ERROR") {
                 var errors = response.getError();

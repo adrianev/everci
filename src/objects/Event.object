@@ -77,9 +77,6 @@
         <fullName>IsReminderSet</fullName>
     </fields>
     <fields>
-        <fullName>IsVisibleInSelfService</fullName>
-    </fields>
-    <fields>
         <fullName>Location</fullName>
     </fields>
     <fields>
@@ -111,5 +108,5 @@
         <fullName>WhoId</fullName>
         <type>Lookup</type>
     </fields>
-    <sharingModel>Private</sharingModel>
+    <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

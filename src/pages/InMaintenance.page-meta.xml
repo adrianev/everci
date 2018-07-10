@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com In Maintenance page</description>
+    <description>Default Lightning Platform In Maintenance page</description>
     <label>InMaintenance</label>
 </ApexPage>

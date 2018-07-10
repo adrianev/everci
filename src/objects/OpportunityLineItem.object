@@ -14,15 +14,11 @@
     </actionOverrides>
     <actionOverrides>
         <actionName>Delete</actionName>
-        <content>BigMachines__OpportunityProductDeleteRedirection</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>Edit</actionName>
-        <content>BigMachines__OpportunityProductEditRedirection</content>
-        <skipRecordTypeSelect>false</skipRecordTypeSelect>
-        <type>Visualforce</type>
+        <type>Default</type>
     </actionOverrides>
     <actionOverrides>
         <actionName>EditAllProduct</actionName>
@@ -38,30 +34,6 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
-    <fields>
-        <fullName>BigMachines__Origin_Quote__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <deprecated>false</deprecated>
-        <description>This line item was created on the opportunity when the &quot;Origin Quote&quot; was set to Primary.  If the &quot;Origin Quote&quot; becomes a secondary quote, this line item will be removed from the opportunity.</description>
-        <externalId>false</externalId>
-        <label>Origin Quote</label>
-        <referenceTo>BigMachines__Quote__c</referenceTo>
-        <relationshipLabel>Opportunity Product</relationshipLabel>
-        <relationshipName>Opportunity_Product</relationshipName>
-        <required>false</required>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>BigMachines__Synchronization_Id__c</fullName>
-        <caseSensitive>true</caseSensitive>
-        <deprecated>false</deprecated>
-        <externalId>true</externalId>
-        <label>Synchronization Id</label>
-        <length>255</length>
-        <required>false</required>
-        <type>Text</type>
-        <unique>true</unique>
-    </fields>
     <fields>
         <fullName>Description</fullName>
     </fields>

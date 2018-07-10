@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
-    <cacheControl>Private</cacheControl>
-    <contentType>application/javascript</contentType>
-    <description>thinkConnectAPI.js v0.2
-Librería preparada para interactuar mediante sendCTIMessage de la consola de Salesforce con thinkConnect</description>
-</StaticResource>

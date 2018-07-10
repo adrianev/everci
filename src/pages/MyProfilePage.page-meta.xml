@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com My Profile page</description>
+    <description>Default Salesforce Sites My Profile page</description>
     <label>MyProfilePage</label>
 </ApexPage>

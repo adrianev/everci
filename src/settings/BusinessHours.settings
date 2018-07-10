@@ -20,32 +20,4 @@
         <wednesdayEndTime>00:00:00.000Z</wednesdayEndTime>
         <wednesdayStartTime>00:00:00.000Z</wednesdayStartTime>
     </businessHours>
-    <businessHours>
-        <active>false</active>
-        <default>false</default>
-        <fridayEndTime>20:00:00.000Z</fridayEndTime>
-        <fridayStartTime>08:00:00.000Z</fridayStartTime>
-        <mondayEndTime>20:00:00.000Z</mondayEndTime>
-        <mondayStartTime>08:00:00.000Z</mondayStartTime>
-        <name>MKT Cloud Business Hours</name>
-        <saturdayEndTime>00:00:00.000Z</saturdayEndTime>
-        <saturdayStartTime>00:00:00.000Z</saturdayStartTime>
-        <sundayEndTime>00:00:00.000Z</sundayEndTime>
-        <sundayStartTime>00:00:00.000Z</sundayStartTime>
-        <thursdayEndTime>20:00:00.000Z</thursdayEndTime>
-        <thursdayStartTime>08:00:00.000Z</thursdayStartTime>
-        <timeZoneId>Europe/Berlin</timeZoneId>
-        <tuesdayEndTime>20:00:00.000Z</tuesdayEndTime>
-        <tuesdayStartTime>08:00:00.000Z</tuesdayStartTime>
-        <wednesdayEndTime>20:00:00.000Z</wednesdayEndTime>
-        <wednesdayStartTime>08:00:00.000Z</wednesdayStartTime>
-    </businessHours>
-    <holidays>
-        <isRecurring>true</isRecurring>
-        <name>navidad</name>
-        <recurrenceDayOfMonth>25</recurrenceDayOfMonth>
-        <recurrenceMonthOfYear>December</recurrenceMonthOfYear>
-        <recurrenceStartDate>2017-12-25</recurrenceStartDate>
-        <recurrenceType>RecursYearly</recurrenceType>
-    </holidays>
 </BusinessHoursSettings>

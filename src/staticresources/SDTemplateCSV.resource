@@ -1,2 +1,0 @@
-"Id","Name","SDOC__Active__c","SDOC__Allow_Edit__c","SDOC__Base_Object__c","SDOC__Base_Related_Object__c","SDOC__Document_Category__c","SDOC__MS_Unit_of_Measure__c","SDOC__Task_Auto_Create_Default__c","SDOC__Template_Format__c","SDOC__Unicode_Level__c","SDOC__Version_History_Keep_Limit__c"
-"a259E000000Mc9jQAC","Código de Activación","true","false","Case","","","Inches","","PDF","","Disable Version History"

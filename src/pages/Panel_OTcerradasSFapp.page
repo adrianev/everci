@@ -1,2 +1,0 @@
-<apex:page showHeader="false" action="{!irOTcerrada}" controller="Panel_OTRedirec">
-</apex:page>

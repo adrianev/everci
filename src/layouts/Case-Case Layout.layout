@@ -1,46 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout xmlns="http://soap.sforce.com/2006/04/metadata">
-    <customButtons>Iniciar_Apertura_B2C</customButtons>
-    <customButtons>Iniciar_Apertura_B2B_B2B2C</customButtons>
-    <customButtons>Argumentario_Rechazo</customButtons>
-    <customButtons>Actualizar_Siniestro_en_Vesta</customButtons>
-    <customButtons>Actualizar_Contactos</customButtons>
-    <customButtons>BusquedaClientes_SSini</customButtons>
-    <customButtons>Gestionar_GremiosB2B</customButtons>
-    <customButtons>Confirmacion</customButtons>
-    <customButtons>Confirmar_Profesional</customButtons>
-    <customButtons>Ayuda_Indemnizable</customButtons>
-    <customButtons>Tramitacion_Siniestro</customButtons>
-    <customButtons>crear_abono</customButtons>
-    <customButtons>Abrir_Reclamacion</customButtons>
-    <customButtons>Cerrar_Reclamacion</customButtons>
-    <customButtons>Anular_Reclamacion</customButtons>
-    <customButtons>Fundada</customButtons>
-    <customButtons>No_fundada</customButtons>
-    <customButtons>Sin_Determinar</customButtons>
-    <customButtons>Nuevo_Servicio_B2C</customButtons>
-    <customButtons>Aplazar_Reclamacion</customButtons>
     <emailDefault>false</emailDefault>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>false</detailHeading>
-        <editHeading>false</editHeading>
-        <label>Nueva sección</label>
-        <layoutColumns>
-            <layoutItems>
-                <height>50</height>
-                <page>Cabecera_Detalle</page>
-                <showLabel>false</showLabel>
-                <showScrollbars>false</showScrollbars>
-                <width>100%</width>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SourceId</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>OneColumn</style>
-    </layoutSections>
+    <excludeButtons>Submit</excludeButtons>
     <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>false</detailHeading>
@@ -52,457 +13,29 @@
                 <field>OwnerId</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>RecordTypeId</field>
-            </layoutItems>
-            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>CaseNumber</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
-                <field>CAS_TXT_Num_Caso_HS__c</field>
+                <field>ContactId</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>Status</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Type</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_PolizaContrato__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_DirRiesgo_Estado_Provincia__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Tercero_Causante__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Nombre__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Apellidos__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TFN_Telefono_1__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TFN_Telefono_2__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Reclamacion_Vinculada__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Causante_N_Documento__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_EMA_Email__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Causante_N_exp_Stro__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Causante_Poliza_R_C__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Solicitud_PolizaContrato__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Tipo_Caso__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_EsB2C__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Primera_Cita__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Fecha_Cita_Reservada__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Rango_Cita_Reservada__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Siniestro_Encuestado__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_VersionPolizaContrato__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Fecha_Factura_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_NUM_Factura_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DIV_Honorarios_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DIV_Gastos_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_POR_Retencion_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DIV_Total_Pagar_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Tipo_IVA__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Gestor_Cierra_Reclamacion__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Presolicitud_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Motivo_No_Apertura__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Semaforo__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Gremio_Principal__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Grupo_Causa__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Tipo_Averia__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Detalle_Averia__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Causa_Averia__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Danos_Perjudicado__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Contador__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Danos_Propios__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Subestado_Caso__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Procedencia__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Liquidado__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Siniestro_Facturado__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>ParentId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Fecha_Apertura__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Argumentario_Rechazo__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Ayuda_Indemnizable__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Identificador__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Rango_Cita__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_NUM_Contador_Analisis__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_NUM_Contador_Pdte_Cierre__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_NUM_Contador_Tratamiento__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Baremo__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Tipo_Interlocutor__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Persona_que_llama__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Sondeo_Tipo_de_Carta__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Direccion_Territorial__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DIV_Importe_Total__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Cliente_contable_cliente__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Cliente_contable__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Confirmado__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsTopToBottom</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Reclamación</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Comunicador_Recl__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Reclamacion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Padre_reclamacion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Origen__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Requiere_profesional__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Motivo_anulacion_reclamacion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Conformidad_del_Cliente__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Conformidad_del_Cliente_3__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Recl_Orden_Trabajo__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Fecha_Vencimiento__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Naturaleza__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Estado_Expediente__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Requiere_el_mismo_profesional__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Estado_Anterior__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Conformidad_del_Cliente_2__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Responsable_Reclamacion__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Servicio B2B/B2B2C</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Linea_de_Contrato__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Fecha_activacion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Informe_Preliminar_Recibido__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Informe_Preliminar_Tramitado__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Fecha_confirmacion_cita__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Limite_Actuacion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_CAS_Supera_Limite_Actuacion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Canal_Baremo__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Estado_Perito__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>CAS_FOR_Descripcion_Baremo__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Cuenta</label>
-        <layoutColumns>
             <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>AccountId</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Required</behavior>
-                <field>CAS_LKP_Compania__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_LKP_Punto_de_venta__c</field>
+                <behavior>Readonly</behavior>
+                <field>ContactPhone</field>
             </layoutItems>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_DirRiesgo_Poblacion__c</field>
+                <behavior>Readonly</behavior>
+                <field>ContactEmail</field>
             </layoutItems>
         </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Direcciones</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Causante_Direccion__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_Direccion__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_DirRiesgo_Pais__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_TXT_DirRiesgo_CP__c</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
+        <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
         <customLabel>false</customLabel>
@@ -511,8 +44,8 @@
         <label>Additional Information</label>
         <layoutColumns>
             <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_DAT_Fecha_Modificacion_Estado__c</field>
+                <behavior>Required</behavior>
+                <field>Status</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
@@ -524,6 +57,10 @@
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Type</field>
+            </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Reason</field>
@@ -548,10 +85,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Comments</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>CAS_SEL_Sondeo_DocIndemSug__c</field>
             </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
@@ -592,29 +125,6 @@
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
     <layoutSections>
-        <customLabel>true</customLabel>
-        <detailHeading>true</detailHeading>
-        <editHeading>true</editHeading>
-        <label>Información del contacto</label>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>ContactId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>ContactPhone</field>
-            </layoutItems>
-        </layoutColumns>
-        <layoutColumns>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>ContactEmail</field>
-            </layoutItems>
-        </layoutColumns>
-        <style>TwoColumnsLeftToRight</style>
-    </layoutSections>
-    <layoutSections>
         <customLabel>false</customLabel>
         <detailHeading>true</detailHeading>
         <editHeading>true</editHeading>
@@ -643,59 +153,6 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <platformActionList>
-        <actionListContext>Record</actionListContext>
-        <platformActionListItems>
-            <actionName>FeedItem.TextPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>0</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.ContentPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>1</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.LinkPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>2</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>FeedItem.PollPost</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>3</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Case.SendEmail</actionName>
-            <actionType>QuickAction</actionType>
-            <sortOrder>4</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Share</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>5</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Delete</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>6</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>ChangeOwnerOne</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>7</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>ChangeRecordType</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>8</sortOrder>
-        </platformActionListItems>
-        <platformActionListItems>
-            <actionName>Submit</actionName>
-            <actionType>StandardButton</actionType>
-            <sortOrder>9</sortOrder>
-        </platformActionListItems>
-    </platformActionList>
     <quickActionList>
         <quickActionListItems>
             <quickActionName>FeedItem.TextPost</quickActionName>
@@ -708,9 +165,6 @@
         </quickActionListItems>
         <quickActionListItems>
             <quickActionName>FeedItem.PollPost</quickActionName>
-        </quickActionListItems>
-        <quickActionListItems>
-            <quickActionName>Case.SendEmail</quickActionName>
         </quickActionListItems>
     </quickActionList>
     <relatedContent>
@@ -728,31 +182,17 @@
         </relatedContentItems>
     </relatedContent>
     <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Confirmacion__c.CNF_LKP_ParentId__c</relatedList>
+        <fields>SOLUTION.ISSUE</fields>
+        <fields>SOLUTION.SOLUTION_NUMBER</fields>
+        <fields>SOLUTION.STATUS</fields>
+        <fields>CORE.USERS.ALIAS</fields>
+        <relatedList>RelatedSolutionList</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedFileList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <customButtons>Task.Nueva_Tarea_Caso</customButtons>
         <fields>TASK.SUBJECT</fields>
         <fields>TASK.WHO_NAME</fields>
-        <fields>TASK.WHAT_NAME</fields>
         <fields>ACTIVITY.TASK</fields>
         <fields>TASK.DUE_DATE</fields>
-        <fields>TASK.STATUS</fields>
-        <fields>TASK.CLOSED</fields>
-        <fields>TASK.PRIORITY</fields>
-        <fields>CORE.USERS.FULL_NAME</fields>
-        <fields>TASK.LAST_UPDATE</fields>
-        <relatedList>Activity.TAR_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>TASK.SUBJECT</fields>
-        <fields>TASK.WHO_NAME</fields>
-        <fields>ACTIVITY.TASK</fields>
-        <fields>TASK.CREATED_DATE</fields>
         <fields>TASK.STATUS</fields>
         <fields>TASK.PRIORITY</fields>
         <fields>CORE.USERS.FULL_NAME</fields>
@@ -768,114 +208,21 @@
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
-        <relatedList>RelatedEmailMessageList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>CASES.CASE_NUMBER</fields>
-        <fields>CAS_FOR_Icono_RecType__c</fields>
-        <fields>CASES.STATUS</fields>
-        <fields>CAS_CAS_Confirmado__c</fields>
-        <relatedList>RelatedChildCaseList</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <relatedList>RelatedAttachmentList</relatedList>
-    </relatedLists>
-    <relatedLists>
         <relatedList>RelatedCommentsList</relatedList>
     </relatedLists>
     <relatedLists>
         <relatedList>RelatedEntityHistoryList</relatedList>
     </relatedLists>
     <relatedLists>
-        <fields>Name</fields>
-        <fields>OTR_SEL_Gremio__c</fields>
-        <fields>WorkType</fields>
-        <fields>Status</fields>
-        <fields>OTR_CAS_Urgente__c</fields>
-        <fields>OTR_FOR_Semaforo__c</fields>
-        <fields>OTR_FOR_Hora_Primera_Cita__c</fields>
-        <fields>OTR_LKP_Recurso_Servicio__c</fields>
-        <fields>OTR_CAS_Orden_Trabajo_Facturada__c</fields>
-        <fields>RecordType</fields>
-        <relatedList>WorkOrders</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>PRE_NUM_Version__c</fields>
-        <fields>PRE_SEL_Estado__c</fields>
-        <fields>PRE_SEL_Estado_Anterior__c</fields>
-        <fields>PRE_TXT_Identificador__c</fields>
-        <fields>PRE_TXT_MotivoAprobacion__c</fields>
-        <fields>PRE_SEL_Motivo_Rechazo__c</fields>
-        <relatedList>Presupuesto__c.PRE_LKP_Caso__c</relatedList>
-        <sortField>PRE_NUM_Version__c</sortField>
-        <sortOrder>Desc</sortOrder>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>PRJ_SEL_Tipo_Perjudicado__c</fields>
-        <fields>PRJ_TFN_Telefono_1__c</fields>
-        <fields>PRJ_TFN_Movil__c</fields>
-        <fields>PRJ_TFN_Telefono_Adicional__c</fields>
-        <fields>PRJ_EMA_Email__c</fields>
-        <fields>PRJ_TXT_Direccion__c</fields>
-        <fields>PRJ_TXT_Perjudicado_N_Documento__c</fields>
-        <relatedList>Perjudicado_Siniestro__c.PRJ_LKP_Siniestro__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>CMC_SEL_Tipo__c</fields>
-        <fields>CMC_TXT_Comentario__c</fields>
-        <fields>CREATEDBY_USER</fields>
-        <fields>CREATED_DATE</fields>
-        <relatedList>Comentario_caso__c.CMC_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Factura__c.FAC_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <fields>EV_AB_FOR_Descripcion__c</fields>
-        <fields>EV_AB_SEL_Estado__c</fields>
-        <fields>EV_AB_CAS_Evento_Ab_Facturado__c</fields>
-        <fields>EV_AB_DIV_Importe_gestor__c</fields>
-        <fields>EV_AB_DIV_Importe_profesional__c</fields>
-        <fields>EV_AB_DIV_Importe_a_liquidar_prof__c</fields>
-        <relatedList>Propuesta_de_Evento__c.EV_AB_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Mensaje_Clic_Hogar__c.MCH_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>ENC_Encuesta__c.ENC_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <customButtons>Nueva_propuesta_de_abono</customButtons>
-        <fields>NAME</fields>
-        <fields>AB_SEL_Estado__c</fields>
-        <fields>AB_CAS_Abono_Liquidado__c</fields>
-        <relatedList>Propuesta_de_Abono__c.AB_LKP_Caso__c</relatedList>
-    </relatedLists>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>Garantia_Siniestro__c.GSIN_LKP_Caso__c</relatedList>
+        <relatedList>RelatedAttachmentList</relatedList>
     </relatedLists>
     <relatedObjects>ContactId</relatedObjects>
     <relatedObjects>AccountId</relatedObjects>
     <runAssignmentRulesDefault>false</runAssignmentRulesDefault>
     <showEmailCheckbox>true</showEmailCheckbox>
-    <showHighlightsPanel>true</showHighlightsPanel>
+    <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
     <showKnowledgeComponent>false</showKnowledgeComponent>
     <showRunAssignmentRulesCheckbox>true</showRunAssignmentRulesCheckbox>
     <showSubmitAndAttachButton>true</showSubmitAndAttachButton>
-    <summaryLayout>
-        <masterLabel>00h0Y000001Mn8X</masterLabel>
-        <sizeX>4</sizeX>
-        <sizeY>0</sizeY>
-        <summaryLayoutStyle>Default</summaryLayoutStyle>
-    </summaryLayout>
 </Layout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TestMetadataType</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TestMetadataType</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountId --></label>
+        <name>AccountId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Checkbox field --></label>
+        <name>Checkbox_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date field --></label>
+        <name>Date_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date/time field --></label>
+        <name>Date_time_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Metadata Relationship --></label>
+        <name>Metadata_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percent field --></label>
+        <name>Percent_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone field --></label>
+        <name>Phone_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist field --></label>
+        <name>Picklist_field__c</name>
+        <picklistValues>
+            <masterLabel>Value1</masterLabel>
+            <translation><!-- Value1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Value2</masterLabel>
+            <translation><!-- Value2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Field --></label>
+        <name>Test_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text Area Long field --></label>
+        <name>Text_Area_Long_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Text Area field --></label>
+        <name>Text_Area_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- URL field --></label>
+        <name>URL_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- email field --></label>
+        <name>email_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- number field --></label>
+        <name>number_field__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

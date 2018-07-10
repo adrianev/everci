@@ -6,8 +6,8 @@
     <label>Sales</label>
     <navType>Standard</navType>
     <tab>standard-home</tab>
+    <tab>Cuentas_y_oportunidades_principales</tab>
     <tab>standard-Opportunity</tab>
-    <tab>standard-Quote</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Task</tab>
     <tab>standard-File</tab>
@@ -22,43 +22,9 @@
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Case</tab>
     <tab>standard-Forecasting3</tab>
-    <tab>Poblacion__c</tab>
-    <tab>Busqueda_Clientes_Asegurados</tab>
-    <tab>Garantia__c</tab>
-    <tab>Panel_de_Casos</tab>
-    <tab>Panel_de_Tareas</tab>
-    <tab>INT_Movimiento_CIA__c</tab>
-    <tab>INT_Bitacora__c</tab>
-    <tab>INT_Envio_Programado__c</tab>
-    <tab>INT_Config_Fichero_CIA__c</tab>
-    <tab>Tipo_Producto_CIA__c</tab>
-    <tab>Arbol_Decision__c</tab>
-    <tab>VDN_Compania__c</tab>
-    <tab>Perito__c</tab>
-    <tab>Arbol_Decision_Lineas__c</tab>
-    <tab>Ayuda__c</tab>
-    <tab>Telefonos_Transfer_CIA__c</tab>
-    <tab>Factura__c</tab>
-    <tab>Linea_Contrato__c</tab>
-    <tab>Tareas_Tipo_Trabajo__c</tab>
-    <tab>Tarea_Linea_Contrato__c</tab>
-    <tab>Direcciones_B2B_B2B2C_Lineas_de_Contrato__c</tab>
-    <tab>Busqueda_Cuentas_B2B_B2B2C</tab>
-    <tab>Movimiento_IR__c</tab>
-    <tab>Direccion_Cuenta__c</tab>
-    <tab>Presupuesto__c</tab>
-    <tab>Procedencia__c</tab>
-    <tab>SMS_Message__c</tab>
-    <tab>Mensaje_Clic_Hogar__c</tab>
-    <tab>ENC_Encuesta_Tipo__c</tab>
-    <tab>ENC_Encuesta__c</tab>
-    <tab>ENC_Pregunta__c</tab>
-    <tab>Propuesta_de_Abono__c</tab>
-    <tab>Propuesta_de_Evento__c</tab>
-    <tab>Guardia__c</tab>
-    <tab>Panel_de_todas_las_tareas</tab>
-    <tab>Baremo__c</tab>
-    <tab>Poblacion_CP__c</tab>
-    <tab>Profesional_Gremio__c</tab>
+    <tab>Fee__c</tab>
+    <tab>Equipo__c</tab>
+    <tab>standard-Quote</tab>
+    <tab>MARCA</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>

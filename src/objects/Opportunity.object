@@ -52,18 +52,8 @@
     </fields>
     <fields>
         <fullName>Amount</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
-    </fields>
-    <fields>
-        <fullName>BigMachines__Line_Items__c</fullName>
-        <deprecated>false</deprecated>
-        <externalId>false</externalId>
-        <label>Line Items</label>
-        <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
-        <summaryOperation>count</summaryOperation>
-        <trackTrending>false</trackTrending>
-        <type>Summary</type>
     </fields>
     <fields>
         <fullName>CampaignId</fullName>
@@ -73,7 +63,7 @@
     </fields>
     <fields>
         <fullName>CloseDate</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -81,6 +71,110 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Dependiente__c</fullName>
+        <externalId>false</externalId>
+        <label>Dependiente</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>RAMO__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+                <value>
+                    <fullName>7</fullName>
+                    <default>false</default>
+                    <label>7</label>
+                </value>
+                <value>
+                    <fullName>8</fullName>
+                    <default>false</default>
+                    <label>8</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>3</controllingFieldValue>
+                <controllingFieldValue>4</controllingFieldValue>
+                <valueName>1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <valueName>2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>2</controllingFieldValue>
+                <valueName>3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>2</controllingFieldValue>
+                <controllingFieldValue>6</controllingFieldValue>
+                <valueName>4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>2</controllingFieldValue>
+                <controllingFieldValue>5</controllingFieldValue>
+                <controllingFieldValue>6</controllingFieldValue>
+                <valueName>5</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>2</controllingFieldValue>
+                <controllingFieldValue>4</controllingFieldValue>
+                <controllingFieldValue>5</controllingFieldValue>
+                <controllingFieldValue>6</controllingFieldValue>
+                <valueName>6</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>4</controllingFieldValue>
+                <controllingFieldValue>6</controllingFieldValue>
+                <valueName>7</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>1</controllingFieldValue>
+                <controllingFieldValue>3</controllingFieldValue>
+                <controllingFieldValue>6</controllingFieldValue>
+                <valueName>8</valueName>
+            </valueSettings>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Description</fullName>
@@ -108,7 +202,7 @@
     </fields>
     <fields>
         <fullName>Name</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
@@ -118,7 +212,7 @@
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
-        <trackFeedHistory>false</trackFeedHistory>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
     </fields>
@@ -133,8 +227,53 @@
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
-        <fullName>StageName</fullName>
+        <fullName>RAMO__c</fullName>
+        <externalId>false</externalId>
+        <label>RAMO</label>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>1</fullName>
+                    <default>false</default>
+                    <label>1</label>
+                </value>
+                <value>
+                    <fullName>2</fullName>
+                    <default>false</default>
+                    <label>2</label>
+                </value>
+                <value>
+                    <fullName>3</fullName>
+                    <default>false</default>
+                    <label>3</label>
+                </value>
+                <value>
+                    <fullName>4</fullName>
+                    <default>false</default>
+                    <label>4</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>6</fullName>
+                    <default>false</default>
+                    <label>6</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
     </fields>
@@ -198,7 +337,7 @@
             <operation>greaterOrEqual</operation>
             <value>LAST_N_MONTHS:3</value>
         </filters>
-        <label>Oportunidad en curso</label>
+        <label>Opportunity Pipeline</label>
     </listViews>
     <listViews>
         <fullName>MyOpportunities</fullName>
@@ -248,15 +387,4 @@
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>Private</sharingModel>
-    <webLinks>
-        <fullName>BigMachines__iframe_resizing</fullName>
-        <availability>online</availability>
-        <description>Resizes the Oracle Quotes and Orders list, which is displayed in an iframe. The iframe is resized to the height of its contents, so that no scroll bar is needed.</description>
-        <displayType>link</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>iframe resizing</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(URLFOR($Site.Prefix) + &apos;/resource/iframe_resizing&apos;)}</url>
-    </webLinks>
 </CustomObject>

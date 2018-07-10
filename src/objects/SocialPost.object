@@ -256,6 +256,15 @@
         <filterScope>Everything</filterScope>
         <label>All social posts</label>
     </listViews>
+    <listViews>
+        <fullName>Queue_Test_SocialPost</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Queue Test</label>
+        <queue>Queue_Test</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Persona</customTabListAdditionalFields>
         <customTabListAdditionalFields>Content</customTabListAdditionalFields>

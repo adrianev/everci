@@ -16,7 +16,6 @@
             <operator>equals</operator>
             <value>Closed</value>
         </criteriaItems>
-        <language>es</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

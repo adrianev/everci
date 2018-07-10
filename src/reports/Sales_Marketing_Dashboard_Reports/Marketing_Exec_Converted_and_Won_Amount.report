@@ -29,7 +29,6 @@
             <operator>equals</operator>
             <value>Closed Won</value>
         </criteriaItems>
-        <language>es</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

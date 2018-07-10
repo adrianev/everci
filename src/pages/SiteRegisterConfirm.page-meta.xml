@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com User Registration Confirmation page</description>
+    <description>Default Salesforce Sites User Registration Confirmation page</description>
     <label>SiteRegisterConfirm</label>
 </ApexPage>

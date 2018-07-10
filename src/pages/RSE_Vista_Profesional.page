@@ -1,2 +1,0 @@
-<apex:page showHeader="true" sidebar="true" action="{!irFichaProfesional}" controller="RSE_Vista_Profesional">
-</apex:page>

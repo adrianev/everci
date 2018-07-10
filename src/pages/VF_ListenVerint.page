@@ -1,6 +1,0 @@
-<apex:page standardController="Task">
-   <audio controls="controls" preload="none">
-   <source src="https://service/static/audio?file=" type="audio/wav" />
-   Your browser does not support the audio tag.
-    </audio>
-</apex:page>

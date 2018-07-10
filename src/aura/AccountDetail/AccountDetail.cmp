@@ -1,0 +1,44 @@
+<aura:component controller="AccountDetailController">
+    <aura:attribute name='count' type='Integer' default='5' />
+    <aura:attribute name='accountList' type='Account[]' default='' />
+    <aura:attribute name='acc' type='Account' default="{Name : ''}"/>
+    
+    <h3 class="slds-section-title--divider">Account Count</h3>
+    <div class="slds-panel__section">
+        <lightning:button label="Update Count" onclick="{!c.updateCount}"/> <br />
+        {!v.count} <br />
+    </div>
+    
+    <h3 class="slds-section-title--divider">Account List</h3>
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <div class="slds-form-element">
+            <lightning:button label="Get List Count" onclick="{!c.getListAccount}"/> <br />
+            <div class="slds-form-element__control">
+                <table>
+                    <thead>
+                        <th>Id</th>
+                        <th>Name</th>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.accountList}" var="account">
+                        <tr>
+                            <td>
+                                {!account.Id}
+                            </td>
+                            <td>
+                                {!account.Name}
+                            </td>
+                        </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <h3 class="slds-section-title--divider">New Account</h3>
+    <div class="slds-form--stacked slds-p-around--medium slds-m-bottom--x-small">
+        <lightning:input label="Nombre de la cuenta" value="{!v.acc.Name}"/>
+        <lightning:button label="New" onclick="{!c.addAccount}"/> <br />
+    </div>
+</aura:component>

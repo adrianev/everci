@@ -5,7 +5,6 @@
     @IsTest(SeeAllData=true) 
     public static void testCommunitiesSelfRegController() {
         CommunitiesSelfRegController controller = new CommunitiesSelfRegController();
-        controller.registerUser();
         controller.firstName = 'FirstName';
         controller.lastName = 'LastName';
         controller.email = 'test@force.com';
@@ -16,7 +15,6 @@
         
         controller.password = 'abcd1234';
         controller.confirmPassword = 'abcd123';
-        System.assert(controller.registerUser() == null); 
-        
+        System.assert(controller.registerUser() == null);  
     }    
 }

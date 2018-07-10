@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Role xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseAccessLevel>Edit</caseAccessLevel>
-    <contactAccessLevel>Edit</contactAccessLevel>
-    <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>Gestor tramitación especialista B2B/B2B2C</name>
-    <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Supervisor_tramitaci_n_especialista_B2B_B2B2C</parentRole>
-</Role>

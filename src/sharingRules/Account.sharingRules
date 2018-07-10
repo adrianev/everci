@@ -1,21 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
-    <sharingCriteriaRules>
-        <fullName>Visibilidad_Global_Cuenta</fullName>
-        <accessLevel>Edit</accessLevel>
-        <accountSettings>
-            <caseAccessLevel>Edit</caseAccessLevel>
-            <contactAccessLevel>Edit</contactAccessLevel>
-            <opportunityAccessLevel>None</opportunityAccessLevel>
-        </accountSettings>
-        <label>Visibilidad Global Cuenta</label>
-        <sharedTo>
-            <roleAndSubordinatesInternal>Director_General</roleAndSubordinatesInternal>
-        </sharedTo>
-        <criteriaItems>
-            <field>RecordTypeId</field>
-            <operation>equals</operation>
-            <value>Cliente Particular,Cliente B2B/B2B2C secundario</value>
-        </criteriaItems>
-    </sharingCriteriaRules>
-</SharingRules>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata"/>
+

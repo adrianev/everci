@@ -1,3 +1,0 @@
-Id,MasterLabel,DeveloperName
-0C59E00000001KM,Acuchillado,E_08_Acuchillado
-1C59E00000001KM,SegurCaixa,CIA_1018

@@ -1,3 +1,0 @@
-<apex:page controller="Retorno_Empresa" showHeader="false" sidebar="false">
-<apex:iframe src="https://homeserve--develop--c.cs88.visual.force.com/apex/visor_informe?informe=Empresas_y_contratos" id="redirect"/>
-</apex:page>

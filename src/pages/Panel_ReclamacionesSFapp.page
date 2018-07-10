@@ -1,2 +1,0 @@
-<apex:page showHeader="false" action="{!irReclamaciones}" controller="Panel_OTRedirec">
-</apex:page>

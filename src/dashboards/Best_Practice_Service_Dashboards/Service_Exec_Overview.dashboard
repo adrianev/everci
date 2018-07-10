@@ -271,9 +271,9 @@
             <useReportChart>true</useReportChart>
         </components>
     </rightSection>
-    <runningUser>adminsfdc@reparalia.com</runningUser>
+    <runningUser>millan.santos.arias@everis.com</runningUser>
     <textColor>#000000</textColor>
-    <title>Service Executive Overview - SAMPLE</title>
+    <title>Service Executive Overview</title>
     <titleColor>#000000</titleColor>
     <titleSize>12</titleSize>
 </Dashboard>

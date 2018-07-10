@@ -1,13 +1,13 @@
-Hola {!Receiving_User.FirstName},
+Hello {!Receiving_User.FirstName},
 
-            Recibimos su solicitud para restablecer su contraseña de {!Community_Name}. No podemos restablecer su contraseña en estos momentos. Su cuenta está bloqueada tras demasiados intentos de inicio de sesión.
+            We received your request to reset your {!Community_Name} password. We can't reset your password right now. Your account is locked after too many login attempts.
 
             {!CASE(1,
-            IF(VALUE(PASSWORD_LOCK_TIME) > 0, 1, 0), "Inténtelo de nuevo en " + PASSWORD_LOCK_TIME + " minutos.",
-            IF(VALUE(PASSWORD_LOCK_TIME) < 0, 1, 0), "Póngase en contacto con su administrador de " + Community_Name + " para desbloquear su cuenta.",
+            IF(VALUE(PASSWORD_LOCK_TIME) > 0, 1, 0), "Try again in " + PASSWORD_LOCK_TIME + " minutes.",
+            IF(VALUE(PASSWORD_LOCK_TIME) < 0, 1, 0), "Contact your " + Community_Name + " administrator to unlock your account.",
             "")}
 
-            Si no solicitó un restablecimiento de su contraseña o no ha intentado iniciar sesión en su cuenta recientemente, póngase en contacto con su administrador de {!Community_Name} o responda a este mensaje.
+            If you didn't request a password reset or haven't tried to log in to your account recently, contact your {!Community_Name} administrator or reply to this email.
 
-            Gracias,
+            Thank you,
             {!Community_Name}

@@ -1,2 +1,0 @@
-<apex:page controller="CTI_Dispatcher" action="{!redireccion}">
-</apex:page>

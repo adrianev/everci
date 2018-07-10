@@ -3,6 +3,6 @@
     <apiVersion>42.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <description>Default Force.com Authorization Required page</description>
+    <description>Default Lightning Platform Authorization Required page</description>
     <label>Unauthorized</label>
 </ApexPage>

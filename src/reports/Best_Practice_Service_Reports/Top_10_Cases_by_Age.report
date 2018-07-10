@@ -50,7 +50,6 @@
             <operator>equals</operator>
             <value>1</value>
         </criteriaItems>
-        <language>es</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

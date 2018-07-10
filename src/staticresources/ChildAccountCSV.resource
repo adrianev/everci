@@ -1,6 +1,0 @@
-Id,Name,CUE_TXT_Identificador__c,CUE_EMA_Email__c,RecordTypeId,CUE_TXT_Numero_Documento__c,CUE_TXT_PrimerApellido__c,CUE_TXT_Nombre__c,CUE_CAS_No_Permite_Servicio_B2C__c,CUE_TXT_Presentacion__c,CUE_TXT_SegundoApellido__c,CUE_DIV_Limite_Graves__c,CUE_SEL_GestionIndemnizable__c,CUE_DIV_Limite_Actuacion__c,Type,CUE_LKP_Cuenta_principal__c,ShippingPostalCode,ShippingStreet,ShippingCity,ShippingState,CUE_TXT_Segmentacion_num__c
-0019E00000XZI55QAH,AseguradoHijo,19783776E,aseguradoExample@gmail.es,0129E0000005Tpg,12345678A,Fernandez,Paco,false,#USUARIO# Bienvenido3 #SALUDO#,Lopez,,,,,6019E00000P9vBIQAZ,28050,04
-1019E00000XZI55QAH,SegurCaixa3Hijo,1298,B2BSecundariaExample@gmail.es,0129E0000005Tpg,19951764F,Martinez,Alex,false,#USUARIO# Bienvenido #SALUDO#,Sanchez,2000.00,,,,6019E00000P9vBIQAZ,,
-0019E00000XIkdFQAT,Holiday Gym Arturo Soria,1515595538177,,0129E0000005TpgQAE,75896398I,,,false,,,,,,Direccion,0019E00000UHDO5QAP,
-3339E00000XIkdFQAT,Holiday Gym Arturo Soria2,1515595538178,B2BSecundariaExample1@gmail.es,0129E0000005Tpg,19951766F,Martinez1,Alex1,false,#USUARIO# Bienvenido #SALUDO#,Sanchez,2000.00,,,02,3329E00000UHDO5QAP,28050,Avenida de Europa 34,Madrid,Madrid,
-7019E00000P9vBIQAZ,SegurCaixa3,1218,B2BSecundariaExample@gmail.es,0129E0000005Tpg,19951764F,Martinez,Alex,false,#USUARIO# Bienvenido #SALUDO#,Sanchez,2000.00,,,,6019E00000P9vBIQAZ,,,

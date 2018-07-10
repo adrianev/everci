@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>https://homeserve--develop.cs88.my.salesforce.com/services/oauth2/token</description>
-    <disableProtocolSecurity>false</disableProtocolSecurity>
-    <isActive>true</isActive>
-    <url>https://140.86.69.224:8443</url>
-</RemoteSiteSetting>

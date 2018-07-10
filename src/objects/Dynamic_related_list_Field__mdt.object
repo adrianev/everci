@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Dynamic_related_list__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Dynamic related list</label>
+        <referenceTo>Dynamic_related_list__mdt</referenceTo>
+        <relationshipLabel>Dynamic related list - Fields</relationshipLabel>
+        <relationshipName>Dynamic_related_list_Fields</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Field</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>navigateToRegister__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Navigate to record</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Dynamic related list - Field</label>
+    <pluralLabel>Dynamic related list - Fields</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

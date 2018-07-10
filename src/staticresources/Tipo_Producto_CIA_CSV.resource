@@ -1,2 +1,0 @@
-Id,Name,TPR_SEL_Tipo_Producto__c,TPR_LKP_Compania__c,TPR_SEL_Interlocutores_Autorizados__c
-a0v9E000000QqrG,SegurCaixa - HOGAR,01,1019E00000P9vBIQAZ,Padre
