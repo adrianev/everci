@@ -61,7 +61,7 @@
         <deprecated>false</deprecated>
         <description>If this box is checked, Campaign Member Status or Activity Field will be updated depending on the value of  the UpdateStatusOrActivity field.</description>
         <externalId>false</externalId>
-        <inlineHelpText>Si esta casilla está marcada, el campo Estado de los miembros de la campaña o Actividad se actualizará dependiendo del valor del campo UpdateStatusOrActivity.</inlineHelpText>
+        <inlineHelpText>If this box is checked, Campaign Member Status or Activity Field will be updated depending on the value of  the UpdateStatusOrActivity field.</inlineHelpText>
         <label>CampaignMemberConnectorEnabled</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>

@@ -93,7 +93,7 @@
         <fullName>et4ae5__DateBounced__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La fecha y la hora en que se realizó la devolución desde la dirección de correo electrónico de este suscriptor</inlineHelpText>
+        <inlineHelpText>The date and time when this subscriber&apos;s email address bounced</inlineHelpText>
         <label>Date Bounced</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -103,7 +103,7 @@
         <fullName>et4ae5__DateOpened__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La fecha y la hora en que el suscriptor abrió el correo electrónico</inlineHelpText>
+        <inlineHelpText>The date and time when the subscriber opened the email</inlineHelpText>
         <label>Date Opened</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -122,7 +122,7 @@
         <fullName>et4ae5__DateUnsubscribed__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La fecha y la hora en que el suscriptor canceló su suscripción</inlineHelpText>
+        <inlineHelpText>The date and time when the subscriber unsubscribed</inlineHelpText>
         <label>Date Unsubscribed</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -188,7 +188,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El correo electrónico enviado a este suscriptor se rechazó debido a anomalías de carácter permanente (esto sucede normalmente cuando se produce un error de tipo &quot;usuario desconocido&quot; o &quot;dominio no encontrado&quot;).</inlineHelpText>
+        <inlineHelpText>The email sent to this subscriber  was rejected due to permanent conditions (this typically results when &quot;user unknown&quot; or &quot;domain not found&quot; errors occur)</inlineHelpText>
         <label>Hard Bounce</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -233,7 +233,7 @@
         <fullName>et4ae5__NumberOfTotalClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número total de veces que este suscriptor hizo clic en los vínculos de este correo electrónico</inlineHelpText>
+        <inlineHelpText>The total number of times this subscriber clicked on the links on this email</inlineHelpText>
         <label>Number of Total Clicks</label>
         <precision>6</precision>
         <required>false</required>
@@ -246,7 +246,7 @@
         <fullName>et4ae5__NumberOfUniqueClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de clics únicos de este suscriptor de los vínculos de este correo electrónico (único significa un clic por vínculo)</inlineHelpText>
+        <inlineHelpText>The unique number of times this subscriber clicked on the links on this email (unique means one click per link)</inlineHelpText>
         <label>Links Clicked</label>
         <precision>6</precision>
         <required>false</required>
@@ -260,7 +260,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Indica si el suscriptor abrió o no el correo electrónico</inlineHelpText>
+        <inlineHelpText>Indicates whether the subscriber opened the email or not</inlineHelpText>
         <label>Opened</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -270,7 +270,7 @@
         <deleteConstraint>SetNull</deleteConstraint>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El identificador único del envío de correo electrónico. Es posible que se le solicite este número cuando llave al servicio de asistencia de Marketing Cloud si se presenta la necesidad.</inlineHelpText>
+        <inlineHelpText>The unique identifier of the email send. You may be asked to reference this number when calling Marketing Cloud support if the need arises.</inlineHelpText>
         <label>Send Definition</label>
         <referenceTo>et4ae5__SendDefinition__c</referenceTo>
         <relationshipLabel>Individual Email Results</relationshipLabel>
@@ -284,7 +284,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El correo electrónico enviado se rechazó debido a una anomalía aparentemente temporal, por ejemplo, porque el buzón de entrada está lleno, después de que el sistema haya reintentado enviar el correo electrónico sin éxito cada 15 minutos durante 72 horas.</inlineHelpText>
+        <inlineHelpText>The email sent was rejected due to a seemingly temporary condition, such as a full inbox, after the system retries unsuccessfully to send the email every 15 minutes for 72 hours. A subscriber will be set to Held status after three soft bounces</inlineHelpText>
         <label>Soft Bounce</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -305,7 +305,7 @@
         <defaultValue>now()</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La fecha y la hora de recepción de la última actualización de seguimiento por parte de Salesforce</inlineHelpText>
+        <inlineHelpText>The date and time the last tracking update was received by Salesforce</inlineHelpText>
         <label>Tracking As Of</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -316,7 +316,7 @@
         <deprecated>false</deprecated>
         <externalId>false</externalId>
         <formula>et4ae5__TriggeredSendDefinition__r.Name</formula>
-        <inlineHelpText>Si este correo electrónico se generó automáticamente por un Envío desencadenado, el nombre del Envío desencadenado que generó el correo electrónico se mostrará aquí.</inlineHelpText>
+        <inlineHelpText>If this email was automatically generated by a Triggered Send, the name of the Triggered Send that generated the email will be displayed here.</inlineHelpText>
         <label>Triggered Send Name</label>
         <required>false</required>
         <trackTrending>false</trackTrending>

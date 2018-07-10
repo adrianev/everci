@@ -1,33 +1,48 @@
 @isTest
 public without sharing class Test_TRG_Handler_ContentDocumentLink {
 
+    private static Account cuentaDireccion;
+
 	public static List<ContentDocumentLink> createContentDocumentLinkCase(){
-        system.debug('hasta aqui llega');
         Baipas.establecerVariableControl();
         List<ContentDocumentLink> lContentDocumentLinkCase = new List<ContentDocumentLink>();
-        system.debug('hasta aqui llega');
+        
         String sInputEmail = 'homeserveGestor@cliente.com';
         
         List<User> lUsers = [SELECT Name,UserRoleId FROM User WHERE UserRoleId != ''];
 		//Create Test Account
-		Account newAccount = new Account(Name='TestAccount', CUE_EMA_Gestor_Comunidad__c = sInputEmail,CUE_TXT_Identificador__c='00001', OwnerId = lUsers.get(0).Id,
-                                        CUE_TXT_Numero_Documento__c = 'X1234567X', CUE_SEL_Tipo_Documento__c = 'C');
-		insert newAccount;
-        system.debug('hasta aqui llega');
+		Baipas.establecerVariableControl();
+
+        Account compania = new Account();
+        compania = Util_Tests.crearCuentaCompania('SegurCaixa','1018', 'J5340931D');
+		Account asegurado = Util_Tests.crearCuentaAsegurado('Asegurado','1019','email@gmail.es', '46595659M','Miguel', 'Sagrado', 'Corazón');
+		insert compania;
+		asegurado.CUE_LKP_Cuenta_principal__c = compania.Id;
+		asegurado.Type='02';
+		insert asegurado;
+        Baipas.deshabilitarVariableControl();
+        
 		//Create Test Contact
-		Contact c = new Contact(firstname='first',lastname='last',AccountId=newAccount.Id);
-		c.CON_TXT_Identificador__c = 'CON78545421';system.debug('hasta aqui llega');
+		Contact c = new Contact();
+        c = Util_Tests.crearContacto('Manuel', 'Rosas Castillo', asegurado.Id, '53568187A');
+        c.CON_TXT_Identificador__c = 'CON78545421';
 		insert c;
+
+
+        cuentaDireccion=Util_Tests.crearCuentaB2BPpal('Name', '1234563', 'X4455667X');
+        cuentaDireccion.Type=Label.CUE_TIPO_DIRECCION;
+        insert cuentaDireccion;
         
         Case caseObj = new Case(
                         ContactId = c.Id,
-                        AccountId = newAccount.Id,
+                        AccountId = asegurado.Id,
                         Status = 'Working',
+             			CAS_LKP_Compania__c=compania.id,
+                        CAS_LKP_Cliente_contable_cliente__c=cuentaDireccion.Id,
                         Origin = 'Phone');
         
         insert caseObj;
-        system.debug('CASE COMO OBJETO: '+caseObj);
-        system.debug([SELECT Id FROM Case]);
+        
         ContentVersion cv=new Contentversion();
         cv.title='ABC';
         cv.PathOnClient ='test';
@@ -50,7 +65,9 @@ public without sharing class Test_TRG_Handler_ContentDocumentLink {
         contentDocumentLinkCase.Visibility='AllUsers';
         contentDocumentLinkCase.ContentDocumentId=cv.Id;
         contentDocumentLinkCase.LinkedEntityId=caseObj.id;
+        
         lContentDocumentLinkCase.add(contentDocumentLinkCase);
+        
 		return lContentDocumentLinkCase;
 	}
     
@@ -61,6 +78,7 @@ public without sharing class Test_TRG_Handler_ContentDocumentLink {
         WorkOrder wo = new WorkOrder();
         wo.subject ='title';
         insert wo;
+        
         ContentVersion cv=new Contentversion();
         cv.title='ABC';
         cv.PathOnClient ='test';
@@ -74,6 +92,7 @@ public without sharing class Test_TRG_Handler_ContentDocumentLink {
         contentDocumentLinkWOUser.Visibility='InternalUsers';
         contentDocumentLinkWOUser.ContentDocumentId=cv.Id;
         contentDocumentLinkWOUser.LinkedEntityId=wo.id;
+        
         lContentDocumentLinkWorkOrder.add(contentDocumentLinkWOUser);
         
         ContentDocumentLink contentDocumentLinkWO = new ContentDocumentLink();
@@ -81,6 +100,7 @@ public without sharing class Test_TRG_Handler_ContentDocumentLink {
         contentDocumentLinkWO.Visibility='AllUsers';
         contentDocumentLinkWO.ContentDocumentId=cv.Id;
         contentDocumentLinkWO.LinkedEntityId=wo.id;
+        
         lContentDocumentLinkWorkOrder.add(contentDocumentLinkWO);
         
         return lContentDocumentLinkWorkOrder;
@@ -96,7 +116,7 @@ public without sharing class Test_TRG_Handler_ContentDocumentLink {
 		//Create Test Account
 		Account newAccount = new Account(Name='TestAccount', CUE_EMA_Gestor_Comunidad__c = sInputEmail,CUE_TXT_Identificador__c='00001', OwnerId = lUsers.get(0).Id,
                                         CUE_TXT_Numero_Documento__c = 'X1234567X', CUE_SEL_Tipo_Documento__c = 'C');
-		insert newAccount;
+		//insert newAccount;
         
         Baipas.deshabilitarVariableControl();
         
@@ -121,39 +141,31 @@ public without sharing class Test_TRG_Handler_ContentDocumentLink {
         contentDocumentLinkAccount.Visibility='AllUsers';
         contentDocumentLinkAccount.ContentDocumentId=cv.Id;
         contentDocumentLinkAccount.LinkedEntityId=newAccount.id;
+        
         lContentDocumentLinkAccount.add(contentDocumentLinkAccount);
+        
         return lContentDocumentLinkAccount;
 	}
     
-    @isTest(SeeAllData=true)
+    @isTest()
     public static void testActualizarVisibilityForCase(){
         List<ContentDocumentLink> lcreateContentDocumentLinkCase = createContentDocumentLinkCase();
-        system.debug('METODO DE TEST');
-        system.debug('Antes: ' + lcreateContentDocumentLinkCase);
         TRG_Handler_ContentDocumentLink.actualizarVisibility(lcreateContentDocumentLinkCase);
-        system.debug('Despues: ' + lcreateContentDocumentLinkCase);
+        for(ContentDocumentLink contentDocumentLink:lcreateContentDocumentLinkCase){
+			system.assertEquals(contentDocumentLink.Visibility, 'AllUsers');
+
+		}
     }
     
-    @isTest(SeeAllData=true)
-    public static void testActualizarVisibilityForWO(){
-        List<ContentDocumentLink> lcreateContentDocumentLinkWO = createContentDocumentLinkWO();
-        system.debug('Antes: ' + lcreateContentDocumentLinkWO);
-        TRG_Handler_ContentDocumentLink.actualizarVisibility(lcreateContentDocumentLinkWO);
-        system.debug('Despues: ' + lcreateContentDocumentLinkWO);
-        
-        system.assertEquals(lcreateContentDocumentLinkWO.get(0).Visibility, 'AllUsers');
-        system.assertEquals(lcreateContentDocumentLinkWO.get(1).Visibility, 'AllUsers');
-    }
-    
-    @isTest(SeeAllData=true)
+     
+    @isTest()
     public static void testActualizarVisibilityForOthers(){
         List<ContentDocumentLink> lcreateContentDocumentLinkOther = createContentDocumentLinkAccount();
-        system.debug('Antes: ' + lcreateContentDocumentLinkOther);
-        TRG_Handler_ContentDocumentLink.actualizarVisibility(lcreateContentDocumentLinkOther);
-		system.debug('Despues: ' + lcreateContentDocumentLinkOther);
+        TRG_Handler_ContentDocumentLink.actualizarVisibility(lcreateContentDocumentLinkOther);       
+		for(ContentDocumentLink contentDocumentLink:lcreateContentDocumentLinkOther){
+			system.assertEquals(contentDocumentLink.Visibility, 'AllUsers');
 
-        system.assertEquals(lcreateContentDocumentLinkOther.get(0).Visibility, 'InternalUsers');
-        system.assertEquals(lcreateContentDocumentLinkOther.get(1).Visibility, 'AllUsers');
-    }
-        
+		}
+    }  
+       
 }

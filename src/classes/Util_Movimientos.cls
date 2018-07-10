@@ -288,7 +288,7 @@ public without sharing class Util_Movimientos implements Queueable  {
 		//Se comenta, pendiente de traducción
 		//movimiento.MOV_TXT_Codigo_Reapertura__c=caso.CAS_SEL_Motivo_Reapertura__c;
 		String traduccionRechazo = mapaTraduccionCaso.get(IDIOMA + CIAId + 'CAS_SEL_Motivo_Rechazo__c' + caso.CAS_SEL_Motivo_Rechazo__c);
-		movimiento.MOV_TXT_Responsable_Siniestro__c = (traduccionRechazo != null ? traduccionRechazo : caso.CAS_SEL_Motivo_Rechazo__c );
+		movimiento.MOV_TXT_Codigo_Rechazo__c = (traduccionRechazo != null ? traduccionRechazo : caso.CAS_SEL_Motivo_Rechazo__c );
 		//movimiento.MOV_TXT_Codigo_Rechazo__c=caso.CAS_SEL_Codigo_Rechazo__c;
 		movimiento.MOV_LKP_Compania__c=caso.CAS_LKP_Compania__c;
 		//movimiento.CreatedDate=caso.LastModifiedDate;

@@ -455,6 +455,11 @@
                     <label>Nuevo</label>
                 </value>
                 <value>
+                    <fullName>05</fullName>
+                    <default>false</default>
+                    <label>Anulado</label>
+                </value>
+                <value>
                     <fullName>01</fullName>
                     <default>false</default>
                     <isActive>false</isActive>

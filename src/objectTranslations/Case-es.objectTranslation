@@ -1167,7 +1167,7 @@
     <fields>
         <label><!-- Gestor Apertura --></label>
         <name>CAS_LKP_Gestor_Apertura__c</name>
-        <relationshipLabel><!-- Intervenciones (Gestor Apertura) --></relationshipLabel>
+        <relationshipLabel><!-- Cases (Gestor Apertura) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Línea de Contrato --></label>
@@ -1207,7 +1207,7 @@
     <fields>
         <label><!-- Responsable Reclamación --></label>
         <name>CAS_LKP_Responsable_Reclamacion__c</name>
-        <relationshipLabel><!-- Intervenciones (Responsable Reclamación) --></relationshipLabel>
+        <relationshipLabel><!-- Cases (Responsable Reclamación) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Suceso --></label>
@@ -2686,11 +2686,6 @@
         <label><!-- Texto observación RGA --></label>
         <name>CAS_TXT_texto_observaciones_RGA__c</name>
     </fields>
-    <fields>
-        <label><!-- Contacto responsable --></label>
-        <name>Contacto_responsable__c</name>
-        <relationshipLabel><!-- Casos --></relationshipLabel>
-    </fields>
     <gender>Feminine</gender>
     <layouts>
         <layout>CASO FSL</layout>
@@ -3319,6 +3314,10 @@
     <webLinks>
         <label><!-- Sin_Determinar --></label>
         <name>Sin_Determinar</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solicitud_llamada_cliente --></label>
+        <name>Solicitud_llamada_cliente</name>
     </webLinks>
     <webLinks>
         <label><!-- Tramitacion_Siniestro --></label>

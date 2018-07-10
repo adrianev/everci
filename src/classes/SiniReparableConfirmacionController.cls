@@ -703,6 +703,7 @@ public class SiniReparableConfirmacionController {
 		Task tareaAlGestor=new Task();
 		List<Garantia_Siniestro__c> listaGarantiasCasoToDelete=Util_Siniestro.queryGarantiasExistentes(new set<Id>{intervencion.Id}).values();
         List<Garantia_Siniestro__c> listaGarantiasCasoToUpsert=Util_Siniestro.queryGarantiasExistentes(new set<Id>{confirmacion.Id}).values();
+                
         Set<Id> setIdWo = new Set<Id>();								 
 		for(WorkOrder wo: listaOrdenesTrabajo){
 			setIdWo.add(wo.Id);							   
@@ -791,6 +792,12 @@ public class SiniReparableConfirmacionController {
 						}
 					}
 				}
+											
+				//Se genera el movimiento de cambio de garantías si no son iguales las listas
+				if(!(sonIguales(listaGarantiasCasoToUpsert, listaGarantiasCasoToDelete))){
+        			Util_Movimientos.compruebaEnviable(intervencion.Id,intervencion.CAS_LKP_Compania__r.CUE_TXT_Identificador__c,'9');
+        		}
+				
 				if(intervencion.CAS_CAS_Confirmado__c) {
 					insert newComentarioCaso;
 				}
@@ -812,6 +819,23 @@ public class SiniReparableConfirmacionController {
 				System.debug('SiniReparableAperturaController: finalizarAperturaSalesforce:  e.getStackTraceString: ' + e.getStackTraceString());
 			}
 		}
+	}
+	
+	//Compara las listas de garantías y devuelve un booleano que indica si ambas son iguales
+	public Boolean sonIguales(List<Garantia_Siniestro__c> listaGarantiasCasoToUpsert, List<Garantia_Siniestro__c> listaGarantiasCasoToDelete){
+		Boolean iguales=true;
+		Boolean salida;
+		for(Garantia_Siniestro__c g : listaGarantiasCasoToUpsert){
+			if(!listaGarantiasCasoToDelete.contains(g)){
+				iguales = false;
+			}
+		}
+		if(iguales == true && listaGarantiasCasoToUpsert.size() == listaGarantiasCasoToDelete.size()){
+			salida = true;
+		}else{
+			salida = false;
+		}
+		return salida;
 	}
 
 

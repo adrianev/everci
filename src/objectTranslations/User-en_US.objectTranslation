@@ -66,7 +66,7 @@
         <help><!-- If you&apos;d like to have a delegated approver in Oracle CPQ Cloud, select that user here.  Please note that the user you select must already be provisioned in Oracle CPQ Cloud. --></help>
         <label><!-- Oracle CPQ Cloud Delegated Approver --></label>
         <name>BigMachines__Delegated_Approver__c</name>
-        <relationshipLabel><!-- Usuarios --></relationshipLabel>
+        <relationshipLabel><!-- Users --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Language Preference --></label>

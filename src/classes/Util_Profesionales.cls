@@ -1,6 +1,11 @@
-public without sharing class Util_Profesionales {
+public without sharing class Util_Profesionales implements Queueable {
 	
-	public static void crearUsuarioCPQ(User usr){
+	public User usr;
+	public Util_Profesionales(User usr){
+		this.usr = usr;
+	}
+	
+	public void crearUsuarioCPQ (){
 		
 		Callout_CPQ_Profesionales_RQ resultado = new Callout_CPQ_Profesionales_RQ();
 		
@@ -28,10 +33,11 @@ public without sharing class Util_Profesionales {
 		String idBitacora = Util_Llamada_Externa.insertarBitacora(Label.CPQ_Profesional,'','01','02',Label.CPQ_Profesional_Nombre,bodySend,'',
 							'','','','','','',usr.id,0,'',0,Label.Callout_POST);
 		system.debug('---- SVV. Se llama al callout ----');
-		system.debug('---- SVV. bodySend: ' + bodySend);
-		system.debug('---- SVV. Label.CPQ_Profesional: ' + Label.CPQ_Profesional);
-		system.debug('---- SVV. idBitacora: ' + idBitacora);
-		system.debug('---- SVV. usr.Id: ' + usr.Id);
 		Callout_CPQ_Profesionales.updateDatos(bodySend, Label.CPQ_Profesional, idBitacora, usr.Id);
+	}
+	
+	public void execute(QueueableContext context) {
+		system.debug('va a crear usuarios');
+		crearUsuarioCPQ();
 	}
 }

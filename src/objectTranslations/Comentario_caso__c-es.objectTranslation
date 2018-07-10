@@ -29,6 +29,13 @@
             <section>Vínculos personalizados</section>
         </sections>
     </layouts>
+    <layouts>
+        <layout>Formato Comentario caso Comunidad</layout>
+        <sections>
+            <label><!-- Vínculos personalizados --></label>
+            <section>Vínculos personalizados</section>
+        </sections>
+    </layouts>
     <validationRules>
         <errorMessage><!-- El comentario debe ser mayor que 14 caracteres. --></errorMessage>
         <name>Longitud_minima_del_comentario</name>

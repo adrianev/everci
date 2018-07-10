@@ -81,7 +81,7 @@
         <externalId>false</externalId>
         <formula>IF( AND( NOT( ISNULL( et4ae5__NumberSent__c ) ), et4ae5__NumberSent__c != 0 ), et4ae5__Number_Bounced__c / et4ae5__NumberSent__c , null )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El porcentaje de devoluciones frente a los correos electrónicos que se han enviado</inlineHelpText>
+        <inlineHelpText>The percentage of bounces versus the emails that were sent</inlineHelpText>
         <label>Bounce Rate</label>
         <precision>18</precision>
         <required>false</required>
@@ -145,7 +145,7 @@
         <externalId>false</externalId>
         <formula>IF( AND( NOT( ISNULL( et4ae5__Number_Delivered__c ) ), et4ae5__Number_Delivered__c != 0 ), et4ae5__NumberofUniqueClicks__c / et4ae5__Number_Delivered__c, null )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El porcentaje de clics únicos frente a los correos electrónicos que se han enviado (excluidas las devoluciones)</inlineHelpText>
+        <inlineHelpText>The percentage of unique clicks versus the emails that were sent (excluding bounces)</inlineHelpText>
         <label>Click Through Rate</label>
         <precision>18</precision>
         <required>false</required>
@@ -232,7 +232,7 @@
         <fullName>et4ae5__DateSent__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La fecha y hora reales del envío de Marketing Cloud</inlineHelpText>
+        <inlineHelpText>The date and time the send was actually sent by Marketing Cloud</inlineHelpText>
         <label>Date Sent</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -255,7 +255,7 @@
         <externalId>false</externalId>
         <formula>IF( AND( NOT( ISNULL( et4ae5__NumberSent__c ) ), et4ae5__NumberSent__c != 0 ), et4ae5__Number_Delivered__c / et4ae5__NumberSent__c, null )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El porcentaje de correos electrónicos que se han entregado correctamente frente a los correos electrónicos que se han devuelto</inlineHelpText>
+        <inlineHelpText>The percentage of emails that were successfully delivered versus the emails that bounced</inlineHelpText>
         <label>Deliverability Rate</label>
         <precision>18</precision>
         <required>false</required>
@@ -370,7 +370,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Se reintentó este trabajo en algún punto del proceso. La razón principal de reintentos de trabajos es debida principalmente a problemas de conectividad.</inlineHelpText>
+        <inlineHelpText>This job was retried at some point in the process. A job will be mainly retried due to connectivity issues.</inlineHelpText>
         <label>Retried</label>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
@@ -503,7 +503,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <externalId>false</externalId>
         <formula>et4ae5__Number_Delivered__c -  et4ae5__NumberofUniqueClicks__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El número de suscriptores que no han realizado ninguna acción en el correo electrónico (p. ej., no han seleccionado ningún vínculo)</inlineHelpText>
+        <inlineHelpText>The number of subscribers who did not perform any action on the email (i.e.: did not click on any link)</inlineHelpText>
         <label>Number Not Clicked</label>
         <precision>18</precision>
         <required>false</required>
@@ -517,7 +517,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberSent__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de mensajes de correo electrónico enviados. Este valor corresponde al número de suscriptores a los que se dirige este envío, excepto los suscriptores que se hayan excluido.</inlineHelpText>
+        <inlineHelpText>The number of email messages sent. This value is the number of subscribers that were targeted for this send, minus any excluded subscribers.</inlineHelpText>
         <label>Number Sent</label>
         <precision>6</precision>
         <required>false</required>
@@ -531,7 +531,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberUnsubscribed__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de suscriptores que han cancelado su suscripción tras el envío</inlineHelpText>
+        <inlineHelpText>The number of subscribers who unsubscribed from the send</inlineHelpText>
         <label>Number Unsubscribed</label>
         <precision>6</precision>
         <required>false</required>
@@ -547,7 +547,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <externalId>false</externalId>
         <formula>et4ae5__NumberofHardBounces__c + et4ae5__NumberofSoftBounces__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El número de mensajes de correo electrónico que se han devuelto, independientemente de si la devolución es permanente o temporal</inlineHelpText>
+        <inlineHelpText>The number of email messages that bounced regardless of whether it was a soft or hard bounce</inlineHelpText>
         <label>Number Bounced</label>
         <precision>18</precision>
         <required>false</required>
@@ -563,7 +563,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <externalId>false</externalId>
         <formula>et4ae5__NumberSent__c - et4ae5__Number_Bounced__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El número de mensajes de correo electrónico que no se han devuelto</inlineHelpText>
+        <inlineHelpText>The number of email messages that did not bounce</inlineHelpText>
         <label>Number Delivered</label>
         <precision>18</precision>
         <required>false</required>
@@ -579,7 +579,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <externalId>false</externalId>
         <formula>et4ae5__Number_Delivered__c - et4ae5__NumberofUniqueOpens__c</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El número de suscriptores que no han abierto el mensaje de correo electrónico</inlineHelpText>
+        <inlineHelpText>The number of subscribers who did not open the email</inlineHelpText>
         <label>Number Not Opened</label>
         <precision>18</precision>
         <required>false</required>
@@ -593,7 +593,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofExistingUndeliverables__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de suscriptores a los que no se ha podido entregar el mensaje</inlineHelpText>
+        <inlineHelpText>The number of subscribers to whom the message could not be delivered</inlineHelpText>
         <label>Number of Existing Undeliverables</label>
         <precision>6</precision>
         <required>false</required>
@@ -607,7 +607,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofExistingUnsubscribes__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de suscriptores que habían cancelado su suscripción o que no habían aceptado en el momento en que se envió el correo electrónico</inlineHelpText>
+        <inlineHelpText>The number of subscribers who had unsubscribed or opted out prior to the time the email was sent</inlineHelpText>
         <label>Number of Existing Unsubscribes</label>
         <precision>6</precision>
         <required>false</required>
@@ -621,7 +621,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofHardBounces__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de mensajes de correo electrónico que no se han entregado debido a errores permanentes</inlineHelpText>
+        <inlineHelpText>The number of email messages that were not delivered due to permanent errors</inlineHelpText>
         <label>Number of Hard Bounces</label>
         <precision>6</precision>
         <required>false</required>
@@ -635,7 +635,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofSoftBounces__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de mensajes de correo electrónico que no se han entregado debido a errores no permanentes</inlineHelpText>
+        <inlineHelpText>The number of email messages that were not delivered due to non-permanent errors</inlineHelpText>
         <label>Number of Soft Bounces</label>
         <precision>6</precision>
         <required>false</required>
@@ -649,7 +649,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofSubscribersForwardingEmail__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número total de suscriptores que han seleccionado el vínculo Reenviar</inlineHelpText>
+        <inlineHelpText>The total number of subscribers who clicked on the Forward link</inlineHelpText>
         <label>Number of Subscribers Forwarding</label>
         <precision>6</precision>
         <required>false</required>
@@ -663,7 +663,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofTotalClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de acciones realizadas en un mensaje de correo electrónico (por ej. haciendo clic en cualquier vínculo). Este valor incluye acciones múltiples por el mismo suscriptor.</inlineHelpText>
+        <inlineHelpText>The number of actions taken on an email (i.e.: by clicking on any link). This value includes multiple actions by the same subscriber</inlineHelpText>
         <label>Number of Total Clicks</label>
         <precision>6</precision>
         <required>false</required>
@@ -677,7 +677,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofTotalOpens__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de veces que se abrió el mensaje. Este valor incluye aperturas múltiples por el mismo suscriptor.</inlineHelpText>
+        <inlineHelpText>The number of times the message was opened. This value includes multiple opens by the same subscriber.</inlineHelpText>
         <label>Number of Total Opens</label>
         <precision>6</precision>
         <required>false</required>
@@ -691,7 +691,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofUniqueClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de suscriptores que realizaron una acción en el correo electrónico (p. ej., haciendo clic en cualquier vínculo)</inlineHelpText>
+        <inlineHelpText>The number of subscribers who performed an action on the email (i.e.: by clicking on any link)</inlineHelpText>
         <label>Number of Unique Clicks</label>
         <precision>6</precision>
         <required>false</required>
@@ -705,7 +705,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__NumberofUniqueOpens__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El número de mensajes de correo electrónico únicos que se abrieron. Este valor incluye una única apertura por suscriptor.</inlineHelpText>
+        <inlineHelpText>The number of unique email messages that were opened. This value includes only one open per subscriber.</inlineHelpText>
         <label>Number of Unique Opens</label>
         <precision>6</precision>
         <required>false</required>
@@ -721,7 +721,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <externalId>false</externalId>
         <formula>IF( AND( NOT( ISNULL( et4ae5__Number_Delivered__c ) ), et4ae5__Number_Delivered__c != 0 ), et4ae5__NumberofUniqueOpens__c / et4ae5__Number_Delivered__c, null )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El porcentaje de correos electrónicos que se han abierto frente a los correos electrónicos que se han enviado (excluidas las devoluciones)</inlineHelpText>
+        <inlineHelpText>The percentage of emails that were opened versus the emails that were sent (excluding bounces)</inlineHelpText>
         <label>Open Rate</label>
         <precision>18</precision>
         <required>false</required>
@@ -892,7 +892,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
 
 )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El estado de envío indica en qué fase del proceso se encuentra el envío.</inlineHelpText>
+        <inlineHelpText>The Send Status indicates where in the process the send is.</inlineHelpText>
         <label>Send Status</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -1034,7 +1034,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <fullName>et4ae5__Tracking_As_Of__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La fecha y la hora de recepción de la última actualización de seguimiento</inlineHelpText>
+        <inlineHelpText>The date and time the last tracking update was received</inlineHelpText>
         <label>Tracking As Of</label>
         <required>false</required>
         <trackHistory>false</trackHistory>
@@ -1070,7 +1070,7 @@ text(MONTH(  datevalue(et4ae5__Scheduled_Date_Time__c )))  &amp; &quot;/&quot; &
         <externalId>false</externalId>
         <formula>IF( AND( NOT( ISNULL( et4ae5__Number_Delivered__c ) ), et4ae5__Number_Delivered__c != 0 ), et4ae5__NumberUnsubscribed__c / et4ae5__Number_Delivered__c, null )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>El porcentaje de suscriptores que han cancelado su suscripción frente a los correos electrónicos que se han enviado (excluidas las devoluciones)</inlineHelpText>
+        <inlineHelpText>The percentage of subscribers who unsubscribed versus the emails that were sent (excluding bounces)</inlineHelpText>
         <label>Unsubscribe Rate</label>
         <precision>18</precision>
         <required>false</required>

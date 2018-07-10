@@ -132,7 +132,7 @@
         <deprecated>false</deprecated>
         <description>Field label selected for the recipient. Only used for display purposes.</description>
         <externalId>false</externalId>
-        <inlineHelpText>El campo Contacto/Candidato se utiliza para identificar el destinatario específico del mensaje de correo electrónico. Debe ser un campo de búsqueda en el objeto Contacto o Candidato para el objeto respectivo empleado en la definición de envío desencadenado. Si está creando un envío desencadenado en el objeto Contacto o Candidato, seleccione el campo Id. de contacto o candidato.</inlineHelpText>
+        <inlineHelpText>The Contact/Lead Field is used to identify the intended recipient of the email. This must be a Lookup field to the Contact or Lead Object for the respective object used in the Triggered Send Definition. If creating a Triggered Send on the Contact or Lead</inlineHelpText>
         <label>Contact/Lead FIeld</label>
         <length>255</length>
         <required>false</required>
@@ -261,7 +261,7 @@
         <fullName>et4ae5__Filter__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Los criterios de campo pueden utilizarse para restringir más si debe enviarse un envío desencadenado. Los criterios se evalúan cuando se produce el evento del objeto seleccionado.</inlineHelpText>
+        <inlineHelpText>Field Criteria can be used to further refine if a Triggered Send should be sent.  Criteria is evaluated when the selected Object Event occurs</inlineHelpText>
         <label>Field Criteria</label>
         <length>32768</length>
         <trackHistory>true</trackHistory>
@@ -566,7 +566,7 @@
         <fullName>et4ae5__Object__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Objeto en el que se basa el envío desencadenado</inlineHelpText>
+        <inlineHelpText>Object which the Triggered Send is based off of</inlineHelpText>
         <label>Object</label>
         <length>255</length>
         <required>false</required>
@@ -593,7 +593,7 @@
         <fullName>et4ae5__Person_Account_Lookup_Field__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>El valor de campo seleccionado que busca cuentas personales.</inlineHelpText>
+        <inlineHelpText>Field value selected that looks up to person accounts.</inlineHelpText>
         <label>Person Accout Lookup Field</label>
         <length>255</length>
         <required>false</required>
@@ -606,7 +606,7 @@
         <fullName>et4ae5__Preheader__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La cadena de texto que aparecía en la línea de preencabezado del mensaje de correo electrónico. Nota: Este texto contiene barras invertidas (\) antes de las comillas simples (&apos;) para garantizar una experiencia segura. No obstante, estas barras invertidas no aparecen en el mensaje de correo electrónico enviado.</inlineHelpText>
+        <inlineHelpText>The string of text used to appear in the email&apos;s preheader. Note: This text contains backslashes (\) before all single quotes (&apos;) to ensure a secure experience. However, these backslashes do not appear in the email sent.</inlineHelpText>
         <label>Preheader</label>
         <length>255</length>
         <required>false</required>
@@ -676,7 +676,7 @@
         <fullName>et4ae5__Subject__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>La cadena de texto que aparecía en la línea de asunto del mensaje de correo electrónico. Nota: Este texto contiene barras invertidas (\) antes de las comillas simples (&apos;) para garantizar una experiencia segura. No obstante, estas barras invertidas no aparecen en el mensaje de correo electrónico enviado.</inlineHelpText>
+        <inlineHelpText>The string of text used to appear in the email&apos;s subject line. Note: This text contains backslashes (\) before all single quotes (&apos;) to ensure a secure experience. However, these backslashes do not appear in the email sent.</inlineHelpText>
         <label>Subject</label>
         <length>255</length>
         <required>false</required>
@@ -724,7 +724,7 @@
         <description>Object event that will trigger the evaluation of the Triggered Send.  Options are for when a new record for respective object is created, existing record is updated, or both created and updated</description>
         <externalId>false</externalId>
         <formula>IF( et4ae5__Action__c == &apos;Insert&apos;,  $Label.et4ae5__recins , IF( et4ae5__Action__c == &apos;Update&apos;,  $Label.et4ae5__recupdt , IF(et4ae5__Action__c == &apos;Either&apos;, $Label.et4ae5__recups , IF(et4ae5__Action__c == &apos;EitherSubsequently&apos;, $Label.et4ae5__recupdtsub,&apos;&apos;))))</formula>
-        <inlineHelpText>Evento del objeto que desencadenará la evaluación del envío desencadenado. Las opciones se establecen cuando se crea un nuevo registro para el objeto respectivo, se actualiza un objeto existente o ambos se crean y se actualizan.</inlineHelpText>
+        <inlineHelpText>Object event that will trigger the evaluation of the Triggered Send.  Options are for when a new record for respective object is created, existing record is updated, or both created and updated</inlineHelpText>
         <label>Trigger send when</label>
         <required>false</required>
         <trackHistory>false</trackHistory>

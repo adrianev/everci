@@ -120,17 +120,17 @@
     <fields>
         <label><!-- Imputar a --></label>
         <name>PAR_LKP_Imputar_a_gestor1__c</name>
-        <relationshipLabel><!-- Partidas de servicios (Imputar a) --></relationshipLabel>
+        <relationshipLabel><!-- Work Order Line Items (Imputar a) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Imputar a --></label>
         <name>PAR_LKP_Imputar_a_gestor2__c</name>
-        <relationshipLabel><!-- Partidas de servicios (Imputar a) --></relationshipLabel>
+        <relationshipLabel><!-- Work Order Line Items (Imputar a) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Imputar a --></label>
         <name>PAR_LKP_Imputar_a_gestor3__c</name>
-        <relationshipLabel><!-- Partidas de servicios (Imputar a) --></relationshipLabel>
+        <relationshipLabel><!-- Work Order Line Items (Imputar a) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Imputar a --></label>

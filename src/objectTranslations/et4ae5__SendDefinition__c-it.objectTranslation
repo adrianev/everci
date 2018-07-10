@@ -33,7 +33,7 @@
     <fields>
         <label><!-- Business Unit --></label>
         <name>et4ae5__Business_Unit__c</name>
-        <relationshipLabel><!-- Envíos de correos electrónicos --></relationshipLabel>
+        <relationshipLabel><!-- Email Sends --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Business Unit saved --></label>
@@ -42,7 +42,7 @@
     <fields>
         <label><!-- Campaign --></label>
         <name>et4ae5__Campaign__c</name>
-        <relationshipLabel><!-- Envíos de correos electrónicos (Campaña) --></relationshipLabel>
+        <relationshipLabel><!-- Email Sends (Campaign) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Campaigns --></label>
@@ -56,7 +56,7 @@
     <fields>
         <label><!-- Contact --></label>
         <name>et4ae5__Contact__c</name>
-        <relationshipLabel><!-- Envíos de correos electrónicos --></relationshipLabel>
+        <relationshipLabel><!-- Email Sends --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Conversation Id --></label>
@@ -111,7 +111,7 @@
     <fields>
         <label><!-- ExclusionCampaign --></label>
         <name>et4ae5__ExclusionCampaign__c</name>
-        <relationshipLabel><!-- Envíos de correos electrónicos (ExclusionCampaign) --></relationshipLabel>
+        <relationshipLabel><!-- Email Sends (ExclusionCampaign) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Exclusion Lists --></label>
@@ -177,7 +177,7 @@
     <fields>
         <label><!-- Lead --></label>
         <name>et4ae5__Lead__c</name>
-        <relationshipLabel><!-- Envíos de correos electrónicos --></relationshipLabel>
+        <relationshipLabel><!-- Email Sends --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- MemberID --></label>
@@ -446,7 +446,7 @@
     <fields>
         <label><!-- User Enabled Business Unit --></label>
         <name>et4ae5__UEBU__c</name>
-        <relationshipLabel><!-- Envíos de correos electrónicos --></relationshipLabel>
+        <relationshipLabel><!-- Email Sends --></relationshipLabel>
     </fields>
     <fields>
         <help>La percentuale di abbonati che hanno annullato l&apos;iscrizione rispetto alle email che sono state inviate (esclusi i bounce)</help>

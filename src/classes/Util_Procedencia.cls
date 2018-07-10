@@ -206,7 +206,8 @@ public without sharing class Util_Procedencia {
 								PROC_SEL_Tipos_Caso__c,
 								PROC_LKP_Cuenta__c,
 								PROC_LKP_Cuenta__r.CUE_TXT_Identificador__c,
-								PROC_TXT_Identificador__c
+								PROC_TXT_Identificador__c,
+								PROC_CAS_Requiere_Pago_Minuta__c
 						 FROM Procedencia__c
 						 FOR UPDATE] ){
 						 	mapa.putAll(lista);

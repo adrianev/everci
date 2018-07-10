@@ -31,12 +31,12 @@
         <criteriaItems>
             <field>Account.CUE_CAS_Dada_de_Baja__c</field>
             <operation>equals</operation>
-            <value>Verdadero</value>
+            <value>True</value>
         </criteriaItems>
         <criteriaItems>
             <field>Account.CUE_CAS_Activado__c</field>
             <operation>equals</operation>
-            <value>Falso</value>
+            <value>False</value>
         </criteriaItems>
         <description>cuando el padre esta inactivo o de baja los hijos estarán tambien de baja</description>
         <triggerType>onCreateOrTriggeringUpdate</triggerType>

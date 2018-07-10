@@ -11,7 +11,7 @@
     <fields>
         <label><!-- Service Territory --></label>
         <name>FSL__ServiceTerritory__c</name>
-        <relationshipLabel><!-- Terrotorios de usuarios --></relationshipLabel>
+        <relationshipLabel><!-- User Territories --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Territory Name --></label>
@@ -20,7 +20,7 @@
     <fields>
         <label><!-- User --></label>
         <name>FSL__User__c</name>
-        <relationshipLabel><!-- Terrotorios de usuarios --></relationshipLabel>
+        <relationshipLabel><!-- User Territories --></relationshipLabel>
     </fields>
     <gender>Feminine</gender>
     <nameFieldLabel>Номер на територия на потребител</nameFieldLabel>

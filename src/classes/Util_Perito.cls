@@ -368,7 +368,7 @@ public without sharing class Util_Perito {
 		return listaTareasACerrar;
 	}
 
-	public static Case fechaSolicitudPerito(Case caso, Case casoOld,Perito__c Perito){
+	public static Case fechaSolicitudPerito(Case caso, Case casoOld,Perito__c Perito, Procedencia__c procedencia){
 		//1.2.0. Si está marcado el check de solicitar perito y el campo fecha está vacío
 		if(caso.CAS_CAS_Requiere_Perito__c && casoOld.CAS_CAS_Requiere_Perito__c!=caso.CAS_CAS_Requiere_Perito__c){
 			caso.CAS_DAT_Fecha_Asignacion_Perito__c = System.now();
@@ -387,7 +387,7 @@ public without sharing class Util_Perito {
 			caso.CAS_DAT_Fecha_Informe_Preli_Tramitado__c = System.now();
 			System.debug('@@@@@@Util_Perito: fechasolicitud: Antes de llamada a correoPerito');
 			//correoPerito(caso, perito, Label.PLANTILLA_EMAIL_PERITO_ID);
-			caso.CAS_SEL_Estado_Perito__c = Label.PER_ESTADO_PDTE_INFORME_PRELIMINAR ;
+			caso.CAS_SEL_Estado_Perito__c = Label.PER_ESTADO_PDTE_INFORME_DEFINITIVO;
 		}
 		//1.2.4. Si está marcado el check de Informe Definitivo Recibido y el campo fecha está vacío
 		if(caso.CAS_CAS_Informe_Definitivo_Recibido__c  && casoOld.CAS_CAS_Informe_Definitivo_Recibido__c!=caso.CAS_CAS_Informe_Definitivo_Recibido__c){
@@ -396,6 +396,9 @@ public without sharing class Util_Perito {
 		//1.2.5. Si está marcado el check de Informe Definitivo Tramitado y el campo fecha está vacío
 		if(caso.CAS_CAS_Informe_Definitivo_Tramitado__c && casoOld.CAS_CAS_Informe_Definitivo_Tramitado__c!=caso.CAS_CAS_Informe_Definitivo_Tramitado__c){
 			caso.CAS_DAT_Fecha_Informe_Pericial__c = Date.Today();
+			if(!procedencia.PROC_CAS_Requiere_Pago_Minuta__c) {
+				caso.CAS_SEL_Estado_Perito__c = Label.PER_ESTADO_CERRADO;
+			}
 		}
 		//1.2.6. Si está marcado el check de Informe Complementario Recibido y el campo fecha está vacío
 		if(caso.CAS_CAS_Informe_Complementario_Recibido__c && casoOld.CAS_CAS_Informe_Complementario_Recibido__c!=caso.CAS_CAS_Informe_Complementario_Recibido__c

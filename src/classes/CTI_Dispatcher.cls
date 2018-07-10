@@ -166,7 +166,8 @@ public without sharing class CTI_Dispatcher{
 					system.debug('>>>>>objetoVDN.VDN_SEL_Mostrar_Objeto__c: ' + objetoVDN.VDN_SEL_Mostrar_Objeto__c);
 					Id data1Id = data1;
 					system.debug('>>>>>data1Id.getSObjectType(): ' + data1Id.getSObjectType());
-					if(objetoVDN.VDN_SEL_Mostrar_Objeto__c == 'Case'){
+					String tipoObjeto = ''+data1Id.getSObjectType();
+					if(tipoObjeto == 'Case'){
 						query += 'Id = ' + '\''+ data1 + '\'';
 					}else if(objetoVDN.VDN_SEL_Mostrar_Objeto__c == 'WorkOrder'){
 						query += 'WorkOrderNumber = ' + data1;

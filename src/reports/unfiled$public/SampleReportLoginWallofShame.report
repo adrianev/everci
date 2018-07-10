@@ -38,7 +38,7 @@
             <operator>notEqual</operator>
             <value>LAST_N_DAYS:7</value>
         </criteriaItems>
-        <language>es</language>
+        <language>en_US</language>
     </filter>
     <format>Summary</format>
     <groupingsDown>

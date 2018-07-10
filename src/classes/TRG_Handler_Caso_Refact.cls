@@ -603,7 +603,8 @@ public without sharing class TRG_Handler_Caso_Refact {
 
 						// 1.2.4.1. Si está marcado el check de solicitar perito y el campo fecha está vacío
 						System.debug('@@@@TRG_Handler_Caso: tratamientoBefore: antes de fechaSolicitudPerito: ' + caso);
-						caso = Util_Perito.fechaSolicitudPerito(caso, triggerOldMap.get(caso.Id),mapaPeritos.get(caso.CAS_LKP_Perito__c));
+						System.debug('@@@@ TRG_Handler_Caso: mapaProcedencias' + mapaProcedencias);
+						caso = Util_Perito.fechaSolicitudPerito(caso, triggerOldMap.get(caso.Id),mapaPeritos.get(caso.CAS_LKP_Perito__c), mapaProcedencias.get(caso.CAS_LKP_Procedencia__c));
 
 						// 1.2.4.2. Si se marcan los check de Informes Recibidos o Tramitados, los Importes de Reserva y Minuta y el Motivo de Retirada. Ademas sus respectivas fechas son nulas
 						// actualizarFechasPerito(caso);
@@ -923,7 +924,7 @@ public without sharing class TRG_Handler_Caso_Refact {
 				}
 			}
 			Map<Id, Case> mapaHijosPorPadre = Util_Siniestro.obtenerHijosSiniestrosMixtos(setIdsMixtos);
-			//inicializarVariables(triggerNew);
+			
 			// Mapa de casos nuevo
 			Map<String, Case> mapaCasosNuevos = new Map<String, Case>();
 

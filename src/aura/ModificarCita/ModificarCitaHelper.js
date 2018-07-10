@@ -19,7 +19,7 @@
                         component.find('notifLib').showNotice({
                             "variant": "error",
                             "header": "Error",
-                            "message": errors[0].message
+                            "message": "Se ha producido un error al comprobar el estado de la cita. Por favor, inténtelo de nuevo más tarde"
                         });
                     }
                 } else {
@@ -110,7 +110,7 @@
                         component.find('notifLib').showNotice({
                             "variant": "error",
                             "header": "Error",
-                            "message": "Se ha producido un error al anular la cita. Por favor, inténtelo de nuevo más tarde."
+                            "message": errors[0].message
                         });
                     }
                 } else {

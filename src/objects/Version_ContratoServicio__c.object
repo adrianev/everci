@@ -56,7 +56,7 @@
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
         <fullName>POLV_CAS_Activa__c</fullName>
-        <defaultValue>false</defaultValue>
+        <defaultValue>true</defaultValue>
         <externalId>false</externalId>
         <label>Activa</label>
         <trackHistory>false</trackHistory>

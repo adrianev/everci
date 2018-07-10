@@ -5,19 +5,25 @@
   * 
   */
 public with sharing class TRG_Handler_Usuario {
+	
+	public static Map<String,Id> fslMobile;
     /**
       * Tratamiento después de insertar registros.
       * 
       * @param triggerNew: lista de usuarios nuevos
       */
     public static void tratamientoAfterInsert(List<User> triggerNew){
-    	Map<String,Id> fslMobile = Util_Perfiles_Usuario.getMapNamePerfilesUsuario();
+    	fslMobile = Util_Perfiles_Usuario.getMapNamePerfilesUsuario();
 		Map<String,Id> mapaPermisos = Util_Perfiles_Usuario.getMapPermissionSet();
         List<PermissionSetAssignment> listaPSA = new List<PermissionSetAssignment>();
         for (User usr : triggerNew) {
-        	if(usr.profileId==fslMobile.get(Label.PERFIL_PROFESIONAL) && usr.IsActive){
-        		// Creamos los permisionSetAssignment
-        		listaPSA.addAll(Util_Perfiles_Usuario.getPermissionSetAssigmentProfesional(usr.Id,mapaPermisos));
+        	if(usr.profileId==fslMobile.get(Label.PERFIL_PROFESIONAL)){
+        		if (usr.IsActive){
+        			// Creamos los permisionSetAssignment
+        			listaPSA.addAll(Util_Perfiles_Usuario.getPermissionSetAssigmentProfesional(usr.Id,mapaPermisos));
+        		}
+        		Util_Profesionales profesionales = new Util_Profesionales(usr);
+        		System.enqueueJob(profesionales);
         	}
         	else if(Util_Perfiles_Usuario.isGestorOrSupervisorActive(usr,fslMobile)){
         		listaPSA.addAll(Util_Perfiles_Usuario.getPermissionSetAssigmentGestoresSupervisores(usr.Id,mapaPermisos));
@@ -40,6 +46,9 @@ public with sharing class TRG_Handler_Usuario {
       * @param triggerOld: lista de usuarios con su valor antes de la actualización
       */
     public static void tratamientoAfterUpdate(Map<Id,User> triggerNewMap, List<User> triggerNew, Map<Id,User> triggerOldMap, List<User> triggerOld){
+    	if (fslMobile == null) {
+    		fslMobile = Util_Perfiles_Usuario.getMapNamePerfilesUsuario();
+    	}
     	//Creo un set con los usuarios que han actualizado el IsActive
     	Set<Id> relatedRecordId = new Set<Id>();
     	for(User usuario: triggerNew){
@@ -50,6 +59,10 @@ public with sharing class TRG_Handler_Usuario {
 			if((usuario.isActive && userOld != null && !userOld.IsActive) || (!usuario.isActive && userOld != null && userOld.IsActive)){
     			relatedRecordId.add(usuario.Id);
 			}
+			if(usuario.profileId==fslMobile.get(Label.PERFIL_PROFESIONAL)){
+        		Util_Profesionales profesionales = new Util_Profesionales(usuario);
+        		System.enqueueJob(profesionales);
+        	}
     	}
     	
     	//Creamos una lista con los recursos de servicio relacionados
