@@ -4,7 +4,7 @@
     <label>Everis Salesforce CI</label>
     <oauthConfig>
         <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
-        <consumerKey>3MVG9X0_oZyBSzHrnzENhROatHC9hZzHS5vn4d95tNuuk6.KTifZdnx41mWsmkKpKPIAf5LhN5HYe4XeU77qe</consumerKey>
+        <consumerKey>3MVG9ZPHiJTk7yFyo2kgZvLTvphJ3z.dvPaPWGa9WAl8XrcLe.lxCuTipaSTxBaFW1Y1BMSKk2I1.wmhrETpk</consumerKey>
         <scopes>Api</scopes>
         <scopes>Web</scopes>
         <scopes>RefreshToken</scopes>
