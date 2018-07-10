@@ -324,7 +324,7 @@
     <fields>
         <label><!-- User --></label>
         <name>FSL__User__c</name>
-        <relationshipLabel><!-- User Settings --></relationshipLabel>
+        <relationshipLabel><!-- Configuraciones de usuarios --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- View Capacity Type --></label>

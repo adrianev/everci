@@ -32,12 +32,12 @@
     <fields>
         <label><!-- Service Appointment 1 --></label>
         <name>FSL__Service_Appointment_1__c</name>
-        <relationshipLabel><!-- Appointment Dependencies (Service Appointment 1) --></relationshipLabel>
+        <relationshipLabel><!-- Dependencias de citas (Cita de servicio 1) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Service Appointment 2 --></label>
         <name>FSL__Service_Appointment_2__c</name>
-        <relationshipLabel><!-- Appointment Dependencies (Service Appointment 2) --></relationshipLabel>
+        <relationshipLabel><!-- Dependencias de citas (Cita de servicio 2) --></relationshipLabel>
     </fields>
     <nameFieldLabel>約會相依性名稱</nameFieldLabel>
     <validationRules>

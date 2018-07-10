@@ -140,10 +140,6 @@
         <label><!-- Estado --></label>
         <name>EV_AB_SEL_Estado__c</name>
         <picklistValues>
-            <masterLabel>Anulado</masterLabel>
-            <translation><!-- Anulado --></translation>
-        </picklistValues>
-        <picklistValues>
             <masterLabel>Aprobado</masterLabel>
             <translation><!-- Aprobado --></translation>
         </picklistValues>

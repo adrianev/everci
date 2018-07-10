@@ -672,10 +672,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Llamada_Cliente_Controller</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>MetadataService</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -898,10 +894,6 @@
     <classAccesses>
         <apexClass>Rest_Franja_RP</apexClass>
         <enabled>true</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>Rest_Home_Claim</apexClass>
-        <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
         <apexClass>Rest_ObtenerFranjaHoraria</apexClass>
@@ -1984,10 +1976,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Test_WCC_ELG_office_DataProviderImpl</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>Test_WorkOrderHistory</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -2297,14 +2285,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>WCC_ELG_DataProviderImpl</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>WCC_ELG_DataProviderImplTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>WCC_ELG_office_DataProviderImpl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -5455,6 +5435,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Case.ContactId</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Case.Contacto_responsable__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>

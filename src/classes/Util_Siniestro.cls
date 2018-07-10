@@ -1079,7 +1079,7 @@ public without sharing class Util_Siniestro {
 	public static Map<String, Garantia__c> queryGarantiasSini(Set<String> garantias) {
 		Map<String, Garantia__c> mapaGarantias=new Map<String, Garantia__c>();
 		if(!garantias.isEmpty()) {
-			for(List<Garantia__c> listaGarantiasAux:[SELECT Id,GAR_TXT_Codigo_Garantia__c FROM Garantia__c WHERE GAR_TXT_Codigo_Garantia__c IN :garantias]) {
+			for(List<Garantia__c> listaGarantiasAux:[SELECT Id FROM Garantia__c WHERE GAR_TXT_Codigo_Garantia__c IN :garantias]) {
 			   for(Garantia__c g:listaGarantiasAux){
 				  mapaGarantias.put(g.GAR_TXT_Codigo_Garantia__c,g);
 			   }
@@ -1141,8 +1141,7 @@ public without sharing class Util_Siniestro {
 											CNF_SEL_Sondeo_Gremios__c,CNF_SEL_Tipo__c,CNF_SEL_Tipo_Averia__c,CNF_TFN_Telefono_1__c,CNF_TFN_Telefono_2__c,CNF_TXT_Apellidos__c,
 											CNF_TXT_Apellidos2__c,CNF_TXT_Causante_Direccion__c,CNF_TXT_Causante_N_Documento__c,CNF_TXT_Causante_N_exp_Stro__c,
 											CNF_TXT_Causante_Poblacion__c,CNF_TXT_Causante_Poliza_R_C__c,CNF_TXT_Comentario__c,CNF_TXT_Codigo_Postal__c,CNF_TXT_Nombre__c,CNF_TXT_S_Garantias__c,
-											CNF_TXT_Sondeo_Causa__c,CNF_LKP_ParentId__r.CAS_LKP_PolizaContrato__r.POL_LKP_Producto_Cia__c,RecordTypeId,
-											CNF_LKP_Gestor_Apertura__c, CNF_DAT_Fecha_Apertura__c
+											CNF_TXT_Sondeo_Causa__c,CNF_LKP_ParentId__r.CAS_LKP_PolizaContrato__r.POL_LKP_Producto_Cia__c,RecordTypeId
 											FROM Confirmacion__c 
 											WHERE CNF_LKP_ParentId__c IN: setIdCaso]);
 	}

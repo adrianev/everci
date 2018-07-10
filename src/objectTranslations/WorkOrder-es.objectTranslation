@@ -405,7 +405,7 @@
     <fields>
         <label><!-- Gestor revisión --></label>
         <name>OTR_LKP_Gestor_revision__c</name>
-        <relationshipLabel><!-- Work Orders --></relationshipLabel>
+        <relationshipLabel><!-- Servicios --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Línea de Contrato --></label>

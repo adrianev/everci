@@ -29,10 +29,6 @@
                 <behavior>Edit</behavior>
                 <field>PROC_SEL_Tipologia_Servicio__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>PROC_CAS_Requiere_Pago_Minuta__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

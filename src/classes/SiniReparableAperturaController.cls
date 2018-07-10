@@ -229,9 +229,9 @@ public without sharing class SiniReparableAperturaController {
 		if(listaOTsSinReserva.isEmpty()) {
 			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, Label.ERROR_FINALIZAR_APERTURA_B2B_FALTA));
 			mensajesErrorfinalizarAperturaSalesforce=Label.ERROR_FINALIZAR_APERTURA_B2B_FALTA;
-		} else if (String.isEmpty(mensajesInfofinalizarAperturaSalesforce) || (String.isEmpty(mensajeInfoComentarioPerito) && intervencion.CAS_CAS_Requiere_Perito__c)) {
+		} else if (String.isEmpty(mensajesInfofinalizarAperturaSalesforce) || String.isEmpty(mensajeInfoComentarioPerito)) {
 			if(String.isEmpty(mensajesInfofinalizarAperturaSalesforce)){
-				mensajesInfofinalizarAperturaSalesforce = Label.WARNING_ACTUALIZAR_PARTIDAS;
+				mensajesInfofinalizarAperturaSalesforce=Label.WARNING_ACTUALIZAR_PARTIDAS;
 				ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.INFO,Label.WARNING_ACTUALIZAR_PARTIDAS));
 			}
 			if(String.isEmpty(mensajeInfoComentarioPerito)) {

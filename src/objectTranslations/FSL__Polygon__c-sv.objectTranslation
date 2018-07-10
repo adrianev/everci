@@ -3,32 +3,32 @@
     <caseValues>
         <article>None</article>
         <plural>false</plural>
-        <value><!-- Map Polygon --></value>
+        <value><!-- Polígono de mapa --></value>
     </caseValues>
     <caseValues>
         <article>Indefinite</article>
         <plural>false</plural>
-        <value><!-- Map Polygon --></value>
+        <value><!-- Polígono de mapa --></value>
     </caseValues>
     <caseValues>
         <article>Definite</article>
         <plural>false</plural>
-        <value><!-- Map Polygon --></value>
+        <value><!-- Polígono de mapa --></value>
     </caseValues>
     <caseValues>
         <article>None</article>
         <plural>true</plural>
-        <value><!-- Map Polygon --></value>
+        <value><!-- Polígono de mapa --></value>
     </caseValues>
     <caseValues>
         <article>Indefinite</article>
         <plural>true</plural>
-        <value><!-- Map Polygon --></value>
+        <value><!-- Polígono de mapa --></value>
     </caseValues>
     <caseValues>
         <article>Definite</article>
         <plural>true</plural>
-        <value><!-- Map Polygon --></value>
+        <value><!-- Polígono de mapa --></value>
     </caseValues>
     <fields>
         <label><!-- Color --></label>

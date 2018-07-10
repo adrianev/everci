@@ -17139,8 +17139,7 @@ ISBLANK( CUE_TXT_Numero_Documento__c ),!$Setup.Baipas__c.Saltar_Regla_Validacion
         <fullName>Nuevo_Profesional_Preactivado</fullName>
         <active>true</active>
         <description>Los nuevos registros de profesionales contrato deben crearse preactivados y con el check de activo desmarcado.</description>
-        <errorConditionFormula>(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp; (NOT(ISPICKVAL(CUE_SEL_Estado__c,&quot;01&quot;))||(CUE_CAS_Activado__c)) &amp;&amp; ISNEW() &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+        <errorConditionFormula>(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp; (NOT(ISPICKVAL(CUE_SEL_Estado__c,&quot;01&quot;))||(CUE_CAS_Activado__c)) &amp;&amp; ISNEW()</errorConditionFormula>
         <errorMessage>El nuevo profesional no puede crearse como &quot;Activo&quot; directamente, primero debe pasar por el estado &quot;Preactivado&quot;</errorMessage>
     </validationRules>
     <validationRules>
@@ -17176,8 +17175,7 @@ ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;01&quot;) &amp;&amp; ISPICKVAL(CUE
         <description>Obliga rellenar el motivo baja cuando cambia el estado a &quot;Baja Definitiva&quot;</description>
         <errorConditionFormula>((TEXT(CUE_SEL_Estado__c)= $Label.CUE_ESTADO_BAJA_DEFINITIVA))&amp;&amp; 
 ((ISBLANK(TEXT(CUE_SEL_Motivo_Baja_Def__c))))&amp;&amp; 
-(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+(RecordType.Name = &apos;Profesional Contrato&apos;)</errorConditionFormula>
         <errorDisplayField>CUE_SEL_Motivo_Baja_Def__c</errorDisplayField>
         <errorMessage>Se debe indicar el motivo de baja definitiva</errorMessage>
     </validationRules>
@@ -17187,8 +17185,7 @@ ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;01&quot;) &amp;&amp; ISPICKVAL(CUE
         <description>Obliga rellenar el motivo baja cuando cambia el estado a &quot;Baja Temporal&quot;</description>
         <errorConditionFormula>((TEXT(CUE_SEL_Estado__c)= $Label.CUE_ESTADO_BAJA_TEMPORAL))&amp;&amp; 
 ((ISBLANK(TEXT(CUE_SEL_Motivo_Baja_Temp__c))))&amp;&amp; 
-(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+(RecordType.Name = &apos;Profesional Contrato&apos;)</errorConditionFormula>
         <errorDisplayField>CUE_SEL_Motivo_Baja_Temp__c</errorDisplayField>
         <errorMessage>Se debe indicar el motivo de baja temporal</errorMessage>
     </validationRules>
@@ -17198,8 +17195,7 @@ ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;01&quot;) &amp;&amp; ISPICKVAL(CUE
         <description>Obliga rellenar las observaciones cuando cambia el estado a &quot;Baja Definitiva&quot;</description>
         <errorConditionFormula>((TEXT(CUE_SEL_Estado__c)= $Label.CUE_ESTADO_BAJA_DEFINITIVA))&amp;&amp; 
 ((ISBLANK(CUE_TXT_Observaciones_BajaDef__c)))&amp;&amp; 
-(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+(RecordType.Name = &apos;Profesional Contrato&apos;)</errorConditionFormula>
         <errorDisplayField>CUE_TXT_Observaciones_BajaDef__c</errorDisplayField>
         <errorMessage>Se deben indicar las observaciones de baja definitiva</errorMessage>
     </validationRules>
@@ -17209,8 +17205,7 @@ ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;01&quot;) &amp;&amp; ISPICKVAL(CUE
         <description>Obliga rellenar las observaciones cuando cambia el estado a &quot;Baja Temporal&quot;</description>
         <errorConditionFormula>((TEXT(CUE_SEL_Estado__c)= $Label.CUE_ESTADO_BAJA_TEMPORAL))&amp;&amp;
 ((ISBLANK(CUE_TXT_Observaciones_BajaTemp__c)))&amp;&amp; 
-(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+(RecordType.Name = &apos;Profesional Contrato&apos;)</errorConditionFormula>
         <errorDisplayField>CUE_TXT_Observaciones_BajaTemp__c</errorDisplayField>
         <errorMessage>Se deben indicar las observaciones de baja temporal</errorMessage>
     </validationRules>
@@ -17220,8 +17215,7 @@ ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;01&quot;) &amp;&amp; ISPICKVAL(CUE
         <description>Obliga rellenar las observaciones cuando cambia el estado a &quot;Vetado&quot;</description>
         <errorConditionFormula>((TEXT(CUE_SEL_Estado__c)= $Label.CUE_ESTADO_VETADO))&amp;&amp; 
 ((ISBLANK(CUE_TXT_Observaciones_Veto__c)))&amp;&amp; 
-(RecordType.Name = &apos;Profesional Contrato&apos;) &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+(RecordType.Name = &apos;Profesional Contrato&apos;)</errorConditionFormula>
         <errorDisplayField>CUE_TXT_Observaciones_Veto__c</errorDisplayField>
         <errorMessage>Se deben indicar las observaciones de veto</errorMessage>
     </validationRules>
@@ -17291,8 +17285,7 @@ ISPICKVAL(CUE_SEL_Tipo_Documento__c,&apos;&apos;),!$Setup.Baipas__c.Saltar_Regla
 (ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;03&quot;) &amp;&amp; NOT((ISPICKVAL(CUE_SEL_Estado__c,&quot;02&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;03&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;04&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;05&quot;)))) || 
 (ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;04&quot;) &amp;&amp; NOT((ISPICKVAL(CUE_SEL_Estado__c,&quot;02&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;03&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;04&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;05&quot;)))) || 
 (ISPICKVAL(PRIORVALUE(CUE_SEL_Estado__c),&quot;05&quot;) &amp;&amp; NOT((ISPICKVAL(CUE_SEL_Estado__c,&quot;02&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;03&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;04&quot;)) || (ISPICKVAL(CUE_SEL_Estado__c,&quot;05&quot;)))) 
-) &amp;&amp;
-!$Setup.Baipas__c.Saltar_Regla_Validacion__c</errorConditionFormula>
+)</errorConditionFormula>
         <errorDisplayField>CUE_SEL_Estado__c</errorDisplayField>
         <errorMessage>No es posible realizar este cambio de estado.</errorMessage>
     </validationRules>

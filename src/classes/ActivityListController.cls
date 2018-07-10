@@ -1,9 +1,3 @@
-/**
-  *
-  * Clase controladora del Componente "ActivityList" encargado de la mostrar 
-  *	el historial de actividades de trabajo de los casos
-  * 
-  */ 
 public without sharing class ActivityListController {
     @AuraEnabled
     public static List<Task> getListTasks(String idRelatedTo, String filter){

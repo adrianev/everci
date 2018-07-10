@@ -207,9 +207,9 @@
 											item.Status != $Label.OTR_ESTADO_EN_ESPERA_PROF_DECL_RESP &&
 											item.OTR_LKP_Recurso_Servicio__r.RelatedRecordId == $User.Id)) &&
 										(!superaLimiteActuacion) && existeGremioPrincipal}" />
-						<!-- [INI] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación : 09/07/2018 : SMM -->
-						<!-- En el rendered del siguiente "apex:image" añadimos el siguiente AND: "!item.OTR_FOR_Gremio_Ppal_Caso__c" -->
-						<!-- [FIN] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación -->
+						<!-- [INI] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación para Gestor y Profesional : 09/07/2018 : SMM -->
+						<!-- En el rendered del siguiente "apex:image" añadimos el siguiente AND: "&& esAdministrador" -->
+						<!-- [FIN] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación para Gestor y Profesional -->
 						<apex:image url="/img/permissions_deny16.gif"
 							title="Anular" styleClass="actionLink link24"
 							onclick="anularOrdenDeTrabajoAF('{!item.Id}');return false;"
@@ -222,7 +222,7 @@
 											(item.Status != $Label.OTR_ESTADO_ANULADO_POR_PROF &&
 											item.Status != $Label.OTR_ESTADO_EN_ESPERA_GESTOR_INDICACIONES &&
 											item.Status != $Label.OTR_ESTADO_EN_ESPERA_PROF_DECL_RESP &&
-											item.OTR_LKP_Recurso_Servicio__r.RelatedRecordId == $User.Id)) && !item.OTR_FOR_Gremio_Ppal_Caso__c}" />
+											item.OTR_LKP_Recurso_Servicio__r.RelatedRecordId == $User.Id)) && esAdministrador}" />
 					</apex:column>
 					<apex:column headerValue="Primera Cita" style="text-align:Center">
 						<apex:outputField value="{!item.OTR_DAT_Fecha_Primera_Cita__c}"

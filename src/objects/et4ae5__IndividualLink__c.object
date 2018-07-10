@@ -83,7 +83,7 @@
         <fullName>et4ae5__Last_Clicked__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The date and time this link was last clicked by this subscriber</inlineHelpText>
+        <inlineHelpText>La fecha y la hora en que este suscriptor hizo clic por última vez en este vínculo</inlineHelpText>
         <label>Last Clicked</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -102,7 +102,7 @@
         <fullName>et4ae5__NumberOfTotalClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The number of times this link has been clicked by this subscriber</inlineHelpText>
+        <inlineHelpText>El número de veces que este suscriptor hizo clic en este vínculo</inlineHelpText>
         <label>Number of Total Clicks</label>
         <precision>6</precision>
         <required>false</required>

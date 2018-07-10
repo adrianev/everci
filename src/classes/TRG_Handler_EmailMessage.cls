@@ -46,7 +46,7 @@ public without sharing class TRG_Handler_EmailMessage {
 							mapaCasos.get(em.ParentId).CAS_SEL_Estado_Perito__c = Label.PER_ESTADO_PDTE_REV_RESP_PER;
 							System.debug('@@@TRG_Email: Caso: ' + mapaCasos.get(em.ParentId).CaseNumber + mapaCasos.get(em.ParentId).CAS_SEL_Estado_Perito__c);
 							listaCasosModif.add(mapaCasos.get(em.ParentId));
-							//tareasInsertar.add(Util_tarea.crearTarea(Label.RT_TAR_COMUN,'Revisión correo perito(Pendiente de etiqueta)', Label.TAR_ESTADO_EN_CURSO, null,mapaCasos.get(em.ParentId).OwnerId,mapaCasos.get(em.ParentId).Id,mapaCasos.get(em.ParentId).CAS_LKP_Compania__c));
+							tareasInsertar.add(Util_tarea.crearTarea(Label.RT_TAR_COMUN,'Revisión correo perito(Pendiente de etiqueta)', Label.TAR_ESTADO_EN_CURSO, null,mapaCasos.get(em.ParentId).OwnerId,mapaCasos.get(em.ParentId).Id,mapaCasos.get(em.ParentId).CAS_LKP_Compania__c));
 						}
 					}
 				}

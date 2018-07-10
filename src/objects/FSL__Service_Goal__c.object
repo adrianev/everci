@@ -59,7 +59,7 @@
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Sets the scheduling to include or exclude from minimize travel considerations the first and last travel of the day, to and from the service resource home base</inlineHelpText>
+        <inlineHelpText>Establece la programación para que incluya o excluya desde las condiciones de desplazamiento minimizadas con el primer y el último desplazamiento del días, hasta la base central del recurso de servicio y desde ella</inlineHelpText>
         <label>Exclude Home Base Travel</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>

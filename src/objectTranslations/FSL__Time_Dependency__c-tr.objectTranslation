@@ -4,217 +4,217 @@
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <fields>
         <label><!-- Dependency --></label>
@@ -244,12 +244,12 @@
     <fields>
         <label><!-- Service Appointment 1 --></label>
         <name>FSL__Service_Appointment_1__c</name>
-        <relationshipLabel><!-- Appointment Dependencies (Service Appointment 1) --></relationshipLabel>
+        <relationshipLabel><!-- Dependencias de citas (Cita de servicio 1) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Service Appointment 2 --></label>
         <name>FSL__Service_Appointment_2__c</name>
-        <relationshipLabel><!-- Appointment Dependencies (Service Appointment 2) --></relationshipLabel>
+        <relationshipLabel><!-- Dependencias de citas (Cita de servicio 2) --></relationshipLabel>
     </fields>
     <nameFieldLabel><!-- Appointment Dependency Name --></nameFieldLabel>
     <validationRules>

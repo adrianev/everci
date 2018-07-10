@@ -963,6 +963,12 @@ public without sharing class TRG_Handler_Cita_de_Servicio {
 			system.debug('>>>>> actualizarOrdenTrabajo.cita.Id: ' + cita.Id);
 			system.debug('>>>>> actualizarOrdenTrabajo.cita.CSE_LKP_Profesional_Programado__c: ' + cita.CSE_LKP_Profesional_Programado__c);
 			system.debug('>>>>> actualizarOrdenTrabajo.recursoId: ' + recursoId);
+		
+			//Si la cita se ha creado despues de eliminar todas las citas de un servicio
+			if(woAct.OTR_LKP_Primera_Cita__c == null){
+				woAct.OTR_LKP_Primera_Cita__c = cita.Id;
+				woActualizada = true;
+			}
 
 			if(cita.CSE_LKP_Profesional_Programado__c != null && 
 			   woAct.OTR_LKP_Profesional_Programado__c != cita.CSE_LKP_Profesional_Programado__c){

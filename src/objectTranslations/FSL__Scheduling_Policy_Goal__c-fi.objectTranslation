@@ -359,12 +359,12 @@
     <fields>
         <label><!-- Scheduling Policy --></label>
         <name>FSL__Scheduling_Policy__c</name>
-        <relationshipLabel><!-- Scheduling Policy Objectives --></relationshipLabel>
+        <relationshipLabel><!-- Objetivos de políticas de programaciones --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Service Goal --></label>
         <name>FSL__Service_Goal__c</name>
-        <relationshipLabel><!-- Scheduling Policy Objectives --></relationshipLabel>
+        <relationshipLabel><!-- Objetivos de políticas de programaciones --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Weight --></label>

@@ -67,7 +67,7 @@
         <fullName>FSL__Boolean_Operator__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Compare a numeric service property with a numeric resource property</inlineHelpText>
+        <inlineHelpText>Comparar una propiedad de servicio numérica con una propiedad de recurso numérica</inlineHelpText>
         <label>Boolean Operator</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -107,8 +107,8 @@
         <fullName>FSL__Break_Duration__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines the length of the breaks created. 
-Leave this field empty if you don&apos;t want to create breaks.</inlineHelpText>
+        <inlineHelpText>Determina la longitud de los descansos creados. 
+Deje este campo vacío si no desea crear descansos.</inlineHelpText>
         <label>Break Duration (minutes)</label>
         <precision>6</precision>
         <required>false</required>
@@ -121,8 +121,8 @@ Leave this field empty if you don&apos;t want to create breaks.</inlineHelpText>
         <fullName>FSL__Break_Start__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines the minimum break start time (in the format: {HH:MM}) to create breaks. 
-Leave this field empty if you don&apos;t want to create breaks.</inlineHelpText>
+        <inlineHelpText>Determina la hora mínima de inicio del descanso (en el formato: {HH:MM}) para crear descansos. 
+Deje este campo vacío si no desea crear descansos.</inlineHelpText>
         <label>Break Start</label>
         <length>5</length>
         <required>false</required>
@@ -135,8 +135,8 @@ Leave this field empty if you don&apos;t want to create breaks.</inlineHelpText>
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>When checked, compare the Minimum Crew Size field on the Work Order or Work Order Line Item to the actual available Service Crew Members. 
-Otherwise, compare the Minimum Crew Size to the Crew Size field on the Service Crew.</inlineHelpText>
+        <inlineHelpText>Cuando está marcada, compara el campo Tamaño de plantilla mínimo en la orden de trabajo con los miembros de la plantilla de servicio disponibles. 
+En caso contrario, compara el Tamaño de plantilla mínimo con el campo Tamaño de plantilla en Plantilla de servicio.</inlineHelpText>
         <label>Consider Service Crew Membership</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -180,7 +180,7 @@ Otherwise, compare the Minimum Crew Size to the Crew Size field on the Service C
         <defaultValue>false</defaultValue>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>If checked, gap between services will be based on the minimum gap field, without travel calculations.</inlineHelpText>
+        <inlineHelpText>Si está marcada, el intervalo entre servicios se basará en el campo de intervalo mínimo, sin cálculos de desplazamientos.</inlineHelpText>
         <label>Fixed Gap</label>
         <trackTrending>false</trackTrending>
         <type>Checkbox</type>
@@ -231,7 +231,7 @@ Otherwise, compare the Minimum Crew Size to the Crew Size field on the Service C
         <fullName>FSL__Maximum_Travel_From_Home__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines what distance or how many minutes the resource can travel from home to reach a service</inlineHelpText>
+        <inlineHelpText>Determina qué distancia o cuántos minutos el recurso puede desplazarse desde su domicilio para llegar a un servicio</inlineHelpText>
         <label>Maximum Travel From Home</label>
         <precision>14</precision>
         <required>false</required>
@@ -244,7 +244,7 @@ Otherwise, compare the Minimum Crew Size to the Crew Size field on the Service C
         <fullName>FSL__Minimum_Gap__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines the minimum gap between services. If fixed gap is enabled, determines the gap between the services.</inlineHelpText>
+        <inlineHelpText>Determina el intervalo mínimo entre servicios. Si el intervalo fijo está activado, determina el intervalo entre los servicios.</inlineHelpText>
         <label>Minimum Gap (minutes)</label>
         <precision>18</precision>
         <required>false</required>
@@ -520,8 +520,8 @@ Otherwise, compare the Minimum Crew Size to the Crew Size field on the Service C
         <fullName>FSL__Travel_From_Home__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines how many minutes prior to the resource&apos;s calendar start of day will be available for travel (on the resource&apos;s expense).
-When empty, any amount of travel prior to start of work day is valid.</inlineHelpText>
+        <inlineHelpText>Determina la cantidad de minutos antes del inicio de la jornada del calendario del recurso que estará disponible para desplazamientos (a cuenta del recurso).
+Cuando está vacía, cualquier cantidad de desplazamiento antes del inicio de la jornada laboral es válida.</inlineHelpText>
         <label>Travel From Home (minutes)</label>
         <precision>18</precision>
         <required>false</required>
@@ -534,8 +534,8 @@ When empty, any amount of travel prior to start of work day is valid.</inlineHel
         <fullName>FSL__Travel_To_Home__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>Determines how many minutes following the resource&apos;s calendar end of day will be available for travel (on the resource&apos;s expense).
-When empty, any amount of travel following the end of work day is valid.</inlineHelpText>
+        <inlineHelpText>Determina la cantidad de minutos tras la finalización de la jornada del calendario del recurso que estará disponible para desplazamientos (a cuenta del recurso).
+Cuando está vacía, cualquier cantidad de desplazamiento tras la finalización de la jornada laboral es válida.</inlineHelpText>
         <label>Travel To Home (minutes)</label>
         <precision>18</precision>
         <required>false</required>

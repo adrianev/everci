@@ -25,6 +25,7 @@ public without sharing class SiniReparableTramitacionController{
 	public Boolean generarPresupuesto {get; set;}
 	public Boolean esProfesional {get; set;}
 	public Boolean esProfesionalSec {get; set;}
+	public Boolean esAdministrador {get; set;} // [INI] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación para Gestor y Profesional : 09/07/2018 : SMM
 	public String fechaCitaUrgenteReservada {get; set;}
 	public Boolean existeGremioPrincipal {get; set;}
 	private String codigoCIA;
@@ -49,6 +50,10 @@ public without sharing class SiniReparableTramitacionController{
 		if (!Test.isRunningTest()) esProfesional = Util_Perfiles_Usuario.esProfesional(UserInfo.getProfileId());
 		else esProfesional = true;
 		esProfesionalSec = (esProfesional && (!Util_Perfiles_Usuario.esRecursoPrincipal(UserInfo.getUserId())));
+		// [INI] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación para Gestor y Profesional : 09/07/2018 : SMM
+		esAdministrador = Util_Perfiles_Usuario.esAdministrador(UserInfo.getProfileId());
+		system.debug('SiniReparableTramitacionController : Constructor : esAdministrador : '+esAdministrador);
+		// [FIN] Nº35 : No permitir anular el gremio principal en Confirmación ni Tramitación para Gestor y Profesional
 
 		PageReference paginaActual = ApexPages.currentPage();
 		if(paginaActual.getParameters().containsKey('fase')){

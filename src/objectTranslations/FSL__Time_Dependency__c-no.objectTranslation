@@ -3,32 +3,32 @@
     <caseValues>
         <article>None</article>
         <plural>false</plural>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <article>Indefinite</article>
         <plural>false</plural>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <article>Definite</article>
         <plural>false</plural>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <article>None</article>
         <plural>true</plural>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <article>Indefinite</article>
         <plural>true</plural>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <caseValues>
         <article>Definite</article>
         <plural>true</plural>
-        <value><!-- Appointment Dependency --></value>
+        <value><!-- Dependencia de cita --></value>
     </caseValues>
     <fields>
         <label><!-- Dependency --></label>
@@ -58,12 +58,12 @@
     <fields>
         <label><!-- Service Appointment 1 --></label>
         <name>FSL__Service_Appointment_1__c</name>
-        <relationshipLabel><!-- Appointment Dependencies (Service Appointment 1) --></relationshipLabel>
+        <relationshipLabel><!-- Dependencias de citas (Cita de servicio 1) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Service Appointment 2 --></label>
         <name>FSL__Service_Appointment_2__c</name>
-        <relationshipLabel><!-- Appointment Dependencies (Service Appointment 2) --></relationshipLabel>
+        <relationshipLabel><!-- Dependencias de citas (Cita de servicio 2) --></relationshipLabel>
     </fields>
     <gender><!-- Neuter --></gender>
     <nameFieldLabel><!-- Appointment Dependency Name --></nameFieldLabel>

@@ -40,7 +40,7 @@
         <externalId>false</externalId>
         <formula>IF( IsTask,0,1)</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <inlineHelpText>Count of all events</inlineHelpText>
+        <inlineHelpText>Recuento de todos los eventos</inlineHelpText>
         <label>Count of Events</label>
         <precision>18</precision>
         <required>false</required>

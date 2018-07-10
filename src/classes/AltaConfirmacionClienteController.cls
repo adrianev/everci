@@ -404,20 +404,12 @@ public class AltaConfirmacionClienteController {
 	}
 
 	public PageReference navegarSiniTipoInterlocutor() {
-		// [INI] Comprobar si la Versión de Póliza está activa : 10/07/2018 : SMM
-		PageReference paginaDestino = null;
-		Ayuda__c ayuda = new Ayuda__c();
-		if(!versionPoliza.POLV_CAS_Activa__c){
-			ayuda = Util_Ayuda.getMapaAyudaByTipo(new Set<String> {Label.AYUDA_POLIZA_BAJA}).values().get(0);
-			ApexPages.addMessage(new ApexPages.Message(ApexPages.Severity.ERROR, ayuda.AYU_TXT_Descripcion__c));
-		}
-		else{
-			comprobarPolizaTieneContacto();
-			guardar();
-		}
-		// [FIN] Comprobar si la Versión de Póliza está activa
-		if(ApexPages.getMessages().isEmpty()){
-			paginaDestino = Page.Sini_TipoInterlocutor;
+		comprobarPolizaTieneContacto();
+		PageReference paginaDestino=null;
+		guardar();
+		if(ApexPages.getMessages().isEmpty())
+		{
+			paginaDestino=Page.Sini_TipoInterlocutor;
 			if(!String.isEmpty(caso.Id)) {
 				paginaDestino.getParameters().put('id',caso.Id);
 			}

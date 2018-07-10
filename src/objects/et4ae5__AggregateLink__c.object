@@ -71,7 +71,7 @@
         <fullName>et4ae5__Last_Clicked__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The date and time this link was last clicked</inlineHelpText>
+        <inlineHelpText>La fecha y la hora cuando se hizo clic por última vez en este vínculo</inlineHelpText>
         <label>Last Clicked</label>
         <required>false</required>
         <trackTrending>false</trackTrending>
@@ -90,7 +90,7 @@
         <fullName>et4ae5__NumberOfTotalClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The aggregate number of times this link has been clicked</inlineHelpText>
+        <inlineHelpText>El número total de veces en el que se ha hecho clic en este vínculo</inlineHelpText>
         <label>Number of Total Clicks</label>
         <precision>6</precision>
         <required>false</required>
@@ -103,7 +103,7 @@
         <fullName>et4ae5__NumberOfUniqueClicks__c</fullName>
         <deprecated>false</deprecated>
         <externalId>false</externalId>
-        <inlineHelpText>The aggregate unique number of times this link has been clicked (unique means one click per subscriber)</inlineHelpText>
+        <inlineHelpText>El número total de clics únicos de este vínculo (único significa un clic por suscriptor)</inlineHelpText>
         <label>Number of Unique Clicks</label>
         <precision>6</precision>
         <required>false</required>

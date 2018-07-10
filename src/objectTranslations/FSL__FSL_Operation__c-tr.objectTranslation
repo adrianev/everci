@@ -4,217 +4,217 @@
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Nominative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Accusative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Genitive</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Dative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Ablative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>false</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>true</plural>
         <possessive>None</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>false</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>true</plural>
         <possessive>First</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>false</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <caseValues>
         <caseType>Locative</caseType>
         <plural>true</plural>
         <possessive>Second</possessive>
-        <value><!-- FSL Operation --></value>
+        <value><!-- Operación de FSL --></value>
     </caseValues>
     <fields>
         <label><!-- Finished --></label>

@@ -97,29 +97,32 @@ public without sharing class ModificarCitaController {
         Id idCitaServicio= Id.valueOf(recordId);
 
         //Recuperamos información de la cita
-        sApp=Util_Cita_Servicio.getMapCitasById(new Set<Id>{idCitaServicio}).get(idCitaServicio);
-
-        /*Set<Id> setIdCita= new Set<Id>();
+        Set<Id> setIdCita= new Set<Id>();
         setIdCita.add(Id.valueOf(recordId));
 
+        System.debug(setIdCita);
 
         Map<Id,ServiceAppointment> mApp= Util_Cita_Servicio.getMapCitasById(setIdCita);
 
+        System.debug(mApp);
+        
         for (Id key : mApp.keySet()) {
             sApp=mApp.get(key);
-        }*/
-        
+        }
+
         //Obtenemos la fecha de hoy
         Datetime hoy = system.now();
-
-        Long milisegundos = sApp.ArrivalWindowStartTime.getTime() - hoy.getTime();
-        Long segundos = milisegundos / 1000;
-        Long minutos = segundos / 60;
-        Long horas = minutos / 60;
-
-        //Si la fecha de entrega es menor que el número de horas configurado en el label. Levantamos excepción.
-        if( horas < Integer.valueof(Label.CIT_HORAS_MOD_CITA) ){
-            throw new AuraHandledException(Label.CIT_NO_MODIFICABLE);
+		
+        if(sApp.ArrivalWindowStartTime != null){
+            Long milisegundos = sApp.ArrivalWindowStartTime.getTime() - hoy.getTime();
+            Long segundos = milisegundos / 1000;
+            Long minutos = segundos / 60;
+            Long horas = minutos / 60;
+    
+            //Si la fecha de entrega es menor que el número de horas configurado en el label. Levantamos excepción.
+            if( horas < Integer.valueof(Label.CIT_HORAS_MOD_CITA) ){
+                throw new AuraHandledException(Label.CIT_NO_MODIFICABLE);
+            }
         }
 
         return sApp;

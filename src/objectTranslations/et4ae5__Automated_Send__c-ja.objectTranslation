@@ -23,7 +23,7 @@
     <fields>
         <label><!-- Business Unit --></label>
         <name>et4ae5__Business_Unit__c</name>
-        <relationshipLabel><!-- Triggered Sends --></relationshipLabel>
+        <relationshipLabel><!-- Envíos desencadenados --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Click Through Rate --></label>

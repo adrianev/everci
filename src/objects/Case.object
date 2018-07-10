@@ -5706,6 +5706,20 @@ IMAGE(&apos;/servlet/servlet.FileDownload?file=0159E000000BGPB&apos;, &apos;DIAS
         <trackTrending>false</trackTrending>
     </fields>
     <fields>
+        <fullName>Contacto_responsable__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contacto responsable</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Casos</relationshipLabel>
+        <relationshipName>Casos</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>Description</fullName>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
@@ -43856,24 +43870,6 @@ else {alert(&quot;No se puede aplicar este cambio porque la reclamación ya est�
 }
 else {alert(&quot;El perfil de usuario no tiene permisos para ejecutar esta acción&quot;);
 }</url>
-    </webLinks>
-    <webLinks>
-        <fullName>Solicitud_llamada_cliente</fullName>
-        <availability>online</availability>
-        <displayType>button</displayType>
-        <linkType>javascript</linkType>
-        <masterLabel>Solicitud llamada cliente</masterLabel>
-        <openType>onClickJavaScript</openType>
-        <protected>false</protected>
-        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/connection.js&quot;)} 
-{!REQUIRESCRIPT(&quot;/soap/ajax/40.0/apex.js&quot;)}
-
-Callout_ClickToCall.Resultado res = sforce.apex.execute(&quot;Util_Click2Call&quot;, &quot;solicitarLlamadaClick2Call&quot;,
-{
-devNameCustomMetadata:&quot;{!$Label.NOTIFICACION_RECHAZO_CLIENTE}&quot;
-dato1:&quot;{Case.Id}&quot; 
-telefono:&quot;{Case.Account.Phone}&quot;
-});</url>
     </webLinks>
     <webLinks>
         <fullName>Tramitacion_Siniestro</fullName>

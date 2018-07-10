@@ -1,8 +1,6 @@
-/**
-  *
-  * Clase usada por el paquete Sortale Data Grid, para mostrar el listado de WorkOrder dentro de la comunidad WORTEN
-  * 	
-  */
+//public class WCC_ELG_DataProviderImpl {
+
+
 global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgIDataProvider {
     
     //Whether to show this class in the AppBuilder.
@@ -12,7 +10,7 @@ global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgID
         return true;
     }
     
-    //Method to retrieve data 
+    //Method to retrieve data:
     
     //SDG object - which is usually irrelevant in the case of custom Apex data providers
     //SDGRequest - provides the details of what's being requested:
@@ -44,9 +42,18 @@ global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgID
                     String fo = filter.FilterOperator;
                     String fv = String.escapeSingleQuotes(filter.FilterValue.trim());
                    	String fid = filter.SDGFieldID;
-                    System.debug('fv ' + fv);
-                    
                     filters = filterSwitch (filters, fid, fo, fv);
+                   /* if(fid.equals('3')){
+                        System.debug('fid y filtervalue ' + fid +' '+ filter.FilterValue);
+                        Datetime fv =  DateTime.parse(filter.FilterValue.replace('-', '/')  +' 00:00:00+0000');
+                        System.debug('Datetime en filter '+ fv);
+                        filters = filterSwitch (filters, fid, fo, fv);
+                    }
+                    else{ 
+                    	String fv = String.escapeSingleQuotes(filter.FilterValue.trim());                        
+                    	filters = filterSwitch (filters, fid, fo, fv, null);
+                 	}*/
+
                 }
             }
             String filterstring = String.join(filters, ' AND ');
@@ -57,7 +64,7 @@ global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgID
             else{
                 filterstring = 'WHERE Case.RecordType.developerName!=\'CAS_Reclamacion\'' + ' AND RecordTypeId !=: aux ';
             }
- 
+
             //Revisar si el usuario tiene asociado una cuenta hija de WORTEN, en dicho caso hay que filtrar por aquellas WO que pertenezcan a la cuenta hija
             User infoUser=inforAccountUser();
             String filterAccount='';
@@ -68,7 +75,10 @@ global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgID
             }
             
             String sSortClause = orderClause(request.SortColumn, request.sortOrder);
-            string query = 'select Case.CAS_TXT_Num_Caso_HS__c, toLabel(Status), Case.CAS_DAT_Fecha_Apertura__c, OTR_TXT_Num_OrdenTrabajo_HS__c, toLabel(OTR_SEL_Gremio__c), Case.Account.CUE_TXT_Numero_Documento__c, Case.CAS_LKP_Punto_de_venta__r.Name,  OTR_FOR_Importe_total_siniestro__c from WorkOrder '  + filterstring + ' ' + sSortClause + ' limit :datalimit offset :dataoffset';          
+            
+            
+            string query = 'select Case.CAS_TXT_Num_Caso_HS__c, toLabel(Status), Case.CAS_DAT_Fecha_Apertura__c, OTR_TXT_Num_OrdenTrabajo_HS__c, toLabel(OTR_SEL_Gremio__c), Case.Account.CUE_TXT_Numero_Documento__c, Case.CAS_LKP_Punto_de_venta__r.Name,  OTR_FOR_Importe_total_siniestro__c from WorkOrder '  + filterstring + ' ' + sSortClause + ' limit :datalimit offset :dataoffset';
+            
             System.debug('Consulta ' + query);
 
             string sQueryCount = 'select count() from WorkOrder ' + filterstring;
@@ -127,8 +137,6 @@ global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgID
      * inforAccountUser Devuelve la información de la cuenta asociada al usuario siempre que no sea AGC
      * @return   return Usuario que no pertenece a AGC
      */
-    
-    @TestVisible
     private static User inforAccountUser(){
         User userInf;
 
@@ -270,7 +278,7 @@ global with sharing class WCC_ELG_DataProviderImpl implements sortablegrid.sdgID
         
         if  (dt!=null && fo!=null){        
             if (fo.equals('=')){ 
-                filters.add(fieldName + ' >= ' + formattedDt );
+                filters.add(fieldName + ' > ' + formattedDt );
                 dt = dt.addDays(1);
                 formattedDt = dt.format('yyyy-MM-dd\'T\'hh:mm:ss\'Z\'');   
                 filters.add(fieldName + ' < ' + formattedDt );

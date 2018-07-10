@@ -672,10 +672,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Llamada_Cliente_Controller</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>MetadataService</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -897,10 +893,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>Rest_Franja_RP</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>Rest_Home_Claim</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -1984,10 +1976,6 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
-        <apexClass>Test_WCC_ELG_office_DataProviderImpl</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
         <apexClass>Test_WorkOrderHistory</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -2297,14 +2285,6 @@
     </classAccesses>
     <classAccesses>
         <apexClass>WCC_ELG_DataProviderImpl</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>WCC_ELG_DataProviderImplTest</apexClass>
-        <enabled>false</enabled>
-    </classAccesses>
-    <classAccesses>
-        <apexClass>WCC_ELG_office_DataProviderImpl</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
@@ -5456,6 +5436,11 @@
         <editable>true</editable>
         <field>Case.ContactId</field>
         <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Case.Contacto_responsable__c</field>
+        <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -17421,7 +17406,7 @@
         <layout>CampaignMember-Campaign Member Page Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Case-Comunidad-Asistencias B2B2C</layout>
+        <layout>Case-Case Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Case-Comunidad-Asistencias B2B2C</layout>
@@ -17478,7 +17463,7 @@
         <layout>CollaborationGroup-Formato Grupo</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Comentario_Orden_de_Trabajo__c-Formato Comentario Servicio Comunidad</layout>
+        <layout>Comentario_Orden_de_Trabajo__c-Formato Comentario Orden de Trabajo</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Comentario_caso__c-Formato Comentario caso</layout>
@@ -18033,14 +18018,14 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrder-Comunidad Orden Trabajo Reparable Extendido</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>WorkOrder-Comunidad Orden Trabajo Reparable Extendido</layout>
         <recordType>WorkOrder.OTR_Reparable</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrder-Orden de Trabajo En Revisión</layout>
         <recordType>WorkOrder.OTR_En_revision</recordType>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>WorkOrder-Orden de Trabajo Reparable</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>WorkOrderLineItem-Formato de partida de orden de trabajo</layout>

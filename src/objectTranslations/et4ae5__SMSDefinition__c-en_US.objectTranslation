@@ -16,7 +16,7 @@
     <fields>
         <label><!-- Business Unit --></label>
         <name>et4ae5__Business_Unit__c</name>
-        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Business Unit saved --></label>
@@ -25,7 +25,7 @@
     <fields>
         <label><!-- Campaign --></label>
         <name>et4ae5__Campaign__c</name>
-        <relationshipLabel><!-- Mobile Sends (Campaign) --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil (Campaña) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Campaigns --></label>
@@ -39,7 +39,7 @@
     <fields>
         <label><!-- Contact --></label>
         <name>et4ae5__Contact__c</name>
-        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Conversation Id --></label>
@@ -82,7 +82,7 @@
     <fields>
         <label><!-- ExclusionCampaign --></label>
         <name>et4ae5__ExclusionCampaign__c</name>
-        <relationshipLabel><!-- Mobile Sends (ExclusionCampaign) --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil (ExclusionCampaign) --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Exclusion Lists --></label>
@@ -148,7 +148,7 @@
     <fields>
         <label><!-- Lead --></label>
         <name>et4ae5__Lead__c</name>
-        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- MemberID --></label>
@@ -249,7 +249,7 @@
     <fields>
         <label><!-- Opt-in Certification User --></label>
         <name>et4ae5__Opt_in_Certification_User__c</name>
-        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil --></relationshipLabel>
     </fields>
     <fields>
         <label><!-- Recipients Opted In --></label>
@@ -364,7 +364,7 @@
     <fields>
         <label><!-- User Enabled Business Unit --></label>
         <name>et4ae5__UEBU__c</name>
-        <relationshipLabel><!-- Mobile Sends --></relationshipLabel>
+        <relationshipLabel><!-- Envíos de dispositivo móvil --></relationshipLabel>
     </fields>
     <fields>
         <help><!-- The percentage of subscribers who unsubscribed versus the emails that were sent (excluding bounces) --></help>

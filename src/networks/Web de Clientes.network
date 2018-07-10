@@ -60,13 +60,20 @@
             <target>/mensajeria</target>
             <type>InternalLink</type>
         </navigationMenuItem>
+        <navigationMenuItem>
+            <label>KPIs</label>
+            <position>6</position>
+            <publiclyAvailable>false</publiclyAvailable>
+            <target>/kpis</target>
+            <type>InternalLink</type>
+        </navigationMenuItem>
     </navigationLinkSet>
     <networkMemberGroups>
         <profile>Admin</profile>
         <profile>HomeServe Customer Community Plus Login</profile>
         <profile>HomeServe Customer Community Plus Login Extendido</profile>
         <profile>HomeServe Customer Community Plus Login B2B2C</profile>
-        <profile>HomeServe Customer Community Plus Login WORTEN</profile>
+        <profile>HomeServe Customer Community Plus Login Insurer</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>
