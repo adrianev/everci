@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>msantosa@everis.com</contactEmail>
+    <label>Everis Salesforce CI</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <consumerKey>3MVG9X0_oZyBSzHrnzENhROatHC9hZzHS5vn4d95tNuuk6.KTifZdnx41mWsmkKpKPIAf5LhN5HYe4XeU77qe</consumerKey>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+</ConnectedApp>

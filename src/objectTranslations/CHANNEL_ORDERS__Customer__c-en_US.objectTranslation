@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- City --></label>
+        <name>CHANNEL_ORDERS__Customer_City__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Name --></label>
+        <name>CHANNEL_ORDERS__Customer_Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>CHANNEL_ORDERS__Customer_Country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Org ID --></label>
+        <name>CHANNEL_ORDERS__Customer_Org_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- State/Province/Region --></label>
+        <name>CHANNEL_ORDERS__Customer_State__c</name>
+    </fields>
+    <fields>
+        <label><!-- Street --></label>
+        <name>CHANNEL_ORDERS__Customer_Street__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZIP/Postal Code --></label>
+        <name>CHANNEL_ORDERS__Customer_ZIP_Postal_Code__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- Invalid Country - Country cannot contain special characters or numbers, Country is a two letter code. --></errorMessage>
+        <name>CHANNEL_ORDERS__Country_2_letter_code</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Org ID - Org IDs begin with 00D and are 15 characters in length. --></errorMessage>
+        <name>CHANNEL_ORDERS__Invalid_OrgID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Org ID cannot contain special characters. --></errorMessage>
+        <name>CHANNEL_ORDERS__OrgID_must_be_alphanumeric</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid State - State is not valid for country CA. --></errorMessage>
+        <name>CHANNEL_ORDERS__Valid_Canada_State</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid State - State is not valid for Country US. --></errorMessage>
+        <name>CHANNEL_ORDERS__Valid_US_State</name>
+    </validationRules>
+</CustomObjectTranslation>
