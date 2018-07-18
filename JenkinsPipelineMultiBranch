@@ -20,7 +20,7 @@ checkout scm
 }
 
 stage('Build'){
-build job: 'generate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME',
+build job: '../generate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME',
 value: package_name)] 
 sh 'sleep 2'
 }
