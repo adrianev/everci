@@ -11,7 +11,7 @@ def rollback_package_name = "Rollback" + package_name
 node {
 
 stage('Parameters'){
-def deployOptions = 'RunLocalTests,NoTestRun'
+def deployOptions = 'RunLocalTests\nNoTestRun'
 properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: 
 [[$class: 'ChoiceParameterDefinition',choices: deployOptions, description: '', name: 'TEST LEVEL' ]]]])
 }
