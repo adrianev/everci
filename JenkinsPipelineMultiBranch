@@ -24,7 +24,7 @@ checkout scm
 stage('Build'){
 build job: '../generate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME',
 value: package_name)] 
-sh 'sleep 2'
+//sh 'sleep 2'
 }
 
 /*
@@ -46,7 +46,7 @@ stage('Validate & Test'){
 println package_name
 build job: '../validate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
 value: package_name), string(name: 'TEST_LEVEL', value: params.TEST_LEVEL)]
-sh 'sleep 2'
+//sh 'sleep 2'
 }
 
 stage('Promotion'){
@@ -58,7 +58,7 @@ input message: 'Do you want to proceed to the Deployment?'
 stage('Deploy'){
 build job: '../deploy-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
 value: package_name), string(name: 'TEST_LEVEL', value: 'NoTestRun')]
-sh 'sleep 2'
+//sh 'sleep 2'
 }
 
 stage('Validate Rollback Package'){
