@@ -229,6 +229,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>PruebaEverCI</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>SDG</apexClass>
         <enabled>false</enabled>
     </classAccesses>
