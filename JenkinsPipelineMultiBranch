@@ -13,7 +13,7 @@ node {
 stage('Parameters'){
 def deployOptions = 'RunLocalTests\nNoTestRun'
 properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: 
-[[$class: 'ChoiceParameterDefinition',choices: deployOptions, description: '', name: 'TEST LEVEL' ]]]])
+[[$class: 'ChoiceParameterDefinition',choices: deployOptions, description: '', name: 'TEST_LEVEL' ]]]])
 }
 
 stage('Checkout SCM'){
