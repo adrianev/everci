@@ -9,9 +9,11 @@ package_name = package_name.replace(".", "-" + sdf.format(today) + ".")
 def rollback_package_name = "Rollback" + package_name
 
 node {
+
 stage('Parameters'){
+def deployOptions = 'RunLocalTests,NoTestRun'
 properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: 
-[[$class: 'StringParameterDefinition', name: 'TEST LEVEL', defaultValue: 'RunLocalTests']]]])
+[[$class: 'ChoiceParameterDefinition',choices: deployOptions, description: '', name: 'TEST LEVEL' ]]]])
 }
 
 stage('Checkout SCM'){
