@@ -27,7 +27,7 @@ value: package_name)]
 sh 'sleep 2'
 }
 
-stage('Quality'){ 
+/*stage('Quality'){ 
 try {
 	sh 'set +e'
 	sh 'sh /home/gnf/DirectorioTrabajoDaikin/Scripts/pmd/bin/run.sh pmd -d $PWD -f xml -l apex -R rulesets/apex/complexity.xml,rulesets/apex/performance.xml,rulesets/apex/style.xml,rulesets/apex/apexunit.xml,rulesets/apex/security.xml,rulesets/apex/braces.xml > pmd.xml 2> errores.txt'
@@ -37,12 +37,12 @@ try {
 
 pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'pmd.xml', unHealthy: ''
 		
-}
+}*/
 
 
 stage('Validate & Test'){
 println package_name
-build job: 'validate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
+build job: '../validate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
 value: package_name), string(name: 'TEST_LEVEL', value: params.TEST_LEVEL)]
 sh 'sleep 2'
 }
@@ -54,13 +54,13 @@ input message: 'Do you want to proceed to the Deployment?'
 }
 
 stage('Deploy'){
-build job: 'deploy-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
+build job: '../deploy-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
 value: package_name), string(name: 'TEST_LEVEL', value: 'NoTestRun')]
 sh 'sleep 2'
 }
 
 stage('Validate Rollback Package'){
-build job: 'validate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
+build job: '../validate-package', parameters: [string(name: 'PKEY', value: PKEY), string(name: 'ENVIRONMENT', value: BRANCH_NAME), string(name: 'PACKAGE_NAME', 
 value: rollback_package_name), string(name: 'TEST_LEVEL', value: params.TEST_LEVEL)], propagate: false
 }
 
