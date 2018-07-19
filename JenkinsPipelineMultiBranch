@@ -11,7 +11,7 @@ def rollback_package_name = "Rollback" + package_name
 node {
 stage('Parameters'){
 properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: 
-[[$class: 'StringParameterDefinition', name: 'TEST_LEVEL', defaultValue: '', values: '1,2']]]])
+[[$class: 'StringParameterDefinition', name: 'TEST_LEVEL', defaultValue: 'RunLocalTests']]]])
 }
 
 stage('Checkout SCM'){
