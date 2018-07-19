@@ -1,5 +1,5 @@
 def package_name=''
-def PKEY='Daikin'
+def PKEY='TELEFONICA'
 def today = new Date()
 def c = new GregorianCalendar()
 def sdf = new java.text.SimpleDateFormat("yyyyMMddhhmmss")
@@ -27,7 +27,8 @@ value: package_name)]
 sh 'sleep 2'
 }
 
-/*stage('Quality'){ 
+/*
+stage('Quality'){ 
 try {
 	sh 'set +e'
 	sh 'sh /home/gnf/DirectorioTrabajoDaikin/Scripts/pmd/bin/run.sh pmd -d $PWD -f xml -l apex -R rulesets/apex/complexity.xml,rulesets/apex/performance.xml,rulesets/apex/style.xml,rulesets/apex/apexunit.xml,rulesets/apex/security.xml,rulesets/apex/braces.xml > pmd.xml 2> errores.txt'
@@ -37,7 +38,8 @@ try {
 
 pmd canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'pmd.xml', unHealthy: ''
 		
-}*/
+}
+*/
 
 
 stage('Validate & Test'){
