@@ -3723,6 +3723,9 @@
         <layout>Dynamic_related_list__mdt-Dynamic related list Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>EVRCI_CustomObjectTest__c-EVRCI_CustomObjectTest Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>EmailMessage-Email Message Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
