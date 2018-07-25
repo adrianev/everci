@@ -12,6 +12,7 @@
     <tab>standard-Case</tab>
     <tab>standard-Contact</tab>
     <tab>Cuentas_y_Oportunidades</tab>
+    <tab>EVRCI_CustomObjectTest__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>EverCI_UtilityBar1</utilityBar>
 </CustomApplication>

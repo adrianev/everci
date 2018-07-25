@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
     <labels>
+        <fullName>EVRCI_LabelTest</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EVRCI_LabelTest</shortDescription>
+        <value>TEST</value>
+    </labels>
+    <labels>
         <fullName>sdgAfter</fullName>
         <language>en_US</language>
         <protected>false</protected>

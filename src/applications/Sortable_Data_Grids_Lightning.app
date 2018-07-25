@@ -5,5 +5,6 @@
     <navType>Standard</navType>
     <tab>standard-home</tab>
     <tab>SDG__c</tab>
+    <tab>EVRCI_CustomObjectTest__c</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>

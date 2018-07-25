@@ -19,9 +19,13 @@
     <tab>Fee__c</tab>
     <tab>Equipo__c</tab>
     <tab>MARCA</tab>
+    <tab>EVRCI_CustomObjectTest__c</tab>
     <uiType>Lightning</uiType>
     <utilityBar>LightningSalesConsole_UtilityBar</utilityBar>
     <workspaceMappings>
+        <mapping>
+            <tab>EVRCI_CustomObjectTest__c</tab>
+        </mapping>
         <mapping>
             <tab>Equipo__c</tab>
         </mapping>

@@ -17,4 +17,5 @@
     <tab>Equipo__c</tab>
     <tab>standard-Quote</tab>
     <tab>MARCA</tab>
+    <tab>EVRCI_CustomObjectTest__c</tab>
 </CustomApplication>

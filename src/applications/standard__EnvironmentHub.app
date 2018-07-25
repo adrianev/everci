@@ -4,4 +4,5 @@
     <tab>Fee__c</tab>
     <tab>Equipo__c</tab>
     <tab>MARCA</tab>
+    <tab>EVRCI_CustomObjectTest__c</tab>
 </CustomApplication>
