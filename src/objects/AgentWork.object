@@ -92,4 +92,10 @@
         <type>Lookup</type>
     </fields>
     <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>EVRCI_CustomObjectValidationRuleTest</fullName>
+        <active>true</active>
+        <errorConditionFormula>LEFT(Name, 6) == &apos;EVERCI_&apos;</errorConditionFormula>
+        <errorMessage>Name mustn´t start with EVERCI_</errorMessage>
+    </validationRules>
 </CustomObject>
