@@ -4479,6 +4479,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>EVRCI_CustomObjectTest__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>Equipo__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
