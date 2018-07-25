@@ -294,6 +294,8 @@
         <members>unfiled$public/CommunityLockoutEmailTemplate</members>
         <members>unfiled$public/CommunityWelcomeEmailTemplate</members>
         <members>unfiled$public/ContactFollowUpSAMPLE</members>
+        <members>unfiled$public/EVERCI_TEST2</members>
+        <members>unfiled$public/EVRCI_CustomObjectEmailTemplateTest</members>
         <members>unfiled$public/LeadsNewassignmentnotificationSAMPLE</members>
         <members>unfiled$public/LeadsWebtoLeademailresponseSAMPLE</members>
         <members>unfiled$public/SUPPORT%3A Self-Service New Comment %28SAMPLE%29</members>
