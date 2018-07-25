@@ -97,6 +97,16 @@
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
     <fields>
+        <fullName>EVRCI_StandardObjectCustomFieldTest__c</fullName>
+        <externalId>false</externalId>
+        <label>EVRCI_StandardObjectCustomFieldTest</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
         <fullName>Fax</fullName>
         <trackFeedHistory>false</trackFeedHistory>
     </fields>
