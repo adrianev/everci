@@ -25,6 +25,10 @@
                 <behavior>Readonly</behavior>
                 <field>Total_value_Opportunies__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>EVRCI_StandardObjectCustomFieldTest__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
