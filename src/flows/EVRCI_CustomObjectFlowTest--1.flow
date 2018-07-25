@@ -3,4 +3,10 @@
     <interviewLabel>EVRCI_CustomObjectFlowTest {!$Flow.CurrentDateTime}</interviewLabel>
     <label>EVRCI_CustomObjectFlowTest</label>
     <processType>Flow</processType>
+    <steps>
+        <name>test</name>
+        <label>test</label>
+        <locationX>406</locationX>
+        <locationY>92</locationY>
+    </steps>
 </Flow>
