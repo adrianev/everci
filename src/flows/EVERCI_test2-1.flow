@@ -13,9 +13,41 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>myDecision</targetReference>
+            <targetReference>isChangedDecision2_myRule_1_Id</targetReference>
         </connector>
     </assignments>
+    <decisions>
+        <name>isChangedDecision2_myRule_1_Id</name>
+        <label>isChangedDecision2_myRule_1_Id</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myDecision</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>isChangedRule_2_myRule_1_Id</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>myVariable_old.Id</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>myVariable_current.Id</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myDecision</targetReference>
+            </connector>
+            <label>isChangedRule_2_myRule_1_Id</label>
+        </rules>
+    </decisions>
     <decisions>
         <processMetadataValues>
             <name>index</name>
@@ -41,13 +73,13 @@
                 <processMetadataValues>
                     <name>leftHandSideType</name>
                     <value>
-                        <stringValue>Boolean</stringValue>
+                        <stringValue>ID</stringValue>
                     </value>
                 </processMetadataValues>
                 <processMetadataValues>
                     <name>operatorDataType</name>
                     <value>
-                        <stringValue>Boolean</stringValue>
+                        <stringValue>String</stringValue>
                     </value>
                 </processMetadataValues>
                 <processMetadataValues>
@@ -56,16 +88,16 @@
                         <stringValue>Boolean</stringValue>
                     </value>
                 </processMetadataValues>
-                <leftValueReference>myVariable_current.IsDeleted</leftValueReference>
+                <leftValueReference>isChangedRule_2_myRule_1_Id</leftValueReference>
                 <operator>EqualTo</operator>
                 <rightValue>
-                    <booleanValue>false</booleanValue>
+                    <booleanValue>true</booleanValue>
                 </rightValue>
             </conditions>
             <connector>
                 <targetReference>myRule_1_A1</targetReference>
             </connector>
-            <label>tet</label>
+            <label>crit1</label>
         </rules>
     </decisions>
     <interviewLabel>EVERCI_test2-1_InterviewLabel</interviewLabel>
@@ -97,7 +129,7 @@
     <processType>Workflow</processType>
     <recordCreates>
         <name>myRule_1_A1</name>
-        <label>hi</label>
+        <label>aa</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
         <inputAssignments>
