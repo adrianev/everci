@@ -1,3 +1,0 @@
-<aura:component implements="flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" access="global">
-	<lightning:button variant="brand" label="Imprimir" onclick="{! c.handleClick }" />
-</aura:component>

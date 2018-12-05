@@ -1,3 +1,0 @@
-<aura:component >
-	<lightning:inputRichText />
-</aura:component>

@@ -74,7 +74,13 @@
         <fullName>IsPrivate</fullName>
     </fields>
     <fields>
+        <fullName>IsRecurrence2</fullName>
+    </fields>
+    <fields>
         <fullName>IsReminderSet</fullName>
+    </fields>
+    <fields>
+        <fullName>IsVisibleInSelfService</fullName>
     </fields>
     <fields>
         <fullName>Location</fullName>
@@ -108,5 +114,5 @@
         <fullName>WhoId</fullName>
         <type>Lookup</type>
     </fields>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>Private</sharingModel>
 </CustomObject>

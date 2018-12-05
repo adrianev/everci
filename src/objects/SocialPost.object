@@ -64,83 +64,16 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>false</enableHistory>
     <fields>
-        <fullName>AnalyzerScore</fullName>
-    </fields>
-    <fields>
-        <fullName>AssignedTo</fullName>
-    </fields>
-    <fields>
-        <fullName>AttachmentType</fullName>
-    </fields>
-    <fields>
-        <fullName>AttachmentUrl</fullName>
-    </fields>
-    <fields>
-        <fullName>Classification</fullName>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>CommentCount</fullName>
-    </fields>
-    <fields>
         <fullName>Content</fullName>
-    </fields>
-    <fields>
-        <fullName>DeletedById</fullName>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>EngagementLevel</fullName>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>ExternalPostId</fullName>
     </fields>
     <fields>
         <fullName>Handle</fullName>
     </fields>
     <fields>
-        <fullName>HarvestDate</fullName>
-    </fields>
-    <fields>
         <fullName>Headline</fullName>
     </fields>
     <fields>
-        <fullName>HiddenById</fullName>
-        <type>Lookup</type>
-    </fields>
-    <fields>
-        <fullName>InboundLinkCount</fullName>
-    </fields>
-    <fields>
-        <fullName>IsOutbound</fullName>
-    </fields>
-    <fields>
-        <fullName>KeywordGroupName</fullName>
-    </fields>
-    <fields>
-        <fullName>Language</fullName>
-    </fields>
-    <fields>
-        <fullName>LikedBy</fullName>
-    </fields>
-    <fields>
-        <fullName>LikesAndVotes</fullName>
-    </fields>
-    <fields>
-        <fullName>MediaProvider</fullName>
-    </fields>
-    <fields>
-        <fullName>MediaType</fullName>
-    </fields>
-    <fields>
-        <fullName>MessageType</fullName>
-    </fields>
-    <fields>
         <fullName>Name</fullName>
-    </fields>
-    <fields>
-        <fullName>Notes</fullName>
     </fields>
     <fields>
         <fullName>OutboundSocialAccountId</fullName>
@@ -159,9 +92,6 @@
         <type>Lookup</type>
     </fields>
     <fields>
-        <fullName>PostPriority</fullName>
-    </fields>
-    <fields>
         <fullName>PostTags</fullName>
     </fields>
     <fields>
@@ -174,72 +104,14 @@
         <fullName>Provider</fullName>
     </fields>
     <fields>
-        <fullName>R6PostId</fullName>
-    </fields>
-    <fields>
-        <fullName>R6SourceId</fullName>
-    </fields>
-    <fields>
-        <fullName>R6TopicId</fullName>
-    </fields>
-    <fields>
-        <fullName>Recipient</fullName>
-    </fields>
-    <fields>
-        <fullName>RecipientType</fullName>
-    </fields>
-    <fields>
         <fullName>ReplyToId</fullName>
         <type>Hierarchy</type>
-    </fields>
-    <fields>
-        <fullName>ResponseContextExternalId</fullName>
-    </fields>
-    <fields>
-        <fullName>ReviewScale</fullName>
-    </fields>
-    <fields>
-        <fullName>ReviewScore</fullName>
-    </fields>
-    <fields>
-        <fullName>ReviewedStatus</fullName>
-        <type>Picklist</type>
-    </fields>
-    <fields>
-        <fullName>Sentiment</fullName>
-    </fields>
-    <fields>
-        <fullName>Shares</fullName>
     </fields>
     <fields>
         <fullName>SourceTags</fullName>
     </fields>
     <fields>
-        <fullName>SpamRating</fullName>
-    </fields>
-    <fields>
-        <fullName>Status</fullName>
-    </fields>
-    <fields>
-        <fullName>StatusMessage</fullName>
-    </fields>
-    <fields>
-        <fullName>ThreadSize</fullName>
-    </fields>
-    <fields>
-        <fullName>TopicProfileName</fullName>
-    </fields>
-    <fields>
-        <fullName>TopicType</fullName>
-    </fields>
-    <fields>
         <fullName>TruncatedContent</fullName>
-    </fields>
-    <fields>
-        <fullName>UniqueCommentors</fullName>
-    </fields>
-    <fields>
-        <fullName>ViewCount</fullName>
     </fields>
     <fields>
         <fullName>WhoId</fullName>
@@ -256,28 +128,15 @@
         <filterScope>Everything</filterScope>
         <label>All social posts</label>
     </listViews>
-    <listViews>
-        <fullName>Queue_Test_SocialPost</fullName>
-        <filterScope>Queue</filterScope>
-        <label>Queue Test</label>
-        <queue>Queue_Test</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
-    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>Persona</customTabListAdditionalFields>
         <customTabListAdditionalFields>Content</customTabListAdditionalFields>
         <customTabListAdditionalFields>Posted</customTabListAdditionalFields>
         <customTabListAdditionalFields>Parent</customTabListAdditionalFields>
-        <customTabListAdditionalFields>ReviewedStatus</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Notes</customTabListAdditionalFields>
         <searchResultsAdditionalFields>Persona</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Content</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Posted</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Parent</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>ReviewedStatus</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Notes</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

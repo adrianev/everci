@@ -6,8 +6,8 @@
     <label>Sales</label>
     <navType>Standard</navType>
     <tab>standard-home</tab>
-    <tab>Cuentas_y_oportunidades_principales</tab>
     <tab>standard-Opportunity</tab>
+    <tab>standard-Quote</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Task</tab>
     <tab>standard-File</tab>
@@ -22,10 +22,9 @@
     <tab>standard-OtherUserProfile</tab>
     <tab>standard-Case</tab>
     <tab>standard-Forecasting3</tab>
-    <tab>Fee__c</tab>
-    <tab>Equipo__c</tab>
-    <tab>standard-Quote</tab>
-    <tab>MARCA</tab>
-    <tab>EVRCI_CustomObjectTest__c</tab>
+    <tab>Suggestion__c</tab>
+    <tab>Battle_Station__c</tab>
+    <tab>Resource__c</tab>
+    <tab>Supply__c</tab>
     <uiType>Lightning</uiType>
 </CustomApplication>

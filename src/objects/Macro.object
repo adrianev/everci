@@ -60,15 +60,6 @@
     <fields>
         <fullName>StartingContext</fullName>
     </fields>
-    <listViews>
-        <fullName>Queue_Test_Macro</fullName>
-        <filterScope>Queue</filterScope>
-        <label>Queue Test</label>
-        <queue>Queue_Test</queue>
-        <sharedTo>
-            <allInternalUsers></allInternalUsers>
-        </sharedTo>
-    </listViews>
     <searchLayouts>
         <customTabListAdditionalFields>StartingContext</customTabListAdditionalFields>
         <customTabListAdditionalFields>LastModifiedDate</customTabListAdditionalFields>

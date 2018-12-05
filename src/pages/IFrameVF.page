@@ -1,6 +1,0 @@
-<apex:page sidebar="false" controller="IFrameVFController">
-    <apex:form >
-    <apex:commandButton action="{!finishCV}" value="Finish"/>
-    </apex:form>
-    <apex:iframe src="https://www.uol.com.br/" scrolling="true" id="theIframe"/>
-</apex:page>

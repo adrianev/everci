@@ -2,12 +2,8 @@
 <SecuritySettings xmlns="http://soap.sforce.com/2006/04/metadata">
     <networkAccess>
         <ipRanges>
-            <end>213.255.255.255</end>
-            <start>213.0.0.0</start>
-        </ipRanges>
-        <ipRanges>
-            <end>91.255.255.255</end>
-            <start>91.0.0.0</start>
+            <end>91.215.65.20</end>
+            <start>91.215.65.10</start>
         </ipRanges>
     </networkAccess>
     <passwordPolicies>
@@ -33,14 +29,14 @@
         <enableClickjackSetup>true</enableClickjackSetup>
         <enableContentSniffingProtection>true</enableContentSniffingProtection>
         <enablePostForSessions>false</enablePostForSessions>
-        <enableSMSIdentity>false</enableSMSIdentity>
+        <enableSMSIdentity>true</enableSMSIdentity>
         <enableUpgradeInsecureRequests>true</enableUpgradeInsecureRequests>
         <enableXssProtection>true</enableXssProtection>
         <enforceIpRangesEveryRequest>false</enforceIpRangesEveryRequest>
-        <forceLogoutOnSessionTimeout>false</forceLogoutOnSessionTimeout>
-        <forceRelogin>false</forceRelogin>
+        <forceLogoutOnSessionTimeout>true</forceLogoutOnSessionTimeout>
+        <forceRelogin>true</forceRelogin>
         <hstsOnForcecomSites>false</hstsOnForcecomSites>
-        <identityConfirmationOnTwoFactorRegistrationEnabled>true</identityConfirmationOnTwoFactorRegistrationEnabled>
+        <identityConfirmationOnTwoFactorRegistrationEnabled>false</identityConfirmationOnTwoFactorRegistrationEnabled>
         <lockSessionsToDomain>true</lockSessionsToDomain>
         <lockSessionsToIp>false</lockSessionsToIp>
         <referrerPolicy>true</referrerPolicy>

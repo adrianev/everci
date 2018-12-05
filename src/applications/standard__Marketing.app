@@ -3,18 +3,15 @@
     <defaultLandingTab>standard-home</defaultLandingTab>
     <formFactors>Large</formFactors>
     <tab>standard-Chatter</tab>
-    <tab>standard-UserProfile</tab>
-    <tab>standard-CollaborationGroup</tab>
-    <tab>standard-File</tab>
     <tab>standard-Campaign</tab>
     <tab>standard-Lead</tab>
     <tab>standard-Contact</tab>
     <tab>standard-Opportunity</tab>
     <tab>standard-report</tab>
     <tab>standard-Dashboard</tab>
-    <tab>Fee__c</tab>
-    <tab>Equipo__c</tab>
     <tab>standard-Quote</tab>
-    <tab>MARCA</tab>
-    <tab>EVRCI_CustomObjectTest__c</tab>
+    <tab>Suggestion__c</tab>
+    <tab>Battle_Station__c</tab>
+    <tab>Resource__c</tab>
+    <tab>Supply__c</tab>
 </CustomApplication>

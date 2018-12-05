@@ -173,22 +173,22 @@
     <tab>standard-Case</tab>
     <tab>standard-Opportunity</tab>
     <tab>standard-Lead</tab>
-    <tab>Fee__c</tab>
-    <tab>Equipo__c</tab>
-    <tab>MARCA</tab>
-    <tab>EVRCI_CustomObjectTest__c</tab>
+    <tab>Suggestion__c</tab>
+    <tab>Battle_Station__c</tab>
+    <tab>Resource__c</tab>
+    <tab>Supply__c</tab>
     <workspaceMappings>
         <mapping>
-            <tab>EVRCI_CustomObjectTest__c</tab>
+            <tab>Battle_Station__c</tab>
         </mapping>
         <mapping>
-            <tab>Equipo__c</tab>
+            <tab>Resource__c</tab>
         </mapping>
         <mapping>
-            <tab>Fee__c</tab>
+            <tab>Suggestion__c</tab>
         </mapping>
         <mapping>
-            <tab>MARCA</tab>
+            <tab>Supply__c</tab>
         </mapping>
         <mapping>
             <tab>standard-Account</tab>
