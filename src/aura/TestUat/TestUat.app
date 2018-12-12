@@ -1,5 +1,5 @@
 <aura:application>
 <aura:attribute 
-   name='hola'
+   name='eyyyyy'
    type='string'/>
 </aura:application>	
